@@ -1,0 +1,136 @@
+<html>
+<head>
+<script language=javascript src="util/APIWrapper.js"></script>
+<script language=javascript>
+   // Set some variables global to the SCO
+   var answer = -1;
+   var exitPageStatus = false;
+
+   function submitScore()
+   {
+        document.examForm.submitButton.disabled = true;
+	var val1 = document.examForm.OBJ3_Status.value;
+        var val2 = document.examForm.OBJ4_Status.value;
+        var indexOfFirstObjective = findObjective("global-obj-3");
+        var indexOfSecondObjective = findObjective("global-obj-4");
+      //  Indicate whether or not the attempt on the SCO was
+      //  sucessful (passed or failed)
+      if ( val1 != "passed"  )
+      {
+         setObjToFailed(indexOfFirstObjective);
+      }
+      else 
+      {
+         setObjToPassed(indexOfFirstObjective);
+      }
+      if ( val2 != "passed"  )
+      {
+         setObjToFailed(indexOfSecondObjective);
+      }
+      else 
+      {
+         setObjToPassed(indexOfSecondObjective);
+      }
+      
+      if ( (val1 != "passed") || (val2 != "passed") )
+      {
+        doSetValue( "cmi.success_status", "failed" );
+      }
+      else
+      {
+        doSetValue( "cmi.success_status", "passed" );
+      }
+      //  Set the SCO to completed with a normal exit
+      doSetValue( "cmi.completion_status", "completed" );
+      doSetValue( "cmi.exit", "" );
+
+      //  Indicate that the SCO was finished normally
+      exitPageStatus = true;
+
+      var result = doTerminate();
+   }
+   
+
+    
+   /**********************************************************************
+   **  Function: loadPage()
+   **  Description: This is called when a SCO is first loaded in the
+   **               browser (onload()).  It finds the API if it was not
+   **               already located and calls Initialize().  In
+   **               the exitPageStatus global variable is set to false
+   **               indicating that the SCO is not yet finished.
+   **********************************************************************/
+   function loadPage()
+   {
+      var result = doInitialize();
+   }
+   
+   
+   /**********************************************************************
+   **  Function: doQuit()
+   **  Description: This function is called in the case that the user
+   **               does not finish the SCO "gracefully".  For example, 
+   **               the user may click the "continue" button before
+   **               submitting an answer to a question.  In this case,
+   **               this function is called as part of the page unloading.
+   **               This function ensures that Terminate() is called
+   **               and that the correct statuses are set even if the 
+   **               user closes the SCO window or navigates away before 
+   **               finishing the SCO.
+   **********************************************************************/
+   function doQuit()
+   {   
+      submitScore();
+   }
+
+   
+   /**********************************************************************
+   **  Function: unloadPage()
+   **  Description: This function is called in the case that the user
+   **               does not finish the SCO "gracefully".  For example, 
+   **               the user may click the "continue" button before
+   **               submitting an answer to a question.  In this case,
+   **               this function is called as part of the page unloading.
+   **               This function ensures that Terminate() is called
+   **               even if the user closes the SCO window or navigates
+   **               away before finishing the SCO.
+   **********************************************************************/
+   function unloadPage()
+   {
+    
+   	if (exitPageStatus != true)
+   	{
+   		doQuit();
+   	}
+   
+   	// NOTE: don't return anything that resembles a javascript
+   	//		   string from this function or IE will take the
+   	//		   liberty of displaying a confirm message box
+   }
+
+
+</script>
+<title>SCO-C: Post-Test</title>
+</head>
+<body onLoad="loadPage()" onunload="return unloadPage()">
+
+   <div id="disp" name="disp"></div>   
+   <br>
+      <form name="examForm">
+		<p>Select status for OBJ_3.
+			<select NAME="OBJ3_Status">
+               			<option VALUE="passed">passed
+               			<option VALUE="failed">failed
+          		</select>
+		</p>	
+                <p>Select status for OBJ_4.
+			<select NAME="OBJ4_Status">
+               			<option VALUE="passed">passed
+               			<option VALUE="failed">failed
+          		</select>
+		</p>	
+		<input type="button" name="submitButton" value=" Submit " onClick="submitScore()">
+      </form>
+</body>
+
+</html>
