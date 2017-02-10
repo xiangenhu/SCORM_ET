@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- v0.1 -->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:lom="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-__ADL-TEMPLATES" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd   http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd   http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3   adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd" version="1.3">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 4th Edition</schemaversion>
+  </metadata>
+  <organizations default="ONR ET (UM)">
+    <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
+      <title>ONR ET Course</title>
+      <item identifier="ONRET-WELCOME" identifierref="ETWELCOME" isvisible="true">
+        <title>Welcome</title>
+        <imsss:sequencing>
+          <imsss:sequencingRules>
+            <imsss:preConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition condition="attempted" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="skip" />
+            </imsss:preConditionRule>
+          </imsss:sequencingRules>
+          <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="0" />
+        </imsss:sequencing>
+        <adlnav:presentation>
+          <adlnav:navigationInterface>
+            <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+          </adlnav:navigationInterface>
+        </adlnav:presentation>
+      </item>
+      <item identifier="ONRET-NAVMENU" identifierref="ONRETNAVMENU" isvisible="true">
+        <title>Nav Menu</title>
+        <imsss:sequencing>
+          <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="0" />
+          <imsss:objectives>
+            <imsss:primaryObjective objectiveID="obj-primary" satisfiedByMeasure="false" />
+            <imsss:objective objectiveID="var-t4b" satisfiedByMeasure="false">
+              <imsss:mapInfo targetObjectiveID="var-adl-t4b" writeSatisfiedStatus="true" />
+            </imsss:objective>
+            <imsss:objective objectiveID="var-t5b" satisfiedByMeasure="false">
+              <imsss:mapInfo targetObjectiveID="var-adl-t5b" writeSatisfiedStatus="true" />
+            </imsss:objective>
+            <imsss:objective satisfiedByMeasure="false" objectiveID="obj-t7-2">
+              <imsss:mapInfo targetObjectiveID="urn:lsal.org/template7/global-obj-2" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+            </imsss:objective>
+            <imsss:objective satisfiedByMeasure="false" objectiveID="obj-t7-3">
+              <imsss:mapInfo targetObjectiveID="urn:lsal.org/template7/global-obj-3" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+            </imsss:objective>
+          </imsss:objectives>
+        </imsss:sequencing>
+        <adlnav:presentation>
+          <adlnav:navigationInterface>
+            <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+          </adlnav:navigationInterface>
+        </adlnav:presentation>
+      </item>
+      <item identifier="SCO-ADL-TEMPLATES-REFS" identifierref="RES-REFS" isvisible="false">
+        <title>References</title>
+        <imsss:sequencing>
+          <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="0" />
+        </imsss:sequencing>
+        <adlnav:presentation>
+          <adlnav:navigationInterface>
+            <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+            <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+          </adlnav:navigationInterface>
+        </adlnav:presentation>
+      </item>
+      <item identifier="Transistors" isvisible="false">
+        <title>Transistors</title>
+        <item identifier="ONRET-Transistors" isvisible="true">
+          <title>ONRET-Transistors</title>
+          <item identifier="AutoTutorDR" identifierref="AutoTutorDR">
+            <title>AutoTutorDR</title>
+            <imsss:sequencing>
+              <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+              <imsss:objectives>
+                <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/primary_objective" />
+                <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/obj-1">
+                  <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-1" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+                </imsss:objective>
+                <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/obj-2">
+                  <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-2" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+                </imsss:objective>
+              </imsss:objectives>
+            </imsss:sequencing>
+            <adlnav:presentation>
+              <adlnav:navigationInterface>
+                <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+                <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+                <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+                <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+                <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+                <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+              </adlnav:navigationInterface>
+            </adlnav:presentation>
+          </item>
+          <item identifier="CLUSTER-ADL-TEMPLATES-TEMP10_1" isvisible="true">
+            <title>Aggregation-A</title>
+            <item identifier="SCO-ADL-TEMPLATES-TEMP10_2" identifierref="RES-TEMP10_2">
+              <title>SCO-1a: Instruction</title>
+              <imsss:sequencing>
+                <imsss:sequencingRules>
+                  <imsss:preConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-1/obj-1" condition="satisfied" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="skip" />
+                  </imsss:preConditionRule>
+                  <imsss:preConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-1/obj-1" condition="objectiveStatusKnown" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="hiddenFromChoice" />
+                  </imsss:preConditionRule>
+                </imsss:sequencingRules>
+                <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+                <imsss:objectives>
+                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-1/primary_objective" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-1/obj-1">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-1" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+                  </imsss:objective>
+                </imsss:objectives>
+              </imsss:sequencing>
+              <adlnav:presentation>
+                <adlnav:navigationInterface>
+                  <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+                </adlnav:navigationInterface>
+              </adlnav:presentation>
+            </item>
+            <item identifier="SCO-ADL-TEMPLATES-TEMP10_3" identifierref="RES-TEMP10_3">
+              <title>SCO-2a: Instruction</title>
+              <imsss:sequencing>
+                <imsss:sequencingRules>
+                  <imsss:preConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-2/obj-1" condition="satisfied" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="skip" />
+                  </imsss:preConditionRule>
+                  <imsss:preConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-2/obj-1" condition="objectiveStatusKnown" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="hiddenFromChoice" />
+                  </imsss:preConditionRule>
+                </imsss:sequencingRules>
+                <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+                <imsss:objectives>
+                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-2/primary_objective" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-2/obj-1">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-2" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+                  </imsss:objective>
+                </imsss:objectives>
+              </imsss:sequencing>
+              <adlnav:presentation>
+                <adlnav:navigationInterface>
+                  <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+                </adlnav:navigationInterface>
+              </adlnav:presentation>
+            </item>
+            <item identifier="SCO-ADL-TEMPLATES-TEMP10_4" identifierref="RES-TEMP10_4">
+              <title>SCO-3a: Post-Test</title>
+              <imsss:sequencing>
+                <imsss:sequencingRules>
+                  <imsss:preConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition operator="noOp" condition="always" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="hiddenFromChoice" />
+                  </imsss:preConditionRule>
+                  <imsss:postConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition condition="always" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="exitParent" />
+                  </imsss:postConditionRule>
+                </imsss:sequencingRules>
+                <imsss:rollupRules objectiveMeasureWeight="1.0000" />
+                <imsss:objectives>
+                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="primary-obj" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-C/obj-1">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-3" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+                  </imsss:objective>
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-C/obj-2">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-4" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+                  </imsss:objective>
+                </imsss:objectives>
+              </imsss:sequencing>
+              <adlnav:presentation>
+                <adlnav:navigationInterface>
+                  <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+                </adlnav:navigationInterface>
+              </adlnav:presentation>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="true" choiceExit="false" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+              <imsss:sequencingRules>
+                <imsss:postConditionRule>
+                  <imsss:ruleConditions conditionCombination="all">
+                    <imsss:ruleCondition condition="satisfied" />
+                  </imsss:ruleConditions>
+                  <imsss:ruleAction action="exitParent" />
+                </imsss:postConditionRule>
+              </imsss:sequencingRules>
+              <imsss:rollupRules objectiveMeasureWeight="1.0000" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="CLUSTER-ADL-TEMPLATES-TEMP10_2" isvisible="true">
+            <title>Aggregation-B</title>
+            <item identifier="SCO-ADL-TEMPLATES-TEMP10_5" identifierref="RES-TEMP10_5">
+              <title>SCO-3b: Remediation</title>
+              <imsss:sequencing>
+                <imsss:sequencingRules>
+                  <imsss:preConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-3/obj-1" condition="satisfied" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="skip" />
+                  </imsss:preConditionRule>
+                  <imsss:preConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-3/obj-1" condition="objectiveStatusKnown" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="hiddenFromChoice" />
+                  </imsss:preConditionRule>
+                </imsss:sequencingRules>
+                <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+                <imsss:objectives>
+                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-3/primary_objective" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-3/obj-1">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-3" readSatisfiedStatus="true" readNormalizedMeasure="false" />
+                  </imsss:objective>
+                </imsss:objectives>
+              </imsss:sequencing>
+              <adlnav:presentation>
+                <adlnav:navigationInterface>
+                  <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+                </adlnav:navigationInterface>
+              </adlnav:presentation>
+            </item>
+            <item identifier="SCO-ADL-TEMPLATES-TEMP10_6" identifierref="RES-TEMP10_6">
+              <title>SCO-4b: Remediation</title>
+              <imsss:sequencing>
+                <imsss:sequencingRules>
+                  <imsss:preConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-4/obj-1" condition="satisfied" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="skip" />
+                  </imsss:preConditionRule>
+                  <imsss:preConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-4/obj-1" condition="objectiveStatusKnown" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="hiddenFromChoice" />
+                  </imsss:preConditionRule>
+                </imsss:sequencingRules>
+                <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+                <imsss:objectives>
+                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-4/primary_objective" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-4/obj-1">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-4" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+                  </imsss:objective>
+                </imsss:objectives>
+              </imsss:sequencing>
+              <adlnav:presentation>
+                <adlnav:navigationInterface>
+                  <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+                </adlnav:navigationInterface>
+              </adlnav:presentation>
+            </item>
+            <item identifier="SCO-ADL-TEMPLATES-TEMP10_7" identifierref="RES-TEMP10_7">
+              <title>SCO-3b: Post-Test for Mastery</title>
+              <imsss:sequencing>
+                <imsss:sequencingRules>
+                  <imsss:preConditionRule>
+                    <imsss:ruleConditions conditionCombination="all">
+                      <imsss:ruleCondition condition="always" />
+                    </imsss:ruleConditions>
+                    <imsss:ruleAction action="hiddenFromChoice" />
+                  </imsss:preConditionRule>
+                </imsss:sequencingRules>
+                <imsss:rollupRules objectiveMeasureWeight="1.0000" />
+              </imsss:sequencing>
+              <adlnav:presentation>
+                <adlnav:navigationInterface>
+                  <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+                  <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+                </adlnav:navigationInterface>
+              </adlnav:presentation>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" choiceExit="false" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+              <imsss:rollupRules objectiveMeasureWeight="1.0000" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" choiceExit="true" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+            <imsss:sequencingRules>
+              <imsss:exitConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="noOp" condition="satisfied" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="exit" />
+              </imsss:exitConditionRule>
+              <imsss:exitConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="noOp" condition="completed" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="exit" />
+              </imsss:exitConditionRule>
+            </imsss:sequencingRules>
+            <imsss:rollupRules rollupObjectiveSatisfied="true" rollupProgressCompletion="true" objectiveMeasureWeight="0">
+              <imsss:rollupRule childActivitySet="any">
+                <imsss:rollupConditions conditionCombination="any">
+                  <imsss:rollupCondition condition="satisfied" />
+                </imsss:rollupConditions>
+                <imsss:rollupAction action="satisfied" />
+              </imsss:rollupRule>
+              <imsss:rollupRule childActivitySet="all">
+                <imsss:rollupConditions conditionCombination="any">
+                  <imsss:rollupCondition operator="not" condition="satisfied" />
+                </imsss:rollupConditions>
+                <imsss:rollupAction action="notSatisfied" />
+              </imsss:rollupRule>
+              <imsss:rollupRule childActivitySet="any">
+                <imsss:rollupConditions conditionCombination="any">
+                  <imsss:rollupCondition condition="satisfied" />
+                </imsss:rollupConditions>
+                <imsss:rollupAction action="completed" />
+              </imsss:rollupRule>
+            </imsss:rollupRules>
+          </imsss:sequencing>
+        </item>
+        <item identifier="SCO-ADL-TEMPLATES-TEMP10_AAR" identifierref="RES-AAR" isvisible="false">
+          <title>AAR</title>
+          <imsss:sequencing>
+            <imsss:controlMode useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+            <imsss:sequencingRules>
+              <imsss:postConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition condition="always" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="exitParent" />
+              </imsss:postConditionRule>
+            </imsss:sequencingRules>
+            <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+          </imsss:sequencing>
+          <adlnav:presentation>
+            <adlnav:navigationInterface>
+              <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+              <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+              <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+              <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+              <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+              <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+            </adlnav:navigationInterface>
+          </adlnav:presentation>
+        </item>
+        <imsss:sequencing>
+          <imsss:controlMode choice="false" choiceExit="false" flow="true" forwardOnly="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+          <imsss:sequencingRules>
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition condition="always" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitParent" />
+            </imsss:postConditionRule>
+          </imsss:sequencingRules>
+          <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" />
+        </imsss:sequencing>
+      </item>
+      <item identifier="CLUSTER-ADL-TEMPLATES-FLOWBACK" isvisible="false">
+        <title>HIDDEN</title>
+        <item identifier="SCO-ADL-TEMPLATES-FLOWBACK" identifierref="RES-FLOWBACK" isvisible="false">
+          <title>GOTO MENU</title>
+          <imsss:sequencing>
+            <imsss:sequencingRules>
+              <imsss:postConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition condition="always" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="retryAll" />
+              </imsss:postConditionRule>
+            </imsss:sequencingRules>
+          </imsss:sequencing>
+          <adlnav:presentation>
+            <adlnav:navigationInterface>
+              <adlnav:hideLMSUI>continue</adlnav:hideLMSUI>
+              <adlnav:hideLMSUI>previous</adlnav:hideLMSUI>
+              <adlnav:hideLMSUI>abandon</adlnav:hideLMSUI>
+              <adlnav:hideLMSUI>abandonAll</adlnav:hideLMSUI>
+              <adlnav:hideLMSUI>exitAll</adlnav:hideLMSUI>
+              <adlnav:hideLMSUI>exit</adlnav:hideLMSUI>
+            </adlnav:navigationInterface>
+          </adlnav:presentation>
+        </item>
+        <imsss:sequencing>
+          <imsss:controlMode choice="true" choiceExit="true" flow="true" forwardOnly="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+          <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" />
+        </imsss:sequencing>
+      </item>
+      <imsss:sequencing>
+        <imsss:controlMode flow="true" choice="false" />
+        <imsss:sequencingRules>
+          <imsss:postConditionRule>
+            <imsss:ruleConditions conditionCombination="all">
+              <imsss:ruleCondition condition="always" />
+            </imsss:ruleConditions>
+            <imsss:ruleAction action="retryAll" />
+          </imsss:postConditionRule>
+        </imsss:sequencingRules>
+        <imsss:rollupRules rollupObjectiveSatisfied="true" rollupProgressCompletion="true" objectiveMeasureWeight="0">
+          <imsss:rollupRule childActivitySet="all">
+            <imsss:rollupConditions conditionCombination="any">
+              <imsss:rollupCondition condition="satisfied" />
+            </imsss:rollupConditions>
+            <imsss:rollupAction action="satisfied" />
+          </imsss:rollupRule>
+          <imsss:rollupRule childActivitySet="any">
+            <imsss:rollupConditions conditionCombination="any">
+              <imsss:rollupCondition operator="not" condition="satisfied" />
+            </imsss:rollupConditions>
+            <imsss:rollupAction action="notSatisfied" />
+          </imsss:rollupRule>
+          <imsss:rollupRule childActivitySet="any">
+            <imsss:rollupConditions conditionCombination="any">
+              <imsss:rollupCondition operator="not" condition="satisfied" />
+            </imsss:rollupConditions>
+            <imsss:rollupAction action="incomplete" />
+          </imsss:rollupRule>
+          <imsss:rollupRule childActivitySet="all">
+            <imsss:rollupConditions conditionCombination="any">
+              <imsss:rollupCondition condition="completed" />
+            </imsss:rollupConditions>
+            <imsss:rollupAction action="completed" />
+          </imsss:rollupRule>
+        </imsss:rollupRules>
+      </imsss:sequencing>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="ONRETWELCOME" adlcp:scormType="sco" href="welcome.html" type="webcontent" xml:base="content/">
+      <file href="../util/apiwrapper.js" />
+      <file href="welcome.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+  </resources>
+</manifest>
+
