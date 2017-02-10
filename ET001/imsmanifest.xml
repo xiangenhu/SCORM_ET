@@ -8,7 +8,7 @@
   <organizations default="ONR ET (UM)">
     <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
       <title>ONR ET Course</title>
-      <item identifier="ONRET-WELCOME" identifierref="ETWELCOME" isvisible="true">
+      <item identifier="ONRET-WELCOME" identifierref="ONRETWELCOME" isvisible="true">
         <title>Welcome</title>
         <imsss:sequencing>
           <imsss:sequencingRules>
@@ -32,7 +32,7 @@
           </adlnav:navigationInterface>
         </adlnav:presentation>
       </item>
-      <item identifier="ONRET-NAVMENU" identifierref="ONRETNAVMENU" isvisible="true">
+      <item identifier="ONRET-NAVMENU" identifierref="Navigation" isvisible="true">
         <title>Nav Menu</title>
         <imsss:sequencing>
           <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="0" />
@@ -81,9 +81,9 @@
       </item>
       <item identifier="Transistors" isvisible="false">
         <title>Transistors</title>
-        <item identifier="ONRET-Transistors" isvisible="true">
+        <item identifier="ONRET-Transistors" identifierref="Transistor_AutoTutorDR" isvisible="true">
           <title>ONRET-Transistors</title>
-          <item identifier="AutoTutorDR" identifierref="AutoTutorDR">
+          <item identifier="AutoTutorDR" identifierref="Transistor_AutoTutorDR">
             <title>AutoTutorDR</title>
             <imsss:sequencing>
               <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
@@ -484,9 +484,16 @@
   </organizations>
   <resources>
     <resource identifier="ONRETWELCOME" adlcp:scormType="sco" href="welcome.html" type="webcontent" xml:base="content/">
-      <file href="../util/apiwrapper.js" />
       <file href="welcome.html" />
-      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Navigation" adlcp:scormType="sco" xml:base="content/" href="navigation.html" type="webcontent">
+      <file href="navigation.html" />
+    </resource>
+    <resource identifier="Transistor_AutoTutorDR" adlcp:scormType="sco" xml:base="content/AutoTutor DR/" href="AutoTutor_DR.html" type="webcontent">
+      <file href="AutoTutor_DR.html" />
+    </resource>
+    <resource identifier="Transistor_AutoTutorKC" adlcp:scormType="sco" xml:base="content/AutoTutor KC/" href="AutoTutor_KC.html" type="webcontent">
+      <file href="AutoTutor_KC.html" />
     </resource>
   </resources>
 </manifest>
