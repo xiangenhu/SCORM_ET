@@ -23,17 +23,17 @@
             <item identifier="ITEM-E27C450C3B047B46DF3A41A2DDC30CB0" isvisible="true">
               <title>Selected Readings</title>
             </item>
-            <item identifier="ITEM-D18BD3793FAA84D5895C130C81CB3269" isvisible="true">
+            <item identifier="ITEM-D18BD3793FAA84D5895C130C81CB3269" identifierref="Transistor_AutoTutorDR" isvisible="true">
               <title>AutoTutor DR</title>
               <item identifier="ITEM-7C8A59657E85401CBDD71E2397E90460" isvisible="true">
                 <title>AT_DR_High</title>
-                <item identifier="ITEM-681F4AB80371ACC0B88392394629EB9B" isvisible="true">
+                <item identifier="ITEM-681F4AB80371ACC0B88392394629EB9B" identifierref="Transistor_Dragoon" isvisible="true">
                   <title>Dragoon</title>
                 </item>
               </item>
               <item identifier="ITEM-9C91587BB2579BD131AB381412F3F2CC" isvisible="true">
                 <title>AT_DR_Low</title>
-                <item identifier="ITEM-BF1848C3BA09A14E231C8751459BF3C2" isvisible="true">
+                <item identifier="ITEM-BF1848C3BA09A14E231C8751459BF3C2" identifierref="Transistor_AutoTutorKC" isvisible="true">
                   <title>AutoTutor KC</title>
                 </item>
                 <item identifier="ITEM-311D194E1D19244395F147188A989474" isvisible="true">
@@ -68,11 +68,14 @@
     <resource identifier="Navigation" adlcp:scormType="sco" xml:base="content/" href="navigation.html" type="webcontent">
       <file href="navigation.html" />
     </resource>
-    <resource identifier="Transistor_AutoTutorDR" adlcp:scormType="sco" xml:base="content/AutoTutor DR/" href="AutoTutor_DR.html" type="webcontent">
+    <resource identifier="Transistor_AutoTutorDR" adlcp:scormType="sco" xml:base="content/Transistor/AutoTutor DR/" href="Transistor_AutoTutorDR" type="webcontent">
       <file href="AutoTutor_DR.html" />
     </resource>
-    <resource identifier="Transistor_AutoTutorKC" adlcp:scormType="sco" xml:base="content/AutoTutor KC/" href="AutoTutor_KC.html" type="webcontent">
+    <resource identifier="Transistor_AutoTutorKC" adlcp:scormType="sco" xml:base="content/Transistor/AutoTutor KC/" href="Transistor_AutoTutorKC" type="webcontent">
       <file href="AutoTutor_KC.html" />
+    </resource>
+    <resource identifier="Transistor_Dragoon" adlcp:scormType="asset" xml:base="content/Transistor/Dragoon/" href="Transistor_Dragoon" type="webcontent">
+      <file href="Dragoon.html" />
     </resource>
   </resources>
 </manifest>
