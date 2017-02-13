@@ -36,21 +36,21 @@
                 <item identifier="ITEM-BF1848C3BA09A14E231C8751459BF3C2" identifierref="Transistor_AutoTutorKC" isvisible="true">
                   <title>AutoTutor KC</title>
                 </item>
-                <item identifier="ITEM-311D194E1D19244395F147188A989474" isvisible="true">
+                <item identifier="ITEM-311D194E1D19244395F147188A989474" identifierref="Transistor_BBN" isvisible="true">
                   <title>BBN</title>
                 </item>
                 <item identifier="ITEM-C8D891D074948FEEBC166F7FBC825C17" isvisible="true">
                   <title>AT_KC_BBN_LOW</title>
-                  <item identifier="ITEM-C5448E22B49D8C14AB244779BBC81EE2" isvisible="true">
+                  <item identifier="ITEM-C5448E22B49D8C14AB244779BBC81EE2" identifierref="Transistor_ATT_Reading" isvisible="true">
                     <title>ATT Reading</title>
                   </item>
-                  <item identifier="ITEM-A5782681280F16FE70FF616919A0BD28" isvisible="true">
+                  <item identifier="ITEM-A5782681280F16FE70FF616919A0BD28" identifierref="Transistor_Skill_Builder" isvisible="true">
                     <title>Skill Builder</title>
                   </item>
                 </item>
                 <item identifier="ITEM-04A1F65169045799A624AA80425DA595" isvisible="true">
                   <title>AT_KC_BBN_HIGH</title>
-                  <item identifier="ITEM-A794E60E11F2028F2C23379435F10669" isvisible="true">
+                  <item identifier="ITEM-A794E60E11F2028F2C23379435F10669" identifierref="Transistor_New_AT_DRQ" isvisible="true">
                     <title>NEW AT DRQ</title>
                   </item>
                 </item>
@@ -96,6 +96,9 @@
     </resource>
     <resource identifier="Transistor_New_AT_DRQ" adlcp:scormType="sco" xml:base="content/Transistor/New AT DRQ/" href="Transistor_New_AT_DRQ" type="webcontent">
       <file href="New AT DRQ.html" />
+    </resource>
+    <resource identifier="Transistor_BBN" adlcp:scormType="sco" xml:base="content/Transistor/BBN/" href="Transistor_BBN" type="webcontent">
+      <file href="BBN.html" />
     </resource>
   </resources>
 </manifest>
