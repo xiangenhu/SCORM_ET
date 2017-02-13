@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 1.1.1 SCORM 2004 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:lom="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-212B1660-42AC-DF6A-CE59-BACBB1ED1B06" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd" version="1.3">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 3rd Edition</schemaversion>
+  </metadata>
+  <organizations default="ORG-1925312C-3E44-B994-5BAC-242566FC7EB3">
+    <organization identifier="ORG-1925312C-3E44-B994-5BAC-242566FC7EB3" adlseq:objectivesGlobalToSystem="false">
+      <title>Template 9 - 3-Way Branching</title>
+      <item identifier="ITEM-F0A8A678-4179-A25F-5823-B28CD4D49809" identifierref="RES-A2821DB6-9C9E-C1A2-8E46-80A3AA02ABDD">
+        <title>Question</title>
+        <imsss:sequencing>
+          <imsss:objectives>
+            <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="obj_1">
+              <imsss:mapInfo targetObjectiveID="urn:lsal.org/template9/obj-1" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="true" />
+            </imsss:primaryObjective>
+          </imsss:objectives>
+        </imsss:sequencing>
+      </item>
+      <item identifier="ITEM-5DC069BC-98A3-4895-F98C-2F89F78F50B0" identifierref="RES-E4F36055-438F-D621-8CC4-8341CA125060">
+        <title>SCO_2</title>
+        <imsss:sequencing>
+          <imsss:sequencingRules>
+            <imsss:preConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition operator="noOp" referencedObjective="primary-obj" measureThreshold="0" condition="objectiveMeasureGreaterThan" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="skip" />
+            </imsss:preConditionRule>
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition operator="noOp" condition="completed" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitParent" />
+            </imsss:postConditionRule>
+          </imsss:sequencingRules>
+          <imsss:objectives>
+            <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="primary-obj">
+              <imsss:mapInfo targetObjectiveID="urn:lsal.org/template9/obj-1" readSatisfiedStatus="false" readNormalizedMeasure="true" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+            </imsss:primaryObjective>
+          </imsss:objectives>
+        </imsss:sequencing>
+      </item>
+      <item identifier="ITEM-44BC9C21-D73B-5E50-6126-32FE77EF0627" identifierref="RES-31DEFC02-3EED-C5CF-DE01-C163525F65ED">
+        <title>SCO_3</title>
+        <imsss:sequencing>
+          <imsss:sequencingRules>
+            <imsss:preConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition operator="noOp" referencedObjective="primary-obj" measureThreshold="0.5" condition="objectiveMeasureGreaterThan" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="skip" />
+            </imsss:preConditionRule>
+            <imsss:preConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition operator="noOp" referencedObjective="primary-obj" measureThreshold="0.5" condition="objectiveMeasureLessThan" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="skip" />
+            </imsss:preConditionRule>
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition operator="noOp" condition="completed" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitParent" />
+            </imsss:postConditionRule>
+          </imsss:sequencingRules>
+          <imsss:objectives>
+            <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="primary-obj">
+              <imsss:mapInfo targetObjectiveID="urn:lsal.org/template9/obj-1" readSatisfiedStatus="false" readNormalizedMeasure="true" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+            </imsss:primaryObjective>
+          </imsss:objectives>
+        </imsss:sequencing>
+      </item>
+      <item identifier="ITEM-23FDB133-51C6-2ED2-54FF-E8D0C682FD14" identifierref="RES-8CE81A78-84DC-CB88-B2D4-BAA3F5A5613C">
+        <title>SCO_4</title>
+        <imsss:sequencing>
+          <imsss:sequencingRules>
+            <imsss:preConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition operator="noOp" referencedObjective="primary-obj" measureThreshold="1" condition="objectiveMeasureLessThan" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="skip" />
+            </imsss:preConditionRule>
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition operator="noOp" condition="completed" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitParent" />
+            </imsss:postConditionRule>
+          </imsss:sequencingRules>
+          <imsss:objectives>
+            <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="primary-obj">
+              <imsss:mapInfo targetObjectiveID="obj_1" readSatisfiedStatus="false" readNormalizedMeasure="true" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+            </imsss:primaryObjective>
+          </imsss:objectives>
+        </imsss:sequencing>
+      </item>
+      <imsss:sequencing>
+        <imsss:controlMode choice="false" choiceExit="true" flow="true" forwardOnly="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+        <imsss:rollupRules rollupObjectiveSatisfied="true" rollupProgressCompletion="true" objectiveMeasureWeight="0">
+          <imsss:rollupRule childActivitySet="atLeastCount" minimumCount="2">
+            <imsss:rollupConditions conditionCombination="any">
+              <imsss:rollupCondition condition="satisfied" />
+            </imsss:rollupConditions>
+            <imsss:rollupAction action="satisfied" />
+          </imsss:rollupRule>
+          <imsss:rollupRule childActivitySet="atLeastCount" minimumCount="2">
+            <imsss:rollupConditions conditionCombination="any">
+              <imsss:rollupCondition condition="completed" />
+            </imsss:rollupConditions>
+            <imsss:rollupAction action="completed" />
+          </imsss:rollupRule>
+        </imsss:rollupRules>
+      </imsss:sequencing>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-A2821DB6-9C9E-C1A2-8E46-80A3AA02ABDD" href="SCO_1.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO_1.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="RES-E4F36055-438F-D621-8CC4-8341CA125060" href="SCO_2.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO_2.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="RES-31DEFC02-3EED-C5CF-DE01-C163525F65ED" href="SCO_3.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO_3.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="RES-8CE81A78-84DC-CB88-B2D4-BAA3F5A5613C" href="SCO_4.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO_4.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+  </resources>
+</manifest>
+
