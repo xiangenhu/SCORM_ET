@@ -20,7 +20,7 @@
           <title>OppeningPage</title>
           <item identifier="ITEM-44C89EF32402FAB7074831BFC5C2A6B4" isvisible="true">
             <title>Starting Of the Course</title>
-            <item identifier="ITEM-E27C450C3B047B46DF3A41A2DDC30CB0" isvisible="true">
+            <item identifier="ITEM-E27C450C3B047B46DF3A41A2DDC30CB0" identifierref="Transistor_Selected_Readings" isvisible="true">
               <title>Selected Readings</title>
             </item>
             <item identifier="ITEM-D18BD3793FAA84D5895C130C81CB3269" identifierref="Transistor_AutoTutorDR" isvisible="true">
@@ -74,8 +74,28 @@
     <resource identifier="Transistor_AutoTutorKC" adlcp:scormType="sco" xml:base="content/Transistor/AutoTutor KC/" href="Transistor_AutoTutorKC" type="webcontent">
       <file href="AutoTutor_KC.html" />
     </resource>
-    <resource identifier="Transistor_Dragoon" adlcp:scormType="asset" xml:base="content/Transistor/Dragoon/" href="Transistor_Dragoon" type="webcontent">
+    <resource identifier="Transistor_Dragoon" adlcp:scormType="sco" xml:base="content/Transistor/Dragoon/" href="Transistor_Dragoon" type="webcontent">
       <file href="Dragoon.html" />
+    </resource>
+    <resource identifier="Transistor_ATT_Reading" adlcp:scormType="sco" xml:base="content/Transistor/ATT Reading/" href="Transistor_ATT_Reading" type="webcontent">
+      <file href="ATTReading01.html" />
+      <file href="ATTReading02.html" />
+      <file href="ATTReading03.html" />
+      <file href="ATTReading04.html" />
+      <file href="ATTReading05.html" />
+    </resource>
+    <resource identifier="Transistor_Skill_Builder" adlcp:scormType="sco" xml:base="content/Transistor/Skill Builder/" href="Transistor_Skill_Builder" type="webcontent">
+      <file href="Skill Builder.html" />
+    </resource>
+    <resource identifier="Transistor_Selected_Readings" adlcp:scormType="sco" xml:base="content/Transistor/Selected Readings/" href="Transistor_Selected_Readings" type="webcontent">
+      <file href="SelectedReading01.html" />
+      <file href="SelectedReading02.html" />
+      <file href="SelectedReading03.html" />
+      <file href="SelectedReading04.html" />
+      <file href="SelectedReading05.html" />
+    </resource>
+    <resource identifier="Transistor_New_AT_DRQ" adlcp:scormType="sco" xml:base="content/Transistor/New AT DRQ/" href="Transistor_New_AT_DRQ" type="webcontent">
+      <file href="New AT DRQ.html" />
     </resource>
   </resources>
 </manifest>
