@@ -10,6 +10,8 @@
       <title>ONR ET Course</title>
       <item identifier="ONRET-WELCOME" identifierref="ONRETWELCOME" isvisible="true">
         <title>Welcome</title>
+        <adlnav:presentation />
+        <imsss:sequencing />
       </item>
       <item identifier="ONRET-NAVMENU" identifierref="Navigation" isvisible="true">
         <title>Nav Menu</title>
@@ -25,34 +27,34 @@
             </item>
             <item identifier="ITEM-D18BD3793FAA84D5895C130C81CB3269" identifierref="Transistor_AutoTutorDR" isvisible="true">
               <title>AutoTutor DR</title>
-              <item identifier="ITEM-7C8A59657E85401CBDD71E2397E90460" isvisible="true">
-                <title>AT_DR_High</title>
-                <item identifier="ITEM-681F4AB80371ACC0B88392394629EB9B" identifierref="Transistor_Dragoon" isvisible="true">
-                  <title>Dragoon</title>
+            </item>
+            <item identifier="ITEM-7C8A59657E85401CBDD71E2397E90460" isvisible="true">
+              <title>AT_DR_High</title>
+              <item identifier="ITEM-681F4AB80371ACC0B88392394629EB9B" identifierref="Transistor_Dragoon" isvisible="true">
+                <title>Dragoon</title>
+              </item>
+            </item>
+            <item identifier="ITEM-9C91587BB2579BD131AB381412F3F2CC" isvisible="true">
+              <title>AT_DR_Low</title>
+              <item identifier="ITEM-BF1848C3BA09A14E231C8751459BF3C2" identifierref="Transistor_AutoTutorKC" isvisible="true">
+                <title>AutoTutor KC</title>
+              </item>
+              <item identifier="ITEM-311D194E1D19244395F147188A989474" identifierref="Transistor_BBN" isvisible="true">
+                <title>BBN</title>
+              </item>
+              <item identifier="ITEM-C8D891D074948FEEBC166F7FBC825C17" isvisible="true">
+                <title>AT_KC_BBN_LOW</title>
+                <item identifier="ITEM-C5448E22B49D8C14AB244779BBC81EE2" identifierref="Transistor_ATT_Reading" isvisible="true">
+                  <title>ATT Reading</title>
+                </item>
+                <item identifier="ITEM-A5782681280F16FE70FF616919A0BD28" identifierref="Transistor_Skill_Builder" isvisible="true">
+                  <title>Skill Builder</title>
                 </item>
               </item>
-              <item identifier="ITEM-9C91587BB2579BD131AB381412F3F2CC" isvisible="true">
-                <title>AT_DR_Low</title>
-                <item identifier="ITEM-BF1848C3BA09A14E231C8751459BF3C2" identifierref="Transistor_AutoTutorKC" isvisible="true">
-                  <title>AutoTutor KC</title>
-                </item>
-                <item identifier="ITEM-311D194E1D19244395F147188A989474" identifierref="Transistor_BBN" isvisible="true">
-                  <title>BBN</title>
-                </item>
-                <item identifier="ITEM-C8D891D074948FEEBC166F7FBC825C17" isvisible="true">
-                  <title>AT_KC_BBN_LOW</title>
-                  <item identifier="ITEM-C5448E22B49D8C14AB244779BBC81EE2" identifierref="Transistor_ATT_Reading" isvisible="true">
-                    <title>ATT Reading</title>
-                  </item>
-                  <item identifier="ITEM-A5782681280F16FE70FF616919A0BD28" identifierref="Transistor_Skill_Builder" isvisible="true">
-                    <title>Skill Builder</title>
-                  </item>
-                </item>
-                <item identifier="ITEM-04A1F65169045799A624AA80425DA595" isvisible="true">
-                  <title>AT_KC_BBN_HIGH</title>
-                  <item identifier="ITEM-A794E60E11F2028F2C23379435F10669" identifierref="Transistor_New_AT_DRQ" isvisible="true">
-                    <title>NEW AT DRQ</title>
-                  </item>
+              <item identifier="ITEM-04A1F65169045799A624AA80425DA595" isvisible="true">
+                <title>AT_KC_BBN_HIGH</title>
+                <item identifier="ITEM-A794E60E11F2028F2C23379435F10669" identifierref="Transistor_New_AT_DRQ" isvisible="true">
+                  <title>NEW AT DRQ</title>
                 </item>
               </item>
             </item>
@@ -66,8 +68,8 @@
       <file href="welcome.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Navigation" adlcp:scormType="sco" xml:base="Content/" href="navigation.html" type="webcontent">
-      <file href="navigation.html" />
+    <resource identifier="Navigation" adlcp:scormType="sco" xml:base="Content/" href="Navigation.html" type="webcontent">
+      <file href="Navigation.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
     <resource identifier="Transistor_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Transistor/AutoTutor DR/" href="AutoTutor_DR.html" type="webcontent">
