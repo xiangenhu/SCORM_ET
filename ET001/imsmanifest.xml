@@ -70,19 +70,19 @@
       <file href="navigation.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_AutoTutorDR" adlcp:scormType="sco" xml:base="content/Transistor/AutoTutor DR/" href="AutoTutor_DR.html" type="webcontent">
+    <resource identifier="Transistor_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Transistor/AutoTutor DR/" href="AutoTutor_DR.html" type="webcontent">
       <file href="AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_AutoTutorKC" adlcp:scormType="sco" xml:base="content/Transistor/AutoTutor KC/" href="AutoTutor_KC.html" type="webcontent">
+    <resource identifier="Transistor_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Transistor/AutoTutor KC/" href="AutoTutor_KC.html" type="webcontent">
       <file href="AutoTutor_KC.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_Dragoon" adlcp:scormType="sco" xml:base="content/Transistor/Dragoon/" href="Dragoon.html" type="webcontent">
+    <resource identifier="Transistor_Dragoon" adlcp:scormType="sco" xml:base="Content/Transistor/Dragoon/" href="Dragoon.html" type="webcontent">
       <file href="Dragoon.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_ATT_Reading" adlcp:scormType="sco" xml:base="content/Transistor/ATT Reading/" href="ATTReading01.html" type="webcontent">
+    <resource identifier="Transistor_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Transistor/ATT Reading/" href="ATTReading01.html" type="webcontent">
       <file href="ATTReading01.html" />
       <file href="ATTReading02.html" />
       <file href="ATTReading03.html" />
@@ -90,11 +90,11 @@
       <file href="ATTReading05.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_Skill_Builder" adlcp:scormType="sco" xml:base="content/Transistor/Skill Builder/" href="Skill Builder.html" type="webcontent">
+    <resource identifier="Transistor_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Transistor/Skill Builder/" href="Skill Builder.html" type="webcontent">
       <file href="Skill Builder.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_Selected_Readings" adlcp:scormType="sco" xml:base="content/Transistor/Selected Readings/" href="SelectedReading01.html" type="webcontent">
+    <resource identifier="Transistor_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Transistor/Selected Readings/" href="SelectedReading01.html" type="webcontent">
       <file href="SelectedReading01.html" />
       <file href="SelectedReading02.html" />
       <file href="SelectedReading03.html" />
@@ -102,15 +102,15 @@
       <file href="SelectedReading05.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_New_AT_DRQ" adlcp:scormType="sco" xml:base="content/Transistor/New AT DRQ/" href="New AT DRQ.html" type="webcontent">
+    <resource identifier="Transistor_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Transistor/New AT DRQ/" href="New AT DRQ.html" type="webcontent">
       <file href="New AT DRQ.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_BBN" adlcp:scormType="sco" xml:base="content/Transistor/BBN/" href="BBN.html" type="webcontent">
+    <resource identifier="Transistor_BBN" adlcp:scormType="sco" xml:base="Content/Transistor/BBN/" href="BBN.html" type="webcontent">
       <file href="BBN.html" />
       <dependency identifierref="" />
     </resource>
-    <resource identifier="RES-COMMON" adlcp:scormType="asset" xml:base="content/" type="webcontent" />
+    <resource identifier="RES-COMMON" adlcp:scormType="asset" xml:base="Content/" type="webcontent" />
   </resources>
 </manifest>
 
