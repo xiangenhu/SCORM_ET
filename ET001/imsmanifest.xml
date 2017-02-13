@@ -86,10 +86,6 @@
     </resource>
     <resource identifier="Transistor_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Transistor/ATT Reading/" href="ATTReading01.html" type="webcontent">
       <file href="ATTReading01.html" />
-      <file href="ATTReading02.html" />
-      <file href="ATTReading03.html" />
-      <file href="ATTReading04.html" />
-      <file href="ATTReading05.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
     <resource identifier="Transistor_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Transistor/Skill Builder/" href="Skill Builder.html" type="webcontent">
@@ -98,10 +94,6 @@
     </resource>
     <resource identifier="Transistor_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Transistor/Selected Readings/" href="SelectedReading01.html" type="webcontent">
       <file href="SelectedReading01.html" />
-      <file href="SelectedReading02.html" />
-      <file href="SelectedReading03.html" />
-      <file href="SelectedReading04.html" />
-      <file href="SelectedReading05.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
     <resource identifier="Transistor_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Transistor/New AT DRQ/" href="New AT DRQ.html" type="webcontent">
