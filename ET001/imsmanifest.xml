@@ -14,7 +14,7 @@
       <item identifier="ONRET-NAVMENU" identifierref="Navigation" isvisible="true">
         <title>Nav Menu</title>
       </item>
-      <item identifier="Transistors" isvisible="false">
+      <item identifier="Transistors" isvisible="true">
         <title>Transistors</title>
         <item identifier="ITEM-6E3CB5D4A2E9967CA285062B8BBA5D60" isvisible="true">
           <title>OppeningPage</title>
@@ -62,10 +62,10 @@
     </organization>
   </organizations>
   <resources>
-    <resource identifier="ONRETWELCOME" adlcp:scormType="sco" href="welcome.html" type="webcontent" xml:base="content/">
+    <resource identifier="ONRETWELCOME" adlcp:scormType="sco" href="welcome.html" type="webcontent" xml:base="Content/">
       <file href="welcome.html" />
     </resource>
-    <resource identifier="Navigation" adlcp:scormType="sco" xml:base="content/" href="navigation.html" type="webcontent">
+    <resource identifier="Navigation" adlcp:scormType="sco" xml:base="Content/" href="navigation.html" type="webcontent">
       <file href="navigation.html" />
     </resource>
     <resource identifier="Transistor_AutoTutorDR" adlcp:scormType="sco" xml:base="content/Transistor/AutoTutor DR/" href="Transistor_AutoTutorDR" type="webcontent">
