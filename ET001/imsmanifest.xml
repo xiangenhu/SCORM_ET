@@ -62,7 +62,7 @@
     </organization>
   </organizations>
   <resources>
-    <resource identifier="ONRETWELCOME" adlcp:scormType="sco" href="welcome.html" type="webcontent" xml:base="Content/">
+    <resource identifier="ONRETWELCOME" adlcp:scormType="sco" href="Welcome.html" type="webcontent" xml:base="Content/">
       <file href="welcome.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
