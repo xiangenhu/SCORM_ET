@@ -242,13 +242,139 @@
         </item>
       </item>
       <item identifier="ITEM-1400FC5759E946BD81D16C5F28FFA392" isvisible="true">
-        <title>Item</title>
+        <title>Parallel_circuit</title>
+        <item identifier="ITEM-62DE7082EE3505A5C4D60DF85D23C145" isvisible="true">
+          <title>Opening Page</title>
+          <item identifier="ITEM-A21C2035B6909095F41ABD8AC0E12914" isvisible="true">
+            <title>Starting of the Course</title>
+            <item identifier="ITEM-4C919293CE555004E56AA3A741D1BBC6" identifierref="Parallel_circuit_Selected_Readings" isvisible="true">
+              <title>Selected Reading</title>
+            </item>
+            <item identifier="ITEM-27EB8555318E3C5F174D07FAFC9D371E" identifierref="Parallel_circuit_AutoTutorDR" isvisible="true">
+              <title>AutoTutor DR</title>
+            </item>
+            <item identifier="ITEM-14AD0168400A3F24E4208B94234444C7" isvisible="true">
+              <title>AT_DR_High</title>
+              <item identifier="ITEM-CF4ACD80B6043CA515C786DA42D4DF00" identifierref="Parallel_circuit_Dragoon" isvisible="true">
+                <title>Dragoon</title>
+              </item>
+            </item>
+            <item identifier="ITEM-130868DEEF3BC8A357C921A062BFFF15" isvisible="true">
+              <title>AT_DR_Low</title>
+              <item identifier="ITEM-B714C45F1A96B4DA793EEBC507C07C7B" identifierref="Parallel_circuit_AutoTutorKC" isvisible="true">
+                <title>AutoTutor KC</title>
+              </item>
+              <item identifier="ITEM-1EC0DF09809A63A306FAEA8A86AD4ABF" identifierref="Parallel_circuit_BBN" isvisible="true">
+                <title>BBN</title>
+              </item>
+              <item identifier="ITEM-D53F215E385E889B27E4C5ECF141F736" isvisible="true">
+                <title>AT_KC_BBN_LOW</title>
+                <item identifier="ITEM-968D3281E4D86255D870FDAD890997F7" identifierref="Parallel_circuit_ATT_Reading" isvisible="true">
+                  <title>ATT Reading</title>
+                </item>
+                <item identifier="ITEM-EE6849B5FB53114ACE5E818DE2AE12CA" identifierref="Parallel_circuit_Skill_Builder" isvisible="true">
+                  <title>Skill Builder</title>
+                </item>
+              </item>
+              <item identifier="ITEM-CFC073BF1A0AE30C6748E8E670D45A45" isvisible="true">
+                <title>AT_KC_BBN_HIGH</title>
+                <item identifier="ITEM-26AD3B5B4DD3750A71B24DDF67574F55" identifierref="Parallel_circuit_New_AT_DRQ" isvisible="true">
+                  <title>NEW AT DRQ</title>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
       </item>
       <item identifier="ITEM-E9FFE6ED6DA088202CFD056805F5C6A5" isvisible="true">
-        <title>Item</title>
+        <title>Ohm_law</title>
+        <item identifier="ITEM-855766DFA90CB53E72862A15CB074FE5" isvisible="true">
+          <title>Opening Page</title>
+          <item identifier="ITEM-C732ECBCB0BE681CB43B9B3B3367804D" isvisible="true">
+            <title>Starting of the Course</title>
+            <item identifier="ITEM-83AF2A2D71180CA09EF876FE9A3CAE1C" identifierref="Ohm_law_Selected_Readings" isvisible="true">
+              <title>Selected Reading</title>
+            </item>
+            <item identifier="ITEM-8CAA3EDF9FC75099981CBE23F226322A" identifierref="Ohm_law_AutoTutorDR" isvisible="true">
+              <title>AutoTutor DR</title>
+            </item>
+            <item identifier="ITEM-FE021F0025A43B689F0CC6D011AACE5F" isvisible="true">
+              <title>AT_DR_High</title>
+              <item identifier="ITEM-0439EF08211BB7810C755103C4EF19B1" identifierref="Ohm_law_Dragoon" isvisible="true">
+                <title>Dragoon</title>
+              </item>
+            </item>
+            <item identifier="ITEM-DE5CD718A22A7EF766B2D64051387A66" isvisible="true">
+              <title>AT_DR_Low</title>
+              <item identifier="ITEM-894AFCEA95C01D285B7DA63F2296F74E" identifierref="Ohm_law_AutoTutorKC" isvisible="true">
+                <title>AutoTutor KC</title>
+              </item>
+              <item identifier="ITEM-03584189BEB06EF9DA280432AEEFDA31" identifierref="Ohm_law_BBN" isvisible="true">
+                <title>BBN</title>
+              </item>
+              <item identifier="ITEM-CF44BE74B929DAFFF8764A83951CD590" isvisible="true">
+                <title>AT_KC_BBN_LOW</title>
+                <item identifier="ITEM-126A76D9DDA6C9787C032AA078E587B9" identifierref="Ohm_law_ATT_Reading" isvisible="true">
+                  <title>ATT Reading</title>
+                </item>
+                <item identifier="ITEM-A8CADB7C6FD381A184ABA6FC5F237E14" identifierref="Ohm_law_Skill_Builder" isvisible="true">
+                  <title>Skill Builder</title>
+                </item>
+              </item>
+              <item identifier="ITEM-EB33BD22249499ED896860F82A25FE03" isvisible="true">
+                <title>AT_KC_BBN_HIGH</title>
+                <item identifier="ITEM-D25C976F48BE3335CED34DD6E45FCC20" identifierref="Ohm_law_New_AT_DRQ" isvisible="true">
+                  <title>NEW AT DRQ</title>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
       </item>
       <item identifier="ITEM-BDDC03D3B60490AB6BA83CDB3804E23A" isvisible="true">
-        <title>Item</title>
+        <title>MultiStage_amplifier</title>
+        <item identifier="ITEM-82DA40A952EBDB7BEA31293FC416B052" isvisible="true">
+          <title>Opening Page</title>
+          <item identifier="ITEM-54CF45B7653359DC443005A35BABE4D5" isvisible="true">
+            <title>Starting of the Course</title>
+            <item identifier="ITEM-45425DC5E4D616B71FCBDAF50A03B731" identifierref="MultiStage_amplifier_Selected_Readings" isvisible="true">
+              <title>Selected Reading</title>
+            </item>
+            <item identifier="ITEM-C69EA4B0EA1B036A681AAF15231A5FC5" identifierref="MultiStage_amplifier_AutoTutorDR" isvisible="true">
+              <title>AutoTutor DR</title>
+            </item>
+            <item identifier="ITEM-96A8E1A17471C887B7526FD07DBC0371" isvisible="true">
+              <title>AT_DR_High</title>
+              <item identifier="ITEM-2BC8D2F8BB9F2D6180C5F23CD14B483B" identifierref="MultiStage_amplifier_Dragoon" isvisible="true">
+                <title>Dragoon</title>
+              </item>
+            </item>
+            <item identifier="ITEM-0DCA54133831C23EB3565C63DC58C05C" isvisible="true">
+              <title>AT_DR_Low</title>
+              <item identifier="ITEM-E0294AB3E40C8D621D208D0106A36609" identifierref="MultiStage_amplifier_AutoTutorKC" isvisible="true">
+                <title>AutoTutor KC</title>
+              </item>
+              <item identifier="ITEM-ABA35A15724B90DAA155C1EF67C52D00" identifierref="MultiStage_amplifier_BBN" isvisible="true">
+                <title>BBN</title>
+              </item>
+              <item identifier="ITEM-45CA28F5291568CA437921564586FFF5" isvisible="true">
+                <title>AT_KC_BBN_LOW</title>
+                <item identifier="ITEM-895A904B7BFABFEC9125E838D7FE7D31" identifierref="MultiStage_amplifier_ATT_Reading" isvisible="true">
+                  <title>ATT Reading</title>
+                </item>
+                <item identifier="ITEM-ADBF6006855D22CD6588CABBB2E07B31" identifierref="MultiStage_amplifier_Skill_Builder" isvisible="true">
+                  <title>Skill Builder</title>
+                </item>
+              </item>
+              <item identifier="ITEM-8339A7153C6C7149B5CA3D01F486EF74" isvisible="true">
+                <title>AT_KC_BBN_HIGH</title>
+                <item identifier="ITEM-44B5789BD7AFE951A0A09CB7CDA1BFF0" isvisible="true">
+                  <title>NEW AT DRQ</title>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
       </item>
     </organization>
   </organizations>
