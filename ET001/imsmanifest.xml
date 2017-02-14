@@ -548,7 +548,97 @@
               </item>
               <item identifier="ITEM-7F08C4CE43D706D5F40DB313F5BD9B8F" isvisible="true">
                 <title>AT_KC_BBN_HIGH</title>
-                <item identifier="ITEM-9AF2C55EC1BFDF8BB91ACAD55DF9D239" isvisible="true">
+                <item identifier="ITEM-9AF2C55EC1BFDF8BB91ACAD55DF9D239" identifierref="CE_amplifier_battery_bias_New_AT_DRQ" isvisible="true">
+                  <title>NEW AT DRQ</title>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+      </item>
+      <item identifier="ITEM-EAF37D0F65DCBEADF3FA861947786399" isvisible="true">
+        <title>CC_amplifier</title>
+        <item identifier="ITEM-94EEA5C94ED4160165254C0D0C259029" isvisible="true">
+          <title>Opening Page</title>
+          <item identifier="ITEM-9CFEE4C444692D3198899F150A938A30" isvisible="true">
+            <title>Starting of the Course</title>
+            <item identifier="ITEM-818C2574D3C9B9098EB6F1568C94F144" identifierref="CC_amplifier_Selected_Readings" isvisible="true">
+              <title>Selected Reading</title>
+            </item>
+            <item identifier="ITEM-5DFD3CF14A5ED8C1C201F7BCC1A98AA0" identifierref="CC_amplifier_AutoTutorDR" isvisible="true">
+              <title>AutoTutor DR</title>
+            </item>
+            <item identifier="ITEM-905B7B98A90AFEF9E8FDD152C7A590C9" isvisible="true">
+              <title>AT_DR_High</title>
+              <item identifier="ITEM-BF4FCF1824DD5BCAF46BE4BFFE190B46" identifierref="CC_amplifier_Dragoon" isvisible="true">
+                <title>Dragoon</title>
+              </item>
+            </item>
+            <item identifier="ITEM-6411519897B983BDD6CDF5CC78A1CADC" isvisible="true">
+              <title>AT_DR_Low</title>
+              <item identifier="ITEM-2606645A93CA289E395D06A09D692A7C" identifierref="CC_amplifier_AutoTutorKC" isvisible="true">
+                <title>AutoTutor KC</title>
+              </item>
+              <item identifier="ITEM-B20B7795324016AD32A905BEF5B3E4D3" identifierref="CC_amplifier_BBN" isvisible="true">
+                <title>BBN</title>
+              </item>
+              <item identifier="ITEM-5F159273D63B6C8458277E6B251C67DC" isvisible="true">
+                <title>AT_KC_BBN_LOW</title>
+                <item identifier="ITEM-9CB437BB7F0709EEAE29C1DECFA7118E" identifierref="CC_amplifier_ATT_Reading" isvisible="true">
+                  <title>ATT Reading</title>
+                </item>
+                <item identifier="ITEM-AC347BBAEBE27AED95D61897FBFA71C6" identifierref="CC_amplifier_Skill_Builder" isvisible="true">
+                  <title>Skill Builder</title>
+                </item>
+              </item>
+              <item identifier="ITEM-95C2E7EB2196F1807C0658609B8A2F66" isvisible="true">
+                <title>AT_KC_BBN_HIGH</title>
+                <item identifier="ITEM-B8B4AC41266ED72E07147D5B16838465" identifierref="CC_amplifier_New_AT_DRQ" isvisible="true">
+                  <title>NEW AT DRQ</title>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+      </item>
+      <item identifier="ITEM-7659AE6FA23E730A9CB465C6A3B0BE75" isvisible="true">
+        <title>CB_amplifier</title>
+        <item identifier="ITEM-E387DBDD2192B7915E40A09BFFB5DF35" isvisible="true">
+          <title>Opening Page</title>
+          <item identifier="ITEM-86B56A2101EF48A3F2E7AC29631224C9" isvisible="true">
+            <title>Starting of the Course</title>
+            <item identifier="ITEM-AC88DEAEB3B4D8910F74126E86720A64" identifierref="CB_amplifier_Selected_Readings" isvisible="true">
+              <title>Selected Reading</title>
+            </item>
+            <item identifier="ITEM-286113A5202D543690C18CB224EFAEC8" identifierref="CB_amplifier_AutoTutorDR" isvisible="true">
+              <title>AutoTutor DR</title>
+            </item>
+            <item identifier="ITEM-3C796FCEC3263078A53572B682DCF5AC" isvisible="true">
+              <title>AT_DR_High</title>
+              <item identifier="ITEM-3DE1362E22A348AF1B49B30BC87E4D03" identifierref="CB_amplifier_Dragoon" isvisible="true">
+                <title>Dragoon</title>
+              </item>
+            </item>
+            <item identifier="ITEM-4AB71A29A0578457DFD338A6961168DA" isvisible="true">
+              <title>AT_DR_Low</title>
+              <item identifier="ITEM-67350D852A718E2EB9800C84CEE8D56E" identifierref="CB_amplifier_AutoTutorKC" isvisible="true">
+                <title>AutoTutor KC</title>
+              </item>
+              <item identifier="ITEM-7B04BD579B9DDBB47E37BE1CD8234410" identifierref="CB_amplifier_BBN" isvisible="true">
+                <title>BBN</title>
+              </item>
+              <item identifier="ITEM-14AB95E390AF756F34ED48E1DCF17716" isvisible="true">
+                <title>AT_KC_BBN_LOW</title>
+                <item identifier="ITEM-E6CCDA65B025695DF8EBF717B7A90E74" identifierref="CB_amplifier_ATT_Reading" isvisible="true">
+                  <title>ATT Reading</title>
+                </item>
+                <item identifier="ITEM-7043F46182A9AA67AFEF42C9C2D38D50" identifierref="CB_amplifier_Skill_Builder" isvisible="true">
+                  <title>Skill Builder</title>
+                </item>
+              </item>
+              <item identifier="ITEM-271B44763CB2126861438DC2DDE521C2" isvisible="true">
+                <title>AT_KC_BBN_HIGH</title>
+                <item identifier="ITEM-76D140CB9932F4733E004201EB5BEB2B" identifierref="CB_amplifier_New_AT_DRQ" isvisible="true">
                   <title>NEW AT DRQ</title>
                 </item>
               </item>
