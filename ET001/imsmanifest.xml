@@ -6,7 +6,7 @@
     <schemaversion>2004 4th Edition</schemaversion>
   </metadata>
   <organizations default="ONR ET (UM)">
-    <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
+    <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false" structure="hierarchical">
       <title>ONR ET Course</title>
       <item identifier="ONRET-WELCOME" identifierref="ONRETWELCOME" isvisible="true">
         <title>Welcome</title>
@@ -65,7 +65,7 @@
   </organizations>
   <resources>
     <resource identifier="ONRETWELCOME" adlcp:scormType="sco" href="Welcome.html" type="webcontent" xml:base="Content/">
-      <file href="welcome.html" />
+      <file href="Welcome.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
     <resource identifier="Navigation" adlcp:scormType="sco" xml:base="Content/" href="Navigation.html" type="webcontent">
