@@ -1,0 +1,160 @@
+#templateHeader
+{
+    position:absolute;
+    top:1px;
+    left:0px;
+    padding:0px 0px;
+    height:38px;
+}
+
+#templateFooter
+{
+    position:absolute;
+    top:565px;
+    left:630px;
+    z-index: 999;
+}
+
+#content
+{
+    position:absolute;
+    top:75px;
+    left:30px;
+    width:770px;
+    z-index: 0;
+}
+#buttons
+{
+    position:absolute;
+    top:470px;
+    left:100px;
+    text-align:center;
+}
+
+#hideButton
+{
+    text-align: center;
+}
+
+#descriptionDiv
+{
+    position: absolute;
+    top: 65px;
+    left: 600px;
+    height:505px;
+    width:201px;
+/*    background-color: #000000; 
+    filter:alpha(opacity=20);
+    opacity:0.2; */
+    visibility:visible;
+    z-index:1;
+}
+
+#descriptionDivBG
+{
+    position: absolute;
+    top: 65px;
+    left: 600px;
+    height:505px;
+    width:201px;
+    background-color: #000000; 
+    filter:alpha(opacity=20);
+    opacity:0.2;
+    visibility:visible;
+    z-index:0;
+}
+
+.popupHeader
+{
+    position:relative;
+    top:0px;
+    left:0px;
+    width:100%; 
+    visibility:inherit;
+    background-color:#235496;
+    font-style:normal;
+    font-family:"verdana","sans-serif";
+    color:#FFFFFF;
+    text-align:center;
+    z-index:998;
+}
+
+.popupDesc
+{
+    visibility:visible;
+    border-width:5px;
+    border-style:solid;
+    border-color:#aaaaaa; 
+    width:600px;
+    z-index:999;
+    background-color:#FFFFFF;
+}
+
+.popupDescText
+{
+    position:relative;
+    top:0px;
+    left:0px;
+    width:95%;
+    min-height:300px;
+    overflow:auto;
+    font-style:normal;
+    font-family:"verdana","sans-serif";
+    visibility:inherit;
+    background-color:#FFFFFF;
+    z-index:999;
+    text-align:justify;
+    text-justify:newspaper;
+    padding:15px 15px 15px 15px;
+}
+
+#closeimg 
+{
+    position: absolute;
+    top:2px;
+    left:97%;
+    z-index:999;
+}
+
+#moveimg 
+{
+    position: absolute;
+    top:2px;
+    left:4px;
+    z-index:999;
+}
+
+
+.popupHidden
+{
+    visibility:hidden;
+}
+
+.popupRulesShow
+{
+    position:absolute;
+    top:200px;
+    left:50px;
+    visibility:visible;
+    background-color:#FFFFFF;
+    border-width:5px;
+    border-style:solid;
+    border-color:#aaaaaa;
+    width:600px;
+    z-index:999;
+}
+
+#maindiv
+{
+    width: 800px;
+}
+
+#downloadLink
+{
+    font-size: 8pt;
+}
+
+body
+{ 
+    background: #FFFFFF url('../images/ONR IPR.pptx.png') no-repeat fixed ; 
+}
