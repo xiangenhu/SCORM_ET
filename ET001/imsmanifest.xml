@@ -21,7 +21,7 @@
         <item identifier="ITEM-6E3CB5D4A2E9967CA285062B8BBA5D60" isvisible="true">
           <title>OppeningPage</title>
           <item identifier="ITEM-44C89EF32402FAB7074831BFC5C2A6B4" isvisible="true">
-            <title>Starting Of the Course</title>
+            <title>Starting of the Course</title>
             <item identifier="ITEM-E27C450C3B047B46DF3A41A2DDC30CB0" identifierref="Transistor_Selected_Readings" isvisible="true">
               <title>Selected Readings</title>
             </item>
@@ -63,6 +63,48 @@
       </item>
       <item identifier="ITEM-278487F296F3B492BFF9BDB2E78748C5" isvisible="true">
         <title>Series_circuit</title>
+        <item identifier="ITEM-1253B0291B9502FB76DEF13DB4D7BE21" isvisible="true">
+          <title>Opening Page</title>
+          <item identifier="ITEM-D55B5DAC5C37164EF1C7E0F1B98BD2C4" isvisible="true">
+            <title>Starting of the Course</title>
+            <item identifier="ITEM-C339EE5C16233BAA20C1805798619A30" identifierref="Series_circuit_Selected_Readings" isvisible="true">
+              <title>Selected Reading</title>
+            </item>
+            <item identifier="ITEM-7E030A264CBE2A78EBDD80009AAC09A0" identifierref="Series_circuit_AutoTutorDR" isvisible="true">
+              <title>AutoTutor DR</title>
+            </item>
+            <item identifier="ITEM-D1AEA5A9E2B999610138DF28E2AEB821" isvisible="true">
+              <title>AT_DR_High</title>
+              <item identifier="ITEM-16956565964D32CEB34936094AB57387" identifierref="Series_circuit_Dragoon" isvisible="true">
+                <title>Dragoon</title>
+              </item>
+            </item>
+            <item identifier="ITEM-B003447B5A02827E77A1753943E529A1" isvisible="true">
+              <title>AT_DR_Low</title>
+              <item identifier="ITEM-2DAB4B9769F654B0289C61C6359840A9" identifierref="Series_circuit_AutoTutorKC" isvisible="true">
+                <title>AutoTutor KC</title>
+              </item>
+              <item identifier="ITEM-D639CF6C5E07732792478C0C4841CBB1" identifierref="Series_circuit_BBN" isvisible="true">
+                <title>BBN</title>
+              </item>
+            </item>
+            <item identifier="ITEM-3932F801875AFC47755859FA5E671C4E" isvisible="true">
+              <title>AT_KC_BBN_LOW</title>
+              <item identifier="ITEM-6095DD5F1EACF588B9322C0CE6FD7EB7" identifierref="Series_circuit_ATT_Reading" isvisible="true">
+                <title>ATT Reading</title>
+              </item>
+              <item identifier="ITEM-8DA0C7C6C35CC2BC6B639E53F77362C1" identifierref="Series_circuit_Skill_Builder" isvisible="true">
+                <title>Skill Builder</title>
+              </item>
+            </item>
+            <item identifier="ITEM-413B13E1C0F417FEDF69DA0301976F82" isvisible="true">
+              <title>AT_KC_BBN_HIGH</title>
+              <item identifier="ITEM-55D6BF62B524BC6E74AC7BC5197B0DF6" isvisible="true">
+                <title>NEW AT DRQ</title>
+              </item>
+            </item>
+          </item>
+        </item>
       </item>
       <item identifier="ITEM-7AE0B2988227F80C4BD5C4E84BB61215" isvisible="true">
         <title>Item</title>
@@ -93,11 +135,11 @@
       <file href="Navigation.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Transistor/AutoTutor DR/" href="Transistor_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="Transistor_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Transistor/AutoTutor_DR/" href="Transistor_AutoTutor_DR.html" type="webcontent">
       <file href="Transistor_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Transistor/AutoTutor KC/" href="Transistor_AutoTutor_KC.html" type="webcontent">
+    <resource identifier="Transistor_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Transistor/AutoTutor_KC/" href="Transistor_AutoTutor_KC.html" type="webcontent">
       <file href="Transistor_AutoTutor_KC.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -105,19 +147,19 @@
       <file href="Transistor_Dragoon.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Transistor/ATT Reading/" href="Transistor_ATTReading01.html" type="webcontent">
-      <file href="Transistor_ATTReading01.html" />
+    <resource identifier="Transistor_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Transistor/ATT_Reading/" href="Transistor_ATTReading.html" type="webcontent">
+      <file href="Transistor_ATTReading.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Transistor/Skill Builder/" href="Transistor_Skill Builder.html" type="webcontent">
-      <file href="Transistor_Skill Builder.html" />
+    <resource identifier="Transistor_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Transistor/Skill_Builder/" href="Transistor_Skill_Builder.html" type="webcontent">
+      <file href="Transistor_Skill_Builder.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Transistor/Selected Readings/" href="Transistor_SelectedReading01.html" type="webcontent">
-      <file href="Transistor_SelectedReading01.html" />
+    <resource identifier="Transistor_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Transistor/Selected_Readings/" href="Transistor_SelectedReading.html" type="webcontent">
+      <file href="Transistor_SelectedReading.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Transistor_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Transistor/New AT DRQ/" href="Transistor_New AT DRQ.html" type="webcontent">
+    <resource identifier="Transistor_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Transistor/New_AT_DRQ/" href="Transistor_New_AT_DRQ.html" type="webcontent">
       <file href="Transistor_New AT DRQ.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -125,11 +167,11 @@
       <file href="Transistor_BBN.html" />
       <dependency identifierref="" />
     </resource>
-    <resource identifier="Series_circuit_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Series_circuit/AutoTutor DR/" href="Series_circuit_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="Series_circuit_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Series_circuit/AutoTutor_DR/" href="Series_circuit_AutoTutor_DR.html" type="webcontent">
       <file href="Series_circuit_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_circuit_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Series_circuit/AutoTutor KC/" href="Series_circuit_AutoTutor_KC.html" type="webcontent">
+    <resource identifier="Series_circuit_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Series_circuit/AutoTutor_KC/" href="Series_circuit_AutoTutor_KC.html" type="webcontent">
       <file href="Series_circuit_AutoTutor_KC.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -137,31 +179,31 @@
       <file href="Series_circuit_Dragoon.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_circuit_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Series_circuit/ATT Reading/" href="Series_circuit_ATTReading01.html" type="webcontent">
-      <file href="Series_circuit_ATTReading01.html" />
+    <resource identifier="Series_circuit_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Series_circuit/ATT_Reading/" href="Series_circuit_ATTReading.html" type="webcontent">
+      <file href="Series_circuit_ATTReading.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_circuit_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Series_circuit/Skill Builder/" href="Series_circuit_Skill Builder.html" type="webcontent">
-      <file href="Series_circuit_Skill Builder.html" />
+    <resource identifier="Series_circuit_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Series_circuit/Skill_Builder/" href="Series_circuit_Skill_Builder.html" type="webcontent">
+      <file href="Series_circuit_Skill_Builder.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_circuit_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Series_circuit/Selected Readings/" href="Series_circuit_SelectedReading01.html" type="webcontent">
-      <file href="Series_circuit_SelectedReading01.html" />
+    <resource identifier="Series_circuit_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Series_circuit/Selected_Readings/" href="Series_circuit_SelectedReading.html" type="webcontent">
+      <file href="Series_circuit_SelectedReading.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_circuit_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Series_circuit/New AT DRQ/" href="Series_circuit_New AT DRQ.html" type="webcontent">
-      <file href="Series_circuit_New AT DRQ.html" />
+    <resource identifier="Series_circuit_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Series_circuit/New_AT_DRQ/" href="Series_circuit_New_AT_DRQ.html" type="webcontent">
+      <file href="Series_circuit_New_AT_DRQ.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
     <resource identifier="Series_circuit_BBN" adlcp:scormType="sco" xml:base="Content/Series_circuit/BBN/" href="Series_circuit_BBN.html" type="webcontent">
       <file href="Series_circuit_BBN.html" />
       <dependency identifierref="" />
     </resource>
-    <resource identifier="Series_parallel_circuit_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/AutoTutor DR/" href="Series_parallel_circuit_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="Series_parallel_circuit_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/AutoTutor_DR/" href="Series_parallel_circuit_AutoTutor_DR.html" type="webcontent">
       <file href="Series_parallel_circuit_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_parallel_circuit_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/AutoTutor KC/" href="Series_parallel_circuit_AutoTutor_KC.html" type="webcontent">
+    <resource identifier="Series_parallel_circuit_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/AutoTutor_KC/" href="Series_parallel_circuit_AutoTutor_KC.html" type="webcontent">
       <file href="Series_parallel_circuit_AutoTutor_KC.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -169,20 +211,20 @@
       <file href="Series_parallel_circuit_Dragoon.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_parallel_circuit_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/ATT Reading/" href="Series_parallel_circuit_ATTReading01.html" type="webcontent">
-      <file href="Series_parallel_circuit_ATTReading01.html" />
+    <resource identifier="Series_parallel_circuit_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/ATT_Reading/" href="Series_parallel_circuit_ATTReading.html" type="webcontent">
+      <file href="Series_parallel_circuit_ATTReading.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_parallel_circuit_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/Skill Builder/" href="Series_parallel_circuit_Skill Builder.html" type="webcontent">
-      <file href="Series_parallel_circuit_Skill Builder.html" />
+    <resource identifier="Series_parallel_circuit_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/Skill_Builder/" href="Series_parallel_circuit_Skill_Builder.html" type="webcontent">
+      <file href="Series_parallel_circuit_Skill_Builder.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_parallel_circuit_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/Selected Readings/" href="Series_parallel_circuit_SelectedReading01.html" type="webcontent">
-      <file href="Series_parallel_circuit_SelectedReading01.html" />
+    <resource identifier="Series_parallel_circuit_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/Selected_Readings/" href="Series_parallel_circuit_SelectedReadin.html" type="webcontent">
+      <file href="Series_parallel_circuit_SelectedReading.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_parallel_circuit_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/New AT DRQ/" href="Series_parallel_circuit_New AT DRQ.html" type="webcontent">
-      <file href="Series_parallel_circuit_New AT DRQ.html" />
+    <resource identifier="Series_parallel_circuit_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/New_AT_DRQ/" href="Series_parallel_circuit_New_AT_DRQ.html" type="webcontent">
+      <file href="Series_parallel_circuit_New_AT_DRQ.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
     <resource identifier="Series_parallel_circuit_BBN" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/BBN/" href="Series_parallel_circuit_BBN.html" type="webcontent">
