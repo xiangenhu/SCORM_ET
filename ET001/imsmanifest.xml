@@ -104,6 +104,38 @@
       <file href="Transistor_BBN.html" />
       <dependency identifierref="" />
     </resource>
+	   <resource identifier="Series_parallel_circuit_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/AutoTutor DR/" href="Series_parallel_circuit_AutoTutor_DR.html" type="webcontent">
+      <file href="Series_parallel_circuit_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Series_parallel_circuit_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/AutoTutor KC/" href="Series_parallel_circuit_AutoTutor_KC.html" type="webcontent">
+      <file href="Series_parallel_circuit_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Series_parallel_circuit_Dragoon" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/Dragoon/" href="Series_parallel_circuit_Dragoon.html" type="webcontent">
+      <file href="Series_parallel_circuit_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Series_parallel_circuit_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/ATT Reading/" href="Series_parallel_circuit_ATTReading01.html" type="webcontent">
+      <file href="Series_parallel_circuit_ATTReading01.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Series_parallel_circuit_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/Skill Builder/" href="Series_parallel_circuit_Skill Builder.html" type="webcontent">
+      <file href="Series_parallel_circuit_Skill Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Series_parallel_circuit_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/Selected Readings/" href="Series_parallel_circuit_SelectedReading01.html" type="webcontent">
+      <file href="Series_parallel_circuit_SelectedReading01.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Series_parallel_circuit_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/New AT DRQ/" href="Series_parallel_circuit_New AT DRQ.html" type="webcontent">
+      <file href="Series_parallel_circuit_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Series_parallel_circuit_BBN" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/BBN/" href="Series_parallel_circuit_BBN.html" type="webcontent">
+      <file href="Series_parallel_circuit_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
     <resource identifier="RES-COMMON" adlcp:scormType="asset" xml:base="Content/" type="webcontent" />
   </resources>
 </manifest>
