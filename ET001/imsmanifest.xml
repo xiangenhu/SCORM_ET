@@ -99,7 +99,7 @@
             </item>
             <item identifier="ITEM-413B13E1C0F417FEDF69DA0301976F82" isvisible="true">
               <title>AT_KC_BBN_HIGH</title>
-              <item identifier="ITEM-55D6BF62B524BC6E74AC7BC5197B0DF6" isvisible="true">
+              <item identifier="ITEM-55D6BF62B524BC6E74AC7BC5197B0DF6" identifierref="Series_circuit_New_AT_DRQ" isvisible="true">
                 <title>NEW AT DRQ</title>
               </item>
             </item>
@@ -107,7 +107,49 @@
         </item>
       </item>
       <item identifier="ITEM-7AE0B2988227F80C4BD5C4E84BB61215" isvisible="true">
-        <title>Item</title>
+        <title>Series_parallel_circuit</title>
+        <item identifier="ITEM-5FA514732A65DC7B24A1532CCDB5B6A8" isvisible="true">
+          <title>Opening Page</title>
+          <item identifier="ITEM-51A0FABBEF57B83608ADF4A42188AFE7" isvisible="true">
+            <title>Starting of the Course</title>
+            <item identifier="ITEM-B76B047448D67001CF46AC93302F04EB" identifierref="Series_parallel_circuit_Selected_Readings" isvisible="true">
+              <title>Selected Reading</title>
+            </item>
+            <item identifier="ITEM-F36C0D72290DBB2FE8E70FC4B0C26313" isvisible="true">
+              <title>AutoTutor DR</title>
+            </item>
+            <item identifier="ITEM-6F57593D4DCBDADAF6C7BF040DE5C862" isvisible="true">
+              <title>AT_DR_High</title>
+              <item identifier="ITEM-6CBA6E6EF07CD6D7B76B21CE8DC61181" identifierref="Series_parallel_circuit_Dragoon" isvisible="true">
+                <title>Dragoon</title>
+              </item>
+            </item>
+            <item identifier="ITEM-0B0BCB8639EA1A5B6EA116052D2BAEA5" isvisible="true">
+              <title>AT_DR_Low</title>
+              <item identifier="ITEM-F3803CA86D1934DA2B528D196EF12D81" identifierref="Series_parallel_circuit_AutoTutorKC" isvisible="true">
+                <title>AutoTutor KC</title>
+              </item>
+              <item identifier="ITEM-62071128162A4C3A0C4A800D4E747C61" identifierref="Series_parallel_circuit_BBN" isvisible="true">
+                <title>BBN</title>
+              </item>
+            </item>
+            <item identifier="ITEM-D412709A10CA952C68EE75505EA2EBF4" isvisible="true">
+              <title>AT_KC_BBN_LOW</title>
+              <item identifier="ITEM-870C5B501A4C9A1A96A49496BD2E32C3" identifierref="Series_parallel_circuit_ATT_Reading" isvisible="true">
+                <title>ATT Reading</title>
+              </item>
+              <item identifier="ITEM-40C3BA754B599A6B3D8A651B50227716" identifierref="Series_parallel_circuit_Skill_Builder" isvisible="true">
+                <title>Skill Builder</title>
+              </item>
+            </item>
+            <item identifier="ITEM-707032730E66983187DA71334A26E669" isvisible="true">
+              <title>AT_KC_BBN_HIGH</title>
+              <item identifier="ITEM-A9DBD6B752C64467C8DFF39B774BB5F7" identifierref="Series_parallel_circuit_New_AT_DRQ" isvisible="true">
+                <title>NEW AT DRQ</title>
+              </item>
+            </item>
+          </item>
+        </item>
       </item>
       <item identifier="ITEM-550639BCBF66C69F0AAF1F96B2BB4C40" isvisible="true">
         <title>Item</title>
@@ -219,7 +261,7 @@
       <file href="Series_parallel_circuit_Skill_Builder.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_parallel_circuit_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/Selected_Readings/" href="Series_parallel_circuit_SelectedReadin.html" type="webcontent">
+    <resource identifier="Series_parallel_circuit_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Series_parallel_circuit/Selected_Readings/" href="Series_parallel_circuit_SelectedReading.html" type="webcontent">
       <file href="Series_parallel_circuit_SelectedReading.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
