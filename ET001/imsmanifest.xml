@@ -273,6 +273,369 @@
       <file href="Series_parallel_circuit_BBN.html" />
       <dependency identifierref="" />
     </resource>
+	
+	<resource identifier="Push_pull_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Push_pull_amplifier/AutoTutor_DR/" href="Push_pull_amplifier_AutoTutor_DR.html" type="webcontent">
+      <file href="Push_pull_amplifier_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Push_pull_amplifier_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Push_pull_amplifier/AutoTutor_KC/" href="Push_pull_amplifier_AutoTutor_KC.html" type="webcontent">
+      <file href="Push_pull_amplifier_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Push_pull_amplifier_Dragoon" adlcp:scormType="sco" xml:base="Content/Push_pull_amplifier/Dragoon/" href="Push_pull_amplifier_Dragoon.html" type="webcontent">
+      <file href="Push_pull_amplifier_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Push_pull_amplifier_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Push_pull_amplifier/ATT_Reading/" href="Push_pull_amplifier_ATTReading.html" type="webcontent">
+      <file href="Push_pull_amplifier_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Push_pull_amplifier_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Push_pull_amplifier/Skill_Builder/" href="Push_pull_amplifier_Skill_Builder.html" type="webcontent">
+      <file href="Push_pull_amplifier_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Push_pull_amplifier_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Push_pull_amplifier/Selected_Readings/" href="Push_pull_amplifier_SelectedReading.html" type="webcontent">
+      <file href="Push_pull_amplifier_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Push_pull_amplifier_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Push_pull_amplifier/New_AT_DRQ/" href="Push_pull_amplifier_New_AT_DRQ.html" type="webcontent">
+      <file href="Push_pull_amplifier_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Push_pull_amplifier_BBN" adlcp:scormType="sco" xml:base="Content/Push_pull_amplifier/BBN/" href="Push_pull_amplifier_BBN.html" type="webcontent">
+      <file href="Push_pull_amplifier_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
+	
+	<resource identifier="PNJunction_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/PNJunction/AutoTutor_DR/" href="PNJunction_AutoTutor_DR.html" type="webcontent">
+      <file href="PNJunction_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="PNJunction_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/PNJunction/AutoTutor_KC/" href="PNJunction_AutoTutor_KC.html" type="webcontent">
+      <file href="PNJunction_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="PNJunction_Dragoon" adlcp:scormType="sco" xml:base="Content/PNJunction/Dragoon/" href="PNJunction_Dragoon.html" type="webcontent">
+      <file href="PNJunction_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="PNJunction_ATT_Reading" adlcp:scormType="sco" xml:base="Content/PNJunction/ATT_Reading/" href="PNJunction_ATTReading.html" type="webcontent">
+      <file href="PNJunction_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="PNJunction_Skill_Builder" adlcp:scormType="sco" xml:base="Content/PNJunction/Skill_Builder/" href="PNJunction_Skill_Builder.html" type="webcontent">
+      <file href="PNJunction_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="PNJunction_Selected_Readings" adlcp:scormType="sco" xml:base="Content/PNJunction/Selected_Readings/" href="PNJunction_SelectedReading.html" type="webcontent">
+      <file href="PNJunction_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="PNJunction_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/PNJunction/New_AT_DRQ/" href="PNJunction_New_AT_DRQ.html" type="webcontent">
+      <file href="PNJunction_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="PNJunction_BBN" adlcp:scormType="sco" xml:base="Content/PNJunction/BBN/" href="PNJunction_BBN.html" type="webcontent">
+      <file href="PNJunction_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
+	
+	<resource identifier="Parallel_circuit_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Parallel_circuit/AutoTutor_DR/" href="Parallel_circuit_AutoTutor_DR.html" type="webcontent">
+      <file href="Parallel_circuit_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Parallel_circuit_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Parallel_circuit/AutoTutor_KC/" href="Parallel_circuit_AutoTutor_KC.html" type="webcontent">
+      <file href="Parallel_circuit_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Parallel_circuit_Dragoon" adlcp:scormType="sco" xml:base="Content/Parallel_circuit/Dragoon/" href="Parallel_circuit_Dragoon.html" type="webcontent">
+      <file href="Parallel_circuit_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Parallel_circuit_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Parallel_circuit/ATT_Reading/" href="Parallel_circuit_ATTReading.html" type="webcontent">
+      <file href="Parallel_circuit_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Parallel_circuit_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Parallel_circuit/Skill_Builder/" href="Parallel_circuit_Skill_Builder.html" type="webcontent">
+      <file href="Parallel_circuit_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Parallel_circuit_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Parallel_circuit/Selected_Readings/" href="Parallel_circuit_SelectedReading.html" type="webcontent">
+      <file href="Parallel_circuit_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Parallel_circuit_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Parallel_circuit/New_AT_DRQ/" href="Parallel_circuit_New_AT_DRQ.html" type="webcontent">
+      <file href="Parallel_circuit_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Parallel_circuit_BBN" adlcp:scormType="sco" xml:base="Content/Parallel_circuit/BBN/" href="Parallel_circuit_BBN.html" type="webcontent">
+      <file href="Parallel_circuit_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
+	
+	<resource identifier="Ohm_law_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Ohm_law/AutoTutor_DR/" href="Ohm_law_AutoTutor_DR.html" type="webcontent">
+      <file href="Ohm_law_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Ohm_law_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Ohm_law/AutoTutor_KC/" href="Ohm_law_AutoTutor_KC.html" type="webcontent">
+      <file href="Ohm_law_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Ohm_law_Dragoon" adlcp:scormType="sco" xml:base="Content/Ohm_law/Dragoon/" href="Ohm_law_Dragoon.html" type="webcontent">
+      <file href="Ohm_law_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Ohm_law_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Ohm_law/ATT_Reading/" href="Ohm_law_ATTReading.html" type="webcontent">
+      <file href="Ohm_law_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Ohm_law_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Ohm_law/Skill_Builder/" href="Ohm_law_Skill_Builder.html" type="webcontent">
+      <file href="Ohm_law_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Ohm_law_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Ohm_law/Selected_Readings/" href="Ohm_law_SelectedReading.html" type="webcontent">
+      <file href="Ohm_law_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Ohm_law_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Ohm_law/New_AT_DRQ/" href="Ohm_law_New_AT_DRQ.html" type="webcontent">
+      <file href="Ohm_law_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Ohm_law_BBN" adlcp:scormType="sco" xml:base="Content/Ohm_law/BBN/" href="Ohm_law_BBN.html" type="webcontent">
+      <file href="Ohm_law_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
+	
+	<resource identifier="MultiStage_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/MultiStage_amplifier/AutoTutor_DR/" href="MultiStage_amplifier_AutoTutor_DR.html" type="webcontent">
+      <file href="MultiStage_amplifier_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="MultiStage_amplifier_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/MultiStage_amplifier/AutoTutor_KC/" href="MultiStage_amplifier_AutoTutor_KC.html" type="webcontent">
+      <file href="MultiStage_amplifier_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="MultiStage_amplifier_Dragoon" adlcp:scormType="sco" xml:base="Content/MultiStage_amplifier/Dragoon/" href="MultiStage_amplifier_Dragoon.html" type="webcontent">
+      <file href="MultiStage_amplifier_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="MultiStage_amplifier_ATT_Reading" adlcp:scormType="sco" xml:base="Content/MultiStage_amplifier/ATT_Reading/" href="MultiStage_amplifier_ATTReading.html" type="webcontent">
+      <file href="MultiStage_amplifier_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="MultiStage_amplifier_Skill_Builder" adlcp:scormType="sco" xml:base="Content/MultiStage_amplifier/Skill_Builder/" href="MultiStage_amplifier_Skill_Builder.html" type="webcontent">
+      <file href="MultiStage_amplifier_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="MultiStage_amplifier_Selected_Readings" adlcp:scormType="sco" xml:base="Content/MultiStage_amplifier/Selected_Readings/" href="MultiStage_amplifier_SelectedReading.html" type="webcontent">
+      <file href="MultiStage_amplifier_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="MultiStage_amplifier_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/MultiStage_amplifier/New_AT_DRQ/" href="MultiStage_amplifier_New_AT_DRQ.html" type="webcontent">
+      <file href="MultiStage_amplifier_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="MultiStage_amplifier_BBN" adlcp:scormType="sco" xml:base="Content/MultiStage_amplifier/BBN/" href="MultiStage_amplifier_BBN.html" type="webcontent">
+      <file href="MultiStage_amplifier_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
+	
+	<resource identifier="Limiters_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Limiters/AutoTutor_DR/" href="Limiters_AutoTutor_DR.html" type="webcontent">
+      <file href="Limiters_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Limiters_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Limiters/AutoTutor_KC/" href="Limiters_AutoTutor_KC.html" type="webcontent">
+      <file href="Limiters_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Limiters_Dragoon" adlcp:scormType="sco" xml:base="Content/Limiters/Dragoon/" href="Limiters_Dragoon.html" type="webcontent">
+      <file href="Limiters_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Limiters_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Limiters/ATT_Reading/" href="Limiters_ATTReading.html" type="webcontent">
+      <file href="Limiters_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Limiters_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Limiters/Skill_Builder/" href="Limiters_Skill_Builder.html" type="webcontent">
+      <file href="Limiters_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Limiters_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Limiters/Selected_Readings/" href="Limiters_SelectedReading.html" type="webcontent">
+      <file href="Limiters_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Limiters_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Limiters/New_AT_DRQ/" href="Limiters_New_AT_DRQ.html" type="webcontent">
+      <file href="Limiters_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Limiters_BBN" adlcp:scormType="sco" xml:base="Content/Limiters/BBN/" href="Limiters_BBN.html" type="webcontent">
+      <file href="Limiters_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
+	
+	<resource identifier="Clampers_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Clampers/AutoTutor_DR/" href="Clampers_AutoTutor_DR.html" type="webcontent">
+      <file href="Clampers_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Clampers_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/Clampers/AutoTutor_KC/" href="Clampers_AutoTutor_KC.html" type="webcontent">
+      <file href="Clampers_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Clampers_Dragoon" adlcp:scormType="sco" xml:base="Content/Clampers/Dragoon/" href="Clampers_Dragoon.html" type="webcontent">
+      <file href="Clampers_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Clampers_ATT_Reading" adlcp:scormType="sco" xml:base="Content/Clampers/ATT_Reading/" href="Clampers_ATTReading.html" type="webcontent">
+      <file href="Clampers_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Clampers_Skill_Builder" adlcp:scormType="sco" xml:base="Content/Clampers/Skill_Builder/" href="Clampers_Skill_Builder.html" type="webcontent">
+      <file href="Clampers_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Clampers_Selected_Readings" adlcp:scormType="sco" xml:base="Content/Clampers/Selected_Readings/" href="Clampers_SelectedReading.html" type="webcontent">
+      <file href="Clampers_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Clampers_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/Clampers/New_AT_DRQ/" href="Clampers_New_AT_DRQ.html" type="webcontent">
+      <file href="Clampers_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Clampers_BBN" adlcp:scormType="sco" xml:base="Content/Clampers/BBN/" href="Clampers_BBN.html" type="webcontent">
+      <file href="Clampers_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
+	
+	<resource identifier="CE_amplifier_fixed _bias_voltage_divider_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CE_amplifier_fixed _bias_voltage_divider/AutoTutor_DR/" href="CE_amplifier_fixed _bias_voltage_divider_AutoTutor_DR.html" type="webcontent">
+      <file href="CE_amplifier_fixed _bias_voltage_divider_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_fixed _bias_voltage_divider_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/CE_amplifier_fixed _bias_voltage_divider/AutoTutor_KC/" href="CE_amplifier_fixed _bias_voltage_divider_AutoTutor_KC.html" type="webcontent">
+      <file href="CE_amplifier_fixed _bias_voltage_divider_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_fixed _bias_voltage_divider_Dragoon" adlcp:scormType="sco" xml:base="Content/CE_amplifier_fixed _bias_voltage_divider/Dragoon/" href="CE_amplifier_fixed _bias_voltage_divider_Dragoon.html" type="webcontent">
+      <file href="CE_amplifier_fixed _bias_voltage_divider_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_fixed _bias_voltage_divider_ATT_Reading" adlcp:scormType="sco" xml:base="Content/CE_amplifier_fixed _bias_voltage_divider/ATT_Reading/" href="CE_amplifier_fixed _bias_voltage_divider_ATTReading.html" type="webcontent">
+      <file href="CE_amplifier_fixed _bias_voltage_divider_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_fixed _bias_voltage_divider_Skill_Builder" adlcp:scormType="sco" xml:base="Content/CE_amplifier_fixed _bias_voltage_divider/Skill_Builder/" href="CE_amplifier_fixed _bias_voltage_divider_Skill_Builder.html" type="webcontent">
+      <file href="CE_amplifier_fixed _bias_voltage_divider_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_fixed _bias_voltage_divider_Selected_Readings" adlcp:scormType="sco" xml:base="Content/CE_amplifier_fixed _bias_voltage_divider/Selected_Readings/" href="CE_amplifier_fixed _bias_voltage_divider_SelectedReading.html" type="webcontent">
+      <file href="CE_amplifier_fixed _bias_voltage_divider_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_fixed _bias_voltage_divider_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/CE_amplifier_fixed _bias_voltage_divider/New_AT_DRQ/" href="CE_amplifier_fixed _bias_voltage_divider_New_AT_DRQ.html" type="webcontent">
+      <file href="CE_amplifier_fixed _bias_voltage_divider_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_fixed _bias_voltage_divider_BBN" adlcp:scormType="sco" xml:base="Content/CE_amplifier_fixed _bias_voltage_divider/BBN/" href="CE_amplifier_fixed _bias_voltage_divider_BBN.html" type="webcontent">
+      <file href="CE_amplifier_fixed _bias_voltage_divider_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
+	
+	<resource identifier="CE_amplifier_battery_bias_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CE_amplifier_battery_bias/AutoTutor_DR/" href="CE_amplifier_battery_bias_AutoTutor_DR.html" type="webcontent">
+      <file href="CE_amplifier_battery_bias_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_battery_bias_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/CE_amplifier_battery_bias/AutoTutor_KC/" href="CE_amplifier_battery_bias_AutoTutor_KC.html" type="webcontent">
+      <file href="CE_amplifier_battery_bias_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_battery_bias_Dragoon" adlcp:scormType="sco" xml:base="Content/CE_amplifier_battery_bias/Dragoon/" href="CE_amplifier_battery_bias_Dragoon.html" type="webcontent">
+      <file href="CE_amplifier_battery_bias_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_battery_bias_ATT_Reading" adlcp:scormType="sco" xml:base="Content/CE_amplifier_battery_bias/ATT_Reading/" href="CE_amplifier_battery_bias_ATTReading.html" type="webcontent">
+      <file href="CE_amplifier_battery_bias_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_battery_bias_Skill_Builder" adlcp:scormType="sco" xml:base="Content/CE_amplifier_battery_bias/Skill_Builder/" href="CE_amplifier_battery_bias_Skill_Builder.html" type="webcontent">
+      <file href="CE_amplifier_battery_bias_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_battery_bias_Selected_Readings" adlcp:scormType="sco" xml:base="Content/CE_amplifier_battery_bias/Selected_Readings/" href="CE_amplifier_battery_bias_SelectedReading.html" type="webcontent">
+      <file href="CE_amplifier_battery_bias_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_battery_bias_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/CE_amplifier_battery_bias/New_AT_DRQ/" href="CE_amplifier_battery_bias_New_AT_DRQ.html" type="webcontent">
+      <file href="CE_amplifier_battery_bias_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_battery_bias_BBN" adlcp:scormType="sco" xml:base="Content/CE_amplifier_battery_bias/BBN/" href="CE_amplifier_battery_bias_BBN.html" type="webcontent">
+      <file href="CE_amplifier_battery_bias_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
+	
+	<resource identifier="CC_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CC_amplifier/AutoTutor_DR/" href="CC_amplifier_AutoTutor_DR.html" type="webcontent">
+      <file href="CC_amplifier_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CC_amplifier_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/CC_amplifier/AutoTutor_KC/" href="CC_amplifier_AutoTutor_KC.html" type="webcontent">
+      <file href="CC_amplifier_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CC_amplifier_Dragoon" adlcp:scormType="sco" xml:base="Content/CC_amplifier/Dragoon/" href="CC_amplifier_Dragoon.html" type="webcontent">
+      <file href="CC_amplifier_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CC_amplifier_ATT_Reading" adlcp:scormType="sco" xml:base="Content/CC_amplifier/ATT_Reading/" href="CC_amplifier_ATTReading.html" type="webcontent">
+      <file href="CC_amplifier_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CC_amplifier_Skill_Builder" adlcp:scormType="sco" xml:base="Content/CC_amplifier/Skill_Builder/" href="CC_amplifier_Skill_Builder.html" type="webcontent">
+      <file href="CC_amplifier_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CC_amplifier_Selected_Readings" adlcp:scormType="sco" xml:base="Content/CC_amplifier/Selected_Readings/" href="CC_amplifier_SelectedReading.html" type="webcontent">
+      <file href="CC_amplifier_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CC_amplifier_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/CC_amplifier/New_AT_DRQ/" href="CC_amplifier_New_AT_DRQ.html" type="webcontent">
+      <file href="CC_amplifier_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CC_amplifier_BBN" adlcp:scormType="sco" xml:base="Content/CC_amplifier/BBN/" href="CC_amplifier_BBN.html" type="webcontent">
+      <file href="CC_amplifier_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
+	
+	<resource identifier="CB_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CB_amplifier/AutoTutor_DR/" href="CB_amplifier_AutoTutor_DR.html" type="webcontent">
+      <file href="CB_amplifier_AutoTutor_DR.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CB_amplifier_AutoTutorKC" adlcp:scormType="sco" xml:base="Content/CB_amplifier/AutoTutor_KC/" href="CB_amplifier_AutoTutor_KC.html" type="webcontent">
+      <file href="CB_amplifier_AutoTutor_KC.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CB_amplifier_Dragoon" adlcp:scormType="sco" xml:base="Content/CB_amplifier/Dragoon/" href="CB_amplifier_Dragoon.html" type="webcontent">
+      <file href="CB_amplifier_Dragoon.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CB_amplifier_ATT_Reading" adlcp:scormType="sco" xml:base="Content/CB_amplifier/ATT_Reading/" href="CB_amplifier_ATTReading.html" type="webcontent">
+      <file href="CB_amplifier_ATTReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CB_amplifier_Skill_Builder" adlcp:scormType="sco" xml:base="Content/CB_amplifier/Skill_Builder/" href="CB_amplifier_Skill_Builder.html" type="webcontent">
+      <file href="CB_amplifier_Skill_Builder.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CB_amplifier_Selected_Readings" adlcp:scormType="sco" xml:base="Content/CB_amplifier/Selected_Readings/" href="CB_amplifier_SelectedReading.html" type="webcontent">
+      <file href="CB_amplifier_SelectedReading.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CB_amplifier_New_AT_DRQ" adlcp:scormType="sco" xml:base="Content/CB_amplifier/New_AT_DRQ/" href="CB_amplifier_New_AT_DRQ.html" type="webcontent">
+      <file href="CB_amplifier_New AT DRQ.html" />
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CB_amplifier_BBN" adlcp:scormType="sco" xml:base="Content/CB_amplifier/BBN/" href="CB_amplifier_BBN.html" type="webcontent">
+      <file href="CB_amplifier_BBN.html" />
+      <dependency identifierref="" />
+    </resource>
     <resource identifier="RES-COMMON" adlcp:scormType="asset" xml:base="Content/" type="webcontent" />
   </resources>
 </manifest>
