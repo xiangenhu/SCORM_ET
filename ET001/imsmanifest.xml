@@ -87,20 +87,20 @@
               <item identifier="ITEM-D639CF6C5E07732792478C0C4841CBB1" identifierref="Series_circuit_BBN" isvisible="true">
                 <title>BBN</title>
               </item>
-            </item>
-            <item identifier="ITEM-3932F801875AFC47755859FA5E671C4E" isvisible="true">
-              <title>AT_KC_BBN_LOW</title>
-              <item identifier="ITEM-6095DD5F1EACF588B9322C0CE6FD7EB7" identifierref="Series_circuit_ATT_Reading" isvisible="true">
-                <title>ATT Reading</title>
+              <item identifier="ITEM-3932F801875AFC47755859FA5E671C4E" isvisible="true">
+                <title>AT_KC_BBN_LOW</title>
+                <item identifier="ITEM-6095DD5F1EACF588B9322C0CE6FD7EB7" identifierref="Series_circuit_ATT_Reading" isvisible="true">
+                  <title>ATT Reading</title>
+                </item>
+                <item identifier="ITEM-8DA0C7C6C35CC2BC6B639E53F77362C1" identifierref="Series_circuit_Skill_Builder" isvisible="true">
+                  <title>Skill Builder</title>
+                </item>
               </item>
-              <item identifier="ITEM-8DA0C7C6C35CC2BC6B639E53F77362C1" identifierref="Series_circuit_Skill_Builder" isvisible="true">
-                <title>Skill Builder</title>
-              </item>
-            </item>
-            <item identifier="ITEM-413B13E1C0F417FEDF69DA0301976F82" isvisible="true">
-              <title>AT_KC_BBN_HIGH</title>
-              <item identifier="ITEM-55D6BF62B524BC6E74AC7BC5197B0DF6" identifierref="Series_circuit_New_AT_DRQ" isvisible="true">
-                <title>NEW AT DRQ</title>
+              <item identifier="ITEM-413B13E1C0F417FEDF69DA0301976F82" isvisible="true">
+                <title>AT_KC_BBN_HIGH</title>
+                <item identifier="ITEM-55D6BF62B524BC6E74AC7BC5197B0DF6" identifierref="Series_circuit_New_AT_DRQ" isvisible="true">
+                  <title>NEW AT DRQ</title>
+                </item>
               </item>
             </item>
           </item>
@@ -132,30 +132,114 @@
               <item identifier="ITEM-62071128162A4C3A0C4A800D4E747C61" identifierref="Series_parallel_circuit_BBN" isvisible="true">
                 <title>BBN</title>
               </item>
-            </item>
-            <item identifier="ITEM-D412709A10CA952C68EE75505EA2EBF4" isvisible="true">
-              <title>AT_KC_BBN_LOW</title>
-              <item identifier="ITEM-870C5B501A4C9A1A96A49496BD2E32C3" identifierref="Series_parallel_circuit_ATT_Reading" isvisible="true">
-                <title>ATT Reading</title>
+              <item identifier="ITEM-D412709A10CA952C68EE75505EA2EBF4" isvisible="true">
+                <title>AT_KC_BBN_LOW</title>
+                <item identifier="ITEM-870C5B501A4C9A1A96A49496BD2E32C3" identifierref="Series_parallel_circuit_ATT_Reading" isvisible="true">
+                  <title>ATT Reading</title>
+                </item>
+                <item identifier="ITEM-40C3BA754B599A6B3D8A651B50227716" identifierref="Series_parallel_circuit_Skill_Builder" isvisible="true">
+                  <title>Skill Builder</title>
+                </item>
               </item>
-              <item identifier="ITEM-40C3BA754B599A6B3D8A651B50227716" identifierref="Series_parallel_circuit_Skill_Builder" isvisible="true">
-                <title>Skill Builder</title>
-              </item>
-            </item>
-            <item identifier="ITEM-707032730E66983187DA71334A26E669" isvisible="true">
-              <title>AT_KC_BBN_HIGH</title>
-              <item identifier="ITEM-A9DBD6B752C64467C8DFF39B774BB5F7" identifierref="Series_parallel_circuit_New_AT_DRQ" isvisible="true">
-                <title>NEW AT DRQ</title>
+              <item identifier="ITEM-707032730E66983187DA71334A26E669" isvisible="true">
+                <title>AT_KC_BBN_HIGH</title>
+                <item identifier="ITEM-A9DBD6B752C64467C8DFF39B774BB5F7" identifierref="Series_parallel_circuit_New_AT_DRQ" isvisible="true">
+                  <title>NEW AT DRQ</title>
+                </item>
               </item>
             </item>
           </item>
         </item>
       </item>
       <item identifier="ITEM-550639BCBF66C69F0AAF1F96B2BB4C40" isvisible="true">
-        <title>Item</title>
+        <title>Push_pull_amplifier</title>
+        <item identifier="ITEM-77C1181747014038E31F242C5C5FF946" isvisible="true">
+          <title>Opening Page</title>
+          <item identifier="ITEM-7CE8C41043254FFC7DF62B014489E39B" isvisible="true">
+            <title>Starting of the Course</title>
+            <item identifier="ITEM-C95B9ACEF392A5046CD76784EF2C3753" identifierref="Push_pull_amplifier_Selected_Readings" isvisible="true">
+              <title>Selected Reading</title>
+            </item>
+            <item identifier="ITEM-8459ACCDAEEA4EC2D14B0669FC8B13D2" identifierref="Push_pull_amplifier_AutoTutorDR" isvisible="true">
+              <title>AutoTutor DR</title>
+            </item>
+            <item identifier="ITEM-13BA4FDD613AF089DCC2262921361E8C" isvisible="true">
+              <title>AT_DR_High</title>
+              <item identifier="ITEM-248A688EED5A3751D1A3AE9D1D28B892" identifierref="Push_pull_amplifier_Dragoon" isvisible="true">
+                <title>Dragoon</title>
+              </item>
+            </item>
+            <item identifier="ITEM-DB021F56EBA87472DD93F795D5D0CE41" isvisible="true">
+              <title>AT_DR_Low</title>
+              <item identifier="ITEM-A5EBBF20D4379E5174DD010E2A2A1F6F" identifierref="Push_pull_amplifier_AutoTutorKC" isvisible="true">
+                <title>AutoTutor KC</title>
+              </item>
+              <item identifier="ITEM-05C764EECDA84D127EA8EBAAC3AAC1EB" identifierref="Push_pull_amplifier_BBN" isvisible="true">
+                <title>BBN</title>
+              </item>
+              <item identifier="ITEM-C2F968420588056A0FDE484987A17C9C" isvisible="true">
+                <title>AT_KC_BBN_LOW</title>
+                <item identifier="ITEM-2213D79FAEB398E2169B50751E23FDFF" identifierref="Push_pull_amplifier_ATT_Reading" isvisible="true">
+                  <title>ATT Reading</title>
+                </item>
+                <item identifier="ITEM-B0F0A454CCB04E386760741690CBF03C" identifierref="Push_pull_amplifier_Skill_Builder" isvisible="true">
+                  <title>Skill Builder</title>
+                </item>
+              </item>
+              <item identifier="ITEM-FEB4A9BDCA33C309CE4EE09FB75B52D3" isvisible="true">
+                <title>AT_KC_BBN_HIGH</title>
+                <item identifier="ITEM-2639A6DF3EF6D4199DB273EA5ABD0ED1" identifierref="Push_pull_amplifier_New_AT_DRQ" isvisible="true">
+                  <title>NEW AT DRQ</title>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
       </item>
       <item identifier="ITEM-B34A101AFD4FC2B17DF621C72FB64C4D" isvisible="true">
-        <title>Item</title>
+        <title>PNJunction</title>
+        <item identifier="ITEM-AB098726C6961F451952D9ABE8A59CB2" isvisible="true">
+          <title>Opening Page</title>
+          <item identifier="ITEM-38B2F15EB069DB0B3F955CD4634DFD04" isvisible="true">
+            <title>Starting of the Course</title>
+            <item identifier="ITEM-FCB4629C107D5F2B50C59AA1C76201AA" identifierref="PNJunction_Selected_Readings" isvisible="true">
+              <title>Selected Reading</title>
+            </item>
+            <item identifier="ITEM-89428EF5793DD8517EBA90BEF69D8BAC" identifierref="PNJunction_AutoTutorDR" isvisible="true">
+              <title>AutoTutor DR</title>
+            </item>
+            <item identifier="ITEM-6AF1D80CCB58B65F8F00031F047E3894" isvisible="true">
+              <title>AT_DR_High</title>
+              <item identifier="ITEM-D7D962264CCAD9BB57B1EBD436B6BEA0" identifierref="PNJunction_Dragoon" isvisible="true">
+                <title>Dragoon</title>
+              </item>
+            </item>
+            <item identifier="ITEM-063F9A66E8DEB00B1F2748ACECAC6888" isvisible="true">
+              <title>AT_DR_Low</title>
+              <item identifier="ITEM-7887B0B9AAE6474993D62FF87C0EF314" identifierref="PNJunction_AutoTutorKC" isvisible="true">
+                <title>AutoTutor KC</title>
+              </item>
+              <item identifier="ITEM-7F01B7E5CC5A425F60CFB88C27B2EB40" identifierref="PNJunction_BBN" isvisible="true">
+                <title>BBN</title>
+              </item>
+              <item identifier="ITEM-D779A66EDEAF5A43550F7A910BD5136B" isvisible="true">
+                <title>AT_KC_BBN_LOW</title>
+                <item identifier="ITEM-BE5D7C7E83B3110ED6B1B464161226CA" identifierref="PNJunction_ATT_Reading" isvisible="true">
+                  <title>ATT Reading</title>
+                </item>
+                <item identifier="ITEM-E6BC196A64A013A2C5CF5F8988FC7756" identifierref="PNJunction_Skill_Builder" isvisible="true">
+                  <title>Skill Builder</title>
+                </item>
+              </item>
+              <item identifier="ITEM-3B2B829D255ED614EF90056C8A4EEFC4" isvisible="true">
+                <title>AT_KC_BBN_HIGH</title>
+                <item identifier="ITEM-6456F68CB5AB04527058BB453DEC26DE" identifierref="PNJunction_New_AT_DRQ" isvisible="true">
+                  <title>NEW AT DRQ</title>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
       </item>
       <item identifier="ITEM-1400FC5759E946BD81D16C5F28FFA392" isvisible="true">
         <title>Item</title>
@@ -273,8 +357,7 @@
       <file href="Series_parallel_circuit_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="Push_pull_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Push_pull_amplifier/AutoTutor_DR/" href="Push_pull_amplifier_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="Push_pull_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Push_pull_amplifier/AutoTutor_DR/" href="Push_pull_amplifier_AutoTutor_DR.html" type="webcontent">
       <file href="Push_pull_amplifier_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -306,8 +389,7 @@
       <file href="Push_pull_amplifier_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="PNJunction_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/PNJunction/AutoTutor_DR/" href="PNJunction_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="PNJunction_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/PNJunction/AutoTutor_DR/" href="PNJunction_AutoTutor_DR.html" type="webcontent">
       <file href="PNJunction_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -339,8 +421,7 @@
       <file href="PNJunction_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="Parallel_circuit_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Parallel_circuit/AutoTutor_DR/" href="Parallel_circuit_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="Parallel_circuit_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Parallel_circuit/AutoTutor_DR/" href="Parallel_circuit_AutoTutor_DR.html" type="webcontent">
       <file href="Parallel_circuit_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -372,8 +453,7 @@
       <file href="Parallel_circuit_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="Ohm_law_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Ohm_law/AutoTutor_DR/" href="Ohm_law_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="Ohm_law_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Ohm_law/AutoTutor_DR/" href="Ohm_law_AutoTutor_DR.html" type="webcontent">
       <file href="Ohm_law_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -405,8 +485,7 @@
       <file href="Ohm_law_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="MultiStage_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/MultiStage_amplifier/AutoTutor_DR/" href="MultiStage_amplifier_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="MultiStage_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/MultiStage_amplifier/AutoTutor_DR/" href="MultiStage_amplifier_AutoTutor_DR.html" type="webcontent">
       <file href="MultiStage_amplifier_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -438,8 +517,7 @@
       <file href="MultiStage_amplifier_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="Limiters_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Limiters/AutoTutor_DR/" href="Limiters_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="Limiters_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Limiters/AutoTutor_DR/" href="Limiters_AutoTutor_DR.html" type="webcontent">
       <file href="Limiters_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -471,8 +549,7 @@
       <file href="Limiters_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="Clampers_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Clampers/AutoTutor_DR/" href="Clampers_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="Clampers_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/Clampers/AutoTutor_DR/" href="Clampers_AutoTutor_DR.html" type="webcontent">
       <file href="Clampers_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -504,8 +581,7 @@
       <file href="Clampers_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="CE_amplifier_fixed _bias_voltage_divider_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CE_amplifier_fixed _bias_voltage_divider/AutoTutor_DR/" href="CE_amplifier_fixed _bias_voltage_divider_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="CE_amplifier_fixed _bias_voltage_divider_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CE_amplifier_fixed _bias_voltage_divider/AutoTutor_DR/" href="CE_amplifier_fixed _bias_voltage_divider_AutoTutor_DR.html" type="webcontent">
       <file href="CE_amplifier_fixed _bias_voltage_divider_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -537,8 +613,7 @@
       <file href="CE_amplifier_fixed _bias_voltage_divider_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="CE_amplifier_battery_bias_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CE_amplifier_battery_bias/AutoTutor_DR/" href="CE_amplifier_battery_bias_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="CE_amplifier_battery_bias_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CE_amplifier_battery_bias/AutoTutor_DR/" href="CE_amplifier_battery_bias_AutoTutor_DR.html" type="webcontent">
       <file href="CE_amplifier_battery_bias_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -570,8 +645,7 @@
       <file href="CE_amplifier_battery_bias_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="CC_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CC_amplifier/AutoTutor_DR/" href="CC_amplifier_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="CC_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CC_amplifier/AutoTutor_DR/" href="CC_amplifier_AutoTutor_DR.html" type="webcontent">
       <file href="CC_amplifier_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -603,8 +677,7 @@
       <file href="CC_amplifier_BBN.html" />
       <dependency identifierref="" />
     </resource>
-	
-	<resource identifier="CB_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CB_amplifier/AutoTutor_DR/" href="CB_amplifier_AutoTutor_DR.html" type="webcontent">
+    <resource identifier="CB_amplifier_AutoTutorDR" adlcp:scormType="sco" xml:base="Content/CB_amplifier/AutoTutor_DR/" href="CB_amplifier_AutoTutor_DR.html" type="webcontent">
       <file href="CB_amplifier_AutoTutor_DR.html" />
       <dependency identifierref="RES-COMMON" />
     </resource>
