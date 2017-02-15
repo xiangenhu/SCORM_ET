@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 1.1.1 SCORM 2004 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:lom="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-CCED0204-39ED-D02A-67D6-D44E36B537CE" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd" version="1.3">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 3rd Edition</schemaversion>
+  </metadata>
+  <organizations default="ORG-C141BB3E-BE8A-5FDC-0876-FA10C4774C14">
+    <organization identifier="ORG-C141BB3E-BE8A-5FDC-0876-FA10C4774C14" adlseq:objectivesGlobalToSystem="false">
+      <title>Content</title>
+      <item identifier="ITEM-A0BAB980-6C55-EF4A-6080-D73FFB8D9B32" identifierref="CB_amplifier.html" isvisible="true">
+        <title>CB_amplifier</title>
+      </item>
+      <item identifier="ITEM-D33D161E-B754-CEA4-5143-23255555C211" identifierref="CC_amplifier.html">
+        <title>CC_amplifier</title>
+      </item>
+      <item identifier="ITEM-E4E5C0CD23F667FC8CD12C31C03A1F4A" identifierref="CE_amplifier_battery_bias.html" isvisible="true">
+        <title>CE_amplifier_fixed _bias_voltage_divider</title>
+      </item>
+      <item identifier="ITEM-158831AA99583007401ADE950F2E0FE9" identifierref="Clampers.html" isvisible="true">
+        <title>Clampers</title>
+      </item>
+      <item identifier="ITEM-8CB0A9E1CF6CE3A668930913B66B1C92" identifierref="Limit.html" isvisible="true">
+        <title>Limit</title>
+      </item>
+      <item identifier="ITEM-AF1199DF1143B0A2935B0A2A42AB05CF" identifierref="Limiters.html" isvisible="true">
+        <title>Limiters</title>
+      </item>
+      <item identifier="ITEM-066915D143B309D7E31B0C5B7CA47C06" identifierref="MultiStage_amplifier.html" isvisible="true">
+        <title>MultiStage_amplifier</title>
+      </item>
+      <item identifier="ITEM-8E0FEE170FD3116E3B7BFE29B166C3C4" identifierref="Ohm_law.html" isvisible="true">
+        <title>Ohm_law</title>
+      </item>
+      <item identifier="ITEM-E903C954A0EFC3F18236B459519D1CBA" identifierref="Parallel_circuit.html" isvisible="true">
+        <title>Parallel_circuit</title>
+      </item>
+      <item identifier="ITEM-DF7BF44ACE45D6873CF4901D319EE281" identifierref="PNJunction.html" isvisible="true">
+        <title>PNJunction</title>
+      </item>
+      <item identifier="ITEM-916AA51E4D4BE9E8D8CA0506A44A2727" identifierref="Push_pull_amplifier.html" isvisible="true">
+        <title>Push_pull_amplifier</title>
+      </item>
+      <item identifier="ITEM-C1827650E2C02A9FE05142B34A570919" identifierref="Series_circuit.html" isvisible="true">
+        <title>Series_circuit</title>
+      </item>
+      <item identifier="ITEM-7947B331AE806F9D7A0014FBCF343511" identifierref="Series_parallel_circuit.html" isvisible="true">
+        <title>Series_parallel_circuit</title>
+      </item>
+      <item identifier="ITEM-6550AA354E677ADA60691F587776BECD" identifierref="Transistor.html" isvisible="true">
+        <title>Transistor</title>
+      </item>
+      <item identifier="ITEM-D0761EE6E231AC6375B85EF0208EE135" identifierref="PostTest.html" isvisible="true">
+        <title>PostTest</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="PostTest.html" href="PostTest.html" adlcp:scormType="sco" xml:base="Contents/" type="webcontent">
+      <file href="PostTest.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="CB_amplifier.html" href="CB_amplifier.html" adlcp:scormType="sco" xml:base="Contents/" type="webcontent">
+      <file href="CB_amplifier.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="CC_amplifier.html" href="CC_amplifier.html" adlcp:scormType="sco" xml:base="Contents/" type="webcontent">
+      <file href="CC_amplifier.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="CE_amplifier_battery_bias.html" adlcp:scormType="sco" xml:base="Contents/" href="CE_amplifier_battery_bias.html" type="webcontent">
+      <file href="CE_amplifier_battery_bias.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="CE_amplifier_fixed _bias_voltage_divider.html" adlcp:scormType="sco" xml:base="Contents/" href="CE_amplifier_fixed _bias_voltage_divider.html" type="webcontent">
+      <file href="CE_amplifier_fixed _bias_voltage_divider.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="Clampers.html" adlcp:scormType="sco" xml:base="Contents/" href="Clampers.html" type="webcontent">
+      <file href="Clampers.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="Limiters.html" adlcp:scormType="sco" xml:base="Contents/" href="Limiters.html" type="webcontent">
+      <file href="Limiters.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="Limit.html" adlcp:scormType="sco" xml:base="Contents/" href="Limit.html" type="webcontent">
+      <file href="Limit.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="MultiStage_amplifier.html" adlcp:scormType="sco" xml:base="Contents/" href="MultiStage_amplifier.html" type="webcontent">
+      <file href="MultiStage_amplifier.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="Ohm_law.html" adlcp:scormType="sco" xml:base="Contents/" href="Ohm_law.html" type="webcontent">
+      <file href="Ohm_law.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="Parallel_circuit.html" adlcp:scormType="sco" xml:base="Contents/" href="Parallel_circuit.html" type="webcontent">
+      <file href="Parallel_circuit.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="PNJunction.html" adlcp:scormType="sco" xml:base="Contents/" href="PNJunction.html" type="webcontent">
+      <file href="PNJunction.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="Push_pull_amplifier.html" adlcp:scormType="sco" xml:base="Contents/" href="Push_pull_amplifier.html" type="webcontent">
+      <file href="Push_pull_amplifier.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="Series_circuit.html" adlcp:scormType="sco" xml:base="Contents/" href="Series_circuit.html" type="webcontent">
+      <file href="Series_circuit.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="Series_parallel_circuit.html" adlcp:scormType="sco" xml:base="Contents/" href="Series_parallel_circuit.html" type="webcontent">
+      <file href="Series_parallel_circuit.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="Transistor.html" adlcp:scormType="sco" xml:base="Contents/" href="Transistor.html" type="webcontent">
+      <file href="Transistor.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+  </resources>
+</manifest>
+
