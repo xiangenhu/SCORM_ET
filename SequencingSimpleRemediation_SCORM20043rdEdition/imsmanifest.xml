@@ -112,6 +112,8 @@ Rollup Strategy:
       <file href="Playing/Playing.html" />
       <file href="Playing/playing.jpg" />
       <file href="Playing/rules.jpg" />
+      <file href="Playing/RulesOfGolf.html" />
+      <file href="Playing/Scoring.html" />
       <file href="Playing/scoring.jpg" />
       <dependency identifierref="common_files" />
     </resource>
