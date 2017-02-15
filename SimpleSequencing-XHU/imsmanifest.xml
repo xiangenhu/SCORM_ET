@@ -21,9 +21,6 @@
       <item identifier="ITEM-158831AA99583007401ADE950F2E0FE9" identifierref="Clampers.html" isvisible="true">
         <title>Clampers</title>
       </item>
-      <item identifier="ITEM-8CB0A9E1CF6CE3A668930913B66B1C92" identifierref="Limit.html" isvisible="true">
-        <title>Limit</title>
-      </item>
       <item identifier="ITEM-AF1199DF1143B0A2935B0A2A42AB05CF" identifierref="Limiters.html" isvisible="true">
         <title>Limiters</title>
       </item>
@@ -83,10 +80,6 @@
     </resource>
     <resource identifier="Limiters.html" adlcp:scormType="sco" xml:base="Contents/" href="Limiters.html" type="webcontent">
       <file href="Limiters.html" />
-      <file href="util/APIWrapper.js" />
-    </resource>
-    <resource identifier="Limit.html" adlcp:scormType="sco" xml:base="Contents/" href="Limit.html" type="webcontent">
-      <file href="Limit.html" />
       <file href="util/APIWrapper.js" />
     </resource>
     <resource identifier="MultiStage_amplifier.html" adlcp:scormType="sco" xml:base="Contents/" href="MultiStage_amplifier.html" type="webcontent">
