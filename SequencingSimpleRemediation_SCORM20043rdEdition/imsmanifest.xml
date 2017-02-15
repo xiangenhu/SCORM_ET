@@ -34,7 +34,7 @@ Rollup Strategy:
         The alternative would be to use a retry all rule. That would be simpler, but unfortunately
         it resets the global objectives if objectivesGlobalToSystem is false. 
         -->
-      <title>Electronix Tutor</title>
+      <title>ET</title>
       <item identifier="content_wrapper" isvisible="false">
         <title>Remediation Wrapper</title>
         <item identifier="playing_item" identifierref="playing_resource">
@@ -52,38 +52,8 @@ Rollup Strategy:
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="etuqiette_item" identifierref="etiquette_resource">
-          <title>Series_parallel_circuit</title>
-          <imsss:sequencing IDRef="content_seq_rules">
-            <imsss:objectives>
-              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo targetObjectiveID="com.scorm.golfsamples.sequencing.simpleremediation.20043rd.etiquette_satisfied" readSatisfiedStatus="true" writeSatisfiedStatus="false" />
-              </imsss:primaryObjective>
-            </imsss:objectives>
-          </imsss:sequencing>
-        </item>
-        <item identifier="handicapping_item" identifierref="handicapping_resource">
-          <title>Series_circuit</title>
-          <imsss:sequencing IDRef="content_seq_rules">
-            <imsss:objectives>
-              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo targetObjectiveID="com.scorm.golfsamples.sequencing.simpleremediation.20043rd.handicapping_satisfied" readSatisfiedStatus="true" writeSatisfiedStatus="false" />
-              </imsss:primaryObjective>
-            </imsss:objectives>
-          </imsss:sequencing>
-        </item>
-        <item identifier="havingfun_item" identifierref="havingfun_resource">
-          <title>Push_pull_amplifier</title>
-          <imsss:sequencing IDRef="content_seq_rules">
-            <imsss:objectives>
-              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo targetObjectiveID="com.scorm.golfsamples.sequencing.simpleremediation.20043rd.havingfun_satisfied" readSatisfiedStatus="true" writeSatisfiedStatus="false" />
-              </imsss:primaryObjective>
-            </imsss:objectives>
-          </imsss:sequencing>
-        </item>
         <item identifier="test_1" identifierref="assessment_resource" parameters="?content=assessment1">
-          <title>PNJunction</title>
+          <title>Transistor_test</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
               <!-- 
@@ -93,48 +63,6 @@ Rollup Strategy:
               -->
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
                 <imsss:mapInfo targetObjectiveID="com.scorm.golfsamples.sequencing.simpleremediation.20043rd.playing_satisfied" readSatisfiedStatus="true" writeSatisfiedStatus="true" writeNormalizedMeasure="true" />
-              </imsss:primaryObjective>
-            </imsss:objectives>
-          </imsss:sequencing>
-        </item>
-        <item identifier="test_2" identifierref="assessment_resource" parameters="?content=assessment2">
-          <title>Parallel_circuit</title>
-          <imsss:sequencing IDRef="test_seq_rules">
-            <imsss:objectives>
-              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo targetObjectiveID="com.scorm.golfsamples.sequencing.simpleremediation.20043rd.etiquette_satisfied" readSatisfiedStatus="true" writeSatisfiedStatus="true" writeNormalizedMeasure="true" />
-              </imsss:primaryObjective>
-            </imsss:objectives>
-          </imsss:sequencing>
-        </item>
-        <item identifier="test_3" identifierref="assessment_resource" parameters="?content=assessment3">
-          <title>Ohm_law</title>
-          <imsss:sequencing IDRef="test_seq_rules">
-            <imsss:objectives>
-              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo targetObjectiveID="com.scorm.golfsamples.sequencing.simpleremediation.20043rd.handicapping_satisfied" readSatisfiedStatus="true" writeSatisfiedStatus="true" writeNormalizedMeasure="true" />
-              </imsss:primaryObjective>
-            </imsss:objectives>
-          </imsss:sequencing>
-        </item>
-        <item identifier="test_4" identifierref="assessment_resource" parameters="?content=assessment4">
-          <title>MultiStage_amplifier</title>
-          <imsss:sequencing IDRef="test_seq_rules">
-            <!-- 
-            When the last activity is encountered, exit the remediation loop
-            to trigger its retry check.
-            -->
-            <imsss:sequencingRules>
-              <imsss:postConditionRule>
-                <imsss:ruleConditions>
-                  <imsss:ruleCondition condition="always" />
-                </imsss:ruleConditions>
-                <imsss:ruleAction action="exitParent" />
-              </imsss:postConditionRule>
-            </imsss:sequencingRules>
-            <imsss:objectives>
-              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo targetObjectiveID="com.scorm.golfsamples.sequencing.simpleremediation.20043rd.havingfun_satisfied" readSatisfiedStatus="true" writeSatisfiedStatus="true" writeNormalizedMeasure="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
