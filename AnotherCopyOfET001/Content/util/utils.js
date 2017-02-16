@@ -5,6 +5,27 @@ function mouseOut(btnId) {
     document.getElementById(btnId).src = "../images/" + btnId + "_btn.png";
 }
 
+
+function GetQueryVar(search_for,defaultstr) {
+            var query = window.location.search.substring(1);
+			var parms = query.split('&');
+			for (var i = 0; i<parms.length; i++) {
+				var pos = parms[i].indexOf('=');
+				if (pos > 0  && search_for == parms[i].substring(0,pos)) {
+					return parms[i].substring(pos+1);
+					}
+				}
+				return defaultstr;
+			}
+
+function ComposePage() {
+	var URLString = GetQueryVar("CL","http://www.yahoo.com");
+	var TopicString = GetQueryVar("T","CB_Amplifier");
+    var html = 'Topic='+TopicString;
+    html +=    '<div><iframe src="'+URLString+'"frameborder="1" width="1100" height="900"/></div>';
+	document.getElementById("maindiv").innerHTML = html; 
+}
+
 var gConfig = new Object();
 function mergeConfigs(cConf) {
     for (var key in cConf) {
