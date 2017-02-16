@@ -101,7 +101,7 @@
         <item identifier="TEST-Series_circuit" identifierref="Test_Series_circuit" isvisible="true">
           <title>TEST Series_circuit</title>
         </item>
-        <item identifier="Transistors" identifierref="Test_Transistor" isvisible="true">
+        <item identifier="TEST-Transistors" identifierref="Test_Transistor" isvisible="true">
           <title>TEST Transistors</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
