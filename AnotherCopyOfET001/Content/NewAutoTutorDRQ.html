@@ -17,7 +17,9 @@ var exitPageStatus = false;
    **********************************************************************/
    function loadPage()
    {
-     /* var result = doInitialize(); */
+    /* var result = doInitialize(); */
+	 var TOPICInfo="Current Topic "+GetQueryVar("T","");
+	   document.getElementById("TopicInfo").innerHTML = TOPICInfo;
    }
    
    
@@ -51,6 +53,7 @@ var exitPageStatus = false;
 </head>
 
 <body onLoad="loadPage()" onunload="return unloadPage()">
+<div id="TopicInfo"></div>
 AutoTutor Is Here
 </body>
 </html>
