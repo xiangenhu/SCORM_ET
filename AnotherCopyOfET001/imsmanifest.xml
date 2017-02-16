@@ -19,45 +19,88 @@
       <item identifier="Transistors" identifierref="Transistor" isvisible="true">
         <title>Transistors</title>
       </item>
-      <item identifier="ITEM-278487F296F3B492BFF9BDB2E78748C5" identifierref="Series_circuit" isvisible="true">
+      <item identifier="ITEM-Series_circuit" identifierref="Series_circuit" isvisible="true">
         <title>Series_circuit</title>
       </item>
-      <item identifier="ITEM-7AE0B2988227F80C4BD5C4E84BB61215" identifierref="Series_parallel_circuit" isvisible="true">
+      <item identifier="ITEM-Series_parallel_circuit" identifierref="Series_parallel_circuit" isvisible="true">
         <title>Series_parallel_circuit</title>
       </item>
-      <item identifier="ITEM-550639BCBF66C69F0AAF1F96B2BB4C40" identifierref="Push_pull_amplifier" isvisible="true">
+      <item identifier="ITEM-Push_pull_amplifier" identifierref="Push_pull_amplifier" isvisible="true">
         <title>Push_pull_amplifier</title>
       </item>
-      <item identifier="ITEM-B34A101AFD4FC2B17DF621C72FB64C4D" identifierref="PNJunction" isvisible="true">
+      <item identifier="ITEM-PNJunction" identifierref="PNJunction" isvisible="true">
         <title>PNJunction</title>
       </item>
-      <item identifier="ITEM-1400FC5759E946BD81D16C5F28FFA392" identifierref="Parallel_circuit" isvisible="true">
+      <item identifier="ITEM-Parallel_circuit" identifierref="Parallel_circuit" isvisible="true">
         <title>Parallel_circuit</title>
       </item>
-      <item identifier="ITEM-E9FFE6ED6DA088202CFD056805F5C6A5" identifierref="Ohm_law" isvisible="true">
+      <item identifier="ITEM-Ohm_law" identifierref="Ohm_law" isvisible="true">
         <title>Ohm_law</title>
       </item>
-      <item identifier="ITEM-BDDC03D3B60490AB6BA83CDB3804E23A" identifierref="MultiStage_amplifier" isvisible="true">
+      <item identifier="ITEM-MultiStage_amplifier" identifierref="MultiStage_amplifier" isvisible="true">
         <title>MultiStage_amplifier</title>
       </item>
-      <item identifier="ITEM-35AE4AC162A715D2771981C3230CA299" identifierref="Limiters" isvisible="true">
+      <item identifier="ITEM-Limiters" identifierref="Limiters" isvisible="true">
         <title>Limiters</title>
       </item>
-      <item identifier="ITEM-006CC3F1B704AB4F8B72277F7B27BD39" identifierref="Clampers" isvisible="true">
+      <item identifier="ITEM-Clampers" identifierref="Clampers" isvisible="true">
         <title>Clampers</title>
       </item>
-      <item identifier="ITEM-1D7A8EE1DD994EC288846EF2ADD1DBDD" identifierref="CE_amplifier_fixed_bias_voltage_divider" isvisible="true">
+      <item identifier="ITEM-CE_amplifier_fixed_bias_voltage_divider" identifierref="CE_amplifier_fixed_bias_voltage_divider" isvisible="true">
         <title>CE_amplifier_fixed _bias_voltage_divider</title>
       </item>
-      <item identifier="ITEM-D9A88C822A876DF13F8289CABFA15CF5" identifierref="CE_amplifier_battery_bias" isvisible="true">
+      <item identifier="ITEM-CE_amplifier_battery_bias" identifierref="CE_amplifier_battery_bias" isvisible="true">
         <title>CE_amplifier_battery_bias</title>
       </item>
-      <item identifier="ITEM-EAF37D0F65DCBEADF3FA861947786399" identifierref="CC_Amplifier" isvisible="true">
+      <item identifier="ITEM-CC_amplifier" identifierref="CC_Amplifier" isvisible="true">
         <title>CC_amplifier</title>
       </item>
-      <item identifier="ITEM-7659AE6FA23E730A9CB465C6A3B0BE75" identifierref="CB_Amplifier" isvisible="true">
+      <item identifier="ITEM-CB_amplifier" identifierref="CB_Amplifier" isvisible="true">
         <title>CB_amplifier</title>
       </item>
+	   <item identifier="Transistors" identifierref="Test_Transistor" isvisible="true">
+        <title>TEST Transistors</title>
+      </item>
+      <item identifier="TEST-Series_circuit" identifierref="Test_Series_circuit" isvisible="true">
+        <title>TEST Series_circuit</title>
+      </item>
+      <item identifier="TEST-Series_parallel_circuit" identifierref="Test_Series_parallel_circuit" isvisible="true">
+        <title>TEST Series_parallel_circuit</title>
+      </item>
+      <item identifier="TEST-Push_pull_amplifier" identifierref="Test_Push_pull_amplifier" isvisible="true">
+        <title>TEST Push_pull_amplifier</title>
+      </item>
+      <item identifier="TEST-PNJunction" identifierref="Test_PNJunction" isvisible="true">
+        <title>TEST PNJunction</title>
+      </item>
+      <item identifier="TEST-Parallel_circuit" identifierref="Test_Parallel_circuit" isvisible="true">
+        <title>TEST Parallel_circuit</title>
+      </item>
+      <item identifier="TEST-Ohm_law" identifierref="Test_Ohm_law" isvisible="true">
+        <title>TEST Ohm_law</title>
+      </item>
+      <item identifier="TEST-MultiStage_amplifier" identifierref="Test_MultiStage_amplifier" isvisible="true">
+        <title>TEST MultiStage_amplifier</title>
+      </item>
+      <item identifier="TEST-Limiters" identifierref="Test_Limiters" isvisible="true">
+        <title>TEST Limiters</title>
+      </item>
+      <item identifier="TEST-Clampers" identifierref="Test_Clampers" isvisible="true">
+        <title>TEST Clampers</title>
+      </item>
+      <item identifier="TEST-CE_amplifier_fixed_bias_voltage_divider" identifierref="Test_CE_amplifier_fixed_bias_voltage_divider" isvisible="true">
+        <title>TEST CE_amplifier_fixed_bias_voltage_divider</title>
+      </item>
+      <item identifier="TEST-CE_amplifier_battery_bias" identifierref="Test_CE_amplifier_battery_bias" isvisible="true">
+        <title>TEST CE_amplifier_battery_TESTbias</title>
+      </item>
+      <item identifier="TEST-CC_amplifier" identifierref="Test_CC_Amplifier" isvisible="true">
+        <title>TEST CC_amplifier</title>
+      </item>
+      <item identifier="TEST-CB_amplifier" identifierref="Test_CB_Amplifier" isvisible="true">
+        <title>TEST CB_amplifier</title>
+      </item>
+      
     </organization>
   </organizations>
   <resources>
@@ -109,6 +152,48 @@
       <dependency identifierref="RES-COMMON" />
     </resource>
     <resource identifier="Series_parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=Series_parallel_circuit" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+     <resource identifier="Test_Transistor" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=Transister" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_CB_Amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=CB_Amplifier" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_CC_Amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=CC_Amplifier" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_CE_amplifier_battery_bias" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=CE_amplifier_battery_bias" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_CE_amplifier_fixed_bias_voltage_divider" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=CE_amplifier_fixed_bias_voltage_divider" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_Clampers" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=Clampers" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_Limiters" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=Limiters" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_MultiStage_amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=MultiStage_amplifier" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_Ohm_law" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=Ohm_law" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_Parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=Parallel_circuit" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_PNJunction" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=PNJunction" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_Push_pull_amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=Push_pull_amplifier" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_Series_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=Series_circuit" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Test_Series_parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=Series_parallel_circuit" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
     <resource identifier="RES-COMMON" adlcp:scormType="asset" xml:base="Content/" type="webcontent" />
