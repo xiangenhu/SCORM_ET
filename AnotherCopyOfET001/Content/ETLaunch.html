@@ -6,11 +6,87 @@
 <script language=javascript src="util/jquery-ui-1.7.2.custom.min.js"></script>
 <script language=javascript src="util/utils.js"></script>
 <script language=javascript src="util/scormfunctions.js"></script>
-
+<script language=javascript>
+    var pageArray = new Array(5);
+	var currentPage = 0;
+    function goToPage(){
+	    pageArray=GetNav();
+        var theIframe = document.getElementById("contentFrame");
+        var prevButton = document.getElementById("butPrevious");
+        var nextButton = document.getElementById("butNext");
+      
+        //navigate the iFrame to the content
+        theIframe.src = pageArray[currentPage];
+        
+        //disable the prev/next buttons if we are on the first or last page.
+        if (currentPage == 0){
+            nextButton.disabled = false;
+            prevButton.disabled = true;
+        }
+        else if (currentPage == (pageArray.length - 1)){
+            nextButton.disabled = true;
+            prevButton.disabled = false;       
+        }
+        else{
+            nextButton.disabled = false;
+            prevButton.disabled = false;
+        }
+        
+        if (pageArray.length == 1){
+            nextButton.disabled = true;
+            prevButton.disabled = true;
+        }
+        
+        //save the current location as the bookmark
+        ScormProcessSetValue("cmi.location", currentPage);
+     
+        //in this example, if there is an assessment, the SCO isn't completed until it is submitted
+        if (currentPage == (pageArray.length - 1)){
+            reachedEnd = true;
+            
+            //For simplicity's sake, mark the course as passed when it is completed
+            //and doesn't have a test. This will make our sequencing based on global
+            //objectives simpler.
+            if (hasAssessment == false){
+                ScormProcessSetValue("cmi.completion_status", "completed");
+                ScormProcessSetValue("cmi.success_status", "passed");
+            }
+            
+            //invoke Commit because sometimes that will trigger the sequencer to 
+            //update the available navigational controls
+            ScormProcessCommit();
+        }
+    }
+    
+    function doPrevious(){
+		 pageArray=GetNav();
+		
+        if (currentPage > 0){
+            currentPage--;
+        }
+        goToPage();
+    }
+    
+    function doNext(){
+	   pageArray=GetNav();
+        if (currentPage < (pageArray.length - 1)){
+            currentPage++;
+        }
+        goToPage();
+    }
+    
+</script>
 
 <title>ATT Reading</title>
 </head>
-<body onload="ComposePage()">
+<body onload="ComposePage();">
+   
+    <div id="navDiv">
+        <input type="button" value="<- Previous" id="butPrevious" onclick="doPrevious();"/>
+        <input type="button" value="Next ->" id="butNext" onclick="doNext();"/>
+        <!--<input type="button" value="Exit" id="butExit" onclick="doExit();"/>-->
+    </div>
+	
 <div id="maindiv"/>
 </body>
 </html>

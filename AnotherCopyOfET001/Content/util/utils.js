@@ -17,17 +17,34 @@ function GetQueryVar(search_for,defaultstr) {
 				}
 				return defaultstr;
 			}
-
+function GetNav()
+{
+	
+	var queryString=GetQueryVar("T","CB_Amplifier");			
+    var pageArray = new Array(5);
+          /*   pageArray[0] = "ETLaunch.html?CL=AutoTutorInnerFrame.html&T="+queryString;
+            pageArray[1] = "ETLaunch.html?CL=DragoonInnerFrame.html&T="+queryString;
+            pageArray[2] = "ETLaunch.html?CL=ReadingInnerFrame.html&T="+queryString;
+            pageArray[3] = "ETLaunch.html?CL=SkillBuilderInnerFrame.html&T="+queryString;
+            pageArray[4] = "ETLaunch.html?CL=BBNInnerFrame.html&T="+queryString;   */  
+			pageArray[1] = "AutoTutorInnerFrame.html";
+            pageArray[2] = "DragoonInnerFrame.html";
+            pageArray[0] = "ReadingInnerFrame.html";
+            pageArray[3] = "SkillBuilderInnerFrame.html";
+            pageArray[4] = "BBNInnerFrame.html";  
+	return pageArray;
+}
+			
 function ComposeTest() {
 	RenderTest(test);
 }			
 			
 
 function ComposePage() {
-	var URLString = GetQueryVar("CL","http://www.yahoo.com");
+	var URLString = GetQueryVar("CL","ReadingInnerFrame.html");
 	var TopicString = GetQueryVar("T","CB_Amplifier");
     var html = 'Topic='+TopicString;
-    html +=    '<div><iframe src="'+URLString+'"frameborder="1" width="1100" height="900"/></div>';
+    html +=    '<div><iframe src="'+URLString+'"frameborder="1" width="1100" height="900" id="contentFrame"/></div>';
 	document.getElementById("maindiv").innerHTML = html; 
 }
 
