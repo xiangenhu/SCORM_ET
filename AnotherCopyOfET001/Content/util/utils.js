@@ -22,11 +22,14 @@ function GetNav()
 	
 	var queryString=GetQueryVar("T","CB_Amplifier");			
     var pageArray = new Array(5);
-			pageArray[1] = "AutoTutorInnerFrame.html?T="+queryString;
-            pageArray[2] = "DragoonInnerFrame.html?T="+queryString;
-            pageArray[0] = "ReadingInnerFrame.html?T="+queryString;
-            pageArray[3] = "SkillBuilderInnerFrame.html?T="+queryString;
-            pageArray[4] = "BBNInnerFrame.html?T="+queryString;  
+            pageArray[0] = "IniReading.html?T="+queryString;
+			pageArray[1] = "AutoTutorDR.html?T="+queryString;			
+			pageArray[2] = "AutoTutorKC.html?T="+queryString;
+            pageArray[3] = "BBN.html?T="+queryString;  
+            pageArray[4] = "Dragoon.html?T="+queryString;
+            pageArray[5] = "SkillBuilder.html?T="+queryString;
+            pageArray[6] = "ATTReading.html?T="+queryString;
+            pageArray[7] = "NewAutoTutorDRQ.html?T="+queryString;
 	return pageArray;
 }
 			

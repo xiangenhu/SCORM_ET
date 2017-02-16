@@ -118,46 +118,46 @@
     </organization>
   </organizations>
   <resources>
-    <resource identifier="Transistor" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=Transister" type="webcontent">
+    <resource identifier="Transistor" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Transister" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="CB_Amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=CB_Amplifier" type="webcontent">
+    <resource identifier="CB_Amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CB_Amplifier" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="CC_Amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=CC_Amplifier" type="webcontent">
+    <resource identifier="CC_Amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CC_Amplifier" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="CE_amplifier_battery_bias" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=CE_amplifier_battery_bias" type="webcontent">
+    <resource identifier="CE_amplifier_battery_bias" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CE_amplifier_battery_bias" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="CE_amplifier_fixed_bias_voltage_divider" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=CE_amplifier_fixed_bias_voltage_divider" type="webcontent">
+    <resource identifier="CE_amplifier_fixed_bias_voltage_divider" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CE_amplifier_fixed_bias_voltage_divider" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Clampers" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=Clampers" type="webcontent">
+    <resource identifier="Clampers" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Clampers" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Limiters" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=Limiters" type="webcontent">
+    <resource identifier="Limiters" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Limiters" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="MultiStage_amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=MultiStage_amplifier" type="webcontent">
+    <resource identifier="MultiStage_amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=MultiStage_amplifier" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Ohm_law" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=Ohm_law" type="webcontent">
+    <resource identifier="Ohm_law" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Ohm_law" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=Parallel_circuit" type="webcontent">
+    <resource identifier="Parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Parallel_circuit" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="PNJunction" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=PNJunction" type="webcontent">
+    <resource identifier="PNJunction" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=PNJunction" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Push_pull_amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=Push_pull_amplifier" type="webcontent">
+    <resource identifier="Push_pull_amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Push_pull_amplifier" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=Series_circuit" type="webcontent">
+    <resource identifier="Series_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Series_circuit" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="Series_parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=AutoTutorInnerFrame.html&amp;T=Series_parallel_circuit" type="webcontent">
+    <resource identifier="Series_parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Series_parallel_circuit" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
     <resource identifier="Test_Transistor" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html?T=Transister" type="webcontent">
