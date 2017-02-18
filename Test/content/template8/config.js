@@ -1,2 +1,0 @@
-{ "tid" : "t08","tdescHeader" : "Template 8:  Remediating Using Objectives (2)", "tdesc" : "Template 8 allows you to control when the learner can access the post-test.  In this template, the learner cannot attempt the post-test in SCO-3 until the instruction in Aggregation-A is complete.  If the learner fails either objective in the post-test, the learner will be remediated to the corresponding instructional materials in Aggregation-1." } 
-                   

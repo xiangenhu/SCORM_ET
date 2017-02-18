@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- v0.1 -->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:lom="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="com.ONRET.SCORM2004" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd   http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd   http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3   adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd" version="1.3">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 4th Edition</schemaversion>
+  </metadata>
+  <organizations default="ONRET">
+    <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
+      <title>ONR ET Course</title>
+      <item identifier="ITEM-B03700553ECF3E8C6E29689D3CE23A00" isvisible="false">
+        <title>ET Topics</title>
+        <item identifier="Transistors" identifierref="Transistor" isvisible="true">
+          <title>Transistors</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-Series_circuit" identifierref="Series_circuit" isvisible="true">
+          <title>Series_circuit</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-Series_parallel_circuit" identifierref="Series_parallel_circuit" isvisible="true">
+          <title>Series_parallel_circuit</title>
+        </item>
+        <item identifier="ITEM-Push_pull_amplifier" identifierref="Push_pull_amplifier" isvisible="true">
+          <title>Push_pull_amplifier</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-PNJunction" identifierref="PNJunction" isvisible="true">
+          <title>PNJunction</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-Parallel_circuit" identifierref="Parallel_circuit" isvisible="true">
+          <title>Parallel_circuit</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-Ohm_law" identifierref="Ohm_law" isvisible="true">
+          <title>Ohm_law</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-MultiStage_amplifier" identifierref="MultiStage_amplifier" isvisible="true">
+          <title>MultiStage_amplifier</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-Limiters" identifierref="Limiters" isvisible="true">
+          <title>Limiters</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-Clampers" identifierref="Clampers" isvisible="true">
+          <title>Clampers</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-CE_amplifier_fixed_bias_voltage_divider" identifierref="CE_amplifier_fixed_bias_voltage_divider" isvisible="true">
+          <title>CE_amplifier_fixed_bias_voltage_divider</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_fixed_bias_voltage_divider_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-CE_amplifier_battery_bias" identifierref="CE_amplifier_battery_bias" isvisible="true">
+          <title>CE_amplifier_battery_bias</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-CC_amplifier" identifierref="CC_Amplifier" isvisible="true">
+          <title>CC_amplifier</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-CB_amplifier" identifierref="CB_Amplifier" isvisible="true">
+          <title>CB_amplifier</title>
+          <imsss:sequencing IDRef="content_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+		<imsss:sequencing>
+
+          <imsss:controlMode choice="false" flow="true" choiceExit="false"/>
+
+          <imsss:sequencingRules>
+
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition operator="not" condition="satisfied"/>
+                <imsss:ruleCondition operator="not" condition="objectiveStatusKnown"/>
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="retry"/>
+            </imsss:postConditionRule>
+
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition condition="satisfied"/>
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitAll"/>
+            </imsss:postConditionRule>
+            
+          </imsss:sequencingRules>
+
+        </imsss:sequencing>
+      </item>
+      <item identifier="ITEM-3C39826629949A81DAD54F17653E4309" isvisible="false">
+        <title>Quizzes</title>
+        <item identifier="TEST-CB_amplifier" identifierref="CB_Amplifier" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST CB_amplifier</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-CC_amplifier" identifierref="CC_Amplifier" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST CC_amplifier</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-CE_amplifier_battery_bias" identifierref="CE_amplifier_battery_bias" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST CE_amplifier_battery_TESTbias</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_TESTbias_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-CE_amplifier_fixed_bias_voltage_divider" identifierref="CE_amplifier_fixed_bias_voltage_divider" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST CE_amplifier_fixed_bias_voltage_divider</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_fixed_bias_voltage_divider_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Clampers" identifierref="Clampers" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST Clampers</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Limiters" identifierref="Limiters" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST Limiters</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-MultiStage_amplifier" identifierref="MultiStage_amplifier" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST MultiStage_amplifier</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Ohm_law" identifierref="Ohm_law" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST Ohm_law</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_lawOhm_law_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Parallel_circuit" identifierref="Parallel_circuit" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST Parallel_circuit</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-PNJunction" identifierref="PNJunction" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST PNJunction</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Push_pull_amplifier" identifierref="Push_pull_amplifier" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST Push_pull_amplifier</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Series_parallel_circuit" identifierref="Series_parallel_circuit" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST Series_parallel_circuit</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Series_circuit" identifierref="Series_circuit" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST Series_circuit</title>
+		  <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Transistors" identifierref="Transistor" isvisible="true" parameters="&amp;PT=Q">
+          <title>TEST Transistors</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+		<imsss:sequencing>
+
+          <imsss:controlMode choice="false" flow="true" choiceExit="false"/>
+
+          <imsss:sequencingRules>
+
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition operator="not" condition="satisfied"/>
+                <imsss:ruleCondition operator="not" condition="objectiveStatusKnown"/>
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="retry"/>
+            </imsss:postConditionRule>
+
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition condition="satisfied"/>
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitAll"/>
+            </imsss:postConditionRule>
+            
+          </imsss:sequencingRules>
+
+        </imsss:sequencing>
+      </item>
+	  
+      <imsss:sequencing>
+        <imsss:controlMode choice="false" flow="true" />
+      </imsss:sequencing>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="Transistor" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Transister" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CB_Amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CB_Amplifier" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CC_Amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CC_Amplifier" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_battery_bias" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CE_amplifier_battery_bias" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="CE_amplifier_fixed_bias_voltage_divider" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CE_amplifier_fixed_bias_voltage_divider" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Clampers" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Clampers" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Limiters" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Limiters" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="MultiStage_amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=MultiStage_amplifier" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Ohm_law" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Ohm_law" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Parallel_circuit" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="PNJunction" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=PNJunction" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Push_pull_amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Push_pull_amplifier" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Series_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Series_circuit" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="Series_parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Series_parallel_circuit" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="ETLaunch.html" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="ETTest.html" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="RES-COMMON" adlcp:scormType="asset" xml:base="Content/" type="webcontent" />
+  </resources>
+  <imsss:sequencingCollection>
+    <imsss:sequencing ID="content_seq_rules">
+      <!-- If the learning objective for this test/content object has been satisfied we can skip it-->
+      <imsss:sequencingRules>
+        <imsss:preConditionRule>
+          <imsss:ruleConditions>
+            <imsss:ruleCondition condition="satisfied" />
+          </imsss:ruleConditions>
+          <imsss:ruleAction action="skip" />
+        </imsss:preConditionRule>
+      </imsss:sequencingRules>
+      <!-- Content doesn't count towards any rollup-->
+      <imsss:rollupRules objectiveMeasureWeight="0" rollupObjectiveSatisfied="false" rollupProgressCompletion="false" />
+      <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true" />
+    </imsss:sequencing>
+    <imsss:sequencing ID="test_seq_rules">
+      <!-- If the learning objective for this test/content object has been satisfied we can skip it-->
+      <imsss:sequencingRules>
+        <imsss:preConditionRule>
+          <imsss:ruleConditions>
+            <imsss:ruleCondition condition="satisfied" />
+          </imsss:ruleConditions>
+          <imsss:ruleAction action="skip" />
+        </imsss:preConditionRule>
+      </imsss:sequencingRules>
+      <!-- Tests count towards all rollup metrics-->
+      <imsss:rollupRules objectiveMeasureWeight="1" rollupObjectiveSatisfied="true" rollupProgressCompletion="true" />
+      <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true" />
+      <!--
+      During remediation, the completion status for a skipped activity might be reset. If
+      an activity is skipped, that means it was previously completed so don't require it for 
+      completion anymore.
+      -->
+      <adlseq:rollupConsiderations requiredForCompleted="ifNotSkipped" />
+    </imsss:sequencing>
+  </imsss:sequencingCollection>
+</manifest>
+

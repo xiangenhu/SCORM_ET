@@ -1,2 +1,0 @@
-{ "tid" : "t05b","tdescHeader" : "Template 5:  Remediation Using Objectives (B)", "tdesc" : "In Template 5 Rules (Application B), we’ve given the learner more control over the learning experience.  The learner now has the choice to view the content in any order.  The learner could even complete the post-test in SCO-3 without first viewing SCOs 1 and 2.  The objectives and remediation work the same way in Application B as they do in Application A; however, the learner is now permitted as many attempts as needed to pass the post-test in SCO-3." }
-                   
