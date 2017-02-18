@@ -104,13 +104,12 @@
 		
 	    var PageType= GetQueryVar("PT","P");
 		if (PageType=="Q") {
-		    setIframeSrc("contentFrame",GetQueryVar("CL")+"?"+GetQueryVar("T"));
+		    setIframeSrc("contentFrame","ETTest.html?"+GetQueryVar("T"));
 			hasAssessment = true;
             nextButton.disabled = true;
-            prevButton.disabled = false;   
-			ScormProcessSetValue("cmi.location", currentPage);
+            prevButton.disabled = true;   
 			ScormProcessCommit();
-			
+			return
 		}
         if (PageType=="P"){
 			theIframe.src = pageArray[currentPage];
@@ -126,12 +125,11 @@
 				nextButton.disabled = false;
 				prevButton.disabled = false;
 			}
-			
+			ScormProcessSetValue("cmi.location", currentPage);
 			if (pageArray.length == 1){
 				nextButton.disabled = true;
 				prevButton.disabled = true;
 			}
-			ScormProcessSetValue("cmi.location", currentPage);
 			if (currentPage == (pageArray.length - 1)){
 				reachedEnd = true;
 				if (hasAssessment == false){
@@ -140,7 +138,7 @@
 				}
 				ScormProcessCommit();
 			}
-		}
+		}		
     }
     
     function doUnload(pressedExit){
