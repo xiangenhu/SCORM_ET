@@ -21,7 +21,7 @@ function GetNav()
 {
 	
 	var queryString=GetQueryVar("T","CB_Amplifier");			
-    var pageArray = new Array(5);
+    var pageArray = new Array(9);
             pageArray[0] = "IniReading.html?T="+queryString;
 			pageArray[1] = "AutoTutorDR.html?T="+queryString;			
 			pageArray[2] = "AutoTutorKC.html?T="+queryString;
@@ -30,6 +30,7 @@ function GetNav()
             pageArray[5] = "SkillBuilder.html?T="+queryString;
             pageArray[6] = "ATTReading.html?T="+queryString;
             pageArray[7] = "NewAutoTutorDRQ.html?T="+queryString;
+			pageArray[8] = "ETTest.html?T="+queryString;
 	return pageArray;
 }
 			
@@ -39,11 +40,11 @@ function ComposeTest() {
 			
 
 function ComposePage() {
-	var URLString = GetQueryVar("CL","ReadingInnerFrame.html");
+	var URLString = GetQueryVar("CL","IniReading.html");
 	var TopicString = GetQueryVar("T","CB_Amplifier");
     var html = 'Topic='+TopicString;
     html +=    '<div><iframe src="'+URLString+'"frameborder="1" width="1100" height="900" id="contentFrame"/></div>';
-	document.getElementById("maindiv").innerHTML = html; 
+	document.getElementById("contentFrame").innerHTML = html; 
 }
 
 var gConfig = new Object();
@@ -176,7 +177,7 @@ function initDivs() {
         html +=    '<div id=descriptionDiv>'+getDescription()+'</div>';
     }
 
-    document.getElementById("maindiv").innerHTML = html + popup_html;
+    document.getElementById("contentFrame").innerHTML = html + popup_html;
 
     if (document.getElementById("rulesDiv")) {
         document.getElementById("rulesDiv").style.width = document.getElementById("rulesimg").width;

@@ -9,12 +9,91 @@
 <script language=javascript>
     var pageArray = new Array(5);
 	var currentPage = 0;
+	var hasAssessment = false;
+    
+    var currentPage = null;
+    var startTimeStamp = null;
+    var processedUnload = false;
+    var reachedEnd = false;
+	
+    function setIframeHeight(id, navWidth) {
+        if ( document.getElementById ) {
+            var theIframe = document.getElementById(id);
+            if (theIframe) {
+                var height = getWindowHeight();
+                theIframe.style.height = Math.round( height ) - navWidth + "px";
+                theIframe.style.marginTop = Math.round( ((height - navWidth) - parseInt(theIframe.style.height) )/2 ) + "px";
+            }
+        }
+    }
+
+    function getWindowHeight() {
+        var height = 0;
+        if (window.innerHeight){
+            height = window.innerHeight - 18;
+        }
+        else if (document.documentElement && document.documentElement.clientHeight){
+            height = document.documentElement.clientHeight;
+        }
+        else if (document.body && document.body.clientHeight) {
+            height = document.body.clientHeight;
+        }
+        return height;
+    }
+	
+	 function SetupIFrame(){
+        //set our iFrame for the content to take up the full screen except for our navigation
+        var navWidth = 40;
+        setIframeHeight("contentFrame", navWidth);
+        //need this in a setTimeout to avoid a timing error in IE6
+        window.setTimeout('window.onresize = function() { setIframeHeight("contentFrame", ' + navWidth + '); }', 1000);
+    }
+	
+    function doStart(){
+		pageArray=GetNav();
+        //get the iFrame sized correctly and set up
+        SetupIFrame();
+        
+        //record the time that the learner started the SCO so that we can report the total time
+        startTimeStamp = new Date();
+        
+        //initialize communication with the LMS
+        ScormProcessInitialize();
+        
+        //it's a best practice to set the completion status to incomplete when
+        //first launching the course (if the course is not already completed)
+        var completionStatus = ScormProcessGetValue("cmi.completion_status", true);
+        if (completionStatus == "unknown"){
+            ScormProcessSetValue("cmi.completion_status", "incomplete");
+        }
+        
+        //see if the user stored a bookmark previously (don't check for errors
+        //because cmi.location may not be initialized
+        var bookmark = ScormProcessGetValue("cmi.location", false);
+        
+        //if there isn't a stored bookmark, start the user at the first page
+        if (bookmark == ""){
+            currentPage = 0;
+        }
+        else{
+            //if there is a stored bookmark, prompt the user to resume from the previous location
+            if (confirm("Would you like to resume from where you previously left off?")){
+                currentPage = parseInt(bookmark, 10);
+            }
+            else{
+                currentPage = 0;
+            }
+        }
+        
+        goToPage();
+    }
+    
     function goToPage(){
-	    pageArray=GetNav();
+		pageArray=GetNav();
         var theIframe = document.getElementById("contentFrame");
         var prevButton = document.getElementById("butPrevious");
         var nextButton = document.getElementById("butNext");
-      
+        
         //navigate the iFrame to the content
         theIframe.src = pageArray[currentPage];
         
@@ -24,6 +103,7 @@
             prevButton.disabled = true;
         }
         else if (currentPage == (pageArray.length - 1)){
+		    hasAssessment = true;
             nextButton.disabled = true;
             prevButton.disabled = false;       
         }
@@ -58,9 +138,28 @@
         }
     }
     
+    function doUnload(pressedExit){
+        pageArray=GetNav();
+        //don't call this function twice
+        if (processedUnload == true){return;}
+        
+        processedUnload = true;
+        
+        //record the session time
+        var endTimeStamp = new Date();
+        var totalMilliseconds = (endTimeStamp.getTime() - startTimeStamp.getTime());
+        var scormTime = ConvertMilliSecondsIntoSCORM2004Time(totalMilliseconds);
+        
+        ScormProcessSetValue("cmi.session_time", scormTime);
+        
+        //don't save the runtime data in this example
+        ScormProcessSetValue("cmi.exit", "");
+
+        ScormProcessTerminate();
+    }
+    
     function doPrevious(){
-		 pageArray=GetNav();
-		
+	
         if (currentPage > 0){
             currentPage--;
         }
@@ -68,25 +167,151 @@
     }
     
     function doNext(){
-	   pageArray=GetNav();
         if (currentPage < (pageArray.length - 1)){
             currentPage++;
         }
         goToPage();
     }
     
+    function doExit(){
+
+        //note use of short-circuit AND. If the user reached the end, don't prompt.
+        //just exit normally and submit the results.
+        if (reachedEnd == false && confirm("Would you like to save your progress to resume later?")){
+            //set exit to suspend
+            ScormProcessSetValue("cmi.exit", "suspend");
+            
+            //issue a suspendAll navigation request
+            ScormProcessSetValue("adl.nav.request", "suspendAll");
+        }
+        else{
+            //set exit to normal
+            ScormProcessSetValue("cmi.exit", "");
+            
+            //issue an exitAll navigation request
+            ScormProcessSetValue("adl.nav.request", "exitAll");
+        }
+        
+        //process the unload handler to close out the session.
+        //the presense of an adl.nav.request will cause the LMS to 
+        //take the content away from the user.
+        doUnload(true);
+        
+    }
+	
+ function RecordTest(score){
+        ScormProcessSetValue("cmi.score.raw", score);
+        ScormProcessSetValue("cmi.score.min", "0");
+        ScormProcessSetValue("cmi.score.max", "100");
+        
+        var scaledScore = score / 100;
+        ScormProcessSetValue("cmi.score.scaled", scaledScore);
+        
+        ScormProcessSetValue("cmi.completion_status", "completed");
+        
+        //consider 70% to be passing
+        if (score >= 70){
+            ScormProcessSetValue("cmi.success_status", "passed");
+        }
+        else{
+            ScormProcessSetValue("cmi.success_status", "failed");
+        }
+    }
+
+ //SCORM requires time to be formatted in a specific way
+    function ConvertMilliSecondsIntoSCORM2004Time(intTotalMilliseconds){
+	
+	    var ScormTime = "";
+    	
+	    var HundredthsOfASecond;	//decrementing counter - work at the hundreths of a second level because that is all the precision that is required
+    	
+	    var Seconds;	// 100 hundreths of a seconds
+	    var Minutes;	// 60 seconds
+	    var Hours;		// 60 minutes
+	    var Days;		// 24 hours
+	    var Months;		// assumed to be an "average" month (figures a leap year every 4 years) = ((365*4) + 1) / 48 days - 30.4375 days per month
+	    var Years;		// assumed to be 12 "average" months
+    	
+	    var HUNDREDTHS_PER_SECOND = 100;
+	    var HUNDREDTHS_PER_MINUTE = HUNDREDTHS_PER_SECOND * 60;
+	    var HUNDREDTHS_PER_HOUR   = HUNDREDTHS_PER_MINUTE * 60;
+	    var HUNDREDTHS_PER_DAY    = HUNDREDTHS_PER_HOUR * 24;
+	    var HUNDREDTHS_PER_MONTH  = HUNDREDTHS_PER_DAY * (((365 * 4) + 1) / 48);
+	    var HUNDREDTHS_PER_YEAR   = HUNDREDTHS_PER_MONTH * 12;
+    	
+	    HundredthsOfASecond = Math.floor(intTotalMilliseconds / 10);
+    	
+	    Years = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_YEAR);
+	    HundredthsOfASecond -= (Years * HUNDREDTHS_PER_YEAR);
+    	
+	    Months = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_MONTH);
+	    HundredthsOfASecond -= (Months * HUNDREDTHS_PER_MONTH);
+    	
+	    Days = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_DAY);
+	    HundredthsOfASecond -= (Days * HUNDREDTHS_PER_DAY);
+    	
+	    Hours = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_HOUR);
+	    HundredthsOfASecond -= (Hours * HUNDREDTHS_PER_HOUR);
+    	
+	    Minutes = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_MINUTE);
+	    HundredthsOfASecond -= (Minutes * HUNDREDTHS_PER_MINUTE);
+    	
+	    Seconds = Math.floor(HundredthsOfASecond / HUNDREDTHS_PER_SECOND);
+	    HundredthsOfASecond -= (Seconds * HUNDREDTHS_PER_SECOND);
+    	
+	    if (Years > 0) {
+		    ScormTime += Years + "Y";
+	    }
+	    if (Months > 0){
+		    ScormTime += Months + "M";
+	    }
+	    if (Days > 0){
+		    ScormTime += Days + "D";
+	    }
+    	
+	    //check to see if we have any time before adding the "T"
+	    if ((HundredthsOfASecond + Seconds + Minutes + Hours) > 0 ){
+    		
+		    ScormTime += "T";
+    		
+		    if (Hours > 0){
+			    ScormTime += Hours + "H";
+		    }
+    		
+		    if (Minutes > 0){
+			    ScormTime += Minutes + "M";
+		    }
+    		
+		    if ((HundredthsOfASecond + Seconds) > 0){
+			    ScormTime += Seconds;
+    			
+			    if (HundredthsOfASecond > 0){
+				    ScormTime += "." + HundredthsOfASecond;
+			    }
+    			
+			    ScormTime += "S";
+		    }
+    		
+	    }
+    	
+	    if (ScormTime == ""){
+		    ScormTime = "0S";
+	    }
+    	
+	    ScormTime = "P" + ScormTime;
+    	
+	    return ScormTime;
+    }
+    
 </script>
 
 <title>ATT Reading</title>
-</head>
-<body onload="ComposePage();">
-   
+</head><body onload="doStart(false);" onbeforeunload="doUnload(false);" onunload="doUnload();">
+<iframe width="100%" id="contentFrame" src=""></iframe>   
     <div id="navDiv">
         <input type="button" value="<- Previous" id="butPrevious" onclick="doPrevious();"/>
         <input type="button" value="Next ->" id="butNext" onclick="doNext();"/>
         <!--<input type="button" value="Exit" id="butExit" onclick="doExit();"/>-->
     </div>
-	
-<div id="maindiv"/>
 </body>
 </html>
