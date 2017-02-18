@@ -7,7 +7,7 @@
 <script language=javascript src="util/utils.js"></script>
 <script language=javascript src="util/scormfunctions.js"></script>
 <script language=javascript>
-    var pageArray = new Array(5);
+    var pageArray = new Array(9);
 	var currentPage = 0;
 	var hasAssessment = false;
     
@@ -23,6 +23,15 @@
                 var height = getWindowHeight();
                 theIframe.style.height = Math.round( height ) - navWidth + "px";
                 theIframe.style.marginTop = Math.round( ((height - navWidth) - parseInt(theIframe.style.height) )/2 ) + "px";
+            }
+        }
+    }
+	
+	function setIframeSrc(id, Source) {
+        if ( document.getElementById ) {
+            var theIframe = document.getElementById(id);
+            if (theIframe) {
+				theIframe.src=Source;
             }
         }
     }
@@ -84,7 +93,6 @@
                 currentPage = 0;
             }
         }
-        
         goToPage();
     }
     
@@ -93,49 +101,46 @@
         var theIframe = document.getElementById("contentFrame");
         var prevButton = document.getElementById("butPrevious");
         var nextButton = document.getElementById("butNext");
-        
-        //navigate the iFrame to the content
-        theIframe.src = pageArray[currentPage];
-        
-        //disable the prev/next buttons if we are on the first or last page.
-        if (currentPage == 0){
-            nextButton.disabled = false;
-            prevButton.disabled = true;
-        }
-        else if (currentPage == (pageArray.length - 1)){
-		    hasAssessment = true;
+		
+	    var PageType= GetQueryVar("PT","P");
+		if (PageType=="Q") {
+		    setIframeSrc("contentFrame",GetQueryVar("CL")+"?"+GetQueryVar("T"));
+			hasAssessment = true;
             nextButton.disabled = true;
-            prevButton.disabled = false;       
-        }
-        else{
-            nextButton.disabled = false;
-            prevButton.disabled = false;
-        }
-        
-        if (pageArray.length == 1){
-            nextButton.disabled = true;
-            prevButton.disabled = true;
-        }
-        
-        //save the current location as the bookmark
-        ScormProcessSetValue("cmi.location", currentPage);
-     
-        //in this example, if there is an assessment, the SCO isn't completed until it is submitted
-        if (currentPage == (pageArray.length - 1)){
-            reachedEnd = true;
-            
-            //For simplicity's sake, mark the course as passed when it is completed
-            //and doesn't have a test. This will make our sequencing based on global
-            //objectives simpler.
-            if (hasAssessment == false){
-                ScormProcessSetValue("cmi.completion_status", "completed");
-                ScormProcessSetValue("cmi.success_status", "passed");
-            }
-            
-            //invoke Commit because sometimes that will trigger the sequencer to 
-            //update the available navigational controls
-            ScormProcessCommit();
-        }
+            prevButton.disabled = false;   
+			ScormProcessSetValue("cmi.location", currentPage);
+			ScormProcessCommit();
+			
+		}
+        if (PageType=="P"){
+			theIframe.src = pageArray[currentPage];
+			if (currentPage == 0){
+				nextButton.disabled = false;
+				prevButton.disabled = true;
+			}
+			else if (currentPage == (pageArray.length - 1)){
+				nextButton.disabled = true;
+				prevButton.disabled = false;       
+			}
+			else{
+				nextButton.disabled = false;
+				prevButton.disabled = false;
+			}
+			
+			if (pageArray.length == 1){
+				nextButton.disabled = true;
+				prevButton.disabled = true;
+			}
+			ScormProcessSetValue("cmi.location", currentPage);
+			if (currentPage == (pageArray.length - 1)){
+				reachedEnd = true;
+				if (hasAssessment == false){
+					ScormProcessSetValue("cmi.completion_status", "completed");
+					ScormProcessSetValue("cmi.success_status", "passed");
+				}
+				ScormProcessCommit();
+			}
+		}
     }
     
     function doUnload(pressedExit){

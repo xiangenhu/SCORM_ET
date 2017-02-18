@@ -30,7 +30,7 @@ function GetNav()
             pageArray[5] = "SkillBuilder.html?T="+queryString;
             pageArray[6] = "ATTReading.html?T="+queryString;
             pageArray[7] = "NewAutoTutorDRQ.html?T="+queryString;
-			pageArray[8] = "ETTest.html?T="+queryString;
+			pageArray[8] = "ThanksPage.html?T="+queryString;
 	return pageArray;
 }
 			
