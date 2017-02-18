@@ -1,0 +1,117 @@
+<html>
+<!-- v1.0 -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/template.css" />
+<script language=javascript src="../util/apiwrapper.js"></script>
+<script language=javascript src="../util/json.js"></script>
+<script language=javascript src="../util/jquery-1.3.2.min.js"></script>
+<script language=javascript src="../util/utils.js"></script>
+<script language=javascript>
+
+var exitPageStatus = false;
+
+//var menuObj = [ 
+//    { 'title' : "Template 1: Single SCO with single asset", 'key' : 'var-t1' }, 
+//    { 'title' : "Template 3: The Black Box", 'key' : 'var-t3' }, 
+//    { 'title' : "Template 4a: Multiple SCOs with assets (flow)", 'key'   : 'var-t4a' }, 
+//    { 'title' : "Template 4b: Multiple SCOs with assets (choice)", 'key' : 'var-t4b' },
+//    { 'title' : "Template 5: Remediation", 'key' : 'var-t5' },
+//    { 'title' : "Template 6: Pretest and Posttest", 'key' : 'var-t6' },
+//    { 'title' : "Template 7: Pretest and Posttest", 'key' : 'var-t7' },
+//    { 'title' : "Template 8: Remediation", 'key' : 'var-t8' },
+//    { 'title' : "Template 9: 3 Way Branching", 'key' : 'var-t9' },
+//    { 'title' : "Template 10: Pretest and Posttest with Remediation", 'key' : 'var-t10' }
+//];
+
+var menuObj = [ 
+    { 'lsalid' : '1', 'title' : "Template 1: Single SCO with single asset", 'key' : 'TEMP1_1' }, 
+    { 'lsalid' : '3', 'title' : "Template 3: The Black Box", 'key' : 'TEMP3_1' }, 
+    { 'lsalid' : '4flow', 'title' : "Template 4a: Multiple SCOs with assets (A)", 'key'   : 'TEMP4_1' }, 
+    { 'lsalid' : '4choice', 'title' : "Template 4b: Multiple SCOs with assets (B)", 'key' : 'TEMP4_CHOICE_1' },
+    { 'lsalid' : '5a', 'title' : "Template 5: Remediation (A)", 'key' : 'TEMP5_1' },
+    { 'lsalid' : '5b', 'title' : "Template 5: Remediation (B)", 'key' : 'TEMP5B_1' },
+    { 'lsalid' : '6', 'title' : "Template 6: Pretest and Posttest", 'key' : 'TEMP6_1' },
+    { 'lsalid' : '7', 'title' : "Template 7: Pretest and Posttest", 'key' : 'TEMP7_1' },
+    { 'lsalid' : '8', 'title' : "Template 8: Remediation", 'key' : 'TEMP8_1' },
+    { 'lsalid' : '9', 'title' : "Template 9: 3 Way Branching", 'key' : 'TEMP9_1' },
+    { 'lsalid' : '10', 'title' : "Template 10: Pretest and Posttest with Remediation", 'key' : 'TEMP10_1' }
+];
+
+
+function initSco() {
+
+//    startTimer();
+    var result = doInitialize();
+
+    // set objectives to disable some "choice" examples
+    var index = findObjective("var-t4b");
+    setObjSuccessStatus(index,"failed");
+    index = findObjective("var-t5b");
+    setObjSuccessStatus(index,"failed");
+
+    // set to unknown to hide template 7 choices
+    index = findObjective("obj-t7-2");
+    setObjSuccessStatus(index,"unknown");
+    index = findObjective("obj-t7-3");
+    setObjSuccessStatus(index,"unknown");
+
+    doCommit();
+    loadTemplate();
+
+    document.getElementById("content").style.visibility = "visible";
+    var html = "<center><h3>Select a Template</h3></center><br>";
+
+    html += "<ul>";
+    for (var i in menuObj) {
+        html += '<li><a href=javascript:chooseOption("'+menuObj[i].key+'")>' + menuObj[i].title + '</a>&nbsp;&nbsp;&nbsp;&nbsp;';
+        html += '<a href="../lsal_templates/template' + menuObj[i].lsalid + '.zip"><i id="downloadlink">[download]</i></a>';
+    }
+    html += "</ul>";
+    document.getElementById("content").innerHTML = html;
+}
+
+function chooseOption(key) {
+    if (key == "TEMP4_CHOICE_1") {
+        var index = findObjective("var-t4b");
+        setObjSuccessStatus(index,"passed");
+        doCommit();
+    }
+    else if (key == "TEMP5B_1") {
+        var index = findObjective("var-t5b");
+        setObjSuccessStatus(index,"passed");
+        doCommit();
+    }
+    goToSCO("SCO-ADL-TEMPLATES-" + key);
+}
+
+function moveOn() {
+    //  Set the SCO to completed with a normal exit
+    doSetValue( "cmi.completion_status", "completed" );
+    doSetValue( "cmi.success_status", "passed" );
+    doSetValue( "cmi.exit", "");
+    document.getElementById("content").innerHTML = "Content completed.";
+
+    // Indicate that the SCO was finished normally
+    doSetValue("adl.nav.request","continue");
+    exitPageStatus = true;
+    var result = doTerminate();
+}
+
+function beforeUnload() {
+    if (exitPageStatus != true) {
+//        doTerminate();
+    }
+}
+
+
+// ************************************************************************************
+// END SCO API helpers
+// ************************************************************************************
+
+</script>
+<title>Prompt</title>
+</head>
+<body onLoad="initSco()" onbeforeunload="beforeUnload()">
+<div id=maindiv></div>
+</body>
+</html>
