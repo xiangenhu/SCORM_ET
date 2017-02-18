@@ -17,8 +17,7 @@ var exitPageStatus = false;
    **********************************************************************/
    function loadPage()
    {
-      var result = doInitialize();
-/*      loadTemplate({"chartid":"t10_1a"});
+   //   var result = doInitialize();
    }
    
    
@@ -36,20 +35,17 @@ var exitPageStatus = false;
    **********************************************************************/
    function unloadPage()
    {
-    
+   <!--  
    	if (exitPageStatus != true)
    	{
    		doTerminate();
-   	}
+   	} -->
    
-   	// NOTE: don't return anything that resembles a javascript
-   	//		   string from this function or IE will take the
-   	//		   liberty of displaying a confirm message box
    }
 </script>
 <title>Welcome</title>
 </head>
-<body onLoad="loadPage()" onunload="return unloadPage()">
-Welcome
+<body onLoad="loadPage()">
+Welcome to ONR ET 
 </body>
 </html>
