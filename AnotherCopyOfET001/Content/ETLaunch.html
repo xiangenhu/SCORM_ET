@@ -104,7 +104,7 @@
 		
 	    var PageType= GetQueryVar("PT","P");
 		if (PageType=="Q") {
-		    setIframeSrc("contentFrame","ETTest.html?"+GetQueryVar("T"));
+		    setIframeSrc("contentFrame","ETTest.html?"+GetQueryVar("T","Transistor"));
 			hasAssessment = true;
             nextButton.disabled = true;
             prevButton.disabled = true;   
@@ -125,11 +125,12 @@
 				nextButton.disabled = false;
 				prevButton.disabled = false;
 			}
-			ScormProcessSetValue("cmi.location", currentPage);
+			
 			if (pageArray.length == 1){
 				nextButton.disabled = true;
 				prevButton.disabled = true;
 			}
+			ScormProcessSetValue("cmi.location", currentPage);
 			if (currentPage == (pageArray.length - 1)){
 				reachedEnd = true;
 				if (hasAssessment == false){
