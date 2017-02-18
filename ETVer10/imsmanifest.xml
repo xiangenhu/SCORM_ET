@@ -6,9 +6,9 @@
     <schemaversion>2004 4th Edition</schemaversion>
   </metadata>
   <organizations default="ONRET">
-    <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false" structure="hierarchical">
+    <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
       <title>ONR ET Course</title>
-      <item identifier="ITEM-B03700553ECF3E8C6E29689D3CE23A00" isvisible="true">
+      <item identifier="ITEM-B03700553ECF3E8C6E29689D3CE23A00" isvisible="false">
         <title>ET Topics</title>
         <item identifier="Transistors" identifierref="Transistor" isvisible="true">
           <title>Transistors</title>
@@ -143,8 +143,32 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
+		<imsss:sequencing>
+
+          <imsss:controlMode choice="false" flow="true" choiceExit="false"/>
+
+          <imsss:sequencingRules>
+
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition operator="not" condition="satisfied"/>
+                <imsss:ruleCondition operator="not" condition="objectiveStatusKnown"/>
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="retry"/>
+            </imsss:postConditionRule>
+
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition condition="satisfied"/>
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitAll"/>
+            </imsss:postConditionRule>
+            
+          </imsss:sequencingRules>
+
+        </imsss:sequencing>
       </item>
-      <item identifier="ITEM-3C39826629949A81DAD54F17653E4309" isvisible="true">
+      <item identifier="ITEM-3C39826629949A81DAD54F17653E4309" isvisible="false">
         <title>Quizzes</title>
         <item identifier="TEST-CB_amplifier" identifierref="CB_Amplifier" isvisible="true" parameters="&amp;PT=Q">
           <title>TEST CB_amplifier</title>
@@ -286,7 +310,32 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
+		<imsss:sequencing>
+
+          <imsss:controlMode choice="false" flow="true" choiceExit="false"/>
+
+          <imsss:sequencingRules>
+
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition operator="not" condition="satisfied"/>
+                <imsss:ruleCondition operator="not" condition="objectiveStatusKnown"/>
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="retry"/>
+            </imsss:postConditionRule>
+
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition condition="satisfied"/>
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitAll"/>
+            </imsss:postConditionRule>
+            
+          </imsss:sequencingRules>
+
+        </imsss:sequencing>
       </item>
+	  
       <imsss:sequencing>
         <imsss:controlMode choice="false" flow="true" />
       </imsss:sequencing>
