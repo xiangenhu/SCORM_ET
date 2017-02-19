@@ -1,0 +1,1946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- v0.1 -->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:lom="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="com.ONRET.SCORM2004" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd   http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd   http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3   adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd" version="1.3">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 4th Edition</schemaversion>
+  </metadata>
+  <organizations default="ONRET">
+    <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
+      <title>ONR ET Course</title>
+      <item identifier="ONR_ET_Version_3" identifierref="ONRETWelcome" isvisible="true">
+        <title>Welcome to ONR ET</title>
+      </item>
+      <item identifier="Folder-ET_Topics" isvisible="true">
+        <title>ET Topics</title>
+        <item identifier="Folder_Transistor_Bundle" isvisible="true">
+          <title>Transistor Bundle</title>
+          <item identifier="Folder-Transistor_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-Transistor_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Transister">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.Transistor_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Transistor_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=Transister">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-Transistor_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-Transistor_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=Transister">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Transistor_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=Transister">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Transistor_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-Transistor_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=Transister">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-Transistor_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=Transister">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Transistor_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-Transistor_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=Transister">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-Transistor_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-Transistor_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=Transister">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_Series_circuit_Bundle" isvisible="true">
+          <title>Series_circuit Bundle</title>
+          <item identifier="Folder-Series_circuit_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-Series_circuit_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Series_circuit">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Series_circuit_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=Series_circuit">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-Series_circuit_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-Series_circuit_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=Series_circuit">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Series_circuit_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=Series_circuit">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Series_circuit_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-Series_circuit_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=Series_circuit">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-Series_circuit_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=Series_circuit">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Series_circuit_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-Series_circuit_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=Series_circuit">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-Series_circuit_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-Series_circuit_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=Series_circuit">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_Series_parallel_circuit_Bundle" isvisible="true">
+          <title>Series_parallel_circuit Bundle</title>
+          <item identifier="Folder-Series_parallel_circuit_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-Series_parallel_circuit_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Series_parallel_circuit">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Series_parallel_circuit_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=Series_parallel_circuit">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-Series_parallel_circuit_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-Series_parallel_circuit_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=Series_parallel_circuit">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Series_parallel_circuit_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=Series_parallel_circuit">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Series_parallel_circuit_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-Series_parallel_circuit_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=Series_parallel_circuit">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-Series_parallel_circuit_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=Series_parallel_circuit">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Series_parallel_circuit_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-Series_parallel_circuit_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=Series_parallel_circuit">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-Series_parallel_circuit_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-Series_parallel_circuit_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=Series_parallel_circuit">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_Push_pull_amplifier_Bundle" isvisible="true">
+          <title>Push_pull_amplifier Bundle</title>
+          <item identifier="Folder-Push_pull_amplifier_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-Push_pull_amplifier_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Push_pull_amplifier">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Push_pull_amplifier_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=Push_pull_amplifier">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-Push_pull_amplifier_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-Push_pull_amplifier_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=Push_pull_amplifier">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Push_pull_amplifier_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=Push_pull_amplifier">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Push_pull_amplifier_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-Push_pull_amplifier_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=Push_pull_amplifier">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-Push_pull_amplifier_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=Push_pull_amplifier">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Push_pull_amplifier_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-Push_pull_amplifier_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=Push_pull_amplifier">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-Push_pull_amplifier_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-Push_pull_amplifier_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=Push_pull_amplifier">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_PNJunction_Bundle" isvisible="true">
+          <title>PNJunction Bundle</title>
+          <item identifier="Folder-PNJunction_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-PNJunction_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=PNJunction">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.PNJunction_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-PNJunction_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=PNJunction">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-PNJunction_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-PNJunction_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=PNJunction">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-PNJunction_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=PNJunction">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-PNJunction_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-PNJunction_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=PNJunction">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-PNJunction_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=PNJunction">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-PNJunction_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-PNJunction_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=PNJunction">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-PNJunction_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-PNJunction_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=PNJunction">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_Parallel_circuit_Bundle" isvisible="true">
+          <title>Parallel_circuit Bundle</title>
+          <item identifier="Folder-Parallel_circuit_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-Parallel_circuit_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Parallel_circuit">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Parallel_circuit_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=Parallel_circuit">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-Parallel_circuit_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-Parallel_circuit_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=Parallel_circuit">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Parallel_circuit_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=Parallel_circuit">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Parallel_circuit_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-Parallel_circuit_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=Parallel_circuit">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-Parallel_circuit_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=Parallel_circuit">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Parallel_circuit_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-Parallel_circuit_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=Parallel_circuit">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-Parallel_circuit_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-Parallel_circuit_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=Parallel_circuit">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_Ohm_law_Bundle" isvisible="true">
+          <title>Ohm_law Bundle</title>
+          <item identifier="Folder-Ohm_law_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-Ohm_law_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Ohm_law">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Ohm_law_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=Ohm_law">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-Ohm_law_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-Ohm_law_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=Ohm_law">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Ohm_law_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=Ohm_law">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Ohm_law_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-Ohm_law_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=Ohm_law">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-Ohm_law_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=Ohm_law">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Ohm_law_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-Ohm_law_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=Ohm_law">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-Ohm_law_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-Ohm_law_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=Ohm_law">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_MultiStage_amplifier_Bundle" isvisible="true">
+          <title>MultiStage_amplifier Bundle</title>
+          <item identifier="Folder-MultiStage_amplifier_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-MultiStage_amplifier_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=MultiStage_amplifier">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-MultiStage_amplifier_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=MultiStage_amplifier">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-MultiStage_amplifier_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-MultiStage_amplifier_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=MultiStage_amplifier">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-MultiStage_amplifier_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=MultiStage_amplifier">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-MultiStage_amplifier_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-MultiStage_amplifier_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=MultiStage_amplifier">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-MultiStage_amplifier_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=MultiStage_amplifier">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-MultiStage_amplifier_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-MultiStage_amplifier_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=MultiStage_amplifier">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-MultiStage_amplifier_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-MultiStage_amplifier_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=MultiStage_amplifier">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_Limiters_Bundle" isvisible="true">
+          <title>Limiters Bundle</title>
+          <item identifier="Folder-Limiters_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-Limiters_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Limiters">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.Limiters_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Limiters_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=Limiters">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-Limiters_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-Limiters_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=Limiters">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Limiters_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=Limiters">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Limiters_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-Limiters_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=Limiters">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-Limiters_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=Limiters">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Limiters_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-Limiters_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=Limiters">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-Limiters_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-Limiters_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=Limiters">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_Clampers_Bundle" isvisible="true">
+          <title>Clampers Bundle</title>
+          <item identifier="Folder-Clampers_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-Clampers_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Clampers">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.Clampers_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Clampers_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=Clampers">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-Clampers_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-Clampers_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=Clampers">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-Clampers_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=Clampers">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Clampers_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-Clampers_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=Clampers">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-Clampers_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=Clampers">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-Clampers_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-Clampers_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=Clampers">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-Clampers_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-Clampers_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=Clampers">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_CE_amplifier_FBVD_Bundle" isvisible="true">
+          <title>CE_amplifier_FBVD Bundle</title>
+          <item identifier="Folder-CE_amplifier_FBVD_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-CE_amplifier_FBVD_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=CE_amplifier_FBVD">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-CE_amplifier_FBVD_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=CE_amplifier_FBVD">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-CE_amplifier_FBVD_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-CE_amplifier_FBVD_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=CE_amplifier_FBVD">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-CE_amplifier_FBVD_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=CE_amplifier_FBVD">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-CE_amplifier_FBVD_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-CE_amplifier_FBVD_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=CE_amplifier_FBVD">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-CE_amplifier_FBVD_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=CE_amplifier_FBVD">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-CE_amplifier_FBVD_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-CE_amplifier_FBVD_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=CE_amplifier_FBVD">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-CE_amplifier_FBVD_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-CE_amplifier_FBVD_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=CE_amplifier_FBVD">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_CE_amplifier_battery_bias_Bundle" isvisible="true">
+          <title>CE_amplifier_battery_bias Bundle</title>
+          <item identifier="Folder-CE_amplifier_battery_bias_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-CE_amplifier_battery_bias_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=CE_amplifier_battery_bias">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-CE_amplifier_battery_bias_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=CE_amplifier_battery_bias">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-CE_amplifier_battery_bias_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-CE_amplifier_battery_bias_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=CE_amplifier_battery_bias">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-CE_amplifier_battery_bias_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=CE_amplifier_battery_bias">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-CE_amplifier_battery_bias_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-CE_amplifier_battery_bias_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=CE_amplifier_battery_bias">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-CE_amplifier_battery_bias_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=CE_amplifier_battery_bias">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-CE_amplifier_battery_bias_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-CE_amplifier_battery_bias_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=CE_amplifier_battery_bias">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-CE_amplifier_battery_bias_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-CE_amplifier_battery_bias_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=CE_amplifier_battery_bias">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_CC_amplifier_Bundle" isvisible="true">
+          <title>CC_amplifier Bundle</title>
+          <item identifier="Folder-CC_amplifier_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-CC_amplifier_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=CC_amplifier">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-CC_amplifier_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=CC_amplifier">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-CC_amplifier_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-CC_amplifier_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=CC_amplifier">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-CC_amplifier_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=CC_amplifier">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-CC_amplifier_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-CC_amplifier_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=CC_amplifier">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-CC_amplifier_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=CC_amplifier">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-CC_amplifier_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-CC_amplifier_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=CC_amplifier">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-CC_amplifier_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-CC_amplifier_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=CC_amplifier">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="Folder_CB_amplifier_Bundle" isvisible="true">
+          <title>CB_amplifier Bundle</title>
+          <item identifier="Folder-CB_amplifier_Bundle_Start" isvisible="true">
+            <title>Starting the Bundle</title>
+            <item identifier="ITEM-CB_amplifier_Bundle_IniReading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=CB_amplifier">
+              <title>IniReading</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_IniReading_Satisfied" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-CB_amplifier_Bundle_AutoTutor_Deep_Reasong" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=CB_amplifier">
+              <title>AutoTutor Deep Reasoning</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_Satisfied" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="Folder-CB_amplifier_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR Low</title>
+            <item identifier="ITEM-CB_amplifier_Bundle_AutoTutor KC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=CB_amplifier">
+              <title>AutoTutor KC</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="ITEM-CB_amplifier_Bundle_BBN_Material" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=CB_amplifier">
+              <title>BBN Material</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_Low" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-CB_amplifier_Bundle_AutoTutor_KC_Low" isvisible="true">
+              <title>AutoTutor KC Low</title>
+              <item identifier="ITEM-CB_amplifier_Bundle_SkillBuilder" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=SkillBuilder.html&amp;T=CB_amplifier">
+                <title>SkillBuilder</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <item identifier="ITEM-CB_amplifier_Bundle_ATT_Reading" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=CB_amplifier">
+                <title>ATT Reading</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_KC_Low" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <item identifier="Folder-CB_amplifier_Bundle_AutoTutor_KC_High" isvisible="true">
+              <title>AutoTutor KC High</title>
+              <item identifier="ITEM-CB_amplifier_Bundle_New_AutoTutor_DRQ" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=NewAutoTutorDRQ.html&amp;T=CB_amplifier">
+                <title>New AutoTutor DRQ</title>
+                <imsss:sequencing IDRef="content_seq_rules">
+                  <imsss:objectives>
+                    <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_New_AutoTutor_KC_High" writeSatisfiedStatus="false" />
+                    </imsss:primaryObjective>
+                  </imsss:objectives>
+                </imsss:sequencing>
+              </item>
+              <imsss:sequencing>
+                <imsss:controlMode choice="false" flow="true" />
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <item identifier="ITEM-CB_amplifier_Bundle_AutoTutor_DR_Low" isvisible="true">
+            <title>AutoTutor DR High</title>
+            <item identifier="ITEM-CB_amplifier_Bundle_Dragoon" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=CB_amplifier">
+              <title>Dragoon</title>
+              <imsss:sequencing IDRef="content_seq_rules">
+                <imsss:objectives>
+                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_High" writeSatisfiedStatus="false" />
+                  </imsss:primaryObjective>
+                </imsss:objectives>
+              </imsss:sequencing>
+            </item>
+            <imsss:sequencing>
+              <imsss:controlMode choice="false" flow="true" />
+            </imsss:sequencing>
+          </item>
+          <imsss:sequencing>
+            <imsss:controlMode choice="false" flow="true" />
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_Satisfied" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <imsss:sequencing>
+          <imsss:controlMode choice="false" flow="true" choiceExit="false" />
+          <imsss:sequencingRules>
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition operator="not" condition="satisfied" />
+                <imsss:ruleCondition operator="not" condition="objectiveStatusKnown" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="retry" />
+            </imsss:postConditionRule>
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition condition="satisfied" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitAll" />
+            </imsss:postConditionRule>
+          </imsss:sequencingRules>
+        </imsss:sequencing>
+      </item>
+      <item identifier="ITEM-3C39826629949A81DAD54F17653E4309" isvisible="true">
+        <title>Quizzes</title>
+        <item identifier="TEST-CB_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=CB_amplifier">
+          <title>TEST CB_amplifier</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-CC_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=CC_amplifier">
+          <title>TEST CC_amplifier</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-CE_amplifier_battery_bias" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=CE_amplifier_battery_bias">
+          <title>TEST CE_amplifier_battery_bias</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-CE_amplifier_FBVD" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=CE_amplifier_FBVD">
+          <title>TEST CE_amplifier_FBVD</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Clampers" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Clampers">
+          <title>TEST Clampers</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Limiters" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Limiters">
+          <title>TEST Limiters</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-MultiStage_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=MultiStage_amplifier">
+          <title>TEST MultiStage_amplifier</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Ohm_law" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Ohm_law">
+          <title>TEST Ohm_law</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_lawOhm_law_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Parallel_circuit" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Parallel_circuit">
+          <title>TEST Parallel_circuit</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-PNJunction" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=PNJunction">
+          <title>TEST PNJunction</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Push_pull_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Push_pull_amplifier">
+          <title>TEST Push_pull_amplifier</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Series_parallel_circuit" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Series_parallel_circuit">
+          <title>TEST Series_parallel_circuit</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Series_circuit" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Series_circuit">
+          <title>TEST Series_circuit</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="TEST-Transistors" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Transistors">
+          <title>TEST Transistors</title>
+          <imsss:sequencing IDRef="test_seq_rules">
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="learning_objective_satisfied">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <imsss:sequencing>
+          <imsss:controlMode choice="true" flow="true" choiceExit="false" />
+          <imsss:sequencingRules>
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition operator="not" condition="satisfied" />
+                <imsss:ruleCondition operator="not" condition="objectiveStatusKnown" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="retry" />
+            </imsss:postConditionRule>
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="any">
+                <imsss:ruleCondition condition="satisfied" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitAll" />
+            </imsss:postConditionRule>
+          </imsss:sequencingRules>
+        </imsss:sequencing>
+      </item>
+      <item identifier="ITEM-05FFBFC2DE3F46E1B9F53BA3CDEBD9C7" identifierref="ONRETWelcome" isvisible="true">
+        <title>Thanks for Using ET</title>
+      </item>
+      <imsss:sequencing>
+        <imsss:controlMode choice="true" flow="true" />
+      </imsss:sequencing>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="ETLaunch.html" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="ETTest.html" adlcp:scormType="sco" xml:base="Content/" href="ETTest.html" type="webcontent">
+      <dependency identifierref="RES-COMMON" />
+    </resource>
+    <resource identifier="RES-COMMON" adlcp:scormType="asset" xml:base="Content/" type="webcontent" />
+    <resource identifier="ONRETWelcome" adlcp:scormType="sco" xml:base="Content/" href="Welcome.html" type="webcontent" />
+    <resource identifier="ThanksPage.html" adlcp:scormType="sco" xml:base="Content/" href="ThanksPage.html" type="webcontent" />
+  </resources>
+  <imsss:sequencingCollection>
+    <imsss:sequencing ID="content_seq_rules">
+      <!-- If the learning objective for this test/content object has been satisfied we can skip it-->
+      <imsss:sequencingRules>
+        <imsss:preConditionRule>
+          <imsss:ruleConditions>
+            <imsss:ruleCondition condition="satisfied" />
+          </imsss:ruleConditions>
+          <imsss:ruleAction action="skip" />
+        </imsss:preConditionRule>
+      </imsss:sequencingRules>
+      <!-- Content doesn't count towards any rollup-->
+      <imsss:rollupRules objectiveMeasureWeight="0" rollupObjectiveSatisfied="false" rollupProgressCompletion="false" />
+      <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true" />
+    </imsss:sequencing>
+    <imsss:sequencing ID="test_seq_rules">
+      <!-- If the learning objective for this test/content object has been satisfied we can skip it-->
+      <imsss:sequencingRules>
+        <imsss:preConditionRule>
+          <imsss:ruleConditions>
+            <imsss:ruleCondition condition="satisfied" />
+          </imsss:ruleConditions>
+          <imsss:ruleAction action="skip" />
+        </imsss:preConditionRule>
+      </imsss:sequencingRules>
+      <!-- Tests count towards all rollup metrics-->
+      <imsss:rollupRules objectiveMeasureWeight="1" rollupObjectiveSatisfied="true" rollupProgressCompletion="true" />
+      <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true" />
+      <!--
+      During remediation, the completion status for a skipped activity might be reset. If
+      an activity is skipped, that means it was previously completed so don't require it for 
+      completion anymore.
+      -->
+      <adlseq:rollupConsiderations requiredForCompleted="ifNotSkipped" />
+    </imsss:sequencing>
+  </imsss:sequencingCollection>
+</manifest>
+
