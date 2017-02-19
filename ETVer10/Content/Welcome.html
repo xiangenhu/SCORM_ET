@@ -17,8 +17,7 @@ var exitPageStatus = false;
    **********************************************************************/
    function loadPage()
    {
-      var result = doInitialize();
-/*      loadTemplate({"chartid":"t10_1a"});
+    <!--   var result = doInitialize(); -->
    }
    
    
@@ -36,11 +35,11 @@ var exitPageStatus = false;
    **********************************************************************/
    function unloadPage()
    {
-    
+   <!--  
    	if (exitPageStatus != true)
    	{
    		doTerminate();
-   	}
+   	} -->
    
    	// NOTE: don't return anything that resembles a javascript
    	//		   string from this function or IE will take the
@@ -49,7 +48,7 @@ var exitPageStatus = false;
 </script>
 <title>Welcome</title>
 </head>
-<body onLoad="loadPage()" onunload="return unloadPage()">
-Welcome
+<body onLoad="loadPage()">
+Welcome to ET! Get ready to start!
 </body>
 </html>

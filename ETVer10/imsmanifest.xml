@@ -8,29 +8,8 @@
   <organizations default="ONRET">
     <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
       <title>ONR ET Course</title>
-      <item identifier="ITEM-35837DFEA5B5608A644CC269F05D1ECF" identifierref="ONRETWelcome" isvisible="false">
-        <title>Welcome!</title>
-        <item identifier="ITEM-358FBF85CE796F1EDCBA136FF4DD5BC5" identifierref="ONRETWelcome" isvisible="true">
-          <title>Welcome to ONR ET</title>
-        </item>
-         <imsss:sequencing>
-          <imsss:controlMode choice="false" flow="true" choiceExit="false" />
-          <imsss:sequencingRules>
-            <imsss:postConditionRule>
-              <imsss:ruleConditions conditionCombination="any">
-                <imsss:ruleCondition operator="not" condition="satisfied" />
-                <imsss:ruleCondition operator="not" condition="objectiveStatusKnown" />
-              </imsss:ruleConditions>
-              <imsss:ruleAction action="retry" />
-            </imsss:postConditionRule>
-            <imsss:postConditionRule>
-              <imsss:ruleConditions conditionCombination="any">
-                <imsss:ruleCondition condition="satisfied" />
-              </imsss:ruleConditions>
-              <imsss:ruleAction action="exitAll" />
-            </imsss:postConditionRule>
-          </imsss:sequencingRules>
-        </imsss:sequencing>
+      <item identifier="ITEM-358FBF85CE796F1EDCBA136FF4DD5BC5" identifierref="ONRETWelcome" isvisible="true">
+        <title>Welcome to ONR ET</title>
       </item>
       <item identifier="ITEM-B03700553ECF3E8C6E29689D3CE23A00" isvisible="false">
         <title>ET Topics</title>
@@ -56,7 +35,7 @@
         </item>
         <item identifier="ITEM-Series_parallel_circuit" identifierref="Series_parallel_circuit" isvisible="true">
           <title>Series_parallel_circuit</title>
-		   <imsss:sequencing IDRef="content_seq_rules">
+          <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
                 <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_Satisfied" writeSatisfiedStatus="false" />
@@ -336,7 +315,7 @@
           </imsss:sequencing>
         </item>
         <imsss:sequencing>
-          <imsss:controlMode choice="false" flow="true" choiceExit="false" />
+          <imsss:controlMode choice="true" flow="true" choiceExit="false" />
           <imsss:sequencingRules>
             <imsss:postConditionRule>
               <imsss:ruleConditions conditionCombination="any">
@@ -354,8 +333,11 @@
           </imsss:sequencingRules>
         </imsss:sequencing>
       </item>
+      <item identifier="ITEM-05FFBFC2DE3F46E1B9F53BA3CDEBD9C7" identifierref="ONRETWelcome" isvisible="true">
+        <title>Thanks for Using ET</title>
+      </item>
       <imsss:sequencing>
-        <imsss:controlMode choice="false" flow="true" />
+        <imsss:controlMode choice="true" flow="true" />
       </imsss:sequencing>
     </organization>
   </organizations>
@@ -410,6 +392,7 @@
     </resource>
     <resource identifier="RES-COMMON" adlcp:scormType="asset" xml:base="Content/" type="webcontent" />
     <resource identifier="ONRETWelcome" adlcp:scormType="sco" xml:base="Content/" href="Welcome.html" type="webcontent" />
+    <resource identifier="ThanksPage.html" adlcp:scormType="sco" xml:base="Content/" href="ThanksPage.html" type="webcontent" />
   </resources>
   <imsss:sequencingCollection>
     <imsss:sequencing ID="content_seq_rules">
