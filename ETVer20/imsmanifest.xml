@@ -8,64 +8,13 @@
   <organizations default="ONRET">
     <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
       <title>ONR ET Course</title>
-      <item identifier="ITEM-35837DFEA5B5608A644CC269F05D1ECF" identifierref="ONRETWelcome" isvisible="false">
-        <title>Welcome!</title>
-        <item identifier="ITEM-358FBF85CE796F1EDCBA136FF4DD5BC5" identifierref="ONRETWelcome" isvisible="true">
-          <title>Welcome to ONR ET</title>
-        </item>
-        <imsss:sequencing>
-          <imsss:controlMode choice="false" flow="true" choiceExit="false" />
-          <imsss:sequencingRules>
-            <imsss:postConditionRule>
-              <imsss:ruleConditions conditionCombination="any">
-                <imsss:ruleCondition operator="not" condition="satisfied" />
-                <imsss:ruleCondition operator="not" condition="objectiveStatusKnown" />
-              </imsss:ruleConditions>
-              <imsss:ruleAction action="retry" />
-            </imsss:postConditionRule>
-            <imsss:postConditionRule>
-              <imsss:ruleConditions conditionCombination="any">
-                <imsss:ruleCondition condition="satisfied" />
-              </imsss:ruleConditions>
-              <imsss:ruleAction action="exitAll" />
-            </imsss:postConditionRule>
-          </imsss:sequencingRules>
-        </imsss:sequencing>
+      <item identifier="ITEM-358FBF85CE796F1EDCBA136FF4DD5BC5" identifierref="ONRETWelcome" isvisible="true">
+        <title>Welcome to ONR ET</title>
       </item>
-      <item identifier="ITEM-B03700553ECF3E8C6E29689D3CE23A00" isvisible="false">
+      <item identifier="ITEM-B03700553ECF3E8C6E29689D3CE23A00" isvisible="true">
         <title>ET Topics</title>
-        <item identifier="Transistors" identifierref="Transistor" isvisible="true">
+        <item identifier="Transistors" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Transister">
           <title>Transistors</title>
-          <item identifier="ITEM-4CD5BDAEDA9AFD1CCED0C91F32F445B9" isvisible="false">
-            <title>Level 1</title>
-            <item identifier="ITEM-2BADC712498659BDD2BECE6228FEBB28" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Transistor">
-              <title>Initial Readings</title>
-            </item>
-            <item identifier="ITEM-D1A2A949F1F0A16B9B41A3A7E4CE58BF" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorDR.html&amp;T=Transistor">
-              <title>AutoTutor DR</title>
-            </item>
-            <item identifier="ITEM-8517C185CC620CA7F1380DA4932965BE" isvisible="false">
-              <title>Level 2</title>
-              <item identifier="ITEM-57628BCFB29253135BB1DD892421DC79" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=AutoTutorKC.html&amp;T=Transistor">
-                <title>AutoTutor KC</title>
-              </item>
-              <item identifier="ITEM-C5292F4C60EC52869655863E1B5B1C99" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=BBN.html&amp;T=Transistor">
-                <title>BBN</title>
-              </item>
-              <item identifier="ITEM-B38B43A8B39796BE80CE431DEAB62867" isvisible="false">
-                <title>Level 3</title>
-                <item identifier="ITEM-390999FBFC51B3EBE96192CE9FB064F1" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=Dragoon.html&amp;T=Transistor">
-                  <title>Dragoon</title>
-                </item>
-                <item identifier="ITEM-2AF7E8439ABDC7745013CB1EA2085FDC" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=ATTReading.html&amp;T=Transistor">
-                  <title>ATT Reading</title>
-                </item>
-                <imsss:sequencing />
-              </item>
-              <imsss:sequencing />
-            </item>
-            <imsss:sequencing />
-          </item>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
@@ -74,7 +23,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-Series_circuit" identifierref="Series_circuit" isvisible="true">
+        <item identifier="ITEM-Series_circuit" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Series_circuit">
           <title>Series_circuit</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -84,7 +33,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-Series_parallel_circuit" identifierref="Series_parallel_circuit" isvisible="true">
+        <item identifier="ITEM-Series_parallel_circuit" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Series_parallel_circuit">
           <title>Series_parallel_circuit</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -94,7 +43,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-Push_pull_amplifier" identifierref="Push_pull_amplifier" isvisible="true">
+        <item identifier="ITEM-Push_pull_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Push_pull_amplifier">
           <title>Push_pull_amplifier</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -104,7 +53,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-PNJunction" identifierref="PNJunction" isvisible="true">
+        <item identifier="ITEM-PNJunction" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=PNJunction">
           <title>PNJunction</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -114,7 +63,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-Parallel_circuit" identifierref="Parallel_circuit" isvisible="true">
+        <item identifier="ITEM-Parallel_circuit" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=PNJunction">
           <title>Parallel_circuit</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -124,7 +73,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-Ohm_law" identifierref="Ohm_law" isvisible="true">
+        <item identifier="ITEM-Ohm_law" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Ohm_law">
           <title>Ohm_law</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -134,7 +83,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-MultiStage_amplifier" identifierref="MultiStage_amplifier" isvisible="true">
+        <item identifier="ITEM-MultiStage_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=MultiStage_amplifier">
           <title>MultiStage_amplifier</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -144,7 +93,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-Limiters" identifierref="Limiters" isvisible="true">
+        <item identifier="ITEM-Limiters" identifierref="ETLaunch.html" isvisible="true" parameters="CL=IniReading.html&amp;T=Limiters">
           <title>Limiters</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -154,7 +103,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-Clampers" identifierref="Clampers" isvisible="true">
+        <item identifier="ITEM-Clampers" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=Clampers">
           <title>Clampers</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -164,17 +113,17 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-CE_amplifier_fixed_bias_voltage_divider" identifierref="CE_amplifier_fixed_bias_voltage_divider" isvisible="true">
-          <title>CE_amplifier_fixed_bias_voltage_divider</title>
+        <item identifier="ITEM-CE_amplifier_FBVD" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=iniReading.html&amp;T=CE_amplifier_fixed_bias_voltage_divider">
+          <title>CE_amplifier_FBVD</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_fixed_bias_voltage_divider_Satisfied" writeSatisfiedStatus="false" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_Satisfied" writeSatisfiedStatus="false" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-CE_amplifier_battery_bias" identifierref="CE_amplifier_battery_bias" isvisible="true">
+        <item identifier="ITEM-CE_amplifier_battery_bias" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=CE_amplifier_battery_bias">
           <title>CE_amplifier_battery_bias</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -184,7 +133,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-CC_amplifier" identifierref="CC_Amplifier" isvisible="true">
+        <item identifier="ITEM-CC_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=CC_Amplifier">
           <title>CC_amplifier</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -194,7 +143,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-CB_amplifier" identifierref="CB_Amplifier" isvisible="true">
+        <item identifier="ITEM-CB_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?CL=IniReading.html&amp;T=CB_Amplifier">
           <title>CB_amplifier</title>
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
@@ -205,7 +154,7 @@
           </imsss:sequencing>
         </item>
         <imsss:sequencing>
-          <imsss:controlMode choice="false" flow="true" choiceExit="false" />
+          <imsss:controlMode choice="true" flow="true" choiceExit="false" />
           <imsss:sequencingRules>
             <imsss:postConditionRule>
               <imsss:ruleConditions conditionCombination="any">
@@ -223,9 +172,9 @@
           </imsss:sequencingRules>
         </imsss:sequencing>
       </item>
-      <item identifier="ITEM-3C39826629949A81DAD54F17653E4309" isvisible="false">
+      <item identifier="ITEM-3C39826629949A81DAD54F17653E4309" isvisible="true">
         <title>Quizzes</title>
-        <item identifier="TEST-CB_amplifier" identifierref="CB_Amplifier" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-CB_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=CB_amplifier">
           <title>TEST CB_amplifier</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -235,7 +184,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-CC_amplifier" identifierref="CC_Amplifier" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-CC_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=CC_amplifier">
           <title>TEST CC_amplifier</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -245,27 +194,27 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-CE_amplifier_battery_bias" identifierref="CE_amplifier_battery_bias" isvisible="true" parameters="&amp;PT=Q">
-          <title>TEST CE_amplifier_battery_TESTbias</title>
+        <item identifier="TEST-CE_amplifier_battery_bias" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=CE_amplifier_battery_bias">
+          <title>TEST CE_amplifier_battery_bias</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_TESTbias_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-CE_amplifier_fixed_bias_voltage_divider" identifierref="CE_amplifier_fixed_bias_voltage_divider" isvisible="true" parameters="&amp;PT=Q">
-          <title>TEST CE_amplifier_fixed_bias_voltage_divider</title>
+        <item identifier="TEST-CE_amplifier_FBVD" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=CE_amplifier_FBVD">
+          <title>TEST CE_amplifier_FBVD</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_fixed_bias_voltage_divider_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-Clampers" identifierref="Clampers" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-Clampers" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Clampers">
           <title>TEST Clampers</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -275,7 +224,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-Limiters" identifierref="Limiters" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-Limiters" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Limiters">
           <title>TEST Limiters</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -285,7 +234,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-MultiStage_amplifier" identifierref="MultiStage_amplifier" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-MultiStage_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=MultiStage_amplifier">
           <title>TEST MultiStage_amplifier</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -295,7 +244,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-Ohm_law" identifierref="Ohm_law" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-Ohm_law" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Ohm_law">
           <title>TEST Ohm_law</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -305,7 +254,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-Parallel_circuit" identifierref="Parallel_circuit" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-Parallel_circuit" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Parallel_circuit">
           <title>TEST Parallel_circuit</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -315,7 +264,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-PNJunction" identifierref="PNJunction" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-PNJunction" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=PNJunction">
           <title>TEST PNJunction</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -325,7 +274,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-Push_pull_amplifier" identifierref="Push_pull_amplifier" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-Push_pull_amplifier" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Push_pull_amplifier">
           <title>TEST Push_pull_amplifier</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -335,7 +284,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-Series_parallel_circuit" identifierref="Series_parallel_circuit" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-Series_parallel_circuit" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Series_parallel_circuit">
           <title>TEST Series_parallel_circuit</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -345,7 +294,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-Series_circuit" identifierref="Series_circuit" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-Series_circuit" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Series_circuit">
           <title>TEST Series_circuit</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -355,7 +304,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="TEST-Transistors" identifierref="Transistor" isvisible="true" parameters="&amp;PT=Q">
+        <item identifier="TEST-Transistors" identifierref="ETLaunch.html" isvisible="true" parameters="?PT=Q&amp;T=Transistors">
           <title>TEST Transistors</title>
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
@@ -366,7 +315,7 @@
           </imsss:sequencing>
         </item>
         <imsss:sequencing>
-          <imsss:controlMode choice="false" flow="true" choiceExit="false" />
+          <imsss:controlMode choice="true" flow="true" choiceExit="false" />
           <imsss:sequencingRules>
             <imsss:postConditionRule>
               <imsss:ruleConditions conditionCombination="any">
@@ -384,54 +333,15 @@
           </imsss:sequencingRules>
         </imsss:sequencing>
       </item>
+      <item identifier="ITEM-05FFBFC2DE3F46E1B9F53BA3CDEBD9C7" identifierref="ONRETWelcome" isvisible="true">
+        <title>Thanks for Using ET</title>
+      </item>
       <imsss:sequencing>
-        <imsss:controlMode choice="false" flow="true" />
+        <imsss:controlMode choice="true" flow="true" />
       </imsss:sequencing>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="Transistor" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Transister" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="CB_Amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CB_Amplifier" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="CC_Amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CC_Amplifier" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="CE_amplifier_battery_bias" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CE_amplifier_battery_bias" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="CE_amplifier_fixed_bias_voltage_divider" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=CE_amplifier_fixed_bias_voltage_divider" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="Clampers" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Clampers" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="Limiters" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Limiters" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="MultiStage_amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=MultiStage_amplifier" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="Ohm_law" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Ohm_law" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="Parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Parallel_circuit" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="PNJunction" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=PNJunction" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="Push_pull_amplifier" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Push_pull_amplifier" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="Series_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Series_circuit" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
-    <resource identifier="Series_parallel_circuit" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html?CL=IniReading.html&amp;T=Series_parallel_circuit" type="webcontent">
-      <dependency identifierref="RES-COMMON" />
-    </resource>
     <resource identifier="ETLaunch.html" adlcp:scormType="sco" xml:base="Content/" href="ETLaunch.html" type="webcontent">
       <dependency identifierref="RES-COMMON" />
     </resource>
@@ -440,6 +350,7 @@
     </resource>
     <resource identifier="RES-COMMON" adlcp:scormType="asset" xml:base="Content/" type="webcontent" />
     <resource identifier="ONRETWelcome" adlcp:scormType="sco" xml:base="Content/" href="Welcome.html" type="webcontent" />
+    <resource identifier="ThanksPage.html" adlcp:scormType="sco" xml:base="Content/" href="ThanksPage.html" type="webcontent" />
   </resources>
   <imsss:sequencingCollection>
     <imsss:sequencing ID="content_seq_rules">
