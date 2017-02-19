@@ -59,8 +59,7 @@
     }
 	
     function doStart(){
-		pageArray=GetNav();
-        //get the iFrame sized correctly and set up
+	
         SetupIFrame();
         
         //record the time that the learner started the SCO so that we can report the total time
@@ -99,8 +98,6 @@
     function goToPage(){
 		pageArray=GetNav();
         var theIframe = document.getElementById("contentFrame");
-        var prevButton = document.getElementById("butPrevious");
-        var nextButton = document.getElementById("butNext");
 		
 	    var PageType= GetQueryVar("PT","P");
 		if (PageType=="Q") {
@@ -112,33 +109,11 @@
 			return
 		}
         if (PageType=="P"){
-			theIframe.src = pageArray[currentPage];
-			if (currentPage == 0){
-				nextButton.disabled = false;
-				prevButton.disabled = true;
-			}
-			else if (currentPage == (pageArray.length - 1)){
-				nextButton.disabled = true;
-				prevButton.disabled = false;       
-			}
-			else{
-				nextButton.disabled = false;
-				prevButton.disabled = false;
-			}
-			
-			if (pageArray.length == 1){
-				nextButton.disabled = true;
-				prevButton.disabled = true;
-			}
+			theIframe.src = GetQueryVar("CL","P")+"?T="+GetQueryVar("T","");
+			ScormProcessSetValue("cmi.completion_status", "completed");
+		    ScormProcessSetValue("cmi.success_status", "passed");					
 			ScormProcessSetValue("cmi.location", currentPage);
-			if (currentPage == (pageArray.length - 1)){
-				reachedEnd = true;
-				if (hasAssessment == false){
-					ScormProcessSetValue("cmi.completion_status", "completed");
-					ScormProcessSetValue("cmi.success_status", "passed");
-				}
-				ScormProcessCommit();
-			}
+			ScormProcessCommit();
 		}		
     }
     
@@ -312,10 +287,5 @@
 <title>ATT Reading</title>
 </head><body onload="doStart(false);" onbeforeunload="doUnload(false);" onunload="doUnload();">
 <iframe width="100%" id="contentFrame" src=""></iframe>   
-    <div id="navDiv">
-        <input type="button" value="<- Previous" id="butPrevious" onclick="doPrevious();"/>
-        <input type="button" value="Next ->" id="butNext" onclick="doNext();"/>
-        <!--<input type="button" value="Exit" id="butExit" onclick="doExit();"/>-->
-    </div>
 </body>
 </html>
