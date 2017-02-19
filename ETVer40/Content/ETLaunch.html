@@ -74,7 +74,12 @@
         if (completionStatus == "unknown"){
             ScormProcessSetValue("cmi.completion_status", "incomplete");
         }
-        
+		
+		 var successstatus = ScormProcessGetValue("cmi.success_status", true);
+        if (successstatus == "unknown"){
+            ScormProcessSetValue("cmi.success_status", "failed");
+        }
+		
         //see if the user stored a bookmark previously (don't check for errors
         //because cmi.location may not be initialized
         var bookmark = ScormProcessGetValue("cmi.location", false);
@@ -110,8 +115,8 @@
 		}
         if (PageType=="P"){
 			theIframe.src = GetQueryVar("CL","P")+"?T="+GetQueryVar("T","");
-			ScormProcessSetValue("cmi.completion_status", "completed");
-		    ScormProcessSetValue("cmi.success_status", "passed");					
+//			ScormProcessSetValue("cmi.completion_status", "completed");
+//		    ScormProcessSetValue("cmi.success_status", "passed");					
 			ScormProcessSetValue("cmi.location", currentPage);
 			ScormProcessCommit();
 		}		

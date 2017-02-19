@@ -5,6 +5,8 @@
 <script language=javascript src="util/jquery-1.3.2.min.js"></script>
 <script language=javascript src="util/jquery-ui-1.7.2.custom.min.js"></script>
 <script language=javascript src="util/utils.js"></script>
+<script language=javascript src="util/scormfunctions.js"></script>
+<script language=javascript src="util/contentfunctions.js"></script>
 <script language=javascript>
 var exitPageStatus = false;
    /**********************************************************************
@@ -17,9 +19,9 @@ var exitPageStatus = false;
    **********************************************************************/
    function loadPage()
    {
-     /* var result = doInitialize(); */
-	 var TOPICInfo="Current Topic "+GetQueryVar("T","");
-	   document.getElementById("TopicInfo").innerHTML = TOPICInfo;
+	 
+      /* var result = doInitialize(); */
+	
    }
    
    
@@ -49,11 +51,37 @@ var exitPageStatus = false;
    	//		   liberty of displaying a confirm message box
    }
 </script>
-<title>Reading Page</title>
+<title>Initial Reading Page</title>
 </head>
 
-<body onLoad="loadPage()">
-<div id="TopicInfo"></div>
-Initial Reading Is Here
+<body>
+<div align="center" id="TopicInfo"></div>
+
+<script type="text/javascript">
+
+	var test = new Test(new Array());
+	var Topic = GetQueryVar("T","CB_Amplifier");
+	var SKO = GetQueryVar("SKO","Initial Reading");
+
+	  var test = new Test(new Array());
+	  var HTMLSrc="<p>";
+	  HTMLSrc += "Current Topic: "+Topic;
+	  HTMLSrc +=  "<hr/>";
+	  HTMLSrc +=  "Current SKO: "+SKO;
+	  HTMLSrc +=  "<hr/>";
+	  HTMLSrc +=  "</p>";
+	  document.getElementById("TopicInfo").innerHTML = HTMLSrc; 
+
+test.AddQuestion( new Question ("com.ONRET.SCORM2004.interactions."+Topic+"_"+SKO,
+                                Topic+" "+SKO+" Interaction Passed?",
+                                QUESTION_TYPE_CHOICE,
+                                new Array("True", "False"),
+                                "True",
+                                "obj_"+Topic+"_"+SKO)
+                );
+				
+				
+RenderTest(test);
+</script>
 </body>
 </html>
