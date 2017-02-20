@@ -7,7 +7,7 @@
   </metadata>
   <organizations default="ONRET">
     <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
-      <title>ONR ET Course V4</title>
+      <title>ONR ET Course</title>
       <item identifier="ONR_ET_Version_3" identifierref="ONRETWelcome" isvisible="true">
         <title>Welcome to ONR ET</title>
       </item>
@@ -47,8 +47,8 @@
               <title>AutoTutor KC</title>
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
-                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true"/>
+                  <imsss:primaryObjective objectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_Low_Satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_Low_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -57,8 +57,8 @@
               <title>BBN Material</title>
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
-                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                  <imsss:primaryObjective objectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_Low_Satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_Low_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -70,7 +70,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -80,7 +80,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -96,7 +96,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -115,8 +115,8 @@
               <title>Dragoon</title>
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
-                  <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                  <imsss:primaryObjective objectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_High_Satisfied">
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_High_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -129,7 +129,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_AutoTutor_DR_High_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -153,7 +153,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -169,7 +169,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -179,7 +179,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -191,7 +191,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -201,7 +201,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -217,7 +217,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -237,7 +237,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -250,7 +250,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_circuit_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -274,7 +274,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -290,7 +290,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -300,7 +300,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -312,7 +312,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -322,7 +322,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -338,7 +338,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -358,7 +358,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -371,7 +371,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Series_parallel_circuit_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -395,7 +395,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -411,7 +411,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -421,7 +421,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -433,7 +433,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -443,7 +443,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -459,7 +459,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -479,7 +479,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -492,7 +492,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -516,7 +516,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -532,7 +532,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -542,7 +542,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -554,7 +554,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -564,7 +564,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -580,7 +580,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -600,7 +600,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -613,7 +613,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -637,7 +637,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -653,7 +653,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -663,7 +663,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -675,7 +675,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -685,7 +685,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -701,7 +701,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -721,7 +721,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -734,7 +734,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Parallel_circuit_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -758,7 +758,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -774,7 +774,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -784,7 +784,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -796,7 +796,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -806,7 +806,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -822,7 +822,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -842,7 +842,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -855,7 +855,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Ohm_law_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -879,7 +879,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -895,7 +895,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -905,7 +905,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -917,7 +917,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -927,7 +927,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -943,7 +943,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -963,7 +963,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -976,7 +976,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.MultiStage_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -1000,7 +1000,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1016,7 +1016,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1026,7 +1026,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1038,7 +1038,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1048,7 +1048,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1064,7 +1064,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1084,7 +1084,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1097,7 +1097,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Limiters_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -1121,7 +1121,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1137,7 +1137,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1147,7 +1147,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1159,7 +1159,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1169,7 +1169,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1185,7 +1185,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1205,7 +1205,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1218,7 +1218,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Clampers_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -1242,7 +1242,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1258,7 +1258,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1268,7 +1268,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1280,7 +1280,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1290,7 +1290,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1306,7 +1306,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1326,7 +1326,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1339,7 +1339,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_FBVD_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -1363,7 +1363,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1379,7 +1379,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1389,7 +1389,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1401,7 +1401,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1411,7 +1411,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1427,7 +1427,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1447,7 +1447,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1460,7 +1460,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CE_amplifier_battery_bias_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -1484,7 +1484,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1500,7 +1500,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1510,7 +1510,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1522,7 +1522,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1532,7 +1532,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1548,7 +1548,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1568,7 +1568,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1581,7 +1581,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -1605,7 +1605,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1621,7 +1621,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1631,7 +1631,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1643,7 +1643,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1653,7 +1653,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_KC_Low"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_KC_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1669,7 +1669,7 @@
                 <imsss:sequencing IDRef="content_seq_rules">
                   <imsss:objectives>
                     <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_New_AutoTutor_KC_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                      <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_New_AutoTutor_KC_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                     </imsss:primaryObjective>
                   </imsss:objectives>
                 </imsss:sequencing>
@@ -1689,7 +1689,7 @@
               <imsss:sequencing IDRef="content_seq_rules">
                 <imsss:objectives>
                   <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_High"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                    <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_AutoTutor_DR_High" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
                   </imsss:primaryObjective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -1702,7 +1702,7 @@
             <imsss:controlMode choice="false" flow="true" />
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_Satisfied"  writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CB_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>

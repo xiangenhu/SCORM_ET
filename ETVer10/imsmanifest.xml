@@ -7,7 +7,7 @@
   </metadata>
   <organizations default="ONRET">
     <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
-      <title>ONR ET Course</title>
+      <title>ONR ET Course V1</title>
       <item identifier="ITEM-358FBF85CE796F1EDCBA136FF4DD5BC5" identifierref="ONRETWelcome" isvisible="true">
         <title>Welcome to ONR ET</title>
       </item>
