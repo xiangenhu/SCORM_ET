@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 1.1.1 SCORM 2004 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:lom="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-B1CF093F-9CE6-88BC-15A0-C9B4436C057E" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd" version="1.3">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 3rd Edition</schemaversion>
+  </metadata>
+  <organizations default="ORG-D4C1D227-EBF7-523B-2A62-20A32F57C55B">
+    <organization identifier="ORG-D4C1D227-EBF7-523B-2A62-20A32F57C55B" adlseq:objectivesGlobalToSystem="false">
+      <title>Transistor</title>
+      <item identifier="ITEM-0B5FDB3B-DE8C-AD03-7F96-243CAF89FFC1" identifierref="RES-0D607530-D517-83EB-585D-ECF5D96BE899">
+        <title>Autotutor Deep Reasoning Question</title>
+        <imsss:sequencing>
+          <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+          <imsss:objectives>
+            <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-b/primary_objective" />
+            <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/obj-1">
+              <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-1" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+            </imsss:objective>
+            <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/obj-2">
+              <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-2" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+            </imsss:objective>
+          </imsss:objectives>
+        </imsss:sequencing>
+      </item>
+      <item identifier="ITEM-35BFB257-C3BE-60E4-4AA9-179AB313E483" isvisible="true">
+        <title>Deep Reasoning Failed</title>
+        <item identifier="ITEM-E8A5E3C9-42E9-3754-8EDD-57027DDFDD5C" identifierref="RES-AF61BACF-1095-8D46-46D1-4AD1F9420691">
+          <title>SCO-1: Instruction</title>
+          <imsss:sequencing>
+            <imsss:sequencingRules>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-1/obj-1" condition="satisfied" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="skip" />
+              </imsss:preConditionRule>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-1/obj-1" condition="objectiveStatusKnown" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="hiddenFromChoice" />
+              </imsss:preConditionRule>
+            </imsss:sequencingRules>
+            <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+            <imsss:objectives>
+              <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-1/primary_objective" />
+              <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-1/obj-1">
+                <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-1" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+              </imsss:objective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-69A12E64-2986-C30D-4A4F-7D1616DC9259" identifierref="RES-D5CF4F23-0411-1361-62BA-860884BB3B3B">
+          <title>SCO-2: Instruction</title>
+          <imsss:sequencing>
+            <imsss:sequencingRules>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-2/obj-1" condition="satisfied" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="skip" />
+              </imsss:preConditionRule>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-2/obj-1" condition="objectiveStatusKnown" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="hiddenFromChoice" />
+              </imsss:preConditionRule>
+            </imsss:sequencingRules>
+            <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+            <imsss:objectives>
+              <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-2/primary_objective" />
+              <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-2/obj-1">
+                <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-2" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+              </imsss:objective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-4A31D2AB-615C-2F24-6221-542993882E6E" identifierref="RES-0C4F212D-1EE9-0361-479B-472B97B4EACD">
+          <title>SCO-C: Post-Test</title>
+          <imsss:sequencing>
+            <imsss:sequencingRules>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="noOp" condition="always" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="hiddenFromChoice" />
+              </imsss:preConditionRule>
+              <imsss:postConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition condition="always" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="exitParent" />
+              </imsss:postConditionRule>
+            </imsss:sequencingRules>
+            <imsss:rollupRules objectiveMeasureWeight="1.0000" />
+            <imsss:objectives>
+              <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="primary-obj" />
+              <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-C/obj-1">
+                <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-3" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+              </imsss:objective>
+              <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-C/obj-2">
+                <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-4" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+              </imsss:objective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <imsss:sequencing>
+          <imsss:controlMode choice="true" choiceExit="true" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+          <imsss:sequencingRules>
+            <imsss:postConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition condition="satisfied" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="exitParent" />
+            </imsss:postConditionRule>
+          </imsss:sequencingRules>
+          <imsss:rollupRules objectiveMeasureWeight="1.0000" />
+        </imsss:sequencing>
+      </item>
+      <item identifier="ITEM-240E68CE-1E3E-18F0-E3BF-F5BD4E467FEA" isvisible="true">
+        <title>Deep Reasoning Passed</title>
+        <item identifier="ITEM-79E9051F-300E-BB38-9F62-9A05800B7656" identifierref="RES-2E685E0F-C5BF-F04C-75FF-A4393B46F552">
+          <title>Dragoon</title>
+          <imsss:sequencing>
+            <imsss:sequencingRules>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-3/obj-1" condition="satisfied" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="skip" />
+              </imsss:preConditionRule>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-3/obj-1" condition="objectiveStatusKnown" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="hiddenFromChoice" />
+              </imsss:preConditionRule>
+            </imsss:sequencingRules>
+            <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+            <imsss:objectives>
+              <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-3/primary_objective" />
+              <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-3/obj-1">
+                <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-3" readSatisfiedStatus="true" readNormalizedMeasure="false" />
+              </imsss:objective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-6310D35B-0A61-B4AB-7760-49D9FD3B1B85" identifierref="RES-8C88141B-4AD8-5780-6827-D7114260AD46">
+          <title>SCO-4: Remediation</title>
+          <imsss:sequencing>
+            <imsss:sequencingRules>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-4/obj-1" condition="satisfied" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="skip" />
+              </imsss:preConditionRule>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-4/obj-1" condition="objectiveStatusKnown" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="hiddenFromChoice" />
+              </imsss:preConditionRule>
+            </imsss:sequencingRules>
+            <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+            <imsss:objectives>
+              <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-4/primary_objective" />
+              <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-4/obj-1">
+                <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-4" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+              </imsss:objective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-C80F6688-64A3-9CA6-4FF9-16D9E694CF78" identifierref="RES-A061CA26-A606-DB58-9457-1521E0B2A754">
+          <title>SCO-B: Post-Test for Mastery</title>
+          <imsss:sequencing>
+            <imsss:sequencingRules>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions conditionCombination="all">
+                  <imsss:ruleCondition operator="noOp" condition="always" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="hiddenFromChoice" />
+              </imsss:preConditionRule>
+            </imsss:sequencingRules>
+            <imsss:rollupRules objectiveMeasureWeight="1.0000" />
+          </imsss:sequencing>
+        </item>
+        <imsss:sequencing>
+          <imsss:controlMode choice="true" choiceExit="true" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+          <imsss:rollupRules objectiveMeasureWeight="1.0000" />
+        </imsss:sequencing>
+      </item>
+      <imsss:sequencing>
+        <imsss:controlMode choice="false" choiceExit="true" flow="true" forwardOnly="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+        <imsss:sequencingRules>
+          <imsss:exitConditionRule>
+            <imsss:ruleConditions conditionCombination="all">
+              <imsss:ruleCondition condition="completed" />
+            </imsss:ruleConditions>
+            <imsss:ruleAction action="exit" />
+          </imsss:exitConditionRule>
+          <imsss:exitConditionRule>
+            <imsss:ruleConditions conditionCombination="all">
+              <imsss:ruleCondition operator="noOp" condition="satisfied" />
+            </imsss:ruleConditions>
+            <imsss:ruleAction action="exit" />
+          </imsss:exitConditionRule>
+        </imsss:sequencingRules>
+        <imsss:rollupRules rollupObjectiveSatisfied="true" rollupProgressCompletion="true" objectiveMeasureWeight="0">
+          <imsss:rollupRule childActivitySet="any">
+            <imsss:rollupConditions conditionCombination="any">
+              <imsss:rollupCondition condition="satisfied" />
+            </imsss:rollupConditions>
+            <imsss:rollupAction action="satisfied" />
+          </imsss:rollupRule>
+          <imsss:rollupRule childActivitySet="all">
+            <imsss:rollupConditions conditionCombination="any">
+              <imsss:rollupCondition operator="not" condition="satisfied" />
+            </imsss:rollupConditions>
+            <imsss:rollupAction action="notSatisfied" />
+          </imsss:rollupRule>
+          <imsss:rollupRule childActivitySet="any">
+            <imsss:rollupConditions conditionCombination="any">
+              <imsss:rollupCondition condition="satisfied" />
+            </imsss:rollupConditions>
+            <imsss:rollupAction action="completed" />
+          </imsss:rollupRule>
+        </imsss:rollupRules>
+      </imsss:sequencing>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-0D607530-D517-83EB-585D-ECF5D96BE899" href="SCO-A_Pre-Test.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO-A_Pre-Test.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="RES-AF61BACF-1095-8D46-46D1-4AD1F9420691" href="SCO-1_Instruction.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO-1_Instruction.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="RES-D5CF4F23-0411-1361-62BA-860884BB3B3B" href="SCO-2_Instruction.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO-2_Instruction.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="RES-0C4F212D-1EE9-0361-479B-472B97B4EACD" href="SCO-C_Post-Test.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO-C_Post-Test.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="RES-2E685E0F-C5BF-F04C-75FF-A4393B46F552" href="SCO-3_Remediation.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO-3_Remediation.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="RES-8C88141B-4AD8-5780-6827-D7114260AD46" href="SCO-4_Remediation.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO-4_Remediation.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+    <resource identifier="RES-A061CA26-A606-DB58-9457-1521E0B2A754" href="SCO-B_Post-Test_Mastery.html" adlcp:scormType="sco" type="webcontent">
+      <file href="SCO-B_Post-Test_Mastery.html" />
+      <file href="util/APIWrapper.js" />
+    </resource>
+  </resources>
+</manifest>
+
