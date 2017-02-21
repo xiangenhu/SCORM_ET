@@ -1,8 +1,47 @@
 <html>
 <head>
-<script language=javascript src="util/APIWrapper.js"></script>
+<style type="text/css">
+body { 
+    background-image: url('../images/BundleFlowChart/Slide6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 30% 20%; 
+}
+</style>
+<script language=javascript src="../util/APIWrapper.js"></script>
 <script language=javascript>
-var exitPageStatus = false;
+   // Set some variables global to the SCO
+   var answer = -1;
+   var exitPageStatus = false;
+
+   function submitScore()
+   {
+        document.examForm.submitButton.disabled = true;
+	    var val1 = document.examForm.OBJ1_Status.value;
+        var indexOfFirstObjective = findObjective("AutoTutorDRPass");
+      //  Indicate whether or not the attempt on the SCO was
+      //  sucessful (passed or failed)
+      if ( val1 != "passed"  )
+      {
+         setObjToFailed(indexOfSecondObjective);
+      }
+      else 
+      {
+         setObjToPassed(indexOfFirstObjective);
+      }
+    
+      //  Set the SCO to completed with a normal exit
+      doSetValue( "cmi.completion_status", "completed" );
+      doSetValue( "cmi.exit", "" );
+
+      //  Indicate that the SCO was finished normally
+      exitPageStatus = true;
+
+      var result = doTerminate();
+   }
+   
+
+    
    /**********************************************************************
    **  Function: loadPage()
    **  Description: This is called when a SCO is first loaded in the
@@ -16,6 +55,24 @@ var exitPageStatus = false;
       var result = doInitialize();
    }
    
+   
+   /**********************************************************************
+   **  Function: doQuit()
+   **  Description: This function is called in the case that the user
+   **               does not finish the SCO "gracefully".  For example, 
+   **               the user may click the "continue" button before
+   **               submitting an answer to a question.  In this case,
+   **               this function is called as part of the page unloading.
+   **               This function ensures that Terminate() is called
+   **               and that the correct statuses are set even if the 
+   **               user closes the SCO window or navigates away before 
+   **               finishing the SCO.
+   **********************************************************************/
+   function doQuit()
+   {   
+      submitScore();
+   }
+
    
    /**********************************************************************
    **  Function: unloadPage()
@@ -33,17 +90,20 @@ var exitPageStatus = false;
     
    	if (exitPageStatus != true)
    	{
-   		doTerminate();
+   		doQuit();
    	}
    
    	// NOTE: don't return anything that resembles a javascript
    	//		   string from this function or IE will take the
    	//		   liberty of displaying a confirm message box
    }
+
+
 </script>
-<title>SCO-3: Remediation</title>
+<title>Skill Bulding</title>
 </head>
 <body onLoad="loadPage()" onunload="return unloadPage()">
-SCO-3: Remediation
+      
 </body>
+
 </html>
