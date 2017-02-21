@@ -17,20 +17,20 @@
         <item identifier="Transistor_AutoTutorDR" identifierref="ETLaunch.html" parameters="?CL=Transistor/AutoTutorDR.html&amp;T=Transistor&amp;PT=AutoTutorDR">
           <title>AutoTutorDR</title>
         </item>
-        <item identifier="Transistor_AutoTutorDR" identifierref="ETLaunch.html" parameters="?CL=Transistor/AutoTutorDRQ.html&amp;T=Transistor&amp;PT=AutoTutorDRQ">
-          <title>AutoTutorDRQ</title>
+        <item identifier="Transistor_BBN" identifierref="ETLaunch.html" parameters="?CL=Transistor/BBN.html&amp;T=Transistor&amp;PT=BBN">
+          <title>BBN</title>
         </item>
         <item identifier="Transistor_AutoTutorKC" identifierref="ETLaunch.html" parameters="?CL=Transistor/AutoTutorKC.html&amp;T=Transistor&amp;PT=AutoTutorKC">
           <title>AutoTutorKC</title>
         </item>
-        <item identifier="Transistor_BBN" identifierref="ETLaunch.html" parameters="?CL=Transistor/BBN.html&amp;T=Transistor&amp;PT=BBN">
-          <title>BBN</title>
+        <item identifier="Transistor_SkillBuilder" identifierref="ETLaunch.html" parameters="?CL=Transistor/SkillBuilder.html&amp;T=Transistor&amp;PT=SkillBuilder">
+          <title>SkillBuilder</title>
         </item>
         <item identifier="Transistor_ATTReading" identifierref="ETLaunch.html" parameters="?CL=Transistor/ATTReading.html&amp;T=Transistor&amp;PT=ATTReading">
           <title>ATTReading</title>
         </item>
-        <item identifier="Transistor_SkillBuilder" identifierref="ETLaunch.html" parameters="?CL=Transistor/SkillBuilder.html&amp;T=Transistor&amp;PT=SkillBuilder">
-          <title>SkillBuilder</title>
+        <item identifier="Transistor_AutoTutorDRQ" identifierref="ETLaunch.html" parameters="?CL=Transistor/AutoTutorDRQ.html&amp;T=Transistor&amp;PT=AutoTutorDRQ">
+          <title>AutoTutorDRQ</title>
         </item>
         <item identifier="Transistor_Dragoon" identifierref="ETLaunch.html" parameters="?CL=Transistor/Dragoon.html&amp;T=Transistor&amp;PT=Dragoon">
           <title>Dragoon</title>
