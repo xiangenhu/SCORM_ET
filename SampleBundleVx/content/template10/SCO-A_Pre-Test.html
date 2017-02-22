@@ -1,15 +1,20 @@
 <html>
 <head>
-<script language=javascript src="../util/APIWrapper.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/template.css" />
+<script language=javascript src="../util/apiwrapper.js"></script>
+<script language=javascript src="../util/jquery-1.3.2.min.js"></script>
+<script language=javascript src="../util/jquery-ui-1.7.2.custom.min.js"></script>
+<script language=javascript src="../util/json.js"></script>
+<script language=javascript src="../util/utils.js"></script>
 <script language=javascript>
    // Set some variables global to the SCO
    var answer = -1;
    var exitPageStatus = false;
 
-   function submitScore()
+   function submitScore(doTerm)
    {
-        document.examForm.submitButton.disabled = true;
-	var val1 = document.examForm.OBJ1_Status.value;
+   //     document.examForm.submitButton.disabled = true;
+    	var val1 = document.examForm.OBJ1_Status.value;
         var val2 = document.examForm.OBJ2_Status.value;
         var indexOfFirstObjective = findObjective("urn:lsal.org/template10/sco-A/obj-1");
         var indexOfSecondObjective = findObjective("urn:lsal.org/template10/sco-A/obj-2");
@@ -17,15 +22,22 @@
       //  sucessful (passed or failed)
       if ( val1 != "passed"  )
       {
-         setObjToFailed(indexOfSecondObjective);
+         setObjToFailed(indexOfFirstObjective);
       }
       else 
       {
          setObjToPassed(indexOfFirstObjective);
       }
+      if ( val2 != "passed"  )
+      {
+         setObjToFailed(indexOfSecondObjective);
+      }
+      else 
+      {
+         setObjToPassed(indexOfSecondObjective);
+      }
       
-     /*
-	 if ( (val1 != "passed") || (val2 != "passed") )
+      if ( (val1 != "passed") || (val2 != "passed") )
       {
         doSetValue( "cmi.success_status", "failed" );
       }
@@ -33,16 +45,21 @@
       {
         doSetValue( "cmi.success_status", "passed" );
       }
-*/
+
       //  Set the SCO to completed with a normal exit
       doSetValue( "cmi.completion_status", "completed" );
-      doSetValue( "cmi.exit", "" );
+      doSetValue( "cmi.exit", "normal" );
 
-      //  Indicate that the SCO was finished normally
-      exitPageStatus = true;
-
-      var result = doTerminate();
+      if (doTerm) {
+        //  Indicate that the SCO was finished normally
+        exitPageStatus = true;
+        var result = doTerminate();
+      }
    }
+
+  function localDoNext() {
+      submitScore(false);
+  }
    
 
     
@@ -57,6 +74,8 @@
    function loadPage()
    {
       var result = doInitialize();
+      loadTemplate();
+      loadTemplate({"chartid":"t10_a"});
    }
    
    
@@ -74,6 +93,7 @@
    **********************************************************************/
    function doQuit()
    {   
+       //alert("doQuit called");
       submitScore();
    }
 
@@ -89,37 +109,41 @@
    **               even if the user closes the SCO window or navigates
    **               away before finishing the SCO.
    **********************************************************************/
-   function unloadPage()
-   {
+   function unloadPage() {
     
-   	if (exitPageStatus != true)
-   	{
-   		doQuit();
-   	}
+   	    if (exitPageStatus != true) {
+            //alert("unload calling doQuit");
+   	    	doQuit();
+   	    }
    
    	// NOTE: don't return anything that resembles a javascript
    	//		   string from this function or IE will take the
    	//		   liberty of displaying a confirm message box
    }
+    function getDescription() {
+        var html = '<form name="examForm">';
+	    html    += '  <p>Select status of learning objective for SCO-1a.';
+	    html    += '  <select NAME="OBJ1_Status">';
+        html    += '    <option VALUE="passed">passed';
+        html    += '    <option VALUE="failed">failed';
+        html    += '  </select>';
+	    html    += '  </p>	';
+	    html    += '  <p>Select status of learning objective for SCO-2a.';
+	    html    += '  <select NAME="OBJ2_Status">';
+        html    += '    <option VALUE="passed">passed';
+        html    += '    <option VALUE="failed">failed';
+        html    += '  </select>';
+	    html    += '  </p>	';
+        html    += '</form>';
+        html    += '<p>Click NEXT to see the results of your choices.</p>	';
+        return html;
+    }
 
 
 </script>
 <title>SCO-A: Pre-Test</title>
 </head>
 <body onLoad="loadPage()" onunload="return unloadPage()">
-
-   <div id="disp" name="disp"></div>   
-   <br>
-      <form name="examForm">
-	  <image src="BundleFlowChart/Slide2.jpg">
-		<p>Select status for Autotutor Deep Reasoning.
-			<select NAME="OBJ1_Status">
-               			<option VALUE="passed">passed
-               			<option VALUE="failed">failed
-          		</select>
-		</p>
-		<input type="button" name="submitButton" value=" Submit " onClick="submitScore()">
-      </form>
+<div id=maindiv></div>
 </body>
-
 </html>

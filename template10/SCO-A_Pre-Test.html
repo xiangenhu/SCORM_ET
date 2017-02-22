@@ -1,6 +1,6 @@
 <html>
 <head>
-<script language=javascript src="../util/APIWrapper.js"></script>
+<script language=javascript src="util/APIWrapper.js"></script>
 <script language=javascript>
    // Set some variables global to the SCO
    var answer = -1;
@@ -17,15 +17,22 @@
       //  sucessful (passed or failed)
       if ( val1 != "passed"  )
       {
-         setObjToFailed(indexOfSecondObjective);
+         setObjToFailed(indexOfFirstObjective);
       }
       else 
       {
          setObjToPassed(indexOfFirstObjective);
       }
+      if ( val2 != "passed"  )
+      {
+         setObjToFailed(indexOfSecondObjective);
+      }
+      else 
+      {
+         setObjToPassed(indexOfSecondObjective);
+      }
       
-     /*
-	 if ( (val1 != "passed") || (val2 != "passed") )
+      if ( (val1 != "passed") || (val2 != "passed") )
       {
         doSetValue( "cmi.success_status", "failed" );
       }
@@ -33,7 +40,7 @@
       {
         doSetValue( "cmi.success_status", "passed" );
       }
-*/
+
       //  Set the SCO to completed with a normal exit
       doSetValue( "cmi.completion_status", "completed" );
       doSetValue( "cmi.exit", "" );
@@ -111,13 +118,18 @@
    <div id="disp" name="disp"></div>   
    <br>
       <form name="examForm">
-	  <image src="BundleFlowChart/Slide2.jpg">
-		<p>Select status for Autotutor Deep Reasoning.
+		<p>Select status for OBJ_1.
 			<select NAME="OBJ1_Status">
                			<option VALUE="passed">passed
                			<option VALUE="failed">failed
           		</select>
-		</p>
+		</p>	
+                <p>Select status for OBJ_2.
+			<select NAME="OBJ2_Status">
+               			<option VALUE="passed">passed
+               			<option VALUE="failed">failed
+          		</select>
+		</p>	
 		<input type="button" name="submitButton" value=" Submit " onClick="submitScore()">
       </form>
 </body>
