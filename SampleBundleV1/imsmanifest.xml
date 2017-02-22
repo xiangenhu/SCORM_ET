@@ -58,7 +58,7 @@
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Push_pull_amplifier_Satisfied" writeSatisfiedStatus="false" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_pull_amplifier_Satisfied" writeSatisfiedStatus="false" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -68,7 +68,7 @@
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.PNJunction_Satisfied" writeSatisfiedStatus="false" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_Satisfied" writeSatisfiedStatus="false" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
@@ -78,7 +78,7 @@
           <imsss:sequencing IDRef="test_seq_rules">
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.CC_amplifier_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
