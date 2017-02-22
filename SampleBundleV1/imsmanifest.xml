@@ -18,7 +18,7 @@
           <imsss:sequencing IDRef="content_seq_rules">
             <imsss:objectives>
               <imsss:primaryObjective objectiveID="learning_objective_satisfied">
-                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_Satisfied" writeSatisfiedStatus="false" />
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="com.ONRET.SCORM2004.Transistor_IniReading_Satisfied" writeNormalizedMeasure="true" writeSatisfiedStatus="false" />
               </imsss:primaryObjective>
             </imsss:objectives>
           </imsss:sequencing>
