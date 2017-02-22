@@ -10,7 +10,6 @@ body {
 </style>
 <script language=javascript src="../util/APIWrapper.js"></script>
 <script language=javascript src="../util/utils.js"></script>
-<script language=javascript src="../util/scormfunctions.js"></script>
 <script language=javascript>
    // Set some variables global to the SCO
  
@@ -31,7 +30,7 @@ body {
         html+='<option VALUE="passed">passed</option>';
         html+='<option VALUE="failed">failed</option>';
         html+='</select>';
-		html+='<input type="button" name="submitButton" value=" Submit " onClick="submitScore()">';
+		html+='<input type="button" name="submitButton" value="Submit" onClick="submitScore()">';
         html+='</form>';
 		document.getElementById("ContentForm").innerHTML = html;
 		
@@ -50,11 +49,7 @@ body {
    **               user closes the SCO window or navigates away before 
    **               finishing the SCO.
    **********************************************************************/
-    function loadPage()
-   {
-	   doInitialize();
-		
-   }
+  
   
    
    /**********************************************************************
@@ -76,9 +71,9 @@ body {
 
 
 </script>
-<title>IniReading</title>
+<title>Skill Bulding</title>
 </head>
-<body onload="loadPage();">
+<body>
       
 </body>
 
