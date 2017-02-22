@@ -104,8 +104,10 @@
 		if (PageType=="Q") {
 		    setIframeSrc("contentFrame","ETTest.html?T="+GetQueryVar("T","Transistor")+"&SKO="+GetQueryVar("SKO","AutoTutorDR"));
 			hasAssessment = true;
+            nextButton.disabled = true;
+            prevButton.disabled = true;   
 			ScormProcessCommit();
-			return;
+			return
 		}
         if (PageType=="P"){
 			theIframe.src = GetQueryVar("CL","BBN.html")+"?T="+GetQueryVar("T","Transistor")+"&SKO="+GetQueryVar("SKO","AutoTutorDR");
