@@ -374,7 +374,7 @@
       <file href="config.js" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="RES-TEMP10_3" adlcp:scormType="sco" href="SkillBuilding.html" type="webcontent" xml:base="content/Transistor/">
+    <resource identifier="RES-TEMP10_3" adlcp:scormType="sco" href="SkillBuilder.html" type="webcontent" xml:base="content/Transistor/">
       <file href="../images/adl_t10_2a.png" />
       <file href="../images/t10_rules.png" />
       <file href="../util/apiwrapper.js" />
