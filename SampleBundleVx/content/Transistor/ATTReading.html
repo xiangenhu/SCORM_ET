@@ -1,6 +1,14 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../css/template.css" />
+
+<style type="text/css">
+body { 
+    background-image: url('../images/BundleFlowChart/Slide7.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 30% 20%; 
+}
+</style>
 <script language=javascript src="../util/apiwrapper.js"></script>
 <script language=javascript src="../util/jquery-1.3.2.min.js"></script>
 <script language=javascript src="../util/jquery-ui-1.7.2.custom.min.js"></script>
@@ -19,9 +27,8 @@ var exitPageStatus = false;
    function loadPage()
    {
       var result = doInitialize();
-      loadTemplate({"chartid":"t10_2b"});
+      loadTemplate({"chartid":"t10_2a"});
    }
-   
    
    
    /**********************************************************************
@@ -48,7 +55,7 @@ var exitPageStatus = false;
    	//		   liberty of displaying a confirm message box
    }
 </script>
-<title>SCO-4: Remediation</title>
+<title>SCO-2: Instruction</title>
 </head>
 <body onLoad="loadPage()" onunload="return unloadPage()">
 <div id=maindiv></div>

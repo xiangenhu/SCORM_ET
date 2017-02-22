@@ -7,25 +7,22 @@
   </metadata>
   <organizations default="ORG-ADL-TEMPLATES">
     <organization identifier="ORG-ADL-TEMPLATES" adlseq:objectivesGlobalToSystem="false">
-      <title>ADL SCORM 2004 Sequencing Templates Support Tool</title>
+      <title>ET Bundle Example</title>
       <item identifier="CLUSTER-ADL-TEMPLATES-TEMP_10_MAIN" isvisible="false">
         <title>Template 10: Pre- and Post-Test Sequencing wtih New Content for Remediation</title>
         <item identifier="CLUSTER-ADL-TEMPLATES-TEMP_10" isvisible="true">
           <title>Template 10: Pre- and Post-Test Sequencing wtih New Content for Remediation</title>
-          <item identifier="ITEM-C9D6F2D1EB97D4EEE4CD7E4F39ED7185" identifierref="RES-TEMP10_2" isvisible="true">
-            <title>Item</title>
-          </item>
           <item identifier="SCO-ADL-TEMPLATES-TEMP10_1" identifierref="RES-TEMP10_1">
             <title>SCO-A: Pre-Test</title>
             <imsss:sequencing>
               <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
               <imsss:objectives>
-                <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/primary_objective" />
-                <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/obj-1">
-                  <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-1" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+                <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-A/primary_objective" />
+                <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-A/obj-1">
+                  <imsss:mapInfo targetObjectiveID="urn:lsal.org/Transistor/global-obj-1" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
                 </imsss:objective>
-                <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/obj-2">
-                  <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-2" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+                <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-A/obj-2">
+                  <imsss:mapInfo targetObjectiveID="urn:lsal.org/Transistor/global-obj-2" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
                 </imsss:objective>
               </imsss:objectives>
             </imsss:sequencing>
@@ -48,22 +45,22 @@
                 <imsss:sequencingRules>
                   <imsss:preConditionRule>
                     <imsss:ruleConditions conditionCombination="all">
-                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-1/obj-1" condition="satisfied" />
+                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/Transistor/sco-1/obj-1" condition="satisfied" />
                     </imsss:ruleConditions>
                     <imsss:ruleAction action="skip" />
                   </imsss:preConditionRule>
                   <imsss:preConditionRule>
                     <imsss:ruleConditions conditionCombination="all">
-                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-1/obj-1" condition="objectiveStatusKnown" />
+                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/Transistor/sco-1/obj-1" condition="objectiveStatusKnown" />
                     </imsss:ruleConditions>
                     <imsss:ruleAction action="hiddenFromChoice" />
                   </imsss:preConditionRule>
                 </imsss:sequencingRules>
                 <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
                 <imsss:objectives>
-                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-1/primary_objective" />
-                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-1/obj-1">
-                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-1" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-1/primary_objective" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-1/obj-1">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/Transistor/global-obj-1" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
                   </imsss:objective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -84,22 +81,22 @@
                 <imsss:sequencingRules>
                   <imsss:preConditionRule>
                     <imsss:ruleConditions conditionCombination="all">
-                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-2/obj-1" condition="satisfied" />
+                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/Transistor/sco-2/obj-1" condition="satisfied" />
                     </imsss:ruleConditions>
                     <imsss:ruleAction action="skip" />
                   </imsss:preConditionRule>
                   <imsss:preConditionRule>
                     <imsss:ruleConditions conditionCombination="all">
-                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-2/obj-1" condition="objectiveStatusKnown" />
+                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/Transistor/sco-2/obj-1" condition="objectiveStatusKnown" />
                     </imsss:ruleConditions>
                     <imsss:ruleAction action="hiddenFromChoice" />
                   </imsss:preConditionRule>
                 </imsss:sequencingRules>
                 <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
                 <imsss:objectives>
-                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-2/primary_objective" />
-                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-2/obj-1">
-                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-2" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-2/primary_objective" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-2/obj-1">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/Transistor/global-obj-2" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
                   </imsss:objective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -134,11 +131,11 @@
                 <imsss:rollupRules objectiveMeasureWeight="1.0000" />
                 <imsss:objectives>
                   <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="primary-obj" />
-                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-C/obj-1">
-                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-3" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-C/obj-1">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/Transistor/global-obj-3" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
                   </imsss:objective>
-                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-C/obj-2">
-                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-4" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-C/obj-2">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/Transistor/global-obj-4" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
                   </imsss:objective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -174,22 +171,22 @@
                 <imsss:sequencingRules>
                   <imsss:preConditionRule>
                     <imsss:ruleConditions conditionCombination="all">
-                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-3/obj-1" condition="satisfied" />
+                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/Transistor/sco-3/obj-1" condition="satisfied" />
                     </imsss:ruleConditions>
                     <imsss:ruleAction action="skip" />
                   </imsss:preConditionRule>
                   <imsss:preConditionRule>
                     <imsss:ruleConditions conditionCombination="all">
-                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-3/obj-1" condition="objectiveStatusKnown" />
+                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/Transistor/sco-3/obj-1" condition="objectiveStatusKnown" />
                     </imsss:ruleConditions>
                     <imsss:ruleAction action="hiddenFromChoice" />
                   </imsss:preConditionRule>
                 </imsss:sequencingRules>
                 <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
                 <imsss:objectives>
-                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-3/primary_objective" />
-                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-3/obj-1">
-                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-3" readSatisfiedStatus="true" readNormalizedMeasure="false" />
+                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-3/primary_objective" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-3/obj-1">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/Transistor/global-obj-3" readSatisfiedStatus="true" readNormalizedMeasure="false" />
                   </imsss:objective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -210,22 +207,22 @@
                 <imsss:sequencingRules>
                   <imsss:preConditionRule>
                     <imsss:ruleConditions conditionCombination="all">
-                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-4/obj-1" condition="satisfied" />
+                      <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/Transistor/sco-4/obj-1" condition="satisfied" />
                     </imsss:ruleConditions>
                     <imsss:ruleAction action="skip" />
                   </imsss:preConditionRule>
                   <imsss:preConditionRule>
                     <imsss:ruleConditions conditionCombination="all">
-                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-4/obj-1" condition="objectiveStatusKnown" />
+                      <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/Transistor/sco-4/obj-1" condition="objectiveStatusKnown" />
                     </imsss:ruleConditions>
                     <imsss:ruleAction action="hiddenFromChoice" />
                   </imsss:preConditionRule>
                 </imsss:sequencingRules>
                 <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
                 <imsss:objectives>
-                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-4/primary_objective" />
-                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-4/obj-1">
-                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-4" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
+                  <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-4/primary_objective" />
+                  <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/Transistor/sco-4/obj-1">
+                    <imsss:mapInfo targetObjectiveID="urn:lsal.org/Transistor/global-obj-4" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
                   </imsss:objective>
                 </imsss:objectives>
               </imsss:sequencing>
@@ -360,7 +357,8 @@
     </organization>
   </organizations>
   <resources>
-    <resource identifier="RES-TEMP10_1" adlcp:scormType="sco" href="SCO-A_Pre-Test.html" type="webcontent" xml:base="content/template10/">
+    <resource adlcp:scormType="sco" xml:base="content/Transistor/" href="IniReading.html" identifier="IniReading.html" type="webcontent" />
+    <resource identifier="RES-TEMP10_1" adlcp:scormType="sco" href="AutoTutorDR.html" type="webcontent" xml:base="content/Transistor/">
       <file href="../images/adl_t10_a.png" />
       <file href="../images/t10_rules.png" />
       <file href="../util/apiwrapper.js" />
@@ -368,7 +366,7 @@
       <file href="config.js" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="RES-TEMP10_2" adlcp:scormType="sco" href="SCO-1a_Instruction.html" type="webcontent" xml:base="content/template10/">
+    <resource identifier="RES-TEMP10_2" adlcp:scormType="sco" href="BBN.html" type="webcontent" xml:base="content/Transistor/">
       <file href="../images/adl_t10_1a.png" />
       <file href="../images/t10_rules.png" />
       <file href="../util/apiwrapper.js" />
@@ -376,7 +374,7 @@
       <file href="config.js" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="RES-TEMP10_3" adlcp:scormType="sco" href="SCO-2a_Instruction.html" type="webcontent" xml:base="content/template10/">
+    <resource identifier="RES-TEMP10_3" adlcp:scormType="sco" href="SkillBuilding.html" type="webcontent" xml:base="content/Transistor/">
       <file href="../images/adl_t10_2a.png" />
       <file href="../images/t10_rules.png" />
       <file href="../util/apiwrapper.js" />
@@ -384,7 +382,7 @@
       <file href="config.js" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="RES-TEMP10_4" adlcp:scormType="sco" href="SCO-3a_Post-Test.html" type="webcontent" xml:base="content/template10/">
+    <resource identifier="RES-TEMP10_4" adlcp:scormType="sco" href="AutoTutorKC.html" type="webcontent" xml:base="content/Transistor/">
       <file href="../images/adl_t10_3a.png" />
       <file href="../images/t10_rules.png" />
       <file href="../util/apiwrapper.js" />
@@ -392,7 +390,7 @@
       <file href="config.js" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="RES-TEMP10_5" adlcp:scormType="sco" href="SCO-1b_Remediation.html" type="webcontent" xml:base="content/template10/">
+    <resource identifier="RES-TEMP10_5" adlcp:scormType="sco" href="ATTReading.html" type="webcontent" xml:base="content/Transistor/">
       <file href="../images/adl_t10_1b.png" />
       <file href="../images/t10_rules.png" />
       <file href="../util/apiwrapper.js" />
@@ -400,7 +398,7 @@
       <file href="config.js" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="RES-TEMP10_6" adlcp:scormType="sco" href="SCO-2b_Remediation.html" type="webcontent" xml:base="content/template10/">
+    <resource identifier="RES-TEMP10_6" adlcp:scormType="sco" href="Dragoon.html" type="webcontent" xml:base="content/Transistor/">
       <file href="../images/adl_t10_2b.png" />
       <file href="../images/t10_rules.png" />
       <file href="../util/apiwrapper.js" />
@@ -408,7 +406,7 @@
       <file href="config.js" />
       <dependency identifierref="RES-COMMON" />
     </resource>
-    <resource identifier="RES-TEMP10_7" adlcp:scormType="sco" href="SCO-3b_Post-Test_Mastery.html" type="webcontent" xml:base="content/template10/">
+    <resource identifier="RES-TEMP10_7" adlcp:scormType="sco" href="AutoTutorDRQ.html" type="webcontent" xml:base="content/Transistor/">
       <file href="../images/adl_t10_3b.png" />
       <file href="../images/t10_rules.png" />
       <file href="../util/apiwrapper.js" />
