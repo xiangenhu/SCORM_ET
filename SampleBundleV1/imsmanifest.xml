@@ -7,7 +7,7 @@
   </metadata>
   <organizations default="ONRET">
     <organization identifier="ONRET" adlseq:objectivesGlobalToSystem="false">
-      <title>Sample Bundle</title>
+      <title>Sample Bundle V1</title>
       <item identifier="RootBundle" identifierref="ONRETWelcome" isvisible="true">
         <title>Welcome to ONR ET</title>
       </item>
