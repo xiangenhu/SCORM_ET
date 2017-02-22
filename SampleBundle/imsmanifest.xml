@@ -13,15 +13,43 @@
         <title>Transistor</title>
         <item identifier="Transistor_INIReading" identifierref="ETLaunch.html" parameters="?CL=Transistor/INIReading.html&amp;T=Transistor&amp;PT=INIReading">
           <title>INIReading</title>
+          <imsss:sequencing>
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="SampleOBJ">
+                <imsss:mapInfo targetObjectiveID="SampleOBJMapInfo" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
         </item>
-        <item identifier="Transistor_AutoTutorDR" identifierref="ETLaunch.html" parameters="?CL=Transistor/AutoTutorDR.html&amp;T=Transistor&amp;PT=AutoTutorDR">
+        <item identifier="Transistor_AutoTutorDR" identifierref="ETLaunch.html" parameters="?CL=Transistor/AutoTutorDR.html&amp;T=Transistor&amp;PT=AutoTutorDR&amp;OBJ=Transistor_AutoTutorDRPass">
           <title>AutoTutorDR</title>
+          <imsss:sequencing>
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="Transistor_AutoTutorDRPass" satisfiedByMeasure="false">
+                <imsss:mapInfo targetObjectiveID="Transistor_AutoTutorDRPass" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
         </item>
         <item identifier="Transistor_BBN" identifierref="ETLaunch.html" parameters="?CL=Transistor/BBN.html&amp;T=Transistor&amp;PT=BBN">
           <title>BBN</title>
+          <imsss:sequencing>
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="Transistor_AutoTutorDRPass">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="Transistor_AutoTutorDRPass" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
         </item>
         <item identifier="Transistor_AutoTutorKC" identifierref="ETLaunch.html" parameters="?CL=Transistor/AutoTutorKC.html&amp;T=Transistor&amp;PT=AutoTutorKC">
           <title>AutoTutorKC</title>
+          <imsss:sequencing>
+            <imsss:objectives>
+              <imsss:primaryObjective objectiveID="Transistor_AutoTutorDRPass">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="Transistor_AutoTutorDRPass" writeSatisfiedStatus="false" />
+              </imsss:primaryObjective>
+            </imsss:objectives>
+          </imsss:sequencing>
         </item>
         <item identifier="Transistor_SkillBuilder" identifierref="ETLaunch.html" parameters="?CL=Transistor/SkillBuilder.html&amp;T=Transistor&amp;PT=SkillBuilder">
           <title>SkillBuilder</title>
@@ -36,7 +64,7 @@
           <title>Dragoon</title>
         </item>
         <imsss:sequencing>
-          <imsss:controlMode choice="true" flow="true" />
+          <imsss:controlMode choice="false" flow="true" />
         </imsss:sequencing>
       </item>
     </organization>
