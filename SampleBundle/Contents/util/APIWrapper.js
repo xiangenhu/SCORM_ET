@@ -493,10 +493,12 @@ function getAPI()
    {
 	   var numOfObj = doGetValue("cmi.objectives._count");
 	   var objectiveLocation = -1;
-
+	   alert(numOfObj);
 	   for ( var i=0; i < numOfObj; i++ ) 
 	   {
-                if ( doGetValue("cmi.objectives." + i + ".id") == obj )
+		   var TheObj= doGetValue("cmi.objectives." + i + ".id");
+		   alert(TheObj);
+                if ( TheObj == obj )
                 {
 			 objectiveLocation = i;
 			 break;

@@ -10,15 +10,36 @@ body {
 </style>
 <script language=javascript src="../util/APIWrapper.js"></script>
 <script language=javascript src="../util/utils.js"></script>
+<script language=javascript src="../util/scormfunctions.js"></script>
 <script language=javascript>
    // Set some variables global to the SCO
    var answer = -1;
    var exitPageStatus = false;
 
+function RecordTest(score){
+        ScormProcessSetValue("cmi.score.raw", score);
+        ScormProcessSetValue("cmi.score.min", "0");
+        ScormProcessSetValue("cmi.score.max", "100");
+        
+        var scaledScore = score / 100;
+        ScormProcessSetValue("cmi.score.scaled", scaledScore);
+        
+        ScormProcessSetValue("cmi.completion_status", "completed");
+        
+        //consider 70% to be passing
+        if (score >= 70){
+            ScormProcessSetValue("cmi.success_status", "passed");
+        }
+        else{
+            ScormProcessSetValue("cmi.success_status", "failed");
+        }
+    }      
+   
+   
    function submitScore()
    {
         document.examForm.submitButton.disabled = true;
-		var ObjectStr = GetQueryVar("OBJ","AutoTutorDRPass");
+		var ObjectStr = GetQueryVar("OBJ","Transistor_AutoTutorDRPass");
         var indexOfFirstObjective = findObjective(ObjectStr);
 	    var val1 = document.examForm.OBJ1_Status.value;
       //  Indicate whether or not the attempt on the SCO was
@@ -26,10 +47,12 @@ body {
       if ( val1 != "passed"  )
       {
          setObjToFailed(indexOfSecondObjective);
+		 RecordTest(0);
       }
       else 
       {
          setObjToPassed(indexOfFirstObjective);
+		 RecordTest(100);
       }
     
       //  Set the SCO to completed with a normal exit
@@ -54,7 +77,8 @@ body {
    **********************************************************************/
    function loadPage()
    {
-      var html='<form name="examForm">';
+	   doInitialize();
+       var html='<form name="examForm">';
 		html+='Select status for '+GetQueryVar("PT","AutoTutorDR");
 		html+='<select NAME="OBJ1_Status">';
         html+='<option VALUE="passed">passed</option>';
