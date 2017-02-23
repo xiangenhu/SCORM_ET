@@ -266,33 +266,35 @@
     </resource>
     <resource identifier="RES-AF61BACF-1095-8D46-46D1-4AD1F9420691" href="SCO-1_Instruction.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" type="webcontent">
       <file href="SCO-1_Instruction.html" />
-      <file href="util/APIWrapper.js" />
+      <file href="..util/APIWrapper.js" />
     </resource>
     <resource identifier="RES-D5CF4F23-0411-1361-62BA-860884BB3B3B" href="SCO-2_Instruction.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" type="webcontent">
       <file href="SCO-2_Instruction.html" />
-      <file href="util/APIWrapper.js" />
+      <file href="..util/APIWrapper.js" />
     </resource>
     <resource identifier="RES-0C4F212D-1EE9-0361-479B-472B97B4EACD" href="SCO-C_Post-Test.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" type="webcontent">
       <file href="SCO-C_Post-Test.html" />
-      <file href="util/APIWrapper.js" />
+      <file href="..util/APIWrapper.js" />
     </resource>
     <resource identifier="RES-2E685E0F-C5BF-F04C-75FF-A4393B46F552" href="SCO-3_Remediation.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" type="webcontent">
       <file href="SCO-3_Remediation.html" />
-      <file href="util/APIWrapper.js" />
+      <file href="..util/APIWrapper.js" />
     </resource>
     <resource identifier="RES-8C88141B-4AD8-5780-6827-D7114260AD46" href="SCO-4_Remediation.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" type="webcontent">
       <file href="SCO-4_Remediation.html" />
-      <file href="util/APIWrapper.js" />
+      <file href="..util/APIWrapper.js" />
     </resource>
     <resource identifier="RES-A061CA26-A606-DB58-9457-1521E0B2A754" href="SCO-B_Post-Test_Mastery.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" type="webcontent">
       <file href="SCO-B_Post-Test_Mastery.html" />
-      <file href="util/APIWrapper.js" />
+      <file href="..util/APIWrapper.js" />
     </resource>
     <resource identifier="RES-85D19FB12546334E22B8E0F2EBD4D387" adlcp:scormType="sco" xml:base="Contents/Transistor/" href="Dragoon.html" type="webcontent">
-      <file href="Dragoon.html" />
+      <file href="Dragoon.html" /> 
+	  <file href="..util/APIWrapper.js" />
     </resource>
     <resource identifier="RES-C08324587C745ADE1CD811CF02DC28B0" adlcp:scormType="sco" xml:base="Contents/Transistor/" href="AutoTutorDRQ.html" type="webcontent">
       <file href="AutoTutorDRQ.html" />
+	   <file href="..util/APIWrapper.js" />
     </resource>
   </resources>
 </manifest>
