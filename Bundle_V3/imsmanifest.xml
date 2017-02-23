@@ -8,7 +8,7 @@
   </metadata>
   <organizations default="ORG-D4C1D227-EBF7-523B-2A62-20A32F57C55B">
     <organization identifier="ORG-D4C1D227-EBF7-523B-2A62-20A32F57C55B" adlseq:objectivesGlobalToSystem="false">
-      <title>ET_Bundle_V3</title>
+      <title>ET_Bundle_Transistor</title>
       <item identifier="ITEM-0B5FDB3B-DE8C-AD03-7F96-243CAF89FFC1" identifierref="RES-0D607530-D517-83EB-585D-ECF5D96BE899">
         <title>Autotutor Deep Reasoning</title>
         <imsss:sequencing>
