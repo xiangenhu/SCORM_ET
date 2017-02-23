@@ -11,10 +11,10 @@
       <title>ET_Bundle_Transistor</title>
       <item identifier="Transistor_Starting" isvisible="true">
         <title>Starting</title>
-        <item identifier="Transistor_Initial Reading" identifierref="RES-72B9C6B6055C54CD79F06DC0B8D062E5" isvisible="true">
+        <item identifier="Transistor_Initial_Reading" identifierref="Welcome.html" isvisible="true">
           <title>Initial Reading</title>
         </item>
-        <item identifier="Transistor_Autotutor_Deep_Reasoning" identifierref="RES-0D607530-D517-83EB-585D-ECF5D96BE899">
+        <item identifier="Transistor_Autotutor_Deep_Reasoning" identifierref="RES-0D607530-D517-83EB-585D-ECF5D96BE899" isvisible="true">
           <title>Autotutor Deep Reasoning</title>
           <imsss:sequencing>
             <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
@@ -31,6 +31,7 @@
         </item>
         <imsss:sequencing>
           <imsss:controlMode choice="False" flow="true" />
+          <imsss:rollupRules objectiveMeasureWeight="1.0000" />
         </imsss:sequencing>
       </item>
       <item identifier="Transistor_Autotutor_Deep_Reasoning_Low" isvisible="true">
@@ -214,9 +215,6 @@
           <title>Draggon</title>
         </item>
       </item>
-      <item identifier="ITEM-E079970D25E36EC5E5C41696C210C59D" isvisible="true">
-        <title>New Autututor Deep Reasoning Questions Low</title>
-      </item>
       <imsss:sequencing>
         <imsss:controlMode choice="false" choiceExit="true" flow="true" forwardOnly="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
         <imsss:sequencingRules>
@@ -289,12 +287,12 @@
       <file href="..util/APIWrapper.js" />
     </resource>
     <resource identifier="RES-85D19FB12546334E22B8E0F2EBD4D387" adlcp:scormType="sco" xml:base="Contents/Transistor/" href="Dragoon.html" type="webcontent">
-      <file href="Dragoon.html" /> 
-	  <file href="..util/APIWrapper.js" />
+      <file href="Dragoon.html" />
+      <file href="..util/APIWrapper.js" />
     </resource>
     <resource identifier="RES-C08324587C745ADE1CD811CF02DC28B0" adlcp:scormType="sco" xml:base="Contents/Transistor/" href="AutoTutorDRQ.html" type="webcontent">
       <file href="AutoTutorDRQ.html" />
-	   <file href="..util/APIWrapper.js" />
+      <file href="..util/APIWrapper.js" />
     </resource>
   </resources>
 </manifest>
