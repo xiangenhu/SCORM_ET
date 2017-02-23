@@ -193,34 +193,17 @@
           <imsss:rollupRules objectiveMeasureWeight="1.0000" />
         </imsss:sequencing>
       </item>
+      <item identifier="ITEM-AC06AE36CF2B70A88661BB803170755B" isvisible="true">
+        <title>Autotutor Knowledge Component Passed</title>
+        <item identifier="ITEM-A2CD671F39BF9F533F15FA3B720EE180" identifierref="RES-C08324587C745ADE1CD811CF02DC28B0" isvisible="true">
+          <title>Autotutor DRQ</title>
+        </item>
+      </item>
       <item identifier="ITEM-51B232AFACDDB63012F21C5AE3712973" isvisible="true">
         <title>Autututor Deep Reasoning Passed</title>
         <item identifier="ITEM-C4E1A43AD28A4222CD75567B6761BD00" identifierref="RES-85D19FB12546334E22B8E0F2EBD4D387" isvisible="true">
           <title>Draggon</title>
         </item>
-        <imsss:sequencing>
-          <imsss:sequencingRules>
-            <imsss:preConditionRule>
-              <imsss:ruleConditions conditionCombination="all">
-                <imsss:ruleCondition operator="noOp" referencedObjective="urn:lsal.org/template10/sco-3/obj-3" condition="satisfied" />
-              </imsss:ruleConditions>
-              <imsss:ruleAction action="skip" />
-            </imsss:preConditionRule>
-            <imsss:preConditionRule>
-              <imsss:ruleConditions conditionCombination="all">
-                <imsss:ruleCondition operator="not" referencedObjective="urn:lsal.org/template10/sco-3/obj-3" condition="objectiveStatusKnown" />
-              </imsss:ruleConditions>
-              <imsss:ruleAction action="hiddenFromChoice" />
-            </imsss:preConditionRule>
-          </imsss:sequencingRules>
-          <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
-          <imsss:objectives>
-            <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-3/primary_objective" />
-            <imsss:objective satisfiedByMeasure="true" objectiveID="urn:lsal.org/template10/sco-3/obj-3">
-              <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-3" readSatisfiedStatus="true" readNormalizedMeasure="false" writeSatisfiedStatus="false" writeNormalizedMeasure="false" />
-            </imsss:objective>
-          </imsss:objectives>
-        </imsss:sequencing>
       </item>
       <imsss:sequencing>
         <imsss:controlMode choice="false" choiceExit="true" flow="true" forwardOnly="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
@@ -295,6 +278,9 @@
     </resource>
     <resource identifier="RES-85D19FB12546334E22B8E0F2EBD4D387" adlcp:scormType="sco" href="Dragoon.html" type="webcontent">
       <file href="Dragoon.html" />
+    </resource>
+    <resource identifier="RES-C08324587C745ADE1CD811CF02DC28B0" adlcp:scormType="sco" href="AutoTutorDRQ.html" type="webcontent">
+      <file href="AutoTutorDRQ.html" />
     </resource>
   </resources>
 </manifest>
