@@ -9,24 +9,33 @@
   <organizations default="ORG-D4C1D227-EBF7-523B-2A62-20A32F57C55B">
     <organization identifier="ORG-D4C1D227-EBF7-523B-2A62-20A32F57C55B" adlseq:objectivesGlobalToSystem="false">
       <title>ET_Bundle_Transistor</title>
-      <item identifier="ITEM-0B5FDB3B-DE8C-AD03-7F96-243CAF89FFC1" identifierref="RES-0D607530-D517-83EB-585D-ECF5D96BE899">
-        <title>Autotutor Deep Reasoning</title>
+      <item identifier="Transistor_Starting" isvisible="true">
+        <title>Starting</title>
+        <item identifier="Transistor_Initial Reading" identifierref="RES-72B9C6B6055C54CD79F06DC0B8D062E5" isvisible="true">
+          <title>Initial Reading</title>
+        </item>
+        <item identifier="Transistor_Autotutor_Deep_Reasoning" identifierref="RES-0D607530-D517-83EB-585D-ECF5D96BE899">
+          <title>Autotutor Deep Reasoning</title>
+          <imsss:sequencing>
+            <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
+            <imsss:objectives>
+              <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/primary_objective" />
+              <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/obj-1">
+                <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-1" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+              </imsss:objective>
+              <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/obj-2">
+                <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-2" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+              </imsss:objective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
         <imsss:sequencing>
-          <imsss:rollupRules rollupObjectiveSatisfied="false" rollupProgressCompletion="false" objectiveMeasureWeight="1.0000" />
-          <imsss:objectives>
-            <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/primary_objective" />
-            <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/obj-1">
-              <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-1" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
-            </imsss:objective>
-            <imsss:objective satisfiedByMeasure="false" objectiveID="urn:lsal.org/template10/sco-A/obj-2">
-              <imsss:mapInfo targetObjectiveID="urn:lsal.org/template10/global-obj-2" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
-            </imsss:objective>
-          </imsss:objectives>
+          <imsss:controlMode choice="False" flow="true" />
         </imsss:sequencing>
       </item>
-      <item identifier="ITEM-35BFB257-C3BE-60E4-4AA9-179AB313E483" isvisible="true">
-        <title>Autotutor Deep Reasoning Failed</title>
-        <item identifier="ITEM-E8A5E3C9-42E9-3754-8EDD-57027DDFDD5C" identifierref="RES-AF61BACF-1095-8D46-46D1-4AD1F9420691">
+      <item identifier="Transistor_Autotutor_Deep_Reasoning_Low" isvisible="true">
+        <title>Autotutor Deep Reasoning Failed Low</title>
+        <item identifier="Transistor_BBN" identifierref="RES-AF61BACF-1095-8D46-46D1-4AD1F9420691">
           <title>BBN</title>
           <imsss:sequencing>
             <imsss:sequencingRules>
@@ -52,7 +61,7 @@
             </imsss:objectives>
           </imsss:sequencing>
         </item>
-        <item identifier="ITEM-69A12E64-2986-C30D-4A4F-7D1616DC9259" identifierref="RES-D5CF4F23-0411-1361-62BA-860884BB3B3B">
+        <item identifier="Transistor_AutoTutor_Knowledge_Components" identifierref="RES-D5CF4F23-0411-1361-62BA-860884BB3B3B">
           <title>AutoTutor KC</title>
           <imsss:sequencing>
             <imsss:sequencingRules>
@@ -108,7 +117,7 @@
           </imsss:sequencing>
         </item>
         <imsss:sequencing>
-          <imsss:controlMode choice="true" choiceExit="true" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+          <imsss:controlMode choice="false" flow="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
           <imsss:sequencingRules>
             <imsss:postConditionRule>
               <imsss:ruleConditions conditionCombination="all">
@@ -189,21 +198,24 @@
           </imsss:sequencing>
         </item>
         <imsss:sequencing>
-          <imsss:controlMode choice="true" choiceExit="true" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+          <imsss:controlMode choice="false" flow="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
           <imsss:rollupRules objectiveMeasureWeight="1.0000" />
         </imsss:sequencing>
       </item>
       <item identifier="ITEM-AC06AE36CF2B70A88661BB803170755B" isvisible="true">
-        <title>Autotutor Knowledge Component Passed</title>
+        <title>Autotutor Knowledge Component High</title>
         <item identifier="ITEM-A2CD671F39BF9F533F15FA3B720EE180" identifierref="RES-C08324587C745ADE1CD811CF02DC28B0" isvisible="true">
-          <title>Autotutor DRQ</title>
+          <title>New Autotutor Deep Reasoning Questions</title>
         </item>
       </item>
       <item identifier="ITEM-51B232AFACDDB63012F21C5AE3712973" isvisible="true">
-        <title>Autututor Deep Reasoning Passed</title>
+        <title>New Autututor Deep Reasoning Questions High</title>
         <item identifier="ITEM-C4E1A43AD28A4222CD75567B6761BD00" identifierref="RES-85D19FB12546334E22B8E0F2EBD4D387" isvisible="true">
           <title>Draggon</title>
         </item>
+      </item>
+      <item identifier="ITEM-E079970D25E36EC5E5C41696C210C59D" isvisible="true">
+        <title>New Autututor Deep Reasoning Questions Low</title>
       </item>
       <imsss:sequencing>
         <imsss:controlMode choice="false" choiceExit="true" flow="true" forwardOnly="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
@@ -245,7 +257,7 @@
     </organization>
   </organizations>
   <resources>
-    <resource identifier="RES-72B9C6B6055C54CD79F06DC0B8D062E5" adlcp:scormType="sco" href="Welcome.html" type="webcontent">
+    <resource identifier="Welcome.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" href="Welcome.html" type="webcontent">
       <file href="Welcome.html" />
     </resource>
     <resource identifier="RES-0D607530-D517-83EB-585D-ECF5D96BE899" href="SCO-A_Pre-Test.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" type="webcontent">
