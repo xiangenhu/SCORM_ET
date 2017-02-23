@@ -10,7 +10,7 @@
    {
         document.examForm.submitButton.disabled = true;
 	var val1 = document.examForm.OBJ3_Status.value;
-        var val2 = document.examForm.OBJ4_Status.value;
+        var val2 = "failed";
         var indexOfFirstObjective = findObjective("urn:lsal.org/template10/sco-C/obj-1");
         var indexOfSecondObjective = findObjective("urn:lsal.org/template10/sco-C/obj-2");
       //  Indicate whether or not the attempt on the SCO was
@@ -117,18 +117,13 @@
    <div id="disp" name="disp"></div>   
    <br>
       <form name="examForm">
-		<p>Select status for OBJ_3.
+		<p>Select status for Autotutor Knowledge Check question.
 			<select NAME="OBJ3_Status">
                			<option VALUE="passed">passed
                			<option VALUE="failed">failed
           		</select>
 		</p>	
-                <p>Select status for OBJ_4.
-			<select NAME="OBJ4_Status">
-               			<option VALUE="passed">passed
-               			<option VALUE="failed">failed
-          		</select>
-		</p>	
+               
 		<input type="button" name="submitButton" value=" Submit " onClick="submitScore()">
       </form>
 </body>
