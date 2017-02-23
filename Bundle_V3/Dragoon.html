@@ -1,6 +1,10 @@
 <html>
 <head>
-<script language=javascript src="util/APIWrapper.js"></script>
+
+<script language=javascript src="util/apiwrapper.js"></script>
+<script language=javascript src="util/jquery-1.3.2.min.js"></script>
+<script language=javascript src="util/jquery-ui-1.7.2.custom.min.js"></script>
+<script language=javascript src="util/utils.js"></script>
 <script language=javascript>
 var exitPageStatus = false;
    /**********************************************************************
@@ -13,7 +17,9 @@ var exitPageStatus = false;
    **********************************************************************/
    function loadPage()
    {
-      var result = doInitialize();
+     /* var result = doInitialize(); */
+	 var TOPICInfo="Current Topic "+GetQueryVar("T","");
+	   document.getElementById("TopicInfo").innerHTML = TOPICInfo;
    }
    
    
@@ -31,22 +37,30 @@ var exitPageStatus = false;
    **********************************************************************/
    function unloadPage()
    {
-    
+    /*
    	if (exitPageStatus != true)
    	{
    		doTerminate();
    	}
+	*/
    
    	// NOTE: don't return anything that resembles a javascript
    	//		   string from this function or IE will take the
    	//		   liberty of displaying a confirm message box
    }
-</script>
-<title>SCO-1: Instruction</title>
-</head>
-<body onLoad="loadPage()" onunload="return unloadPage()">
-BBN
-	  <image src="BundleFlowChart/Slide3.jpg">
+   function SetBackGround() {
+	document.getElementById('Picture').innerHTML  = "<img src='images/BundleFlowChart/Slide4.jpg'/>"; 
+}
+function setText(){
 
+document.getElementById('TextBody').innerHTML="Current Topic "+GetQueryVar("T","");
+}
+</script>
+<title>Reading Page</title>
+</head>
+
+<body>
+Dragoon
+<img src='images/BundleFlowChart/Slide4.jpg'/>
 </body>
 </html>

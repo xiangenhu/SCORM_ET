@@ -10,9 +10,9 @@
    {
         document.examForm.submitButton.disabled = true;
 	var val1 = document.examForm.OBJ1_Status.value;
-        var val2 = document.examForm.OBJ2_Status.value;
+        //var val2 = document.examForm.OBJ2_Status.value;
         var indexOfFirstObjective = findObjective("urn:lsal.org/template10/sco-A/obj-1");
-        var indexOfSecondObjective = findObjective("urn:lsal.org/template10/sco-A/obj-2");
+        //var indexOfSecondObjective = findObjective("urn:lsal.org/template10/sco-A/obj-2");
       //  Indicate whether or not the attempt on the SCO was
       //  sucessful (passed or failed)
       if ( val1 != "passed"  )
@@ -23,7 +23,8 @@
       {
          setObjToPassed(indexOfFirstObjective);
       }
-      if ( val2 != "passed"  )
+      /*
+	  if ( val2 != "passed"  )
       {
          setObjToFailed(indexOfSecondObjective);
       }
@@ -40,7 +41,7 @@
       {
         doSetValue( "cmi.success_status", "passed" );
       }
-
+	*/
       //  Set the SCO to completed with a normal exit
       doSetValue( "cmi.completion_status", "completed" );
       doSetValue( "cmi.exit", "" );
