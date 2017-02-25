@@ -1,0 +1,217 @@
+<html>
+<head>
+<script language=javascript src="../util/APIWrapper.js"></script>
+<script language=javascript>
+   // Set some variables global to the SCO
+   var answer = -1;
+   var exitPageStatus = false;
+   var ATType=GetQueryVar("ATType","AutoTutorDR")
+   var BundleTitle=GetQueryVar("T","Transistor");
+function GetQueryVar(search_for,defaultstr) {
+            var query = window.location.search.substring(1);
+			var parms = query.split('&');
+			for (var i = 0; i<parms.length; i++) {
+				var pos = parms[i].indexOf('=');
+				if (pos > 0  && search_for == parms[i].substring(0,pos)) {
+					return parms[i].substring(pos+1);
+					}
+				}
+				return defaultstr;
+			}      
+   
+
+   function submitScore1(doTerm)
+   {
+        
+    var indexOfFirstObjective = findObjective(BundleTitle+"_"+ATType+"_High");
+    var indexOfSecondObjective = findObjective(BundleTitle+"_"+ATType+"_Low");
+	
+		
+        
+        var val1 = document.examForm.OBJ1_Status.value;
+        var val2 = document.examForm.OBJ2_Status.value;
+
+      //  Indicate whether or not the attempt on the SCO was
+      //  sucessful (passed or failed)
+      if ( val1 != "passed"  )
+      {
+         setObjToFailed(indexOfFirstObjective);
+      }
+      else 
+      {
+         setObjToPassed(indexOfFirstObjective);
+      }
+	  
+      if ( val2 != "passed"  )
+      {
+         setObjToFailed(indexOfSecondObjective);
+      }
+      else 
+      {
+         setObjToPassed(indexOfSecondObjective);
+      }
+      
+      if ( (val1 != "passed") || (val2 != "passed") )
+      {
+        doSetValue( "cmi.success_status", "failed" );
+      }
+      else
+      {
+        doSetValue( "cmi.success_status", "passed" );
+      }
+      //  Set the SCO to completed with a normal exit
+      doSetValue( "cmi.completion_status", "completed" );
+      doSetValue( "cmi.exit", "" );
+
+      if (doTerm) {
+        //  Indicate that the SCO was finished normally
+        exitPageStatus = true;
+        var result = doTerminate();
+      }
+   }   
+   
+   
+   function submitScore()
+   {
+	var val1 = document.examForm.OBJ_Status.value;
+    var indexOfFirstObjective = findObjective(BundleTitle+"_"+ATType+"_High");
+    var indexOfSecondObjective = findObjective(BundleTitle+"_"+ATType+"_Low");
+	
+	
+	 if ( val1 != "High"  )
+      {
+         setObjToFailed(indexOfFirstObjective);
+		 doSetValue( "cmi.success_status", "failed" );
+      }
+      else 
+      {
+         setObjToPassed(indexOfFirstObjective);
+		 doSetValue( "cmi.success_status", "passed" );
+      }
+	  
+	
+	
+      //  Set the SCO to completed with a normal exit
+      doSetValue( "cmi.completion_status", "completed" );
+      doSetValue( "cmi.exit", "" );
+
+      //  Indicate that the SCO was finished normally
+      exitPageStatus = true;
+
+      var result = doTerminate();
+   }
+   
+
+    
+   /**********************************************************************
+   **  Function: loadPage()
+   **  Description: This is called when a SCO is first loaded in the
+   **               browser (onload()).  It finds the API if it was not
+   **               already located and calls Initialize().  In
+   **               the exitPageStatus global variable is set to false
+   **               indicating that the SCO is not yet finished.
+   **********************************************************************/
+   function loadPage()
+   {
+      var result = doInitialize();
+	  var html='<form name="examForm">';
+	    html+=BundleTitle+' '+ATType +' Score:';
+		html+='<input type="radio" name="OBJ_Status" value="High"> High</input>';
+		html+='<input type="radio" name="OBJ_Status" value="Low" checked> Low</input>';
+        html+='</form>';
+		html+='<image src="../BundleFlowChart/'+ATType+'.jpg">';
+	   document.getElementById("disp").innerHTML=html;
+   }
+   
+    function getDescription() {
+        var html = '<form name="examForm">';
+	    html    += '  <p>Select status of learning objective for SCO-2.';
+	    html    += '  <select NAME="OBJ1_Status">';
+        html    += '    <option VALUE="passed">passed';
+        html    += '    <option VALUE="failed">failed';
+        html    += '  </select>';
+	    html    += '  </p>	';
+	    html    += '  <p>Select status of learning objective for SCO-3.';
+	    html    += '  <select NAME="OBJ2_Status">';
+        html    += '    <option VALUE="passed">passed';
+        html    += '    <option VALUE="failed">failed';
+        html    += '  </select>';
+	    html    += '  </p>	';
+		html 	+= '<input type="button" name="submitButton" value=" Submit " onClick="submitScore()">';
+        html    += '</form>';
+		html    += '<image src="../BundleFlowChart/'+ATType+'.jpg">';
+        return html;
+    }
+   function loadPage1()
+   {
+      var result = doInitialize();
+	   document.getElementById("disp").innerHTML=getDescription() ;
+   }
+   
+   
+   /**********************************************************************
+   **  Function: doQuit()
+   **  Description: This function is called in the case that the user
+   **               does not finish the SCO "gracefully".  For example, 
+   **               the user may click the "continue" button before
+   **               submitting an answer to a question.  In this case,
+   **               this function is called as part of the page unloading.
+   **               This function ensures that Terminate() is called
+   **               and that the correct statuses are set even if the 
+   **               user closes the SCO window or navigates away before 
+   **               finishing the SCO.
+   **********************************************************************/
+   function doQuit()
+   {   
+      submitScore();
+   }
+
+    function doQuit1()
+   {   
+      submitScore1();
+   }
+
+   
+   /**********************************************************************
+   **  Function: unloadPage()
+   **  Description: This function is called in the case that the user
+   **               does not finish the SCO "gracefully".  For example, 
+   **               the user may click the "continue" button before
+   **               submitting an answer to a question.  In this case,
+   **               this function is called as part of the page unloading.
+   **               This function ensures that Terminate() is called
+   **               even if the user closes the SCO window or navigates
+   **               away before finishing the SCO.
+   **********************************************************************/
+   function unloadPage()
+   {
+    
+   	if (exitPageStatus != true)
+   	{
+   		doQuit();
+   	}
+	}
+	
+	
+	function unloadPage1()
+   {
+    
+   	if (exitPageStatus != true)
+   	{
+   		doQuit1();
+   	}
+   
+   	// NOTE: don't return anything that resembles a javascript
+   	//		   string from this function or IE will take the
+   	//		   liberty of displaying a confirm message box
+   }
+
+
+</script>
+<title>AutoTutor </title>
+</head>
+<body onLoad="loadPage()" onunload="return unloadPage()">
+   <div id="disp" name="disp"></div>    
+</body>
+
+</html>

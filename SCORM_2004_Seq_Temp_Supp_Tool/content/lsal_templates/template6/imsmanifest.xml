@@ -25,7 +25,14 @@
       </item>
       <item identifier="ITEM-8E91D6D8-C6B1-4522-768E-27050F93BD45" identifierref="RES-4CFB224B-E337-06D5-25EB-594AF9B4FD83">
         <title>SCO-2 Lesson</title>
+        <item identifier="ITEM-CB74DE844DC325586C5D62D66541EE8A" identifierref="RES-4CFB224B-E337-06D5-25EB-594AF9B4FD83" isvisible="true">
+          <title>Item</title>
+        </item>
+        <item identifier="ITEM-FA6A9A56AB37A705F69EC695059E8972" identifierref="RES-4CFB224B-E337-06D5-25EB-594AF9B4FD83" isvisible="true">
+          <title>Item</title>
+        </item>
         <imsss:sequencing>
+          <imsss:controlMode choice="false" flow="true" />
           <imsss:sequencingRules>
             <imsss:preConditionRule>
               <imsss:ruleConditions conditionCombination="all">
@@ -45,7 +52,14 @@
       </item>
       <item identifier="ITEM-F467542A-876D-DC32-003F-895F9A1276D9" identifierref="RES-7D7C560F-BC57-BA4A-7F09-E41FA1FC5C3B">
         <title>SCO-3 Lesson</title>
+        <item identifier="ITEM-32018AC35289669184C9E71C31008E60" identifierref="RES-7D7C560F-BC57-BA4A-7F09-E41FA1FC5C3B" isvisible="true">
+          <title>Item</title>
+        </item>
+        <item identifier="ITEM-EBA742E03192CD938FB30D0F590DCFF8" identifierref="RES-7D7C560F-BC57-BA4A-7F09-E41FA1FC5C3B" isvisible="true">
+          <title>Item</title>
+        </item>
         <imsss:sequencing>
+          <imsss:controlMode choice="false" flow="true" />
           <imsss:sequencingRules>
             <imsss:preConditionRule>
               <imsss:ruleConditions conditionCombination="all">
