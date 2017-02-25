@@ -8,7 +8,7 @@
   </metadata>
   <organizations default="ORG-D4C1D227-EBF7-523B-2A62-20A32F57C55B">
     <organization identifier="ORG-D4C1D227-EBF7-523B-2A62-20A32F57C55B" adlseq:objectivesGlobalToSystem="false">
-      <title>ET_Bundle_V5</title>
+      <title>ET_Bundle_V6</title>
       <item identifier="ITEM-9D80B1FCC1DABD0C838ACD96DC8C7DA1" identifierref="RES-72B9C6B6055C54CD79F06DC0B8D062E5" isvisible="true" parameters="true">
         <title>Initial Reading</title>
         <imsss:sequencing>
@@ -67,7 +67,7 @@
           </imsss:sequencing>
         </item>
         <item identifier="ITEM-4A31D2AB-615C-2F24-6221-542993882E6E" identifierref="RES-0C4F212D-1EE9-0361-479B-472B97B4EACD">
-          <title>Check AutoTutor KC Result</title>
+          <title>AutoTutor KC</title>
           <imsss:sequencing>
             <imsss:sequencingRules>
               <imsss:preConditionRule>
@@ -96,7 +96,7 @@
           </imsss:sequencing>
         </item>
         <imsss:sequencing>
-          <imsss:controlMode choice="false" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+          <imsss:controlMode choice="false" choiceExit="false" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
           <imsss:sequencingRules>
             <imsss:postConditionRule>
               <imsss:ruleConditions conditionCombination="all">
@@ -163,7 +163,7 @@
           </imsss:sequencing>
         </item>
         <imsss:sequencing>
-          <imsss:controlMode choice="true" choiceExit="true" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+          <imsss:controlMode choice="false" choiceExit="false" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
           <imsss:rollupRules objectiveMeasureWeight="1.0000" />
         </imsss:sequencing>
       </item>
@@ -184,7 +184,7 @@
           </imsss:sequencing>
         </item>
         <imsss:sequencing>
-          <imsss:controlMode choice="true" choiceExit="true" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+          <imsss:controlMode choice="false" choiceExit="true" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
           <imsss:rollupRules objectiveMeasureWeight="1.0000" />
         </imsss:sequencing>
       </item>
@@ -205,12 +205,12 @@
           </imsss:sequencing>
         </item>
         <imsss:sequencing>
-          <imsss:controlMode choice="true" choiceExit="true" flow="true" forwardOnly="false" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+          <imsss:controlMode choice="false" choiceExit="true" flow="true" forwardOnly="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
           <imsss:rollupRules objectiveMeasureWeight="1.0000" />
         </imsss:sequencing>
       </item>
       <imsss:sequencing>
-        <imsss:controlMode choice="false" choiceExit="true" flow="true" forwardOnly="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
+        <imsss:controlMode choice="false" flow="true" forwardOnly="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
         <imsss:sequencingRules>
           <imsss:exitConditionRule>
             <imsss:ruleConditions conditionCombination="all">
