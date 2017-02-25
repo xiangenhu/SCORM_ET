@@ -5,8 +5,8 @@
    // Set some variables global to the SCO
    var answer = -1;
    var exitPageStatus = false;
-
-
+   var ATType=GetQueryVar("ATType","AutoTutorDR")
+   var BundleTitle=GetQueryVar("T","Transistor");
 function GetQueryVar(search_for,defaultstr) {
             var query = window.location.search.substring(1);
 			var parms = query.split('&');
@@ -21,11 +21,9 @@ function GetQueryVar(search_for,defaultstr) {
    
    function submitScore()
    {
-        document.examForm.submitButton.disabled = true;
 	var val1 = document.examForm.OBJ_Status.value;
-	var BundleTitle=GetQueryVar("T","Transistor");
-    var indexOfFirstObjective = findObjective(BundleTitle+"_AutoTutorDR_High");
-    var indexOfSecondObjective = findObjective(BundleTitle+"_AutoTutorDR_Low");
+    var indexOfFirstObjective = findObjective(BundleTitle+"_"+ATType+"_High");
+    var indexOfSecondObjective = findObjective(BundleTitle+"_"+ATType+"_Low");
       //  sucessful (High or Low)
       if ( val1 == "Low"  )
       {
@@ -65,12 +63,12 @@ function GetQueryVar(search_for,defaultstr) {
    {
       var result = doInitialize();
 	  var html='<form name="examForm">';
-	    html+='AutoTutor Score:';
+	    html+=BundleTitle+' '+ATType +' Score:';
 		html+='<input type="radio" name="OBJ_Status" value="High"> High</input>';
 		html+='<input type="radio" name="OBJ_Status" value="Low" checked> Low</input>';
         html+='</form>';
-		html+='<image src="../BundleFlowChart/'+GetQueryVar("T","AutoTutorDR.jpg")+'">';
-	document.getElementById("disp").innerHTML=html;
+		html+='<image src="../BundleFlowChart/'+ATType+'.jpg">';
+	   document.getElementById("disp").innerHTML=html;
    }
    
    

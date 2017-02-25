@@ -522,6 +522,7 @@ function getAPI()
    function setObjToPassed(index)
    {
       doSetValue("cmi.objectives." + index + ".success_status", "passed");
+	  alert(index+' passed');
    }
 
    /**********************************************************************
@@ -532,4 +533,5 @@ function getAPI()
    function setObjToFailed(index)
    {
       doSetValue("cmi.objectives." + index + ".success_status", "failed");
+	  alert(index+' failed');
    }
