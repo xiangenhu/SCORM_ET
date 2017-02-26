@@ -25,6 +25,13 @@ function GetLinks(module)
 		pageArray.push(prefix+'26bc9152-2735-44ab-ae6c-27a1879cb7d2');
 		pageArray.push(prefix+'04c9e0a4-bb46-4d81-899a-9008babc02af');
 	}
+	if  (module=="NewAutoTutorDRQ")			
+    {    
+        prefix='https://prod.x-in-y.com/ASAT2016/Template/Template_ET/Mainpage_ET.html?id=';
+		pageArray.push(prefix+'e1b6b231-e63e-4c59-bbb0-f19d8f4d94a1');
+		pageArray.push(prefix+'26bc9152-2735-44ab-ae6c-27a1879cb7d2');
+		pageArray.push(prefix+'04c9e0a4-bb46-4d81-899a-9008babc02af');
+	}
 	if  (module=="AutoTutorKC")			
     {       
         prefix='https://prod.x-in-y.com/ASAT2016/Template/Template_ET/Mainpage_ET.html?id=';
