@@ -1,20 +1,21 @@
 <html>
 <head>
+
 <style type="text/css">
 body { 
-    background-image: url('../images/BundleFlowChart/Slide6.jpg');
+    background-image: url('../BundleFlowChart/ONR.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 30% 20%; 
 }
 </style>
+
 <script language=javascript src="../util/APIWrapper.js"></script>
-<script language=javascript src="../util/utils.js"></script>
-<script language=javascript src="../util/scormfunctions.js"></script>
+<script language=javascript src="ET.js"></script>
 <script language=javascript>
-   // Set some variables global to the SCO
- 
-    
+var exitPageStatus = false;
+
+var ATType=GetQueryVar("ATType","SkillBuilder") 
    /**********************************************************************
    **  Function: loadPage()
    **  Description: This is called when a SCO is first loaded in the
@@ -25,33 +26,11 @@ body {
    **********************************************************************/
    function loadPage()
    {
-      var html='<form name="examForm">';
-		html+='Select status for '+GetQueryVar("PT","AutoTutorDR");
-		html+='<select NAME="OBJ1_Status">';
-        html+='<option VALUE="passed">passed</option>';
-        html+='<option VALUE="failed">failed</option>';
-        html+='</select>';
-		html+='<input type="button" name="submitButton" value=" Submit " onClick="submitScore()">';
-        html+='</form>';
-		document.getElementById("ContentForm").innerHTML = html;
-		
+      var result = doInitialize();
+	  
+	  document.getElementById("contentFrame").src = GetLinks(ATType); 
    }
    
-   
-   /**********************************************************************
-   **  Function: doQuit()
-   **  Description: This function is called in the case that the user
-   **               does not finish the SCO "gracefully".  For example, 
-   **               the user may click the "continue" button before
-   **               submitting an answer to a question.  In this case,
-   **               this function is called as part of the page unloading.
-   **               This function ensures that Terminate() is called
-   **               and that the correct statuses are set even if the 
-   **               user closes the SCO window or navigates away before 
-   **               finishing the SCO.
-   **********************************************************************/
-  
-  
    
    /**********************************************************************
    **  Function: unloadPage()
@@ -64,18 +43,24 @@ body {
    **               even if the user closes the SCO window or navigates
    **               away before finishing the SCO.
    **********************************************************************/
-  
-  
+   function unloadPage()
+   {
+    
+   	if (exitPageStatus != true)
+   	{
+   		doTerminate();
+   	}
+   
    	// NOTE: don't return anything that resembles a javascript
    	//		   string from this function or IE will take the
    	//		   liberty of displaying a confirm message box
-
-
+   }
 </script>
-<title>Skill Bulding</title>
+<title>Skill Builder</title>
 </head>
-<body>
-      
-</body>
+<body onLoad="loadPage()" onunload="return unloadPage()">
+<iframe src="" frameborder="0" height="768" width="1024" id="contentFrame"/>
+	  <!-- image src="../BundleFlowChart/Slide6.jpg" -->
 
+</body>
 </html>

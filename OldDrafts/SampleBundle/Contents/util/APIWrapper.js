@@ -493,10 +493,12 @@ function getAPI()
    {
 	   var numOfObj = doGetValue("cmi.objectives._count");
 	   var objectiveLocation = -1;
-
+	   alert(numOfObj);
 	   for ( var i=0; i < numOfObj; i++ ) 
 	   {
-                if ( doGetValue("cmi.objectives." + i + ".id") == obj )
+		   var TheObj= doGetValue("cmi.objectives." + i + ".id");
+		   alert(TheObj);
+                if ( TheObj == obj )
                 {
 			 objectiveLocation = i;
 			 break;
@@ -505,7 +507,7 @@ function getAPI()
       
            if ( objectiveLocation == -1 ) 
            {
-//                alert("objective not found");
+                alert("objective not found");
                 objectiveLocation = numOfObj;
                 alert("setting index " + numOfObj + " -- and id to " + obj);
                 doSetValue( "cmi.objectives." + objectiveLocation + ".id", obj);
@@ -522,7 +524,6 @@ function getAPI()
    function setObjToPassed(index)
    {
       doSetValue("cmi.objectives." + index + ".success_status", "passed");
-//	  alert(index+' passed');
    }
 
    /**********************************************************************
@@ -533,5 +534,4 @@ function getAPI()
    function setObjToFailed(index)
    {
       doSetValue("cmi.objectives." + index + ".success_status", "failed");
-//	  alert(index+' failed');
    }
