@@ -9,7 +9,7 @@
   <organizations default="ORG-D2EC6E06-0DA8-A985-4628-8F049E264D87">
     <organization identifier="ORG-D2EC6E06-0DA8-A985-4628-8F049E264D87" adlseq:objectivesGlobalToSystem="false">
       <title>Transistor Bundle</title>
-      <item identifier="ITEM-Transistor_Initial_Reading" identifierref="IniReading.html" isvisible="true" parameters="?T=Transistor">
+      <item identifier="ITEM-Transistor_Initial_Reading" identifierref="INIReading.html" isvisible="true" parameters="?T=Transistor">
         <title>Initial Reading</title>
         <imsss:sequencing>
           <imsss:objectives>
@@ -222,8 +222,8 @@
     <resource identifier="AutoTutor.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" href="AutoTutor.html" type="webcontent">
       <file href="AutoTutor.html" />
     </resource>
-    <resource identifier="IniReading.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" href="IniReading.html" type="webcontent">
-      <file href="IniReading.html" />
+    <resource identifier="INIReading.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" href="INIReading.html" type="webcontent">
+      <file href="INIReading.html" />
     </resource>
     <resource identifier="ATTReading.html" adlcp:scormType="sco" xml:base="Contents/Transistor/" href="ATTReading.html" type="webcontent">
       <file href="ATTReading.html" />
