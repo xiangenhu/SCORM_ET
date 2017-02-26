@@ -11,8 +11,10 @@ body {
 </style>
 
 <script language=javascript src="../util/APIWrapper.js"></script>
+<script language=javascript src="ET.js"></script>
 <script language=javascript>
 var exitPageStatus = false;
+var ATType=GetQueryVar("ATType","Dragoon") 
    /**********************************************************************
    **  Function: loadPage()
    **  Description: This is called when a SCO is first loaded in the
@@ -23,10 +25,11 @@ var exitPageStatus = false;
    **********************************************************************/
    function loadPage()
    {
-     /* var result = doInitialize(); */
-	 var TOPICInfo="Current Topic "+GetQueryVar("T","");
-	   document.getElementById("TopicInfo").innerHTML = TOPICInfo;
+      var result = doInitialize();
+	  
+	  document.getElementById("contentFrame").src = GetLinks(ATType); 
    }
+   
    
    
    
@@ -43,12 +46,12 @@ var exitPageStatus = false;
    **********************************************************************/
    function unloadPage()
    {
-    /*
+    
    	if (exitPageStatus != true)
    	{
    		doTerminate();
    	}
-	*/
+	
    
    	// NOTE: don't return anything that resembles a javascript
    	//		   string from this function or IE will take the
@@ -61,8 +64,8 @@ var exitPageStatus = false;
 </script>
 <title>Dragoon</title>
 </head>
-<body>
-<iframe src="https://dragoon.asu.edu/ET/index.php" frameborder="0" height="768" width="1024"/>
+<body onLoad="loadPage()" onunload="return unloadPage()">
+<iframe src="" frameborder="0" height="768" width="1024" id="contentFrame"/>
 <!-- img src='../BundleFlowChart/Slide4.jpg'/-->
 </body>
 </html>

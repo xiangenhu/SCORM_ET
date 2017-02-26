@@ -11,8 +11,11 @@ body {
 </style>
 
 <script language=javascript src="../util/APIWrapper.js"></script>
+<script language=javascript src="ET.js"></script>
 <script language=javascript>
 var exitPageStatus = false;
+
+var ATType=GetQueryVar("ATType","SkillBuilder") 
    /**********************************************************************
    **  Function: loadPage()
    **  Description: This is called when a SCO is first loaded in the
@@ -24,6 +27,8 @@ var exitPageStatus = false;
    function loadPage()
    {
       var result = doInitialize();
+	  
+	  document.getElementById("contentFrame").src = GetLinks(ATType); 
    }
    
    
@@ -54,8 +59,8 @@ var exitPageStatus = false;
 <title>Skill Builder</title>
 </head>
 <body onLoad="loadPage()" onunload="return unloadPage()">
-
-	  <image src="../BundleFlowChart/Slide6.jpg">
+<iframe src="" frameborder="0" height="768" width="1024" id="contentFrame"/>
+	  <!-- image src="../BundleFlowChart/Slide6.jpg" -->
 
 </body>
 </html>

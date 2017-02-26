@@ -11,10 +11,13 @@ body {
 </style>
 
 <script language=javascript src="../util/APIWrapper.js"></script>
+<script language=javascript src="ET.js"></script>
 <script language=javascript>
    // Set some variables global to the SCO
    var answer = -1;
    var exitPageStatus = false;
+   
+   var ATType=GetQueryVar("ATType","NewAutoTutorDRQ") 
 
    function submitScore()
    {
@@ -74,6 +77,8 @@ body {
    function loadPage()
    {
       var result = doInitialize();
+	  
+	  document.getElementById("contentFrame").src = GetLinks(ATType); 
    }
    
    
@@ -125,10 +130,10 @@ body {
 </head>
 <body onLoad="loadPage()" onunload="return unloadPage()">
 
+<iframe src="" frameborder="0" height="768" width="1024" id="contentFrame"/>
    <div id="disp" name="disp"></div>   
-   AutoTUtor DRQ
-   
-   <image src="../BundleFlowChart/Slide8.jpg">
+  
+   <!--image src="../BundleFlowChart/Slide8.jpg"-->
 
 </body>
 
