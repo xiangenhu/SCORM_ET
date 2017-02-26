@@ -31,23 +31,6 @@ function GetQueryVar(search_for,defaultstr) {
 			}      
    
 
-   function GetATScripts()
-   {
-	   var AutoTutorLink="";
-	   if (ATType=="AutoTutorDR") {
-	   AutoTutorLink ="https://prod.x-in-y.com/ASAT2016/Template/Template_ET/Mainpage_ET.html?id=26bc9152-2735-44ab-ae6c-27a1879cb7d2";
-	   }
-	    
-	   if (ATType=="AutoTutorKC"){
-	   AutoTutorLink ="https://prod.x-in-y.com/ASAT2016/Template/Template_ET/Mainpage_ET.html?id=0fe3a7f3-c4bf-4787-a036-a182f6b0af89";
-	   } 
-	   
-	   if (ATType=="NewAutoTutorDRQ"){
-	   AutoTutorLink ="https://prod.x-in-y.com/ASAT2016/Template/Template_ET/Mainpage_ET.html?id=04c9e0a4-bb46-4d81-899a-9008babc02af";
-	   }
-	   return AutoTutorLink;
-   }
-   
    function submitScore1(doTerm)
    {
         
@@ -173,7 +156,7 @@ function GetQueryVar(search_for,defaultstr) {
 		html+='<input type="radio" name="OBJ_Status" value="High"> High</input>';
 		html+='<input type="radio" name="OBJ_Status" value="Low" checked> Low</input>';
         html+='</form>';
-		html+='<iframe src="'+GetATScripts()+'" width="1024" height="768" frameborder="0"/>';
+		html+='<iframe src="'+GetLinks(ATType)+'" width="1024" height="768" frameborder="0"/>';
 //		html+='<image src="../BundleFlowChart/'+ATType+'.jpg">';
 	   document.getElementById("disp").innerHTML=html;
    }
