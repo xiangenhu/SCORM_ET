@@ -73,20 +73,38 @@ function GetQueryVar(search_for,defaultstr) {
    
    function submitScore()
    {
-	var val1 = document.examForm.OBJ_Status.value;
+	var val = document.examForm.OBJ_Status.value;
     var indexOfFirstObjective = findObjective(BundleTitle+"_"+ATType+"_High");
     var indexOfSecondObjective = findObjective(BundleTitle+"_"+ATType+"_Low");
+	var val1 =""
+	var val2 ="";
+	
+	if (val=="High") {
+	val2="passed";
+	val1="failed"
+	}
+	else{
+	val2="failed";
+	val1="passed"
+	}
 	
 	
-	 if ( val1 != "High"  )
+	 if ( val1 != "passed"  )
       {
          setObjToFailed(indexOfFirstObjective);
-		 doSetValue( "cmi.success_status", "failed" );
       }
       else 
       {
          setObjToPassed(indexOfFirstObjective);
-		 doSetValue( "cmi.success_status", "passed" );
+      }
+	  
+      if ( val2 != "passed"  )
+      {
+         setObjToFailed(indexOfSecondObjective);
+      }
+      else 
+      {
+         setObjToPassed(indexOfSecondObjective);
       }
 	  
 	
@@ -98,6 +116,7 @@ function GetQueryVar(search_for,defaultstr) {
       //  Indicate that the SCO was finished normally
       exitPageStatus = true;
 
+	  
       var result = doTerminate();
    }
    
@@ -125,16 +144,16 @@ function GetQueryVar(search_for,defaultstr) {
    
     function getDescription() {
         var html = '<form name="examForm">';
-	    html    += '  <p>Select status of learning objective for SCO-2.';
+	    html    += '  <p>' +BundleTitle+' '+ATType +' Score High';
 	    html    += '  <select NAME="OBJ1_Status">';
-        html    += '    <option VALUE="passed">passed';
-        html    += '    <option VALUE="failed">failed';
+        html    += '    <option VALUE="passed">yes</option>';
+        html    += '    <option VALUE="failed">no</option>';
         html    += '  </select>';
 	    html    += '  </p>	';
-	    html    += '  <p>Select status of learning objective for SCO-3.';
+	    html    += '  <p>'+BundleTitle+' '+ATType +' Score low';
 	    html    += '  <select NAME="OBJ2_Status">';
-        html    += '    <option VALUE="passed">passed';
-        html    += '    <option VALUE="failed">failed';
+        html    += '    <option VALUE="passed">yes</option>';
+        html    += '    <option VALUE="failed">no</option>';
         html    += '  </select>';
 	    html    += '  </p>	';
 		html 	+= '<input type="button" name="submitButton" value=" Submit " onClick="submitScore()">';
@@ -210,7 +229,7 @@ function GetQueryVar(search_for,defaultstr) {
 </script>
 <title>AutoTutor </title>
 </head>
-<body onLoad="loadPage1()" onunload="return unloadPage1()">
+<body onLoad="loadPage()" onunload="return unloadPage()">
    <div id="disp" name="disp"></div>    
 </body>
 

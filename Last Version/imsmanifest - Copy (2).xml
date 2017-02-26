@@ -182,6 +182,54 @@
           <imsss:controlMode choice="false" flow="true" />
         </imsss:sequencing>
       </item>
+      <item identifier="ITEM-BCFF432F5D5FABC20367A7B0AEB5A4C0" isvisible="true">
+        <title>Item</title>
+        <item identifier="ITEM-Transistor_Dragoon2" identifierref="Dragoon.html" isvisible="true">
+          <title>Dragoon</title>
+          <imsss:sequencing>
+            <imsss:sequencingRules>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions>
+                  <imsss:ruleCondition condition="satisfied" operator="noOp" referencedObjective="Transistor_Dragoon2" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="" />
+              </imsss:preConditionRule>
+            </imsss:sequencingRules>
+            <imsss:rollupRules />
+            <imsss:objectives>
+              <imsss:primaryObjective />
+              <imsss:objective objectiveID="Transistor_Dragoon2">
+                <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="Transistor_NewAutoTutorDRQ_G_Obj_High" />
+              </imsss:objective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+        <item identifier="ITEM-Transistor_AutoTutorDR2" identifierref="AutoTutor.html" isvisible="true" parameters="?T=Transistor&amp;ATType=AutoTutorDR2">
+          <title>AutoTutor DR</title>
+          <imsss:sequencing>
+            <imsss:sequencingRules>
+              <imsss:preConditionRule>
+                <imsss:ruleConditions>
+                  <imsss:ruleCondition condition="satisfied" operator="noOp" referencedObjective="Transistor_AutoTutorDR2" />
+                </imsss:ruleConditions>
+                <imsss:ruleAction action="" />
+              </imsss:preConditionRule>
+            </imsss:sequencingRules>
+            <imsss:objectives>
+              <imsss:primaryObjective satisfiedByMeasure="false" objectiveID="" />
+              <imsss:objective satisfiedByMeasure="false" objectiveID="Transistor_AutoTutorDR2">
+                <imsss:mapInfo targetObjectiveID="Transistor_NewAutoTutorDRQ_G_Obj_Low" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+              </imsss:objective>
+              <imsss:objective satisfiedByMeasure="false" objectiveID="Transistor_AutoTutorDR2_High">
+                <imsss:mapInfo targetObjectiveID="Transistor_AutoTutorDR_G_Obj_High" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+              </imsss:objective>
+              <imsss:objective satisfiedByMeasure="false" objectiveID="Transistor_AutoTutorDR2_Low">
+                <imsss:mapInfo targetObjectiveID="Transistor_AutoTutorDR_G_Obj_Low" readSatisfiedStatus="false" readNormalizedMeasure="false" writeSatisfiedStatus="true" writeNormalizedMeasure="false" />
+              </imsss:objective>
+            </imsss:objectives>
+          </imsss:sequencing>
+        </item>
+      </item>
       <imsss:sequencing>
         <imsss:controlMode choice="false" flow="true" useCurrentAttemptObjectiveInfo="true" useCurrentAttemptProgressInfo="true" />
         <imsss:sequencingRules>
