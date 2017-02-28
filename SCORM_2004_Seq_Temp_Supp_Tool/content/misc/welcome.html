@@ -1,0 +1,68 @@
+<html>
+<!-- v1.0 -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/template.css" />
+<script language=javascript src="../util/apiwrapper.js"></script>
+<script language=javascript src="../util/jquery-1.3.2.min.js"></script>
+<script language=javascript src="../util/utils.js"></script>
+<script language=javascript>
+
+var exitPageStatus = false;
+
+
+function initSco() {
+    var result = doInitialize();
+    loadTemplate();
+
+    var html = '<center><h4>Welcome to the ADL SCORM 2004 Sequencing Support Tool</h4></center>';
+    html += '<p>';
+    html += 'This support tool is designed to work in conjunction with the ';
+    html += '<a href=javascript:openRef("http://www.adlnet.gov/Technologies/scorm/SCORMSDocuments/SCORM%20Resources/Resources.aspx")>ADL Guidelines for Creating Reusable Content with SCORM 2004</a>, section 7 - "Sequencing Your SCORM ';
+    html += 'Content". You should read it before using this tool, in order ';
+    html += 'to fully understand the information presented here. ';
+    html += '<p>';
+    html += 'The templates shown in this tool were designed by the Learning Systems Architecture Lab (LSAL) ';
+    html += 'at Carnegie Mellon University as examples ';
+    html += 'of SCORM-based sequencing scenarios required by many stakeholders to achieve their training goals. '; 
+    html += 'The templates are described in detail in the SCORM Best Practices Guide for Content Developers.  Much ';
+    html += 'of that guide was incorporated into the ADL Guidelines for Creating Reusable Content with SCORM 2004. ';
+    html += 'The templates range from simple to more complex.  They can also be combined to form models, so that a ';
+    html += 'template can be part of another template, instead of a template simply representing a standalone ';
+    html += 'course (in SCORM terms, these templates can be child aggregations of parent aggregations or organizations). ';
+    html += '<p>';
+    html += 'This support tool has two purposes: ';
+    html += '<ul>';
+    html += '<li>Provide example packages and SCOs for ISDs and developers to use as ';
+    html += 'design or code templates. ISDs can view the diagrams, descriptions, and ';
+    html += 'rules tables for ideas and inspiration on SCORM-based learning scenarios, ';
+    html += 'and developers can download the packages to acquire the code as a ';
+    html += 'starting point for implementing these scenarios. ';
+    html += '<li>Illustrate what these sequencing scenarios actually look like running in ';
+    html += 'an LMS, so that training stakeholders can better understand SCORM ';
+    html += 'sequencing principles and how they might be used in their courses. ';
+    html += '</ul>';
+    html += 'These templates are also incorporated into the <a href=javascript:openRef("http://www.adlnet.gov/Technologies/scorm/SCORMSDocuments/2004%204th%20Edition/Reload.aspx")>ADL SCORM 2004 RELOAD Editor</a>, an authoring tool for SCORM sequencing. ';
+    html += '<p>';
+    html += 'Please send any comments or questions about this tool to the ';
+    html += '<a href="mailto:scormhelpdesk@adlnet.gov">ADL Helpdesk</a>.';
+    document.getElementById("content").innerHTML = html;
+}
+
+function beforeUnload() {
+    if (exitPageStatus != true) {
+        doTerminate();
+    }
+}
+
+
+// ************************************************************************************
+// END SCO API helpers
+// ************************************************************************************
+
+</script>
+<title>Prompt</title>
+</head>
+<body onLoad="initSco()" onbeforeunload="beforeUnload()">
+<div id=maindiv></div>
+</body>
+</html>

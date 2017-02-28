@@ -423,7 +423,7 @@ function getAPIHandle()
       apiHandle = getAPI();
    }
 
-   return apiHandle;
+   return apiHandle; 
 }
 
 
