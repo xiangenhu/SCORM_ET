@@ -1,0 +1,32 @@
+<html>
+<!-- v1.0 -->
+<head>
+<link rel="stylesheet" type="text/css" href="../css/template.css" />
+<script language=javascript src="../util/apiwrapper.js"></script>
+<script language=javascript>
+
+var exitPageStatus = false;
+
+function initSco() {
+    var result = doInitialize();
+    doSetValue("cmi.completion_status", "completed" );
+    doSetValue("cmi.success_status", "passed" );
+    //doSetValue("adl.nav.request","{target=SCO-ADL-TEMPLATES-NAVMENU}choice");
+    doSetValue("adl.nav.request","continue");
+    exitPageStatus = true;
+    doTerminate();
+}
+
+// ************************************************************************************
+// END SCO API helpers
+// ************************************************************************************
+
+</script>
+<title>Prompt</title>
+</head>
+<body onLoad="initSco()"> 
+<div id="skuidiv">
+</div>
+
+</body>
+</html>

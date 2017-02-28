@@ -203,6 +203,19 @@
         </item>
         <imsss:sequencing>
           <imsss:controlMode choice="false" choiceExit="true" flow="true" forwardOnly="true" />
+          <imsss:sequencingRules>
+            <imsss:preConditionRule>
+              <imsss:ruleConditions conditionCombination="all">
+                <imsss:ruleCondition condition="satisfied" operator="noOp" referencedObjective="AutoTutor_Low_Match" />
+              </imsss:ruleConditions>
+              <imsss:ruleAction action="hiddenFromChoice" />
+            </imsss:preConditionRule>
+          </imsss:sequencingRules>
+          <imsss:objectives>
+            <imsss:primaryObjective objectiveID="AutoTutor_Low_Match">
+              <imsss:mapInfo readSatisfiedStatus="true" targetObjectiveID="Transistor_AutoTutorDR_G_Obj_Low" writeNormalizedMeasure="true" writeSatisfiedStatus="true" />
+            </imsss:primaryObjective>
+          </imsss:objectives>
         </imsss:sequencing>
       </item>
       <imsss:sequencing>
