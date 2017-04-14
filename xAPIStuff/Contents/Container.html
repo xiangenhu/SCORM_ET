@@ -1,10 +1,122 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	</head>
-	<body>
-	<iframe src="Content.html"></iframe>
-	submit to xAPI <br/>
-	receive from xAPI
-	</body>
+<head>
+    <script src="jquery/2.1.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
+
+    
+
+    <script src="dist/xapiwrapper.min.js"></script>
+
+    <!-- <script src="../lib/cryptojs_v3.1.2.js"></script>
+    <script src="../src/verbs.js"></script>
+    <script src="../src/xapi-launch.js"></script>
+    <script src="../src/xapiwrapper.js"></script> -->
+    <!-- <script src="../src/offline.js"></script>
+    <script src="../src/storage.js"></script>
+    <script src="../src/validator.js"></script> -->
+
+    <style>
+    </style>
+</head>
+<body class='container'>
+<iframe id="iframe" src="Content.html"></iframe>
+
+        <button id="sendbtn" type="button" class="btn btn-success">send</button><br>
+        <div id="results"></div>
+<script>
+var iframe = document.getElementById('iframe'); 
+
+    sendValue ={
+        "actor": {
+            "mbox": "mailto:Fully@WOW.com"
+        },
+        "verb": {
+            "id": "http://verb.com/id",
+            "display": {
+                "en": "verbed"
+            }
+        },
+        "object": {
+            "id": "http://activity.com/id"
+        },
+        "timestamp": (new Date()).toISOString(),
+        "result": {
+            "completion": true,
+            "response": "this is the response",
+            "duration": "PT5H4M"
+        }
+    };
+</script>
+
+<script>
+    var wrapper;
+    ADL.launch(function(err, launchdata, xAPIWrapper) {
+        if (!err) {
+            wrapper = ADL.XAPIWrapper = xAPIWrapper;
+            console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
+        } else {
+            wrapper = ADL.XAPIWrapper;
+            wrapper.changeConfig({
+                endpoint: "https://sko.waxlrs.com/TCAPI/",
+                user: 'X88iLMqfLZs4o9nEDOhi',
+                password: 'x8z43P0Xoi0oKXC6qSvQ'
+            });
+            console.log("--- content statically configured ---\n", wrapper.lrs);
+        }
+        $('#endpoint').text(wrapper.lrs.endpoint);
+    }, true);
+</script>
+
+<script>
+    var outputResults = function (resp, thing) {
+        var spanclass = "text-info";
+        var text = "";
+        if (resp.status >= 400) {
+            spanclass = "text-danger";
+            text = (thing.totalErrors > 1) ? "Errors: " : "Error: ";
+            for ( var res in thing.results ) {
+                text += "<br>" + ((thing.results[res].instance.id) ? thing.results[res].instance.id : "Statement " + res);
+                for ( var err in thing.results[res].errors ) {
+                    text += "<br>&nbsp;&nbsp;" + thing.results[res].errors[err].trace;
+                    text += "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + thing.results[res].errors[err].message;
+                }
+            }
+        } else {
+            if ( resp.responseText )
+                text = "Successfully sent " + resp.responseText;
+            else
+                text = thing;
+        }
+
+        var p = $('<p>').addClass(spanclass).html(text);
+        $('#results').append(p);
+    };
+
+    $('#sendbtn').on('click', function (ev) {
+                //console.log('sending array - multi stmt... ');
+                //wrapper.sendStatements(instmt, outputResults);      
+                console.log('sending object - single stmt... ');             
+               wrapper.sendStatement(sendValue, outputResults);
+           
+       });
+
+
+
+
+
+
+
+   </script>
+</body>
 </html>
