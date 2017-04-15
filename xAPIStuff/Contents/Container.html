@@ -21,31 +21,12 @@
 </head>
 <body class='container'>
 <iframe id="iframe" src="Content.html"></iframe>
-        <button id="sendbtn" type="button" class="btn btn-success">send</button><br>
+       
         <div id="results"></div>
 <script>
 var iframe = document.getElementById('iframe'); 
 
-    sendValue ={
-        "actor": {
-            "mbox": "mailto:Google@woogle.com"
-        },
-        "verb": {
-            "id": "http://verb.com/id",
-            "display": {
-                "en": "verbed"
-            }
-        },
-        "object": {
-            "id": "http://activity.com/id"
-        },
-        "timestamp": (new Date()).toISOString(),
-        "result": {
-            "completion": true,
-            "response": "this is the response",
-            "duration": "PT5H4M"
-        }
-    };
+    
 </script>
 
 <script>
@@ -92,14 +73,12 @@ var iframe = document.getElementById('iframe');
         $('#results').append(p);
     };
 
-    $('#sendbtn').on('click', function (ev) {
+    function send(sendValue){
                 //console.log('sending array - multi stmt... ');
                 //wrapper.sendStatements(instmt, outputResults);      
                 console.log('sending object - single stmt... ');             
                wrapper.sendStatement(sendValue, outputResults);
-           
-       });
-
+    }
 
 
 

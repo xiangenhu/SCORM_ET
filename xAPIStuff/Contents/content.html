@@ -23,9 +23,32 @@
 	</form>
 
 	<script type="text/javascript">
+var dt;
+
+	sendValue ={
+        "actor": {
+            "mbox": "mailto:Golden@Path.com"
+        },
+        "verb": {
+            "id": "http://verb.com/id",
+            "display": {
+                "en": "verbed"
+            }
+        },
+        "object": {
+            "id": "http://activity.com/id"
+        },
+        "timestamp": dt,
+        "result": {
+            "completion": true,
+            "response": "this is the response",
+            "duration": "PT5H4M"
+        }
+    };
 
 		function SendToParent(){
-			parent.contentWindow.postMessage("hi", '*'); 
+			dt=(new Date()).toISOString();
+			parent.send(sendValue); 
 			//parent.CatchIframeMessage("hi");
 		//alert(document.getElementById('Resources').value + " " + document.getElementById('Performance').value + " " + document.getElementById('KC1').checked)
 		}
