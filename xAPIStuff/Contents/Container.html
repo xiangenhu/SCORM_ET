@@ -5,8 +5,10 @@
 
     <script src="dist/xapiwrapper.min.js"></script>
 
+    <script src="src/verbs.js"></script>
+
     <!-- <script src="../lib/cryptojs_v3.1.2.js"></script>
-    <script src="../src/verbs.js"></script>
+    
     <script src="../src/xapi-launch.js"></script>
     <script src="../src/xapiwrapper.js"></script> -->
     <!-- <script src="../src/offline.js"></script>
@@ -18,70 +20,110 @@
 </head>
 <body class='container'>
 
-<iframe id="iframe" src="content.html"></iframe>
-     <div id="results"></div>
-<script>
-var iframe = document.getElementById('iframe'); 
+    <iframe id="iframe" src="content.html"></iframe>
+    <div id="results"></div>
 
-    
-</script>
+    <script>
+        var iframe = document.getElementById('iframe'); 
+    </script>
 
-<script>
-    var wrapper;
-    ADL.launch(function(err, launchdata, xAPIWrapper) {
-        if (!err) {
-            wrapper = ADL.XAPIWrapper = xAPIWrapper;
-            console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
-        } else {
-            wrapper = ADL.XAPIWrapper;
-            wrapper.changeConfig({
-                endpoint: "https://sko.waxlrs.com/TCAPI/",
-                user: 'X88iLMqfLZs4o9nEDOhi',
-                password: 'x8z43P0Xoi0oKXC6qSvQ'
-            });
-            console.log("--- content statically configured ---\n", wrapper.lrs);
-        }
-        $('#endpoint').text(wrapper.lrs.endpoint);
-    }, true);
-</script>
-
-<script>
-    var outputResults = function (resp, thing) {
-        var spanclass = "text-info";
-        var text = "";
-        if (resp.status >= 400) {
-            spanclass = "text-danger";
-            text = (thing.totalErrors > 1) ? "Errors: " : "Error: ";
-            for ( var res in thing.results ) {
-                text += "<br>" + ((thing.results[res].instance.id) ? thing.results[res].instance.id : "Statement " + res);
-                for ( var err in thing.results[res].errors ) {
-                    text += "<br>&nbsp;&nbsp;" + thing.results[res].errors[err].trace;
-                    text += "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + thing.results[res].errors[err].message;
-                }
+    <script>
+        var wrapper;
+        ADL.launch(function(err, launchdata, xAPIWrapper) {
+            if (!err) {
+                wrapper = ADL.XAPIWrapper = xAPIWrapper;
+                console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
+            } else {
+                wrapper = ADL.XAPIWrapper;
+                wrapper.changeConfig({
+                    endpoint: "https://sko.waxlrs.com/TCAPI/",
+                    user: 'X88iLMqfLZs4o9nEDOhi',
+                    password: 'x8z43P0Xoi0oKXC6qSvQ'
+                });
+                console.log("--- content statically configured ---\n", wrapper.lrs);
             }
-        } else {
-            if ( resp.responseText )
-                text = "Successfully sent " + resp.responseText;
-            else
-                text = thing;
-        }
+            $('#endpoint').text(wrapper.lrs.endpoint);
+        }, true);
+    </script>
 
-        var p = $('<p>').addClass(spanclass).html(text);
-        $('#results').append(p);
-    };
+    <script>
+        var outputResults = function (resp, thing) {
+            var spanclass = "text-info";
+            var text = "";
+            if (resp.status >= 400) {
+                spanclass = "text-danger";
+                text = (thing.totalErrors > 1) ? "Errors: " : "Error: ";
+                for ( var res in thing.results ) {
+                    text += "<br>" + ((thing.results[res].instance.id) ? thing.results[res].instance.id : "Statement " + res);
+                    for ( var err in thing.results[res].errors ) {
+                        text += "<br>&nbsp;&nbsp;" + thing.results[res].errors[err].trace;
+                        text += "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + thing.results[res].errors[err].message;
+                    }
+                }
+            } else {
+                if ( resp.responseText )
+                    text = "Successfully sent " + resp.responseText;
+                else
+                    text = thing;
+            }
 
-    function send(sendValue){
-                //console.log('sending array - multi stmt... ');
-                //wrapper.sendStatements(instmt, outputResults);      
-                console.log('sending object - single stmt... ');             
-               wrapper.sendStatement(sendValue, outputResults);
-    }
+            var p = $('<p>').addClass(spanclass).html(text);
+            $('#results').append(p);
+        };
+
+        var parts = {
+            actor: {
+                mbox: {mbox:"mailto:placeholder@fixme.com"},
+                account: {account:{name:"accountname", homePage:"http://account.com/homepage"}},
+                student: {mbox:"mailto:placeholder@fixme.com"}
+            },
+            verb: {
+                passed: ADL.verbs.passed,
+                failed: ADL.verbs.failed
+            },
+            object: {
+                autotutor: {id:"http://activity.com/autotutor"},
+                bbn: {id:"http://activity.com/bbn"},
+                dragoon: {id:"http://activity.com/dragoon"}
+                
+            },
+            context: {
+                contextActivities: {
+                    
+
+                }
+
+            }
+        };
+
+        function send(recievedData){
+                parts.actor.student.mbox = "mailto:"+recievedData.userID; 
+              
+                ret = {
+                  actor: parts.actor.student,
+                  verb: parts.verb[recievedData.verbVal],
+                  object: parts.object[recievedData.Resource],
+                  context: parts.context,
+                  timestamp: (new Date()).toISOString()
+              };
+
+              ret.result = {};
+              ret.result.score = {};
+              ret.result.score.scaled = parseFloat(recievedData.sScore);
+
+              
+
+              console.log(ret);
+              console.log('sending object - single stmt... ');             
+                //wrapper.sendStatement(sendValue, outputResults);
+                wrapper.sendStatement(ret, outputResults);
+            }
 
 
 
 
 
 
-   </script>
-</body>
-</html>
+        </script>
+    </body>
+    </html>

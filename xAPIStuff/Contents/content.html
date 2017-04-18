@@ -4,18 +4,27 @@
 </head>
 <body>
 	<form>
-		<select id = Resources>
-			<option value="Autotutor">Autotutor</option>
-			<option value="Dragoon">Dragoon</option>
-			<option value="BBN">BBN </option>
+		<select id = user>
+			<option value="joe@gmail.com">joe</option>
+			<option value="john@yahoo.com">john</option>
+			<option value="jane@hotmail.com">jane</option>
 		</select>
-<br/>
-		<select id = "Performance">
-			<option value="Pass">Pass</option>
-			<option value="Fail">Fail</option>
-		</select><br>
+		<br>
+		<select id = Resources>
+			<option value="autotutor">Autotutor</option>
+			<option value="dragoon">Dragoon</option>
+			<option value="bbn">BBN </option>
+		</select>
+		<br/>
+		<select id = "verb">
+			<option value="passed">Pass</option>
+			<option value="failed">Fail</option>
+		</select>
+		<br>
+		<input type="number" id="score" value=0.75>
+		<br>
 		<input id = "KC1" type="checkbox" name="KC1" value="KC1"> KC1<br>
- 		<input type="checkbox" name="KC2" value="KC2"> KC2<br>
+		<input type="checkbox" name="KC2" value="KC2"> KC2<br>
 		<input type="checkbox" name="KC3" value="KC3"> KC3<br>
 
 		<button onclick="SendToParent()" type="button">Send</button>
@@ -23,36 +32,22 @@
 	</form>
 
 	<script type="text/javascript">
-var dt;
+		var dt;
 
-	sendValue ={
-        "actor": {
-            "mbox": "mailto:Golden@Path.com"
-        },
-        "verb": {
-            "id": "http://verb.com/id",
-            "display": {
-                "en": "verbed"
-            }
-        },
-        "object": {
-            "id": "http://activity.com/id"
-        },
-        "timestamp": dt,
-        "result": {
-            "completion": true,
-            "response": "this is the response",
-            "duration": "PT5H4M"
-        }
-    };
 
 		function SendToParent(){
-			dt=(new Date()).toISOString();
-			parent.send(sendValue); 
+			sendData = {
+				userID : document.getElementById("user").value,
+				Resource : document.getElementById("Resources").value,
+				verbVal : document.getElementById("verb").value,
+				sScore : document.getElementById("score").value
+			}
+			
+			parent.send(sendData); 
 			//parent.CatchIframeMessage("hi");
 		//alert(document.getElementById('Resources').value + " " + document.getElementById('Performance').value + " " + document.getElementById('KC1').checked)
-		}
-	</script>
-	
+	}
+</script>
+
 </body>
 </html>
