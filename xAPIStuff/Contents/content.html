@@ -8,6 +8,8 @@
 	<script language=javascript src="util/APIWrapper.js"></script>
 	<script language=javascript src="ET.js"></script>
 
+	<script language=javascript src="Config.js"></script>
+
 	<script language=javascript>
         // Set some variables global to the SCO
         var answer = -1;
@@ -69,30 +71,26 @@
 			<form class="form-group">
 				<label for="user">UserName:</label>
 				<select class="form-control" id = user>
-					<option value="joe@gmail.com">joe</option>
-					<option value="john@yahoo.com">john</option>
-					<option value="jane@hotmail.com">jane</option>
+					
 				</select>
 				<br>
 				<label for="Resources">Learning Resource:</label>
 				<select class="form-control" id = Resources>
-					<option value="autotutor">Autotutor</option>
-					<option value="dragoon">Dragoon</option>
-					<option value="bbn">BBN </option>
+					
 				</select>
 				<br/>
 				<label for="verb">Performance (verb):</label>
 				<select class="form-control" id = "verb">
-					<option value="passed">Pass</option>
-					<option value="failed">Fail</option>
+					
 				</select>
 				<br>
 				<label for="score">Score (0-1):</label>
 				<input type="number" id="score" value=0.75>
 				<br>
-				<input id = "KC1" type="checkbox" name="KC1" value="KC1"> KC1<br>
-				<input type="checkbox" name="KC2" value="KC2"> KC2<br>
-				<input type="checkbox" name="KC3" value="KC3"> KC3<br>
+				<div id = "KnowledgeComponentCheckboxes">
+					
+				</div>
+				
 
 				<button type="button" class="btn btn-primary" onclick="SendToParent()" >Send</button>
 
@@ -100,38 +98,62 @@
 		</div>
 	</div>
 
-	
+	<script type="text/javascript"> 
+		$( document ).ready(function() {
+			configUsers.forEach(function(item, index, array) {
+				$('#user').append(
+					$('<option />')
+					.text(item)
+					.val(item));
+			});
+
+			configResources.forEach(function(item, index, array) {
+				$('#Resources').append(
+					$('<option />')
+					.text(item)
+					.val(configResourceURI + item));
+			});
+
+			configVerbs.forEach(function(item, index, array) {
+				$('#verb').append(
+					$('<option />')
+					.text(item)
+					.val(item));
+			});
+
+			configKnowledgeComponents.forEach(function(item, index, array) {
+				$('#KnowledgeComponentCheckboxes')
+				.append(
+					$('<input type="checkbox" />')
+					.val(item))
+				.append(" " + item)
+				.append('<br/>');
+			});
+
+		});
+
+	</script>
 
 	<script type="text/javascript">
 		var dt;
 
-		
-
-		
-
 		function SendToParent(){
-			var KCS = [];
-
-			$("input:checkbox").each(function() {
-				if($(this).is( ":checked" )){
-					KCS.push($(this).val());
-				}
-				KCS.push();
-
-			});
-console.log("kcs" + KCS);
+			
+			var selectedKCArray = $('input:checkbox:checked').map(function () {
+			  return this.value;
+			}).get();
 
 			sendData = {
 				userID : document.getElementById("user").value,
 				Resource : document.getElementById("Resources").value,
 				verbVal : document.getElementById("verb").value,
 				sScore : document.getElementById("score").value,
-				kcs : KCS
+				kcs : selectedKCArray,
+				kcURI : configKnowledgeComponentURI
 			}
 			
 			parent.send(sendData); 
-			//parent.CatchIframeMessage("hi");
-		//alert(document.getElementById('Resources').value + " " + document.getElementById('Performance').value + " " + document.getElementById('KC1').checked)
+			
 	}
 </script>
 

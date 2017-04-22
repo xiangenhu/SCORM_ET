@@ -6,10 +6,6 @@
         <script src="dist/xapiwrapper.min.js"></script>
 
         <script src="src/verbs.js"></script>
-
-
-
-
         <!--
         <script src="../lib/cryptojs_v3.1.2.js"></script>
         <script src="../src/xapi-launch.js"></script>
@@ -77,65 +73,35 @@
                 $('#results').append(p);
             };
 
-            var parts = {
-                actor: {
-                    mbox: {mbox:"mailto:placeholder@fixme.com"},
-                    account: {account:{name:"accountname", homePage:"http://account.com/homepage"}},
-                    student: {mbox:"mailto:placeholder@fixme.com"}
-                },
-                verb: {
-                    passed: ADL.verbs.passed,
-                    failed: ADL.verbs.failed
-                },
-                object: {
-                    autotutor: {id:"http://activity.com/autotutor"},
-                    bbn: {id:"http://activity.com/bbn"},
-                    dragoon: {id:"http://activity.com/dragoon"}
-                    
-                },
-                context: {
-                    KC1: {extensions:{"http://example.com/KC1": "KC1"}},
-                    KC2: {extensions:{"http://example.com/KC2": "KC2"}},
-                    KC2: {extensions:{"http://example.com/KC3": "KC3"}}
+
+
+            function send(recievedData){
+                
+                ret = {
+                  actor: {mbox:"mailto:"+recievedData.userID},
+                  verb: ADL.verbs[recievedData.verbVal],
+                  object: {id: recievedData.Resource},
+                  context: {extensions:{}},
+                  timestamp: (new Date()).toISOString()
+              };
+
+              recievedData.kcs.forEach(function(item, index, array) {
+                var temp = item.replace(' ','_');
+                ret.context.extensions[recievedData.kcURI+temp] = temp;
+                
+            });
+
+              ret.result = {};
+              ret.result.score = {};
+              ret.result.score.scaled = parseFloat(recievedData.sScore);
 
 
 
-                }
-
-
-            };
-
-
-
-
-          function send(recievedData){
-            parts.actor.student.mbox = "mailto:"+recievedData.userID; 
-console.log(recievedData.kcs);
-
-            ret = {
-              actor: parts.actor.student,
-              verb: parts.verb[recievedData.verbVal],
-              object: parts.object[recievedData.Resource],
-              context: parts.context[recievedData.kcs[0]],
-              timestamp: (new Date()).toISOString()
-          };
-
-          ret.result = {};
-          ret.result.score = {};
-          ret.result.score.scaled = parseFloat(recievedData.sScore);
-
-
-
-          console.log(ret);
-          console.log('sending object - single stmt... ');             
+              console.log(ret);
+              console.log('sending object - single stmt... ');             
                     //wrapper.sendStatement(sendValue, outputResults);
                     wrapper.sendStatement(ret, outputResults);
                 }
-
-
-
-
-
 
             </script>
         </body>
