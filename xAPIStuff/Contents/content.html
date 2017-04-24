@@ -68,22 +68,22 @@
 <body onLoad="loadPage()">
 
 
-<div class="row">
-	 <div class="col-sm-offset-5">
+	<div class="row">
+		<div class="col-sm-offset-4">
 
-		<h3>Debug Mode: <input type="checkbox" name="my-checkbox" checked></h3>
-	 </div>
-</div>
+			<h2>Debug Mode: <input type="checkbox" name="my-checkbox" checked></h2>
+		</div>
+	</div>
 
 	<div class="row">
-		<div class="col-sm-8">
+		<div class="col-sm-7">
 			<div id="disp" name="disp"></div>
 		</div>
-		<div class="col-sm-4">
-		
-		<br>
-			<form id = "DebugForm" class="form-group">
-				<label for="user">UserName:</label>
+		<div id = "DebugForm" class="col-sm-4 jumbotron">
+
+			<br>
+			<form  class="form-group ">
+			<label for="user">UserName:</label>
 				<select class="form-control" id = user>
 					
 				</select>
@@ -104,9 +104,10 @@
 				<div id = "KnowledgeComponentCheckboxes">
 					
 				</div>
+				<br/>
 				
 
-				<button type="button" class="btn btn-primary" onclick="SendToParent()" >Send</button>
+				<button type="button" class="btn btn-primary col-sm-offset-5" onclick="SendToParent()" >Send</button>
 
 			</form>
 		</div>
@@ -117,13 +118,13 @@
 			$("[name='my-checkbox']").bootstrapSwitch();
 
 			$('input[name="my-checkbox"]').on('switchChange.bootstrapSwitch', function(event, state) {
-		 		if(state == false){
-		 				$('#DebugForm').fadeTo( "fast", 0 );
-		 		}else{
-		 			$('#DebugForm').fadeTo( "fast", 1);
-		 		}
-		 
-		});
+				if(state == false){
+					$('#DebugForm').fadeTo( "fast", 0 );
+				}else{
+					$('#DebugForm').fadeTo( "fast", 1);
+				}
+
+			});
 
 			configUsers.forEach(function(item, index, array) {
 				$('#user').append(
@@ -165,7 +166,7 @@
 		function SendToParent(){
 			
 			var selectedKCArray = $('input:checkbox:checked').map(function () {
-			  return this.value;
+				return this.value;
 			}).get();
 
 			sendData = {
@@ -179,8 +180,8 @@
 			
 			parent.send(sendData); 
 			
-	}
-</script>
+		}
+	</script>
 
 </body>
 </html>
