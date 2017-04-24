@@ -101,8 +101,88 @@
               console.log('sending object - single stmt... ');             
                     //wrapper.sendStatement(sendValue, outputResults);
                     wrapper.sendStatement(ret, outputResults);
+
+                    getStatementsWithSearch();
                 }
 
-            </script>
-        </body>
-        </html>
+                function setupConfig() {
+    // get LRS credentials from user interface
+    var endpoint = "https://sko.waxlrs.com/TCAPI/";
+    var user = 'X88iLMqfLZs4o9nEDOhi';
+    var password = 'x8z43P0Xoi0oKXC6qSvQ';
+
+    var conf = {
+        "endpoint" : endpoint,
+        "auth" : "Basic " + toBase64(user + ":" + password),
+    };
+    ADL.XAPIWrapper.changeConfig(conf);
+}
+
+/*  Statement Manipulation and Response -- Receiving */
+
+// Retreive statements from the LRS
+function getStatementsWithSearch() {
+    setupConfig();
+
+    var verbSort = "";
+    var verbId = "";
+    var actorEmail ="";
+    var activityId = "";
+    var relatedAgents = "";
+    var relatedActivities = "";
+    var registrationId = "";
+    var statementId = "";
+    var voidedStatementId = "";
+    var sinceDate = "";
+    var untilDate = "";
+    var limit = "";
+
+    // Build Search
+    var search = ADL.XAPIWrapper.searchParams();
+    if (verbId != "") { search['verb'] = verbId; }
+    if (verbSort != "") { search['ascending'] = verbSort; }
+    if (actorEmail != "") { search['agent'] = JSON.stringify({ "mbox": "mailto:" + actorEmail}); }
+    if (activityId != "") { search['activity'] = activityId; }
+    if (relatedAgents != "") { search['related_agents'] = relatedAgents; }
+    if (relatedActivities != "") { search['related_activities'] = relatedActivities; }
+    if (registrationId != "") { search['registration'] = registrationId; }
+    if (statementId != "") { search['statementId'] = statementId; }
+    if (voidedStatementId != "") { search['voidedStatementId'] = voidedStatementId; }
+    if (sinceDate != "") { search['since'] = sinceDate; }
+    if (untilDate != "") { search['until'] = untilDate; }
+    if (limit != "") { search['limit'] = limit; }
+    //console.log(search);
+
+    ADL.XAPIWrapper.getStatements(search, null, function(r) {
+        //console.log(r);
+        var response = $.parseJSON(r.response);
+
+        // notification
+        if (r.status == 200) {
+
+            // Handle case where only a single statement is returned
+            // using statementId or voidedStatementId
+            if (response.hasOwnProperty('statements')) {
+                var stmts = response.statements;
+                var length = stmts.length;
+                console.log(stmts);
+            } else {
+                var stmt = response;
+                var length = 1;
+            }
+
+           // notify({ title: "Status " + r.status + " " + r.statusText + ": ", message: "statements received successfully from LRS" }, notificationSettings);
+
+           
+       }
+   });
+}
+
+// Clear Statements received from the LRS
+function clearReceivedStatements() {
+    $("#received-statements").html("");
+}
+
+</script>
+</body>
+</html>
