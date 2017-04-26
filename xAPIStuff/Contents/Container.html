@@ -78,12 +78,16 @@
             function send(recievedData){
                 
                 ret = {
-                  actor: {mbox:"mailto:"+recievedData.userID},
+                  actor: {account:{}},
                   verb: ADL.verbs[recievedData.verbVal],
                   object: {id: recievedData.Resource},
                   context: {extensions:{}},
                   timestamp: (new Date()).toISOString()
               };
+
+              ret.actor.account.name = recievedData.userID;
+              ret.actor.account.homePage = recievedData.kcURI;
+              ret.actor.objectType ="Agent";
 
               recievedData.kcs.forEach(function(item, index, array) {
                 var temp = item.replace(' ','_');
@@ -102,7 +106,7 @@
                     //wrapper.sendStatement(sendValue, outputResults);
                     wrapper.sendStatement(ret, outputResults);
 
-                    getStatementsWithSearch();
+                    getStatementsWithSearch(recievedData,"ResourcesPassedByUser");
                 }
 
                 function setupConfig() {
@@ -121,11 +125,12 @@
 /*  Statement Manipulation and Response -- Receiving */
 
 // Retreive statements from the LRS
-function getStatementsWithSearch() {
+function getStatementsWithSearch(recievedData,dataQuestion) {
     setupConfig();
 
+    var agentID = "";
     var verbSort = "";
-    var verbId = "";
+    var verbId = "";//ADL.verbs.answered.id;
     var actorEmail ="";
     var activityId = "";
     var relatedAgents = "";
@@ -137,11 +142,16 @@ function getStatementsWithSearch() {
     var untilDate = "";
     var limit = "";
 
+    if(dataQuestion == "ResourcesPassedByUser"){
+        agentID = {"account": {"name": recievedData.userID,"homePage": recievedData.kcURI},"objectType": "Agent"};
+    }
+
     // Build Search
     var search = ADL.XAPIWrapper.searchParams();
+    if (agentID != "") { search['agent'] = JSON.stringify(agentID); }
     if (verbId != "") { search['verb'] = verbId; }
     if (verbSort != "") { search['ascending'] = verbSort; }
-    if (actorEmail != "") { search['agent'] = JSON.stringify({ "mbox": "mailto:" + actorEmail}); }
+    //if (actorEmail != "") { search['agent'] = JSON.stringify({ "mbox": "mailto:" + actorEmail}); }
     if (activityId != "") { search['activity'] = activityId; }
     if (relatedAgents != "") { search['related_agents'] = relatedAgents; }
     if (relatedActivities != "") { search['related_activities'] = relatedActivities; }
@@ -165,7 +175,16 @@ function getStatementsWithSearch() {
             if (response.hasOwnProperty('statements')) {
                 var stmts = response.statements;
                 var length = stmts.length;
-                console.log(stmts);
+                //console.log(stmts);
+
+                stmts.forEach(function(item) {
+                    console.log("UserEmail: " + item.actor.account.name);
+                    console.log("KCs: " + item.context.extensions);
+                    console.log("Resource: " +item.object.id);
+              });
+
+
+                
             } else {
                 var stmt = response;
                 var length = 1;

@@ -34,7 +34,6 @@ var configVerbs =
 
 var configKnowledgeComponents = 
 [
-'Parallel',
 'PN Junctions',
 'Electrons',
 'Parallel',
