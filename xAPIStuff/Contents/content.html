@@ -28,12 +28,14 @@
 
         window.addEventListener("message",
         	function submitScore(evt) {
+        		console.log(":::::::::::::::::::::Function Called::::::::::::::::::");
         		if (evt.origin === "http://prod.x-in-y.com" || evt.origin === "https://prod.x-in-y.com") {
         			ATScoreMessage = evt.data;
         			var getScore = ATScoreMessage.ETScore;
         			if (getScore == true) {
         				ATKcName = ATScoreMessage.KcName;
         				ATScore = ATScoreMessage.KcScore;
+        				console.log(":::::::::::::::::::::" + ATKcName + ": " + ATScore);
         			}
         		}
         		document.getElementById("ATscore").innerHTML = 'Topic Name: ' + BundleTitle + '<br>' + 'Type of Question: ' + ATType + '<br>' + 'Knowledge Component: ' + ATKcName + '<br>' + 'Score: ' + ATScore + '<br>' + 'Overall Performance (Threshold  = 0.5): ' + val;

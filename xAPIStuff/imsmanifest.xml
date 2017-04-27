@@ -2,7 +2,26 @@
 <!--This is a Reload version 2.5.6 SCORM 2004 Content Package document-->
 <!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
 <manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:imsmd="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-4667C06C00AF11A5F73DA02F0025E27B" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd">
-  <organizations />
-  <resources />
+  <organizations default="ORG-710CA44C8047807992377C568454140C">
+    <organization identifier="ORG-710CA44C8047807992377C568454140C" structure="hierarchical">
+      <title>Transistor</title>
+      <item identifier="ITEM-E0DD5060514DD1A7998246F178F2E70A" identifierref="RES-3BA0FFC49887E3F57CBC56EF976F1577" isvisible="true">
+        <title>Topic</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-3BA0FFC49887E3F57CBC56EF976F1577" adlcp:scormType="asset" type="webcontent" href="Contents/Container.html">
+      <file href="Contents/Container.html" />
+      <file href="Contents/Bootstrap/css/bootstrap3/bootstrap-switch.css" />
+      <file href="Contents/Bootstrap/js/bootstrap-switch.js" />
+      <file href="Contents/Config.js" />
+      <file href="Contents/content.html" />
+      <file href="Contents/dist/xapiwrapper.min.js" />
+      <file href="Contents/ET.js" />
+      <file href="Contents/src/verbs.js" />
+      <file href="Contents/util/APIWrapper.js" />
+    </resource>
+  </resources>
 </manifest>
 
