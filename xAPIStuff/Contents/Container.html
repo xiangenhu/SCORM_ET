@@ -2,13 +2,13 @@
     <html>
     <head>
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-        <script src="dist/xapiwrapper.min.js"></script>
+       <script src="dist/xapiwrapper.min.js"></script>
 
-        <script src="src/verbs.js"></script>
+       <script src="src/verbs.js"></script>
         <!--
         <script src="../lib/cryptojs_v3.1.2.js"></script>
         <script src="../src/xapi-launch.js"></script>
@@ -32,111 +32,36 @@
             var iframe = document.getElementById('iframe'); 
         </script>
 
-        <div id = "resultsTable" class="container">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
-              </tr>
+        <div  class="container">
+          <table id = "resultsTable" class="table">
+            <thead id = 'tableHead'>
+
             </thead>
-            <tbody>
-              <tr>
-                <td>Default</td>
-                <td>Defaultson</td>
-                <td>def@somemail.com</td>
-              </tr>      
-              <tr class="success">
-                <td>Success</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
-              </tr>
+            <tbody id = 'tableBody'>
+              
             </tbody>
-          </table>
-        </div>
+    </table>
+</div>
 
-        <script>
-            var wrapper;
-            ADL.launch(function(err, launchdata, xAPIWrapper) {
-                if (!err) {
-                    wrapper = ADL.XAPIWrapper = xAPIWrapper;
-                    console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
-                } else {
-                    wrapper = ADL.XAPIWrapper;
-                    wrapper.changeConfig({
-                        endpoint: "https://sko.waxlrs.com/TCAPI/",
-                        user: 'X88iLMqfLZs4o9nEDOhi',
-                        password: 'x8z43P0Xoi0oKXC6qSvQ'
-                    });
-                    console.log("--- content statically configured ---\n", wrapper.lrs);
-                }
-                $('#endpoint').text(wrapper.lrs.endpoint);
-            }, true);
-        </script>
-
-        <script>
-            var outputResults = function (resp, thing) {
-                var spanclass = "text-info";
-                var text = "";
-                if (resp.status >= 400) {
-                    spanclass = "text-danger";
-                    text = (thing.totalErrors > 1) ? "Errors: " : "Error: ";
-                    for ( var res in thing.results ) {
-                        text += "<br>" + ((thing.results[res].instance.id) ? thing.results[res].instance.id : "Statement " + res);
-                        for ( var err in thing.results[res].errors ) {
-                            text += "<br>&nbsp;&nbsp;" + thing.results[res].errors[err].trace;
-                            text += "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + thing.results[res].errors[err].message;
-                        }
-                    }
-                } else {
-                    if ( resp.responseText )
-                        text = "Successfully sent " + resp.responseText;
-                    else
-                        text = thing;
-                }
-
-                var p = $('<p>').addClass(spanclass).html(text);
-                $('#results').append(p);
-            };
-
-
-
-            function send(recievedData){
-                
-                ret = {
-                  actor: {account:{}},
-                  verb: ADL.verbs[recievedData.verbVal],
-                  object: {id: recievedData.Resource},
-                  context: {extensions:{}},
-                  timestamp: (new Date()).toISOString()
-              };
-
-              ret.actor.account.name = recievedData.userID;
-              ret.actor.account.homePage = recievedData.kcURI;
-              ret.actor.objectType ="Agent";
-
-              recievedData.kcs.forEach(function(item, index, array) {
-                var temp = item.replace(' ','_');
-                ret.context.extensions[recievedData.kcURI+temp] = temp;
-                
+<script>
+    var wrapper;
+    ADL.launch(function(err, launchdata, xAPIWrapper) {
+        if (!err) {
+            wrapper = ADL.XAPIWrapper = xAPIWrapper;
+            console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
+        } else {
+            wrapper = ADL.XAPIWrapper;
+            wrapper.changeConfig({
+                endpoint: "https://sko.waxlrs.com/TCAPI/",
+                user: 'X88iLMqfLZs4o9nEDOhi',
+                password: 'x8z43P0Xoi0oKXC6qSvQ'
             });
+            console.log("--- content statically configured ---\n", wrapper.lrs);
+        }
+        $('#endpoint').text(wrapper.lrs.endpoint);
+    }, true);
 
-              ret.result = {};
-              ret.result.score = {};
-              ret.result.score.scaled = parseFloat(recievedData.sScore);
-
-
-
-              console.log(ret);
-              console.log('sending object - single stmt... ');             
-                    //wrapper.sendStatement(sendValue, outputResults);
-                    wrapper.sendStatement(ret, outputResults);
-
-                    getStatementsWithSearch(recievedData,"ResourcesPassedByUser");
-                }
-
-                function setupConfig() {
+           function setupConfig() {
     // get LRS credentials from user interface
     var endpoint = "https://sko.waxlrs.com/TCAPI/";
     var user = 'X88iLMqfLZs4o9nEDOhi';
@@ -148,6 +73,71 @@
     };
     ADL.XAPIWrapper.changeConfig(conf);
 }
+</script>
+
+<script>
+    var outputResults = function (resp, thing) {
+        var spanclass = "text-info";
+        var text = "";
+        if (resp.status >= 400) {
+            spanclass = "text-danger";
+            text = (thing.totalErrors > 1) ? "Errors: " : "Error: ";
+            for ( var res in thing.results ) {
+                text += "<br>" + ((thing.results[res].instance.id) ? thing.results[res].instance.id : "Statement " + res);
+                for ( var err in thing.results[res].errors ) {
+                    text += "<br>&nbsp;&nbsp;" + thing.results[res].errors[err].trace;
+                    text += "<br>&nbsp;&nbsp;&nbsp;&nbsp;" + thing.results[res].errors[err].message;
+                }
+            }
+        } else {
+            if ( resp.responseText )
+                text = "Successfully sent " + resp.responseText;
+            else
+                text = thing;
+        }
+
+        var p = $('<p>').addClass(spanclass).html(text);
+        $('#results').html("");
+        $('#results').append(p);
+    };
+
+
+
+    function send(recievedData){
+
+        ret = {
+          actor: {account:{}},
+          verb: ADL.verbs[recievedData.verbVal],
+          object: {id: recievedData.Resource},
+          context: {extensions:{}},
+          timestamp: (new Date()).toISOString()
+      };
+
+      ret.actor.account.name = recievedData.userID;
+      ret.actor.account.homePage = recievedData.kcURI;
+      ret.actor.objectType ="Agent";
+
+      recievedData.kcs.forEach(function(item, index, array) {
+        var temp = item.replace(/ /g,'_');
+        ret.context.extensions[recievedData.kcURI+temp] = temp;
+
+    });
+
+      ret.result = {};
+      ret.result.score = {};
+      ret.result.score.scaled = parseFloat(recievedData.sScore);
+
+
+
+      //console.log(ret);
+      console.log('sending object - single stmt... ');             
+                    //wrapper.sendStatement(sendValue, outputResults);
+                    wrapper.sendStatement(ret, outputResults);
+
+                    getStatementsWithSearch(recievedData,"ResourcesPassedByUser");
+                }
+
+         
 
 /*  Statement Manipulation and Response -- Receiving */
 
@@ -204,25 +194,62 @@ function getStatementsWithSearch(recievedData,dataQuestion) {
                 var length = stmts.length;
                 //console.log(stmts);
 
-                stmts.forEach(function(item) {
-                    console.log("UserEmail: " + item.actor.account.name);
-                    console.log("KCs: " + item.context.extensions);
-                    console.log("Resource: " +item.object.id);
-              });
-
-
+                createTable(countKCS(stmts));
                 
+
             } else {
                 var stmt = response;
                 var length = 1;
             }
 
            // notify({ title: "Status " + r.status + " " + r.statusText + ": ", message: "statements received successfully from LRS" }, notificationSettings);
-
            
        }
    });
 }
+
+function countKCS(stmts){
+    var kcCountDictionary = {};
+                //iterate all statements
+                stmts.forEach(function(item) {
+                    //console.log("UserEmail: " + item.actor.account.name);
+                    //console.log(item.context.extensions);
+                    //console.log("Resource: " +item.object.id);
+
+                    //iterate all KCs
+                    for(var kc in item.context.extensions) {
+                       if(kc in kcCountDictionary){
+                        kcCountDictionary[kc] = kcCountDictionary[kc] + 1;
+                    }else{
+                        kcCountDictionary[kc] = 1;
+                    }
+
+                }
+
+
+
+            });
+                //console.log(kcCountDictionary);
+                return kcCountDictionary;
+            }
+
+            function createTable(kcCountDic){
+                $('#tableHead').html("");
+                $('#tableBody').html("");
+
+        //var tableBody = $('<table class="table">');
+
+        var headColumn = $('<tr>');
+        var bodyRow = $('<tr>');
+        for(var kc in kcCountDic) {
+           headColumn.append($('<th>', {html: kc}));
+           bodyRow.append($('<th>', {html: kcCountDic[kc]}));
+
+       }
+       $('#tableHead').append(headColumn);
+       $('#tableBody').append(bodyRow);
+
+   }
 
 // Clear Statements received from the LRS
 function clearReceivedStatements() {
