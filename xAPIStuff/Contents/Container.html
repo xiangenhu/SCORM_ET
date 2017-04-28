@@ -9,6 +9,12 @@
        <script src="dist/xapiwrapper.min.js"></script>
 
        <script src="src/verbs.js"></script>
+
+       <script src="dataTables/dataTables.min.js"></script>
+       <link rel="stylesheet" href="dataTables/dataTables.min.css">
+
+       <script src="dataTables/Scroller-1.4.2/js/dataTables.scroller.min.js"></script>
+       <link rel="stylesheet" href="dataTables/Scroller-1.4.2/css/scroller.dataTables.min.css">
         <!--
         <script src="../lib/cryptojs_v3.1.2.js"></script>
         <script src="../src/xapi-launch.js"></script>
@@ -21,6 +27,7 @@
             body {
                 margin: 0;
             }
+            
         </style>
     </head>
     <body  style="border:1px solid #000; overflow:hidden;">
@@ -32,16 +39,31 @@
             var iframe = document.getElementById('iframe'); 
         </script>
 
-        <div  class="container">
-          <table id = "resultsTable" class="table">
-            <thead id = 'tableHead'>
+        
+<button type="button" id="generalDataButton" class="btn btn-info btn-lg" style="display:none;" data-toggle="modal" data-target="#myModal">General Data</button>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Data</h4>
+        </div>
+        <div class="modal-body">
+          
+            <div id="tableDiv">
+                
+            </div>
+           
 
-            </thead>
-            <tbody id = 'tableBody'>
-              
-            </tbody>
-    </table>
-</div>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 <script>
     var wrapper;
@@ -194,7 +216,7 @@ function getStatementsWithSearch(recievedData,dataQuestion) {
                 var length = stmts.length;
                 //console.log(stmts);
 
-                createTable(countKCS(stmts));
+                countKCS(stmts);
                 
 
             } else {
@@ -210,6 +232,7 @@ function getStatementsWithSearch(recievedData,dataQuestion) {
 
 function countKCS(stmts){
     var kcCountDictionary = {};
+    var resourceCountDictionary = {};
                 //iterate all statements
                 stmts.forEach(function(item) {
                     //console.log("UserEmail: " + item.actor.account.name);
@@ -218,7 +241,7 @@ function countKCS(stmts){
 
                     //iterate all KCs
                     for(var kc in item.context.extensions) {
-                       if(kc in kcCountDictionary){
+                     if(kc in kcCountDictionary){
                         kcCountDictionary[kc] = kcCountDictionary[kc] + 1;
                     }else{
                         kcCountDictionary[kc] = 1;
@@ -226,35 +249,61 @@ function countKCS(stmts){
 
                 }
 
+                
+                if(item.object.id in resourceCountDictionary){
+                    resourceCountDictionary[item.object.id] = resourceCountDictionary[item.object.id] + 1;
+                }else{
+                 resourceCountDictionary[item.object.id] = 1;
+             }
 
-
-            });
-                //console.log(kcCountDictionary);
-                return kcCountDictionary;
+         });
+                
+                createTable(kcCountDictionary,resourceCountDictionary);
+                
             }
 
-            function createTable(kcCountDic){
-                $('#tableHead').html("");
-                $('#tableBody').html("");
+            function createTable(kcCountDic,resourceCountDic){
 
-        //var tableBody = $('<table class="table">');
+                var fake = "";
 
-        var headColumn = $('<tr>');
-        var bodyRow = $('<tr>');
-        for(var kc in kcCountDic) {
-           headColumn.append($('<th>', {html: kc}));
-           bodyRow.append($('<th>', {html: kcCountDic[kc]}));
+                var columns = [
+                {title: "Type"},
+                {title: "Name"},
+                {title: "Count"}
+                ];
+                var dataSet = [];
+                
+                
+                for(var item in kcCountDic) {
+                  
+                    dataSet.push(["KC",item,kcCountDic[item]]);                           
+                }
 
-       }
-       $('#tableHead').append(headColumn);
-       $('#tableBody').append(bodyRow);
+                for(var item in resourceCountDic) {
+                  
+                    dataSet.push(["Resource",item,resourceCountDic[item]]);                           
+                }
 
-   }
+                
+                $('#tableDiv').html('<table id="DebugDataTable" class="display" width="100%"></table>');
+                $('#DebugDataTable').DataTable( {
+                    
+                    "sScrollX": "100%",
+                    "bScrollCollapse": true,
+                    data: dataSet,
+                    columns: columns
+                } ).draw();
+
+                $("#generalDataButton").show();
+
+            }
 
 // Clear Statements received from the LRS
 function clearReceivedStatements() {
     $("#received-statements").html("");
 }
+
+
 
 </script>
 </body>

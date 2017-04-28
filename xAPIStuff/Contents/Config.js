@@ -7,6 +7,7 @@ var configUsers =
 'Jane@school.edu',
 'Jordan@gmail.com',
 'Thomas@hotmail.com',
+'Kate@hotmail.com',
 'Sally@gmail.com'
 ];
 
