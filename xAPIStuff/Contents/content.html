@@ -6,9 +6,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-<link href="Bootstrap/css/bootstrap3/bootstrap-switch.css" rel="stylesheet">
 
-<script src="Bootstrap/js/bootstrap-switch.js"></script>
 
 <script language=javascript src="util/APIWrapper.js"></script>
 <script language=javascript src="ET.js"></script>
@@ -92,13 +90,6 @@
 
 
 <div class="row">
-	<div class="col-sm-offset-4">
-
-		<h2>Custom xAPI Statement: <input type="checkbox" name="my-checkbox" checked></h2>
-	</div>
-</div>
-
-<div class="row">
 	<div class="col-sm-7">
 		<div id="disp" name="disp"></div>
 	</div>
@@ -139,16 +130,7 @@
 
 <script type="text/javascript"> 
 	$( document ).ready(function() {
-		$("[name='my-checkbox']").bootstrapSwitch();
-
-		$('input[name="my-checkbox"]').on('switchChange.bootstrapSwitch', function(event, state) {
-			if(state == false){
-				$('#DebugForm').fadeTo( "fast", 0 );
-			}else{
-				$('#DebugForm').fadeTo( "fast", 1);
-			}
-
-		});
+		
 
 		configUsers.forEach(function(item, index, array) {
 			$('#user').append(
