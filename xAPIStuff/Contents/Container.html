@@ -210,13 +210,17 @@ function getStatementsWithSearch(recievedData,dataQuestion) {
     var untilDate = "";
     var limit = "";
 
+ 	var search = ADL.XAPIWrapper.searchParams();
     if(dataQuestion == "ResourcesPassedByUser"){
         agentID = {"account": {"name": recievedData.userID,"homePage": recievedData.kcURI},"objectType": "Agent"};
+        search['agent'] = JSON.stringify(agentID);
+        search['activity'] = "http://activity.com/dragoon";
+
     }
 
     // Build Search
-    var search = ADL.XAPIWrapper.searchParams();
-    if (agentID != "") { search['agent'] = JSON.stringify(agentID); }
+   
+   /* if (agentID != "") { search['agent'] = JSON.stringify(agentID); }
     if (verbId != "") { search['verb'] = verbId; }
     if (verbSort != "") { search['ascending'] = verbSort; }
     //if (actorEmail != "") { search['agent'] = JSON.stringify({ "mbox": "mailto:" + actorEmail}); }
@@ -229,7 +233,7 @@ function getStatementsWithSearch(recievedData,dataQuestion) {
     if (sinceDate != "") { search['since'] = sinceDate; }
     if (untilDate != "") { search['until'] = untilDate; }
     if (limit != "") { search['limit'] = limit; }
-    //console.log(search);
+    //console.log(search);*/
 
     ADL.XAPIWrapper.getStatements(search, null, function(r) {
         //console.log(r);

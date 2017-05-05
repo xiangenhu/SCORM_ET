@@ -98,12 +98,12 @@
 		<br>
 		<form  class="form-group ">
 			<label for="user">UserName:</label>
-			<select class="form-control" id = user>
+			<select class="form-control" id = "user">
 				
 			</select>
 			<br>
 			<label for="Resources">Learning Resource:</label>
-			<select class="form-control" id = Resources>
+			<select class="form-control" id = "Resources">
 				
 			</select>
 			<br/>
@@ -126,6 +126,42 @@
 
 		</form>
 	</div>
+	<div id = "DebugFormRecieve" class="col-sm-4 jumbotron" >
+
+		<br>
+		<form  class="form-group ">
+			<label for="user">UserName:</label>
+			<select class="form-control" id = "userRecieve">
+				
+			</select>
+			<br>
+			<label for="verb">Performance (verb):</label>
+			<select class="form-control" id = "verbReceive">
+				
+			</select>
+			<br>
+			<label for="Resources">Learning Resource:</label>
+			<select class="form-control" id = "ResourcesRecieve">
+				
+			</select>
+			<br/>
+			 <label for="score">Count:</label> 
+			<input type="number" id="CountRecieved" value=1>
+			<br/>
+			<!-- <label for="score">Score (0-1):</label> 
+			<input type="number" id="score" value=0.75>
+			<br>
+			<div id = "KnowledgeComponentCheckboxesRecieve">
+				
+			</div>
+			<br/>
+			-->
+
+			<button type="button" class="btn btn-primary col-sm-offset-5" onclick="SendRecieveDataToParent('Q1')" >Receive</button>
+			
+
+		</form>
+	</div>
 </div>
 
 <script type="text/javascript"> 
@@ -137,10 +173,20 @@
 				$('<option />')
 				.text(item)
 				.val(item));
+
+			$('#userRecieve').append(
+				$('<option />')
+				.text(item)
+				.val(item));
 		});
 
 		configResources.forEach(function(item, index, array) {
 			$('#Resources').append(
+				$('<option />')
+				.text(item)
+				.val(configResourceURI + item));
+
+			$('#ResourcesRecieve').append(
 				$('<option />')
 				.text(item)
 				.val(configResourceURI + item));
@@ -151,10 +197,22 @@
 				$('<option />')
 				.text(item)
 				.val(item));
+
+			$('#verbReceive').append(
+				$('<option />')
+				.text(item)
+				.val(item));
 		});
 
 		configKnowledgeComponents.forEach(function(item, index, array) {
 			$('#KnowledgeComponentCheckboxes')
+			.append(
+				$('<input type="checkbox" />')
+				.val(item))
+			.append(" " + item)
+			.append('<br/>');
+
+			$('#KnowledgeComponentCheckboxesRecieve')
 			.append(
 				$('<input type="checkbox" />')
 				.val(item))
@@ -211,6 +269,28 @@ function SendToParent(mode,dataObject){
 		console.log(sendData);
 		parent.send(sendData); 
 
+	}
+
+	function SendRecieveDataToParent(question){
+
+	var sendData;
+
+	if(question == "Q1"){
+	
+			sendData = {
+				userID : document.getElementById("userRecieve").value,
+				Resource : document.getElementById("ResourcesRecieve").value,
+				verbVal : document.getElementById("verbReceive").value,
+				count: document.getElementById("CountRecieved").value,
+				kcURI : configKnowledgeComponentURI
+			}
+			
+
+		//console.log(sendData);
+			parent.getStatementsWithSearch(sendData,"ResourcesPassedByUser"); 
+			}
+			
+			
 	}
 </script>
 
