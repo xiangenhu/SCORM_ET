@@ -6,6 +6,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+<script src="datepicker/moment/moment.js"></script>
+
+<link rel="stylesheet" href="datepicker/css/bootstrap-datetimepicker.min.css">
+<script src="datepicker/js/bootstrap-datetimepicker.min.js"></script>
 
 
 <script language=javascript src="util/APIWrapper.js"></script>
@@ -148,6 +152,31 @@
 			 <label for="score">Count:</label> 
 			<input type="number" id="CountRecieved" value=1>
 			<br/>
+			<br/>
+
+			 <div class="row">
+
+                              <div class="form-group col-md-6">
+                                <label class="control-label" for="search-statements-since-date">Since Date</label>
+                                <div class="input-group date" id="search-statements-since-date">
+                                  <input type="text" class="form-control" />
+                                  <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div class="form-group col-md-6">
+                                <label class="control-label" for="search-statements-until-date">Until Date</label>
+                                <div class="input-group date" id="search-statements-until-date">
+                                  <input type="text" class="form-control" />
+                                  <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                  </span>
+                                </div>
+                              </div>
+
+                            </div><!-- .row -->
 			<!-- <label for="score">Score (0-1):</label> 
 			<input type="number" id="score" value=0.75>
 			<br>
@@ -167,6 +196,12 @@
 <script type="text/javascript"> 
 	$( document ).ready(function() {
 		
+		var dateTimeSettings = {
+		    showTodayButton: true,
+		    showClear: true
+		};
+		    $("#search-statements-since-date").datetimepicker(dateTimeSettings);
+    $("#search-statements-until-date").datetimepicker(dateTimeSettings);
 
 		configUsers.forEach(function(item, index, array) {
 			$('#user').append(
@@ -275,6 +310,9 @@ function SendToParent(mode,dataObject){
 
 	var sendData;
 
+	var sinceDate = $("#search-statements-since-date input").val();
+    var untilDate = $("#search-statements-until-date input").val();
+
 	if(question == "Q1"){
 	
 			sendData = {
@@ -282,7 +320,9 @@ function SendToParent(mode,dataObject){
 				Resource : document.getElementById("ResourcesRecieve").value,
 				verbVal : document.getElementById("verbReceive").value,
 				count: document.getElementById("CountRecieved").value,
-				kcURI : configKnowledgeComponentURI
+				kcURI : configKnowledgeComponentURI,
+				SinceDate : sinceDate,
+				UntilDate : untilDate
 			}
 			
 

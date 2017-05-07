@@ -214,7 +214,20 @@ function getStatementsWithSearch(recievedData,dataQuestion) {
     if(dataQuestion == "ResourcesPassedByUser"){
         agentID = {"account": {"name": recievedData.userID,"homePage": recievedData.kcURI},"objectType": "Agent"};
         search['agent'] = JSON.stringify(agentID);
-        search['activity'] = "http://activity.com/dragoon";
+        search['activity'] = recievedData.Resource;
+
+        if(recievedData.SinceDate != ""  ){
+            search['since'] = recievedData.SinceDate; 
+        }
+        if(recievedData.UntilDate != ""){
+            search['until'] = recievedData.UntilDate; 
+        }
+       
+       search['verb'] = "http://adlnet.gov/expapi/verbs/"+recievedData.verbVal;
+
+       var d = "";
+
+        
 
     }
 
