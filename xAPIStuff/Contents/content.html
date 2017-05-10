@@ -111,6 +111,11 @@
 				
 			</select>
 			<br/>
+			<label for="Topics">Topic:</label>
+			<select class="form-control" id = "Topics">
+				
+			</select>
+			<br/>
 			<label for="verb">Performance (verb):</label>
 			<select class="form-control" id = "verb">
 				
@@ -134,26 +139,21 @@
 
 		<br>
 		<form  class="form-group ">
-			<label for="user">UserName:</label>
+			<label for="userRecieve">UserName:</label>
 			<select class="form-control" id = "userRecieve">
 				
 			</select>
 			<br>
-			<label for="verb">Performance (verb):</label>
+			<label for="verbReceive">Performance (verb):</label>
 			<select class="form-control" id = "verbReceive">
 				
 			</select>
 			<br>
-			<label for="Resources">Learning Resource:</label>
+			<label for="ResourcesRecieve">Learning Resource:</label>
 			<select class="form-control" id = "ResourcesRecieve">
 				
 			</select>
 			<br/>
-			 <label for="score">Count:</label> 
-			<input type="number" id="CountRecieved" value=1>
-			<br/>
-			<br/>
-
 			 <div class="row">
 
                               <div class="form-group col-md-6">
@@ -176,7 +176,19 @@
                                 </div>
                               </div>
 
-                            </div><!-- .row -->
+                            </div>
+                            <br/>
+			<label for="TopicsReceive">Topic:</label>
+			<select class="form-control" id = "TopicsReceive">
+				
+			</select>
+			<br/>
+			 <label for="score">Count:</label> 
+			<input type="number" id="CountRecieved" value=1>
+			<br/>
+			<br/>
+
+			<!-- .row -->
 			<!-- <label for="score">Score (0-1):</label> 
 			<input type="number" id="score" value=0.75>
 			<br>
@@ -219,12 +231,24 @@
 			$('#Resources').append(
 				$('<option />')
 				.text(item)
-				.val(configResourceURI + item));
+				.val(URI + item));
 
 			$('#ResourcesRecieve').append(
 				$('<option />')
 				.text(item)
-				.val(configResourceURI + item));
+				.val(URI + item));
+		});
+
+		configTopics.forEach(function(item, index, array) {
+			$('#Topics').append(
+				$('<option />')
+				.text(item)
+				.val(item));
+
+			$('#TopicsReceive').append(
+				$('<option />')
+				.text(item)
+				.val(item));
 		});
 
 		configVerbs.forEach(function(item, index, array) {
@@ -270,7 +294,7 @@ function SendToParent(mode,dataObject){
 	/*
 			sendData = {
 				userID : "GetFromMoodle",
-				Resource : configResourceURI + "AutoTutorDR",
+				Resource : URI + "AutoTutorDR",
 				verbVal : "passed",
 				sScore : "0.67",
 				kcs : ["CE Transistor Function"],
@@ -279,7 +303,7 @@ function SendToParent(mode,dataObject){
 			*/
 			sendData = {
 				userID : "WantFromMoodle",
-				Resource : configResourceURI + dataObject.resourceType,
+				Resource : URI + dataObject.resourceType,
 				verbVal : verb,
 				sScore : dataObject.score,
 				kcs : [dataObject.kcName],
@@ -298,7 +322,9 @@ function SendToParent(mode,dataObject){
 				verbVal : document.getElementById("verb").value,
 				sScore : document.getElementById("score").value,
 				kcs : selectedKCArray,
-				kcURI : configKnowledgeComponentURI
+				kcURI : configKnowledgeComponentURI,
+				topic : document.getElementById("Topics").value,
+				uri : URI 
 			}
 		}
 		console.log(sendData);

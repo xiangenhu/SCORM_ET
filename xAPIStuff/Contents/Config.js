@@ -1,5 +1,5 @@
 
-var configResourceURI = 'http://activity.com/';
+var URI = 'http://activity.com/';
 var configKnowledgeComponentURI = 'http://example.com/KC/';
 var configUsers = 
 [
@@ -18,6 +18,15 @@ var configResources =
 'autotutorKC',
 'dragoon',
 'bbn'
+];
+
+
+var configTopics = 
+[
+'transistor',
+'ohms',
+'parallel circuits',
+'series circuits'
 ];
 
 //We use only xAPI options only as of now.

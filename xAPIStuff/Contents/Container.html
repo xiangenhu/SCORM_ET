@@ -12,11 +12,11 @@
 
        <script src="src/verbs.js"></script>
 
-       <script src="dataTables/dataTables.min.js"></script>
-       <link rel="stylesheet" href="dataTables/dataTables.min.css">
+       <script src="datatables/datatables.min.js"></script>
+       <link rel="stylesheet" href="datatables/datatables.min.css">
 
-       <script src="dataTables/Scroller-1.4.2/js/dataTables.scroller.min.js"></script>
-       <link rel="stylesheet" href="dataTables/Scroller-1.4.2/css/scroller.dataTables.min.css">
+       <script src="datatables/Scroller-1.4.2/js/datatables.scroller.min.js"></script>
+       <link rel="stylesheet" href="datatables/Scroller-1.4.2/css/scroller.datatables.min.css">
         <!--
         <script src="../lib/cryptojs_v3.1.2.js"></script>
         <script src="../src/xapi-launch.js"></script>
@@ -174,18 +174,20 @@ function toggleView(){
 
     });
 
+      ret.context.extensions[recievedData.uri+"topic"] = recievedData.topic;
+
       ret.result = {};
       ret.result.score = {};
       ret.result.score.scaled = parseFloat(recievedData.sScore);
 
 
 
-      //console.log(ret);
+      console.log(ret);
       console.log('sending object - single stmt... ');             
                     //wrapper.sendStatement(sendValue, outputResults);
                     wrapper.sendStatement(ret, outputResults);
 
-                    getStatementsWithSearch(recievedData,"ResourcesPassedByUser");
+                    //getStatementsWithSearch(recievedData,"ResourcesPassedByUser");
                 }
 
          
