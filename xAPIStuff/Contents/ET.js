@@ -65,4 +65,11 @@ function GetLinks(module){
 	return pageArray[index];
 }
 
+var LessonJSON = [
+{
+
+
+}
+];
+
 
