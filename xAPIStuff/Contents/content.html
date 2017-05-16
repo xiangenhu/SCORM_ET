@@ -204,7 +204,7 @@
 			<br/>
 			-->
 
-			<button type="button" class="btn btn-primary col-sm-offset-5" onclick="SendRecieveDataToParent('Q1')" >Receive</button>
+			<button type="button" class="btn btn-primary col-sm-offset-5" onclick="SendRecieveDataToParent('Simulation')" >Receive</button>
 			
 
 		</form>
@@ -338,14 +338,15 @@ function SendToParent(mode,dataObject){
 
 	}
 
-	function SendRecieveDataToParent(question){
+	function SendRecieveDataToParent(mode){
 
+//always queryusing actor, verb, resource, Since/Until Date, and return count... post processing handles all of the calculations
 	var sendData;
 
 	var sinceDate = $("#search-statements-since-date input").val();
     var untilDate = $("#search-statements-until-date input").val();
 
-	if(question == "Q1"){
+	if(mode == "Simulation"){
 	
 			sendData = {
 				userID : document.getElementById("userRecieve").value,
@@ -353,14 +354,15 @@ function SendToParent(mode,dataObject){
 				verbVal : document.getElementById("verbReceive").value,
 				count: document.getElementById("CountRecieved").value,
 				kcURI : configKnowledgeComponentURI,
+				uri: URI,
 				SinceDate : sinceDate,
 				UntilDate : untilDate
 			}
 			
 
 		//console.log(sendData);
-			parent.getStatementsWithSearch(sendData,"ResourcesPassedByUser"); 
-			}
+			parent.getStatementsWithSearch(sendData); 
+		}
 			
 			
 	}

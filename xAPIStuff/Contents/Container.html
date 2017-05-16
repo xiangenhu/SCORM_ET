@@ -17,6 +17,9 @@
 
        <script src="datatables/Scroller-1.4.2/js/datatables.scroller.min.js"></script>
        <link rel="stylesheet" href="datatables/Scroller-1.4.2/css/scroller.datatables.min.css">
+
+
+       <script language=javascript src="Config.js"></script>
         <!--
         <script src="../lib/cryptojs_v3.1.2.js"></script>
         <script src="../src/xapi-launch.js"></script>
@@ -165,7 +168,7 @@ function toggleView(){
       };
 
       ret.actor.account.name = recievedData.userID;
-      ret.actor.account.homePage = recievedData.kcURI;
+      ret.actor.account.homePage = recievedData.uri;
       ret.actor.objectType ="Agent";
 
       recievedData.kcs.forEach(function(item, index, array) {
@@ -174,7 +177,7 @@ function toggleView(){
 
     });
 
-      ret.context.extensions[recievedData.uri+"topic"] = recievedData.topic;
+      ret.context.extensions[recievedData.uri+"topic/"+recievedData.topic] = recievedData.topic;
 
       ret.result = {};
       ret.result.score = {};
@@ -195,7 +198,7 @@ function toggleView(){
 /*  Statement Manipulation and Response -- Receiving */
 
 // Retreive statements from the LRS
-function getStatementsWithSearch(recievedData,dataQuestion) {
+function getStatementsWithSearch(recievedData) {
     setupConfig();
 
     var agentID = "";
@@ -213,8 +216,8 @@ function getStatementsWithSearch(recievedData,dataQuestion) {
     var limit = "";
 
  	var search = ADL.XAPIWrapper.searchParams();
-    if(dataQuestion == "ResourcesPassedByUser"){
-        agentID = {"account": {"name": recievedData.userID,"homePage": recievedData.kcURI},"objectType": "Agent"};
+
+        agentID = {"account": {"name": recievedData.userID,"homePage": recievedData.uri},"objectType": "Agent"};
         search['agent'] = JSON.stringify(agentID);
         search['activity'] = recievedData.Resource;
 
@@ -231,7 +234,7 @@ function getStatementsWithSearch(recievedData,dataQuestion) {
 
         
 
-    }
+   
 
     // Build Search
    
@@ -264,13 +267,14 @@ function getStatementsWithSearch(recievedData,dataQuestion) {
                 var length = stmts.length;
                 //console.log(stmts);
 
-                countKCS(stmts);
+                CountData(stmts);
                 
 
             } else {
                 var stmt = response;
                 var length = 1;
-            }
+            }  
+
 
            // notify({ title: "Status " + r.status + " " + r.statusText + ": ", message: "statements received successfully from LRS" }, notificationSettings);
            
@@ -278,7 +282,7 @@ function getStatementsWithSearch(recievedData,dataQuestion) {
    });
 }
 
-function countKCS(stmts){
+function CountData(stmts){
     var kcCountDictionary = {};
     var resourceCountDictionary = {};
                 //iterate all statements
@@ -307,6 +311,7 @@ function countKCS(stmts){
          });
                 
                 createTable(kcCountDictionary,resourceCountDictionary);
+                DecideAction(kcCountDictionary,resourceCountDictionary);
                 
             }
 
@@ -343,6 +348,13 @@ function countKCS(stmts){
                 } ).draw();
 
                 $("#generalDataButton").show();
+
+            }
+
+            function DecideAction(kcCountDic,resourceCountDic){
+                console.log(kcCountDic);
+                console.log(resourceCountDic);
+                
 
             }
 

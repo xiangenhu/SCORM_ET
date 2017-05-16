@@ -1,14 +1,15 @@
 
 var URI = 'http://activity.com/';
+var topicURI = 'http://topic.com/'
 var configKnowledgeComponentURI = 'http://example.com/KC/';
 var configUsers = 
 [
-'Joe@gmail.com',
-'Jane@school.edu',
-'Jordan@gmail.com',
-'Thomas@hotmail.com',
-'Kate@hotmail.com',
-'Sally@gmail.com'
+'Joe1@gmail.com',
+'Jane1@school.edu',
+'Jordan1@gmail.com',
+'Thomas1@hotmail.com',
+'Kate1@hotmail.com',
+'Sally1@gmail.com'
 ];
 
 var configResources = 
@@ -44,10 +45,12 @@ var configVerbs =
 
 var configKnowledgeComponents = 
 [
-'PN Junctions',
-'Electrons',
-'Parallel',
-'Series',
-'Thevonen',
-'Voltage Potential'
+'CB Transistor Amplifier Function',
+'CE Transistor Behavior',
+'CE Transistor Function',
+'CE Transistor Fixed Bias DC Behavior',
+'CE Transistor Fixed Bias Function',
+'Diode Behavior-Forward',
+'Zener Diode Function',
+'Diode Physics'
 ];

@@ -72,4 +72,10 @@ var LessonJSON = [
 }
 ];
 
+function AccessChecker(conditions){
+	if(conditions.PassedNecessaryResource){
+		
+	}
+}
+
 
