@@ -360,8 +360,15 @@ function CountData(stmts){
             function DecideAction(kcCountDic,resourceCountDic){
                 console.log(kcCountDic);
                 console.log(resourceCountDic);
-                
 
+                if(kcCountDic[configKnowledgeComponentURI+"CB Transistor Amplifier Function".replace(/ /g,'_')] > 1){
+                    console.log("Do Something 1");
+                }
+
+                if(resourceCountDic[URI+"CB Transistor Amplifier Function".replace(/ /g,'_')] >= 1){
+                    console.log("Do Something 2");
+                }
+             
             }
 
 // Clear Statements received from the LRS
