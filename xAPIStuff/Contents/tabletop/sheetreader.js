@@ -3,7 +3,7 @@ var sheetReaderData = '';
 
       function init() {
         Tabletop.init( { key: public_spreadsheet_url,
-                         callback: showInfo,
+                         callback: initialDataPullForStudent,
                          simpleSheet: true } );
       }
 
@@ -13,8 +13,8 @@ var sheetReaderData = '';
         // data comes through as a simple array since simpleSheet is turned on
         //document.getElementById("data").innerHTML = JSON.stringify(data);
         //console.log(data);
-        //sheetReaderData = data;
-        ShowGoogleSheetData(data);
+        sheetReaderData = data;
+        //ShowGoogleSheetData(data);
         //console.log(sheetReaderData);
       }
 

@@ -78,6 +78,10 @@
 
 
 <script>
+$( document ).ready(function() {
+     //initialDataPullForStudent();
+});
+
 
 //Toggle between difrent debug views
 function toggleView(){
@@ -153,6 +157,24 @@ function toggleView(){
         $('#results').html("");
         $('#results').append(p);
     };
+
+    // This will be updated to use the students id from moodle to pull for the real student that is logged in
+    function initialDataPullForStudent(data){
+        sheetReaderData = data;
+
+        sendData = {
+                userID : "Joe1@gmail.com",
+                Resource : "http://activity.com/autotutor",
+                verbVal : "passed",
+                count: 0,
+                kcURI : "http://example.com/KC/",
+                uri: "http://activity.com/",
+                SinceDate : "",
+                UntilDate : ""
+            }
+
+            getStatementsWithSearch(sendData);
+    }
 
 
 
@@ -354,10 +376,15 @@ function CountData(stmts){
 
             function ShowGoogleSheetData(data)
             {
-                console.log('==============Google Sheet Data=========== ' );
-                console.log(data);
+                //console.log('==============Google Sheet Data=========== ' );
+               // console.log(data);
             }
             function DecideAction(kcCountDic,resourceCountDic){
+                var tempGSheetData = sheetReaderData;
+
+
+                console.log('==============Google Sheet Data=========== ' );
+                console.log(tempGSheetData);
                 console.log(kcCountDic);
                 console.log(resourceCountDic);
                 
