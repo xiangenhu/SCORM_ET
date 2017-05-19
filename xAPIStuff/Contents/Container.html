@@ -6,7 +6,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
       
-
+        <script type="text/javascript" src="tabletop/src/tabletop.js"></script>
+        <script src="tabletop/sheetreader.js"></script>
 
        <script src="dist/xapiwrapper.min.js"></script>
 
@@ -351,6 +352,11 @@ function CountData(stmts){
 
             }
 
+            function ShowGoogleSheetData(data)
+            {
+                console.log('==============Google Sheet Data=========== ' );
+                console.log(data);
+            }
             function DecideAction(kcCountDic,resourceCountDic){
                 console.log(kcCountDic);
                 console.log(resourceCountDic);
