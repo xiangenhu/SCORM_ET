@@ -380,14 +380,53 @@ function CountData(stmts){
                // console.log(data);
             }
             function DecideAction(kcCountDic,resourceCountDic){
+                var accessibleResources = [];
+
                 var tempGSheetData = sheetReaderData;
 
 
-                console.log('==============Google Sheet Data=========== ' );
+                console.log('==============Google Sheet Data============');
                 console.log(tempGSheetData);
+                console.log('===============Student LRS Data============');
                 console.log(kcCountDic);
                 console.log(resourceCountDic);
-                
+
+
+                  tempGSheetData.forEach(function(item, index, array) {
+                    var numOfRequiredKcs = item.requiredKcs.split(',').length;
+                    var numOfSatisfiedKcs = 0;
+
+                     item.requiredKcs.split(',').forEach(function(requiredKc, index, array) {
+                        //console.log(requiredKc.replace(/ /g,'_'));
+                        requiredKc = requiredKc.replace(/ /g,'_');
+
+                         //console.log(kcCountDic['http://example.com/KC/'+requiredKc]);
+                        if(kcCountDic['http://example.com/KC/'+requiredKc] >0){
+                            numOfSatisfiedKcs++;
+                        }
+
+ 
+                    });
+
+                    console.log('Number of Required KCS: ' + numOfRequiredKcs + ' Number of Satisfied KCS: ' + numOfSatisfiedKcs);
+                    
+
+
+                    if(numOfRequiredKcs == numOfSatisfiedKcs){
+                        accessibleResources.push({'content' : item.content, 'unlocked': true});
+                    }else{
+                        accessibleResources.push({'content' : item.content, 'unlocked': false});
+                    }
+
+
+
+                    
+                    //var temp = item.replace(/ /g,'_');
+                    //ret.context.extensions[recievedData.kcURI+temp] = temp;
+
+                });
+                  console.log(accessibleResources);
+
 
             }
 
