@@ -8,7 +8,6 @@ function GetQueryVar(search_for,defaultstr) {
 					return parms[i].substring(pos+1);
 					}
 				}
-				console.log("defaultstr: " + defaultstr);
 				return defaultstr;
 			}
 
