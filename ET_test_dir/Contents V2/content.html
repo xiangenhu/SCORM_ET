@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="datepicker/moment/moment.js"></script>
+
+<link rel="stylesheet" href="datepicker/css/bootstrap-datetimepicker.min.css">
+<script src="datepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+
+<script language=javascript src="util/APIWrapper.js"></script>
+<script language=javascript src="ET.js"></script>
+
+<script language=javascript src="Config.js"></script>
+
+<script language=javascript>
+    // Set some variables global to the SCO
+    var answer = -1;
+    var exitPageStatus = false;
+    var ATType = GetQueryVar("ATType", "AutoTutorDR")
+    var BundleTitle = GetQueryVar("T", "Transistor");
+    var ATScoreMessage;
+    var ATKcName;
+    var ATScore;
+    var Threshold = 0.5;
+
+    window.addEventListener("message",
+    	function submitScore(evt) {
+    		console.log(":::::::::::::::::::::Function Called::::::::::::::::::");
+    		if (evt.origin === "http://prod.x-in-y.com" || evt.origin === "https://prod.x-in-y.com") {
+    			ATScoreMessage = evt.data;
+    			var getScore = ATScoreMessage.ETScore;
+    			if (getScore == true) {
+    				ATKcName = ATScoreMessage.KcName;
+    				ATScore = ATScoreMessage.KcScore.replace(/\r?\n|\r/g,'');
+    				console.log(":::::::::::::::::::::" + ATKcName + ": " + ATScore);
+
+    				var val = "";
+    		if (ATScore < Threshold) {
+    			val = "failed";
+    		} else {
+    			val = "passed";
+    		}
+
+    				var resourceData = {
+    					score : ATScore,
+    					resourceType : ATType,
+    					bundleTitle : BundleTitle,
+    					kcName : ATKcName,
+    					verb: val
+
+    				}
+    				console.log(resourceData);
+    				SendToParent("FromResource",resourceData);
+    			}
+    		}
+
+    		
+
+    		document.getElementById("ATscore").innerHTML = 'Topic Name: ' + BundleTitle + '<br>' + 'Type of Question: ' + ATType + '<br>' + 'Knowledge Component: ' + ATKcName + '<br>' + 'Score: ' + ATScore + '<br>' + 'Overall Performance (Threshold  = 0.5): ' + val;
+
+    	},
+    	false);
+
+   
+    function loadPage() {
+    	var result = doInitialize();
+    	var html = '<div style="padding: 15px 20px;  font-weight: bold;">';
+    	html += '<span id="ATscore"></span>';
+    	html += '</div>';
+    	html += '<iframe src="' + GetLinks(ATType) + '" width="900" height="768" frameborder="0"/>';
+    	
+    	document.getElementById("disp").innerHTML = html;
+    }
+
+
+</script>
+</head>
+<body onLoad="loadPage()">
+
+
+<div class="row">
+	<div class="col-sm-7">
+	
+	<button type="button" class="btn btn-primary col-sm-offset-5" onclick="SendToParent('SkipInteraction')" >Skip Interaction</button>
+		<div id="disp" name="disp"></div>
+	</div>
+	<div id = "DebugForm" class="col-sm-4 jumbotron">
+
+		<br>
+		<form  class="form-group ">
+			<label for="user">UserName:</label>
+			<select class="form-control" id = "user">
+				
+			</select>
+			<br>
+			<label for="Resources">Learning Resource:</label>
+			<select class="form-control" id = "Resources">
+				
+			</select>
+			<br/>
+			<label for="Topics">Topic:</label>
+			<select class="form-control" id = "Topics">
+				
+			</select>
+			<br/>
+			<label for="verb">Performance (verb):</label>
+			<select class="form-control" id = "verb">
+				
+			</select>
+			<br>
+			<label for="score">Score (0-1):</label>
+			<input type="number" id="score" value=0.75>
+			<br>
+			<div id = "KnowledgeComponentCheckboxes">
+				
+			</div>
+			<br/>
+			
+
+			<button type="button" class="btn btn-primary col-sm-offset-5" onclick="SendToParent()" >Send</button>
+			
+
+		</form>
+	</div>
+	<div id = "DebugFormRecieve" class="col-sm-4 jumbotron" >
+
+		<br>
+		<form  class="form-group ">
+		<label for="ReceiveMode">Receive Mode:</label>
+			<select class="form-control" id = "ReceiveMode">
+				
+			</select>
+			<br/>
+
+			<label for="userRecieve">UserName:</label>
+			<select class="form-control" id = "userRecieve">
+				
+			</select>
+			<br>
+			<label for="verbReceive">Performance (verb):</label>
+			<select class="form-control" id = "verbReceive">
+				
+			</select>
+			<br>
+			<label for="ResourcesRecieve">Learning Resource:</label>
+			<select class="form-control" id = "ResourcesRecieve">
+				
+			</select>
+			<br/>
+			 <div class="row">
+
+                              <div class="form-group col-md-6">
+                                <label class="control-label" for="search-statements-since-date">Since Date</label>
+                                <div class="input-group date" id="search-statements-since-date">
+                                  <input type="text" class="form-control" />
+                                  <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div class="form-group col-md-6">
+                                <label class="control-label" for="search-statements-until-date">Until Date</label>
+                                <div class="input-group date" id="search-statements-until-date">
+                                  <input type="text" class="form-control" />
+                                  <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                  </span>
+                                </div>
+                              </div>
+
+                            </div>
+                            <br/>
+			<label for="TopicsReceive">Topic:</label>
+			<select class="form-control" id = "TopicsReceive">
+				
+			</select>
+			<br/>
+			 <label for="score">Count:</label> 
+			<input type="number" id="CountRecieved" value=1>
+			<br/>
+			<br/>
+
+			<!-- .row -->
+			<!-- <label for="score">Score (0-1):</label> 
+			<input type="number" id="score" value=0.75>
+			<br>
+			<div id = "KnowledgeComponentCheckboxesRecieve">
+				
+			</div>
+			<br/>
+			-->
+
+			<button type="button" class="btn btn-primary col-sm-offset-5" onclick="SendRecieveDataToParent('Simulation')" >Receive</button>
+			
+
+		</form>
+	</div>
+</div>
+
+<script type="text/javascript"> 
+	$( document ).ready(function() {
+		console.log($("#search-statements-since-date input").val());
+		
+		var dateTimeSettings = {
+		    showTodayButton: true,
+		    showClear: true
+		};
+		    $("#search-statements-since-date").datetimepicker(dateTimeSettings);
+    $("#search-statements-until-date").datetimepicker(dateTimeSettings);
+
+		configUsers.forEach(function(item, index, array) {
+			$('#user').append(
+				$('<option />')
+				.text(item)
+				.val(item));
+
+			$('#userRecieve').append(
+				$('<option />')
+				.text(item)
+				.val(item));
+		});
+
+		configResources.forEach(function(item, index, array) {
+			$('#Resources').append(
+				$('<option />')
+				.text(item)
+				.val(URI + item));
+
+			$('#ResourcesRecieve').append(
+				$('<option />')
+				.text(item)
+				.val(URI + item));
+		});
+
+		configTopics.forEach(function(item, index, array) {
+			$('#Topics').append(
+				$('<option />')
+				.text(item)
+				.val(item));
+
+			$('#TopicsReceive').append(
+				$('<option />')
+				.text(item)
+				.val(item));
+		});
+
+		configVerbs.forEach(function(item, index, array) {
+			$('#verb').append(
+				$('<option />')
+				.text(item)
+				.val(item));
+
+			$('#verbReceive').append(
+				$('<option />')
+				.text(item)
+				.val(item));
+		});
+
+		configKnowledgeComponents.forEach(function(item, index, array) {
+			$('#KnowledgeComponentCheckboxes')
+			.append(
+				$('<input type="checkbox" />')
+				.val(item))
+			.append(" " + item)
+			.append('<br/>');
+
+			$('#KnowledgeComponentCheckboxesRecieve')
+			.append(
+				$('<input type="checkbox" />')
+				.val(item))
+			.append(" " + item)
+			.append('<br/>');
+		});
+
+	});
+
+</script>
+
+<script type="text/javascript">
+var dt;
+
+
+
+function SendToParent(mode,dataObject){
+
+	var sendData;
+
+	if(mode == "FromResource"){
+			sendData = {
+				userID : "WantFromMoodle",
+				Resource : URI + dataObject.resourceType,
+				verbVal : verb,
+				sScore : dataObject.score,
+				kcs : [dataObject.kcName],
+				kcURI : configKnowledgeComponentURI
+			}
+		}else if(mode == 'SkipInteraction'){
+				sendData = {
+					userID : document.getElementById("user").value,
+					Resource : document.getElementById("Resources").value,
+					verbVal : document.getElementById("verb").value,
+					sScore : document.getElementById("score").value,
+					kcs : [configKnowledgeComponents[1]],
+					kcURI : configKnowledgeComponentURI,
+					topic : document.getElementById("Topics").value,
+					uri : URI 
+				}
+		
+		}else{
+			var selectedKCArray = $('input:checkbox:checked').map(function () {
+				return this.value;
+			}).get();
+
+			sendData = {
+				userID : document.getElementById("user").value,
+				Resource : document.getElementById("Resources").value,
+				verbVal : document.getElementById("verb").value,
+				sScore : document.getElementById("score").value,
+				kcs : selectedKCArray,
+				kcURI : configKnowledgeComponentURI,
+				topic : document.getElementById("Topics").value,
+				uri : URI 
+			}
+		}
+		console.log(sendData);
+		parent.send(sendData); 
+
+	}
+
+	function SendRecieveDataToParent(mode){
+
+//always queryusing actor, verb, resource, Since/Until Date, and return count... post processing handles all of the calculations
+	var sendData;
+
+	var sinceDate = $("#search-statements-since-date input").val();
+    var untilDate = $("#search-statements-until-date input").val(); 
+
+
+	if(mode == "Simulation"){
+	
+			sendData = {
+				userID : document.getElementById("userRecieve").value,
+				Resource : document.getElementById("ResourcesRecieve").value,
+				verbVal : document.getElementById("verbReceive").value,
+				count: document.getElementById("CountRecieved").value,
+				kcURI : configKnowledgeComponentURI,
+				uri: URI,
+				SinceDate : sinceDate,
+				UntilDate : untilDate
+			}
+			
+
+
+		//console.log(sendData);
+			parent.getStatementsWithSearch(sendData); 
+		}
+			
+			
+	}
+</script>
+
+</body>
+</html>
