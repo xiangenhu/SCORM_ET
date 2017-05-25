@@ -76,12 +76,12 @@
     </div>
   </div>
 
-  <div class="modal fade" id="FeedbackModal" role="dialog">
-    <div class="modal-dialog modal-lg">
+  <div class="modal modal-wide fade" id="FeedbackModal" style="overflow-y: auto;" role="dialog">
+    <div class="modal-dialog modal-lg" style="width: 80%;">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">You seem to be elibible for the following lessons.</h4>
+          <h2 class="modal-title">You seem to be elibible for the following lessons.</h2>
         </div>
         <div id="FeedbackModalBody" class="modal-body">
           
@@ -448,9 +448,9 @@ function CountData(stmts){
                     if(item.unlocked == false){
                         $('#FeedbackModalBody')
                         .append(
-                            $('<button type="button" class="btn btn-default"> '+ item.content + '</button>')
+                            $('<button type="button" style=" padding: 10px 20px;font-size: 20px;border-radius: 10px;" class="btn btn-default"> '+ item.content + '</button>')
                             .val(item))
-                        .append('<br/>');
+                        .append('<br/>').append('<br/>');
                     }
                         
 

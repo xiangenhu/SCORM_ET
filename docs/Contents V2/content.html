@@ -89,7 +89,7 @@
 	<button type="button" class="btn btn-primary col-sm-offset-5" onclick="SendToParent('SkipInteraction')" >Skip Interaction</button>
 		<div id="disp" name="disp"></div>
 	</div>
-	<div id = "DebugForm" class="col-sm-4 jumbotron">
+	<div id = "DebugForm" class="col-sm-4 jumbotron Debug">
 
 		<br>
 		<form  class="form-group ">
@@ -127,7 +127,7 @@
 
 		</form>
 	</div>
-	<div id = "DebugFormRecieve" class="col-sm-4 jumbotron" >
+	<div id = "DebugFormRecieve" class="col-sm-4 jumbotron Debug" >
 
 		<br>
 		<form  class="form-group ">
@@ -205,6 +205,8 @@
 
 <script type="text/javascript"> 
 	$( document ).ready(function() {
+		
+		$('.Debug').hide();
 		console.log($("#search-statements-since-date input").val());
 		
 		var dateTimeSettings = {
