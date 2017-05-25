@@ -19,6 +19,8 @@
        <script src="datatables/Scroller-1.4.2/js/datatables.scroller.min.js"></script>
        <link rel="stylesheet" href="datatables/Scroller-1.4.2/css/scroller.datatables.min.css">
 
+       <script src="chartjs/chart.js"></script>
+
 
        <script language=javascript src="Config.js"></script>
         <!--
@@ -55,13 +57,14 @@
 <button type="button" id="generalDataButton" class="btn btn-info btn-lg" style="display:none;" data-toggle="modal" data-target="#myModal">General Data</button>
 <button type="button" id="FeedBackDataButton" class="btn btn-info btn-lg" style="display:none;" data-toggle="modal" data-target="#FeedbackModal">Feedback Data</button>
 <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg" style="width: 80%;">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Data</h4>
         </div>
         <div class="modal-body">
+            <canvas id="myChart" width="900" height="500"></canvas>
           
             <div id="tableDiv">
                 
@@ -81,13 +84,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">You seem to be elibible for the following lessons.</h2>
+          <h2 class="modal-title">You seem to be eligible for the following lessons.</h2>
         </div>
         <div id="FeedbackModalBody" class="modal-body">
           
             
            
-
+            
           </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -100,6 +103,7 @@
 
 <script>
 $( document ).ready(function() {
+  
      //initialDataPullForStudent();
 });
 
@@ -391,6 +395,8 @@ function CountData(stmts){
                     columns: columns
                 } ).draw();
 
+                CreateBarChart(kcCountDic);
+
                 $("#generalDataButton").show();
 
             }
@@ -455,8 +461,58 @@ function CountData(stmts){
                         
 
                     });
+                   CreateBarChart('');
                   $('#FeedBackDataButton').click();
 
+            }
+
+            function CreateBarChart(passedData){
+                var tempLabels = [];
+                var tempData = [];
+                 for(var item in passedData) {
+                    temp = item.split('/');
+                  tempLabels.push(temp[temp.length-1]);
+                    tempData.push(passedData[item]);                          
+                }
+
+                var ctx = document.getElementById("myChart");
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: tempLabels,
+                        datasets: [{
+                            label: '# of passes',
+                            data: tempData,
+                            backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                            'rgba(255,99,132,1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: false,
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        }
+                    }
+                });
             }
 
 // Clear Statements received from the LRS

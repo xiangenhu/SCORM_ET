@@ -5,6 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<script src="chartjs/chart.js"></script>
 
 <script src="datepicker/moment/moment.js"></script>
 
@@ -85,10 +86,12 @@
 
 <div class="row">
 	<div class="col-sm-7">
-	
-	<button type="button" class="btn btn-primary col-sm-offset-5" onclick="SendToParent('SkipInteraction')" >Skip Interaction</button>
 		<div id="disp" name="disp"></div>
+		
+	<button type="button" class="btn btn-primary col-sm-offset-5" onclick="SendToParent('SkipInteraction')" >Skip Interaction</button>
+	<button type="button" class="btn btn-primary col-sm-offset-5" onclick="ToggleDebug()" >Toggle Debug</button>
 	</div>
+	
 	<div id = "DebugForm" class="col-sm-4 jumbotron Debug">
 
 		<br>
@@ -206,7 +209,7 @@
 <script type="text/javascript"> 
 	$( document ).ready(function() {
 		
-		$('.Debug').hide();
+		$('.Debug').toggle();
 		console.log($("#search-statements-since-date input").val());
 		
 		var dateTimeSettings = {
@@ -288,83 +291,90 @@
 var dt;
 
 
+function ToggleDebug(){
+	$('#VisualsDiv').toggle();
+	$('.Debug').toggle();
+
+}
 
 function SendToParent(mode,dataObject){
 
 	var sendData;
 
 	if(mode == "FromResource"){
-			sendData = {
-				userID : "WantFromMoodle",
-				Resource : URI + dataObject.resourceType,
-				verbVal : verb,
-				sScore : dataObject.score,
-				kcs : [dataObject.kcName],
-				kcURI : configKnowledgeComponentURI
-			}
-		}else if(mode == 'SkipInteraction'){
-				sendData = {
-					userID : document.getElementById("user").value,
-					Resource : document.getElementById("Resources").value,
-					verbVal : document.getElementById("verb").value,
-					sScore : document.getElementById("score").value,
-					kcs : [configKnowledgeComponents[1]],
-					kcURI : configKnowledgeComponentURI,
-					topic : document.getElementById("Topics").value,
-					uri : URI 
-				}
-		
-		}else{
-			var selectedKCArray = $('input:checkbox:checked').map(function () {
-				return this.value;
-			}).get();
-
-			sendData = {
-				userID : document.getElementById("user").value,
-				Resource : document.getElementById("Resources").value,
-				verbVal : document.getElementById("verb").value,
-				sScore : document.getElementById("score").value,
-				kcs : selectedKCArray,
-				kcURI : configKnowledgeComponentURI,
-				topic : document.getElementById("Topics").value,
-				uri : URI 
-			}
+		sendData = {
+			userID : "WantFromMoodle",
+			Resource : URI + dataObject.resourceType,
+			verbVal : verb,
+			sScore : dataObject.score,
+			kcs : [dataObject.kcName],
+			kcURI : configKnowledgeComponentURI
 		}
-		console.log(sendData);
-		parent.send(sendData); 
+	}else if(mode == 'SkipInteraction'){
+		sendData = {
+			userID : document.getElementById("user").value,
+			Resource : document.getElementById("Resources").value,
+			verbVal : document.getElementById("verb").value,
+			sScore : document.getElementById("score").value,
+			kcs : [configKnowledgeComponents[1]],
+			kcURI : configKnowledgeComponentURI,
+			topic : document.getElementById("Topics").value,
+			uri : URI 
+		}
+		
+	}else{
+		var selectedKCArray = $('input:checkbox:checked').map(function () {
+			return this.value;
+		}).get();
 
+		sendData = {
+			userID : document.getElementById("user").value,
+			Resource : document.getElementById("Resources").value,
+			verbVal : document.getElementById("verb").value,
+			sScore : document.getElementById("score").value,
+			kcs : selectedKCArray,
+			kcURI : configKnowledgeComponentURI,
+			topic : document.getElementById("Topics").value,
+			uri : URI 
+		}
 	}
+	console.log(sendData);
+	parent.send(sendData); 
 
-	function SendRecieveDataToParent(mode){
+}
 
-//always queryusing actor, verb, resource, Since/Until Date, and return count... post processing handles all of the calculations
+function SendRecieveDataToParent(mode){
+
+	//always queryusing actor, verb, resource, Since/Until Date, and return count... post processing handles all of the calculations
 	var sendData;
 
 	var sinceDate = $("#search-statements-since-date input").val();
-    var untilDate = $("#search-statements-until-date input").val(); 
+	var untilDate = $("#search-statements-until-date input").val(); 
 
 
 	if(mode == "Simulation"){
-	
-			sendData = {
-				userID : document.getElementById("userRecieve").value,
-				Resource : document.getElementById("ResourcesRecieve").value,
-				verbVal : document.getElementById("verbReceive").value,
-				count: document.getElementById("CountRecieved").value,
-				kcURI : configKnowledgeComponentURI,
-				uri: URI,
-				SinceDate : sinceDate,
-				UntilDate : untilDate
-			}
-			
+		
+		sendData = {
+			userID : document.getElementById("userRecieve").value,
+			Resource : document.getElementById("ResourcesRecieve").value,
+			verbVal : document.getElementById("verbReceive").value,
+			count: document.getElementById("CountRecieved").value,
+			kcURI : configKnowledgeComponentURI,
+			uri: URI,
+			SinceDate : sinceDate,
+			UntilDate : untilDate
+		}
 
 
-		//console.log(sendData);
+
+			//console.log(sendData);
 			parent.getStatementsWithSearch(sendData); 
 		}
-			
-			
-	}
+
+
+}
+
+
 </script>
 
 </body>
