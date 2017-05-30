@@ -41,12 +41,13 @@
     <body  style="border:1px solid #000; overflow:hidden;">
 	    <div class="row">
 			<div class="col-sm-offset-4">
+           
 
 				<h2>Toggle Debug View: <button type="button" id ='viewToggleButton' onclick="toggleView()" class="btn btn-primary">Toggle</button></h2>
 			</div>
 		</div>
 
-        <iframe id="iframe" width="100%" height=800px src="content.html"></iframe>
+        <iframe id="iframe" width="100%" height="800px"  src="content.html"></iframe>
         <div id="results"></div>
 
         <script>
@@ -103,9 +104,16 @@
 
 <script>
 $( document ).ready(function() {
+$( "#FeedbackModalBody" ).on( "click", ".recommendation", function() {
+
+  console.log( $( this ).text() );
+  document.getElementById('iframe').contentWindow.loadPage($( this ).text());
   
-     //initialDataPullForStudent();
 });
+
+    
+});
+
 
 
 //Toggle between difrent debug views
@@ -454,7 +462,7 @@ function CountData(stmts){
                     if(item.unlocked == false){
                         $('#FeedbackModalBody')
                         .append(
-                            $('<button type="button" style=" padding: 10px 20px;font-size: 20px;border-radius: 10px;" class="btn btn-default"> '+ item.content + '</button>')
+                            $('<button  type="button" style=" padding: 10px 20px;font-size: 20px;border-radius: 10px;" class="btn btn-default recommendation"> '+ item.content + '</button>')
                             .val(item))
                         .append('<br/>').append('<br/>');
                     }
