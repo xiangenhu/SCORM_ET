@@ -199,7 +199,7 @@ function toggleView(){
         }
 
         sendData = {
-                userID : "Joe1@gmail.com",
+                userID : "Jordan1@gmail.com",
                 Resource : "http://activity.com/autotutor",
                 verbVal : "passed",
                 count: 0,
@@ -341,7 +341,11 @@ function getStatementsWithSearch(recievedData) {
 function CountData(stmts){
     var kcCountDictionary = {};
     var resourceCountDictionary = {};
-                //iterate all statements
+    //-----------------------------------
+    var averageScorePerKC = {};
+    var averageScorePerResource = {};
+
+                //iterate all statements and count KCs
                 stmts.forEach(function(item) {
                     //console.log("UserEmail: " + item.actor.account.name);
                     //console.log(item.context.extensions);
@@ -349,20 +353,22 @@ function CountData(stmts){
 
                     //iterate all KCs
                     for(var kc in item.context.extensions) {
-                     if(kc in kcCountDictionary){
-                        kcCountDictionary[kc] = kcCountDictionary[kc] + 1;
-                    }else{
-                        kcCountDictionary[kc] = 1;
+                         if(kc in kcCountDictionary){
+                            kcCountDictionary[kc] = kcCountDictionary[kc] + 1;
+                        }else{
+                            kcCountDictionary[kc] = 1;
+                        }
+
                     }
 
-                }
-
-                
+                //Count Resources
                 if(item.object.id in resourceCountDictionary){
                     resourceCountDictionary[item.object.id] = resourceCountDictionary[item.object.id] + 1;
                 }else{
                  resourceCountDictionary[item.object.id] = 1;
-             }
+                }
+
+
 
          });
                 
@@ -459,7 +465,7 @@ function CountData(stmts){
                   $('#FeedbackModalBody').html('');
                    accessibleResources.forEach(function(item, index, array) {
 
-                    if(item.unlocked == false){
+                    if(item.unlocked == true){
                         $('#FeedbackModalBody')
                         .append(
                             $('<button  type="button" style=" padding: 10px 20px;font-size: 20px;border-radius: 10px;" class="btn btn-default recommendation"> '+ item.content + '</button>')
