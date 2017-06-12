@@ -434,30 +434,35 @@ function CountData(stmts){
 
 
                   tempGSheetData.forEach(function(item, index, array) {
-                    var numOfRequiredKcs = item.requiredKcs.split(',').length;
-                    var numOfSatisfiedKcs = 0;
+                    //make sure the requiredKC Field in google sheet has values
+                    if(item.requiredKcs != null){
+                        var numOfRequiredKcs = item.requiredKcs.split(',').length;
+                        var numOfSatisfiedKcs = 0;
 
-                     item.requiredKcs.split(',').forEach(function(requiredKc, index, array) {
-                        //console.log(requiredKc.replace(/ /g,'_'));
-                        requiredKc = requiredKc.replace(/ /g,'_');
+                         item.requiredKcs.split(',').forEach(function(requiredKc, index, array) {
+                            //console.log(requiredKc.replace(/ /g,'_'));
+                            requiredKc = requiredKc.replace(/ /g,'_');
 
-                         //console.log(kcCountDic['http://example.com/KC/'+requiredKc]);
-                        if(kcCountDic['http://example.com/KC/'+requiredKc] >0){
-                            numOfSatisfiedKcs++;
+                             //console.log(kcCountDic['http://example.com/KC/'+requiredKc]);
+                            if(kcCountDic['http://example.com/KC/'+requiredKc] >0){
+                                numOfSatisfiedKcs++;
+                            }
+
+     
+                        });
+
+                        console.log('Number of Required KCS: ' + numOfRequiredKcs + ' Number of Satisfied KCS: ' + numOfSatisfiedKcs);
+                        
+
+
+                        if(numOfRequiredKcs == numOfSatisfiedKcs){
+                            accessibleResources.push({'content' : item['Base Link (Original)'], 'unlocked': true});
+                        }else{
+                            accessibleResources.push({'content' : item['Base Link (Original)'], 'unlocked': false});
                         }
 
- 
-                    });
-
-                    console.log('Number of Required KCS: ' + numOfRequiredKcs + ' Number of Satisfied KCS: ' + numOfSatisfiedKcs);
-                    
-
-
-                    if(numOfRequiredKcs == numOfSatisfiedKcs){
-                        accessibleResources.push({'content' : item.content, 'unlocked': true});
-                    }else{
-                        accessibleResources.push({'content' : item.content, 'unlocked': false});
                     }
+                   
 
 
                 });
