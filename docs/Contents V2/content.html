@@ -52,7 +52,8 @@
     					resourceType : ATType,
     					bundleTitle : BundleTitle,
     					kcName : ATKcName,
-    					verb: val
+    					verb: val,
+    					resourceTopic: BundleTitle
 
     				}
     				console.log(resourceData);
@@ -313,10 +314,12 @@ function SendToParent(mode,dataObject){
 		sendData = {
 			userID : "WantFromMoodle",
 			Resource : URI + dataObject.resourceType,
-			verbVal : verb,
+			verbVal : dataObject.verb,
 			sScore : dataObject.score,
 			kcs : [dataObject.kcName],
-			kcURI : configKnowledgeComponentURI
+			kcURI : configKnowledgeComponentURI,
+			topic : dataObject.resourceTopic,
+			uri : URI 
 		}
 	}else if(mode == 'SkipInteraction'){
 		sendData = {
