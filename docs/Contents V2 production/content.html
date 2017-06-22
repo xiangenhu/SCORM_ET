@@ -12,7 +12,6 @@
 <script src="datepicker/js/bootstrap-datetimepicker.min.js"></script>
 
 
-<script language=javascript src="util/APIWrapper.js"></script>
 <script language=javascript src="ET.js"></script>
 
 <script language=javascript src="Config.js"></script>
@@ -71,7 +70,7 @@
    
     function loadPage(link) {
     	
-    	var result = doInitialize();
+    	//var result = parent.pipwerks.SCORM.connection.initialize;
     	var html = '<div style="padding: 15px 20px;  font-weight: bold;">';
     	html += '<span id="ATscore"></span>';
     	html += '</div>';
@@ -116,7 +115,7 @@ function SendToParent(mode,dataObject){
 
 	if(mode == "FromResource"){
 		sendData = {
-			userID : "WantFromMoodle",
+			userID : "FromMoodle",
 			Resource : URI + dataObject.resourceType,
 			verbVal : dataObject.verb,
 			sScore : dataObject.score,

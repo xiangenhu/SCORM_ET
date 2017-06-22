@@ -5,7 +5,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-      
+       
+        <script language=javascript src="util/APIWrapper.js"></script>
+
         <script type="text/javascript" src="tabletop/src/tabletop.js"></script>
         <script src="tabletop/sheetreader.js"></script>
 
@@ -187,9 +189,11 @@ function toggleView(){
 
 
     function send(recievedData){
+        var userName = moodleUserName.replace(/ /g,'').split(',');
+        var firstName = userName[0];
+        var lastName = userName[1];
 
     	
-
         ret = {
           actor: {account:{}},
           verb: ADL.verbs[recievedData.verbVal],
@@ -198,9 +202,9 @@ function toggleView(){
           timestamp: (new Date()).toISOString()
       };
 
-      ret.actor.account.name = recievedData.userID;
+      ret.actor.account.name = firstName + ' ' + lastName;
       ret.actor.account.homePage = recievedData.uri;
-      ret.actor.objectType ="Agent";
+      //ret.actor.objectType ="Agent";
 
       recievedData.kcs.forEach(function(item, index, array) {
         var temp = item.replace(/ /g,'_');
