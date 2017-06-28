@@ -9,7 +9,8 @@ var configUsers =
 'Jordan1@gmail.com',
 'Thomas1@hotmail.com',
 'Kate1@hotmail.com',
-'Sally1@gmail.com'
+'Sally1@gmail.com',
+'Admin ElectronixTutor'
 ];
 
 var configResources = 
