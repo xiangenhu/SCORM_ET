@@ -6,6 +6,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+
 <script src="datepicker/moment/moment.js"></script>
 
 <link rel="stylesheet" href="datepicker/css/bootstrap-datetimepicker.min.css">
@@ -44,6 +45,12 @@
     		} else {
     			val = "passed";
     		}
+                    console.log(ATScore);
+                    console.log(ATScore * 100);
+                    
+                    parent.pipwerks.SCORM.set("cmi.core.score.raw", ATScore * 100);
+                    parent.pipwerks.SCORM.status("set", "completed");
+                    parent.pipwerks.SCORM.save();
 
     				var resourceData = {
     					score : ATScore,
@@ -60,7 +67,6 @@
     		}
 
     		
-
     		document.getElementById("ATscore").innerHTML = 'Topic Name: ' + BundleTitle + '<br>' + 'Type of Question: ' + ATType + '<br>' + 'Knowledge Component: ' + ATKcName + '<br>' + 'Score: ' + ATScore + '<br>' + 'Overall Performance (Threshold  = 0.5): ' + val;
 
     	},
@@ -152,8 +158,6 @@ function SendRecieveDataToParent(mode){
 			SinceDate : sinceDate,
 			UntilDate : untilDate
 		}
-
-
 
 			//console.log(sendData);
 			parent.getStatementsWithSearch(sendData); 

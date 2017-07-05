@@ -845,5 +845,7 @@ pipwerks.UTILS.trace = function(msg){
 
 
 pipwerks.SCORM.connection.initialize();
-var moodleUserID = pipwerks.SCORM.data.get("cmi.core.student_id");
 var moodleUserName = pipwerks.SCORM.data.get("cmi.core.student_name");
+pipwerks.SCORM.set("cmi.core.score.min", 0);
+pipwerks.SCORM.set("cmi.core.score.max", 1);
+pipwerks.SCORM.save();
