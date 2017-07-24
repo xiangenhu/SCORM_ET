@@ -28,6 +28,26 @@
     var ATScore;
     var Threshold = 0.5;
 
+    //Timer
+    	var start = new Date().getTime();
+    	/*
+    	var i = 0;
+    	var t=1232342134123421341234;
+    	while (i < 90000000){
+    		t = i+5234523423452345234523452345234+t-t;
+    		i++;
+    	}
+
+     var end = new Date().getTime();
+     console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! TIME');
+     console.log(start);
+     console.log(end);
+     var timeSpent = (end - start)/1000;
+     console.log('seconds: ' + (end - start)/1000);
+	 console.log('milliseconds: ' + (end - start));
+	 console.log(-.1 * (1 / (1 + Math.E ^ -((1/600) * (timeSpent-600) )) ));
+	*/
+
     window.addEventListener("message",
     	function submitScore(evt) {
     		console.log(":::::::::::::::::::::Function Called::::::::::::::::::");
@@ -47,6 +67,19 @@
     		}
                     console.log(ATScore);
                     console.log(ATScore * 100);
+
+                    var end = Date.getTime();
+                    var timeSpent = (end - start)/1000;
+
+                    var timePenalty = 0;
+
+                    if(timeSpent > 180){
+                    	timeAfterThreeMin = timeSpent - 180;
+                    	timePenalty = (-.1 * (1 / (1 + Math.E ^ -((1/600) * (timeSpent-600) )) ));
+                    }
+
+
+                    ATScore = ATScore + timePenalty;
                     
                     parent.pipwerks.SCORM.set("cmi.core.score.raw", ATScore * 100);
                     parent.pipwerks.SCORM.status("set", "completed");
