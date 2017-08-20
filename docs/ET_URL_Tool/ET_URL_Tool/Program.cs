@@ -40,8 +40,9 @@ namespace ET_URL_Tool
                 
 
                 MySqlCommand cmd = cnn.CreateCommand();
-                cmd.CommandText = "SELECT * from knn_course_modules INNER JOIN knn_scorm ON knn_course_modules.instance = knn_scorm.id AND  knn_course_modules.module = 19;";
-
+                //module 19 = scorm ... Module 23 = url
+                //cmd.CommandText = "SELECT * from knn_course_modules INNER JOIN knn_scorm ON knn_course_modules.instance = knn_scorm.id AND  knn_course_modules.module = 19;";
+                cmd.CommandText = "SELECT * from knn_course_modules INNER JOIN knn_url ON knn_course_modules.instance = knn_url.id AND  knn_course_modules.module = 23;";
 
                 cnn.Open();
 
@@ -52,14 +53,19 @@ namespace ET_URL_Tool
                     string id = reader[0].ToString();
                     string courseNumber = reader[1].ToString();
                     string name = reader[22].ToString();
+                    string description = reader[23].ToString();
 
                     //Here we get all of the scorm instance names from database along witht the link id's for each one
-                    ScormNameToScormLinkID.Add(name,id);
+                    //ScormNameToScormLinkID.Add(name,id);
+                    description = description.Replace("<p>", "").Replace("</p>", "");
 
-                   
-                   
+                    if(!description.Equals(""))
+                        ScormNameToScormLinkID.Add(description, id);
 
-                    Debug.WriteLine( id + " " + courseNumber+ " " +name+ " ");
+
+
+                    //Course Modulele id, Courseid, Url name
+                    Debug.WriteLine( id + " " + courseNumber+ " " +name+ " " + " " + description);
                 }
 
                 Debug.WriteLine("Connection Open ! ");
