@@ -78,15 +78,12 @@ var t;
 $( document ).ready(function() {
     getinnerbundlematrix("Cadarrius Mcglown","Transistor");
 
-    
-
-
-
+//t = document.getElementById('iframe');
 //t.contentWindow.loadPage("www.google.com");
 $( "#button" ).click(function() {
   alert( "Handler for .click() called." );
    console.log( "google" );
-  document.getElementById('iframe').contentWindow.loadPage("https://prod.x-in-y.com/ASAT2016/Template/Template_ET/Mainpage_ET.html?id=04c9e0a4-bb46-4d81-899a-9008babc02af");
+  document.getElementById('iframe').contentWindow.loadPage(JSON.parse(localStorage["currentResource"]).Flash);
 });
 
 
@@ -102,12 +99,18 @@ $( "#FeedbackModalBody" ).on( "click", ".recommendation", function() {
 
 function BeginBundle(){
     var context = localStorage['context'];
-    localStorage['currentState'] = "ATDRQ";
+    localStorage['currentState'] = "SelectedReading";
     
     if (context) 
         context = JSON.parse(context);
 
-    t = document.getElementById('iframe');
+    //choose a resource to be used in this Begin state: For now the first selected reading in bundle i.e. 0 
+    var currentResource = context.TopicGroupByType[localStorage['currentState']][0]
+    localStorage['currentResource'] = JSON.stringify(currentResource);
+
+
+    //Open the currentResource
+    $("#button").click();
 }
 
 //

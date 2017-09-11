@@ -58,27 +58,30 @@ var moodleUserName = '';
      var typeGrouping = {};
      
      //1) Group AT Knowledge check questions
-     //var selectedReadings = [];
-     var deepReasonings = [];
-     var knowledgeChecks = [];
+     var SelectedReading = [];
+     var AutoTutorDRQ = [];
+     var AutoTutorKC = [];
      //var skillBuilders = [];
      //var dragoons = [];
      
        $.each(json[topic], function( index, value ) {
+
+        if(value["File Name"].includes("SelectedReading")){
+          SelectedReading.push(value);
+        }
         
         if(value["File Name"].includes("KC")){
-          knowledgeChecks.push(value);
-          //console.log(value);
+          AutoTutorKC.push(value);
         }
 
         if(value["File Name"].includes("DR")){
-          deepReasonings.push(value);
-          console.log(value);
+          AutoTutorDRQ.push(value);
         }
       
        });
-       typeGrouping["KnowledgeCheck"] = knowledgeChecks;
-       typeGrouping["DeepReasoning"] = deepReasonings;
+       typeGrouping["SelectedReading"] = SelectedReading;
+       typeGrouping["KnowledgeCheck"] = AutoTutorKC;
+       typeGrouping["DeepReasoning"] = AutoTutorDRQ;
         //1) end
         return typeGrouping
     }
