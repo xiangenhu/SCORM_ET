@@ -74,11 +74,13 @@
 
 <script>
 var t;
-var context = {};
-$( document ).ready(function() {
-    getinnerbundlematrix("Cadarrius Mcglown");
 
-t = document.getElementById('iframe');
+$( document ).ready(function() {
+    getinnerbundlematrix("Cadarrius Mcglown","Transistor");
+
+    
+
+
 
 //t.contentWindow.loadPage("www.google.com");
 $( "#button" ).click(function() {
@@ -98,7 +100,15 @@ $( "#FeedbackModalBody" ).on( "click", ".recommendation", function() {
     
 });
 
+function BeginBundle(){
+    var context = localStorage['context'];
+    localStorage['currentState'] = "ATDRQ";
+    
+    if (context) 
+        context = JSON.parse(context);
 
+    t = document.getElementById('iframe');
+}
 
 //
 //----------------

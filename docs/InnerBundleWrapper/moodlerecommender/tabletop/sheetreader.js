@@ -12,26 +12,34 @@ var moodleUserName = '';
                          simpleSheet: true } );
       }
 
-      function getinnerbundlematrix(username) {
+      function getinnerbundlematrix(username, topic) {
         moodleUserName = username;
         Tabletop.init( { key: innerBundle_Matrix,
                          callback: function(data, tabletop) { 
                        //console.log(data)
-                       calltwo(data);
+                       calltwo(data, topic);
                    },
                          simpleSheet: true } );
       }
 
-      function calltwo(innerMatrix) {
+      function calltwo(innerMatrix, topic) {
         Tabletop.init( { key: ETResources,
                          callback: function(data, tabletop) { 
+                          var context = {};
                        //console.log(data)
 
                        //var package = {};
 
                        context.innerMatrix = innerMatrix;
                        context.resources = data.Testing.elements;
-                       var groupByTopic = GroupBy(data.Testing.elements, 'Topic');
+                       context.ResourcesGroupByTopic = GroupBy(data.Testing.elements, 'Topic');
+                       context.TopicGroupByType = GroupByType(context.ResourcesGroupByTopic,topic);
+                       //var ResourcesGroupByTopic = GroupBy(data.Testing.elements, 'Topic');
+                       //var TopicGroupByType = GroupByType(ResourcesGroupByTopic,"Transistor");
+
+                       localStorage['context'] = JSON.stringify(context);
+                       BeginBundle();
+
                        console.log("This context provides the learning resources datasheet (JSON).. And the innerBundle transitions matrix (JSON)");
                        console.log(context);
                        //calltwo(data);
@@ -45,6 +53,36 @@ var moodleUserName = '';
         return rv;
       }, {});
     };
+
+    function GroupByType(json, topic) {
+     var typeGrouping = {};
+     
+     //1) Group AT Knowledge check questions
+     //var selectedReadings = [];
+     var deepReasonings = [];
+     var knowledgeChecks = [];
+     //var skillBuilders = [];
+     //var dragoons = [];
+     
+       $.each(json[topic], function( index, value ) {
+        
+        if(value["File Name"].includes("KC")){
+          knowledgeChecks.push(value);
+          //console.log(value);
+        }
+
+        if(value["File Name"].includes("DR")){
+          deepReasonings.push(value);
+          console.log(value);
+        }
+      
+       });
+       typeGrouping["KnowledgeCheck"] = knowledgeChecks;
+       typeGrouping["DeepReasoning"] = deepReasonings;
+        //1) end
+        return typeGrouping
+    }
+
 
       function CallFromMoodle(username){
         moodleUserName = username;
