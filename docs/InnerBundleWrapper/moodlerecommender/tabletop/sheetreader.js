@@ -61,7 +61,7 @@ var moodleUserName = '';
      var SelectedReading = [];
      var AutoTutorDRQ = [];
      var AutoTutorKC = [];
-     //var skillBuilders = [];
+     var SkillBuilder = [];
      //var dragoons = [];
      
        $.each(json[topic], function( index, value ) {
@@ -78,10 +78,14 @@ var moodleUserName = '';
           AutoTutorDRQ.push(value);
         }
       
+         if(value["File Name"].includes("SkillBuilder")){
+          SkillBuilder.push(value);
+        }
        });
        typeGrouping["SelectedReading"] = SelectedReading;
-       typeGrouping["KnowledgeCheck"] = AutoTutorKC;
-       typeGrouping["DeepReasoning"] = AutoTutorDRQ;
+       typeGrouping["AutoTutorKC"] = AutoTutorKC;
+       typeGrouping["AutoTutorDRQ"] = AutoTutorDRQ;
+       typeGrouping["SkillBuilder"] = SkillBuilder;
         //1) end
         return typeGrouping
     }

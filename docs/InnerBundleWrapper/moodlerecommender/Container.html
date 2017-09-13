@@ -39,6 +39,7 @@
     </head>
     <body  style="border:1px solid #000; overflow:hidden;">
 <button type="button" id="button" class="btn btn-info btn-lg myclass" >button</button>
+<button type="button" id="finishbutton" class="btn btn-info btn-lg myclass" >finish</button>
   
      <iframe id="iframe"   src="content.html" style="position: absolute; height: 100%; width:100%; border: none" align="middle"></iframe>
    
@@ -57,7 +58,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">We recommend the following lessons.</h2>
+          <h2 class="modal-title">Good Job.</h2>
         </div>
         <div id="FeedbackModalBody" class="modal-body">
           
@@ -76,13 +77,16 @@
 var t;
 
 $( document ).ready(function() {
-    getinnerbundlematrix("Cadarrius Mcglown","Transistor");
+    localStorage['currentTopic'] = "Transistor";
+    getinnerbundlematrix("Cadarrius Mcglown",localStorage['currentTopic']);
 
 //t = document.getElementById('iframe');
 //t.contentWindow.loadPage("www.google.com");
-$( "#button" ).click(function() {
-  alert( "Handler for .click() called." );
-   console.log( "google" );
+
+$( "#finishbutton" ).click(function() {
+  NextResource();
+});
+$( "#button" ).click(function() { 
   document.getElementById('iframe').contentWindow.loadPage(JSON.parse(localStorage["currentResource"]).Flash);
 });
 
@@ -111,6 +115,63 @@ function BeginBundle(){
 
     //Open the currentResource
     $("#button").click();
+}
+
+function NextResource(){
+    var scoreRank = ["High","Med","Low"];
+    var userRank = scoreRank[getRandomInt(0,2)];
+
+    var context = JSON.parse(localStorage['context']);
+    var previousState = localStorage['currentState'];
+    
+    
+    if(previousState =="SelectedReading"){
+        localStorage['currentState'] = "AutoTutorDRQ";
+        localStorage['currentResource'] = context.TopicGroupByType[localStorage['currentState']][0];
+
+    }else if(previousState =="AutoTutorDRQ"){
+        if(scoreRank == "High"){
+            localStorage['currentState'] = "Dragoon";
+        }else{
+            localStorage['currentState'] = "AutoTutorKC";
+        }
+
+    }else if(previousState =="AutoTutorKC"){
+        if(scoreRank == "High"){
+            localStorage['currentState'] = "AutoTutorDRQ";
+        }else{
+            localStorage['currentState'] = "SkillBuilder";
+        }
+  
+    }else if(previousState =="SkillBuilder"){
+        //Done function to end things
+        console.log("done");
+        $('#FeedbackModalBody')
+                        .append(
+                            $('<h1  type="button" style=" padding: 10px 20px;font-size: 20px;border-radius: 10px;" "> '+ "You finished the " + localStorage['currentTopic'] + " Bundle." + '</h1>')
+                            .val(""));
+        $('#FeedBackDataButton').click();
+        return;
+    }else if(previousState =="Dragoon"){
+        //Done function to end things
+        console.log("done");
+        return;
+    }
+
+    localStorage['currentResource'] = JSON.stringify(context.TopicGroupByType[localStorage['currentState']][0]);
+
+    //Open the currentResource
+    $("#button").click();
+    console.log("previous State:::::::: " + previousState);
+    console.log("Rank:::::::: " + userRank);
+    console.log("current State:::::::: " + localStorage['currentState']);
+    console.log("current Resource:::::::: " + localStorage['currentResource']);
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
 }
 
 //
