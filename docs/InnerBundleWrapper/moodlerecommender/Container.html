@@ -41,7 +41,7 @@
 <button type="button" id="button" class="btn btn-info btn-lg myclass" >button</button>
 <button type="button" id="finishbutton" class="btn btn-info btn-lg myclass" >finish</button>
   
-     <iframe id="iframe"   src="content.html" style="position: absolute; height: 100%; width:100%; border: none" align="middle"></iframe>
+     <iframe id="iframe"   src="content.html" style="position: absolute; height: 1000px; width:1000px; border: none" align="middle"></iframe>
    
        
 
@@ -89,6 +89,10 @@ $( "#finishbutton" ).click(function() {
 $( "#button" ).click(function() { 
   document.getElementById('iframe').contentWindow.loadPage(JSON.parse(localStorage["currentResource"]).Flash);
 });
+
+
+
+
 
 
 $( "#FeedbackModalBody" ).on( "click", ".recommendation", function() {
