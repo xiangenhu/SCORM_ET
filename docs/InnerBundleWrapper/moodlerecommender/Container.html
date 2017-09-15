@@ -78,32 +78,32 @@ var t;
 
 $( document ).ready(function() {
     localStorage['currentTopic'] = "Transistor";
-    getinnerbundlematrix("Cadarrius Mcglown",localStorage['currentTopic']);
+    localStorage['userName'] = GetURLVariable('username');
 
-//t = document.getElementById('iframe');
-//t.contentWindow.loadPage("www.google.com");
+    getinnerbundlematrix(localStorage['userName'],localStorage['currentTopic']);
 
-$( "#finishbutton" ).click(function() {
-  NextResource();
-});
-$( "#button" ).click(function() { 
-  document.getElementById('iframe').contentWindow.loadPage(JSON.parse(localStorage["currentResource"]).Flash);
-});
-
-
-
-
-
-
-$( "#FeedbackModalBody" ).on( "click", ".recommendation", function() {
-
-  console.log( $( this ).text() );
-  document.getElementById('iframe').contentWindow.loadPage($( this ).val());
   
-});
+
+    //t = document.getElementById('iframe');
+    //t.contentWindow.loadPage("www.google.com");
+
+    $( "#finishbutton" ).click(function() {
+      NextResource();
+    });
+    $( "#button" ).click(function() { 
+
+      document.getElementById('iframe').contentWindow.loadPage(JSON.parse(localStorage["currentResource"]).Flash);
+    });
 
     
 });
+
+function GetURLVariable(v){
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get(v);
+    return c;
+}
 
 function BeginBundle(){
     var context = localStorage['context'];
@@ -164,6 +164,8 @@ function NextResource(){
 
     localStorage['currentResource'] = JSON.stringify(context.TopicGroupByType[localStorage['currentState']][0]);
 
+    //
+        xAPIStatement();
     //Open the currentResource
     $("#button").click();
     console.log("previous State:::::::: " + previousState);
@@ -178,6 +180,8 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
 }
 
+
+
 //
 //----------------
 //
@@ -187,6 +191,7 @@ function getRandomInt(min, max) {
         if (!err) {
             wrapper = ADL.XAPIWrapper = xAPIWrapper;
             console.log("--- content launched via xAPI Launch ---\n", wrapper.lrs, "\n", launchdata);
+
         } else {
             wrapper = ADL.XAPIWrapper;
             wrapper.changeConfig({
@@ -210,6 +215,47 @@ function getRandomInt(min, max) {
         "auth" : "Basic " + toBase64(user + ":" + password),
     };
     ADL.XAPIWrapper.changeConfig(conf);
+
+
+}
+
+function xAPIStatement(){
+   var basicStatement= {
+            "actor": {
+                "account": {
+                    "name": localStorage['userName'],
+                    "homePage": "http://ElectronixTutor.com"
+                },
+                "objectType": "Agent"
+            },
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "object": {
+                "id": "http://ElectronixTutor.com/example",
+                "definition": {
+                    "name": {
+                        "en-US": localStorage['currentState']
+                    },
+                    "description": {
+                        "en-US": JSON.parse(localStorage['currentResource'])['File Name']
+                    }
+                },
+                "objectType": "Activity"
+            },"context": {
+        "extensions": {
+            "http://ElectronixTutor.com/Context": JSON.parse(localStorage['context'])
+                
+            
+        }
+    }
+        };
+
+        wrapper.sendStatement(basicStatement, outputResults);
+
 }
 </script>
 
@@ -261,15 +307,9 @@ function getRandomInt(min, max) {
             //getStatementsWithSearch(sendData);
     }
 
-    function LessonResourceDataCall(data){
-
-    }
-
 
 
     function send(recievedData){
-
-    	
 
         ret = {
           actor: {account:{}},
