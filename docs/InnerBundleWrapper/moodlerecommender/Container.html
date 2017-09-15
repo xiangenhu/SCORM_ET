@@ -124,6 +124,8 @@ function BeginBundle(){
 function NextResource(){
     var scoreRank = ["High","Med","Low"];
     var userRank = scoreRank[getRandomInt(0,2)];
+    //Previous resource comepleted
+        xAPIStatement('completed');
 
     var context = JSON.parse(localStorage['context']);
     var previousState = localStorage['currentState'];
@@ -164,8 +166,8 @@ function NextResource(){
 
     localStorage['currentResource'] = JSON.stringify(context.TopicGroupByType[localStorage['currentState']][0]);
 
-    //
-        xAPIStatement();
+    //New resource launched/opened
+        xAPIStatement('launched');
     //Open the currentResource
     $("#button").click();
     console.log("previous State:::::::: " + previousState);
@@ -200,7 +202,7 @@ function getRandomInt(min, max) {
                 password: 'x8z43P0Xoi0oKXC6qSvQ'
             });
             console.log("--- content statically configured ---\n", wrapper.lrs);
-              xAPIStatement();
+              xAPIStatement('launched');
         }
         $('#endpoint').text(wrapper.lrs.endpoint);
     }, true);
@@ -220,7 +222,7 @@ function getRandomInt(min, max) {
 
 }
 
-function xAPIStatement(){
+function xAPIStatement(verb){
    var basicStatement= {
             "actor": {
                 "account": {
@@ -229,12 +231,7 @@ function xAPIStatement(){
                 },
                 "objectType": "Agent"
             },
-            "verb": {
-                "id": "http://adlnet.gov/expapi/verbs/answered",
-                "display": {
-                    "en-US": "answered"
-                }
-            },
+            "verb": ADL.verbs[verb],
             "object": {
                 "id": "http://ElectronixTutor.com/example",
                 "definition": {
