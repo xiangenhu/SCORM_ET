@@ -39,9 +39,9 @@
     </head>
     <body  style="border:1px solid #000; overflow:hidden;">
 <button type="button" id="button" class="btn btn-info btn-lg myclass" >button</button>
-<button type="button" id="finishbutton" class="btn btn-info btn-lg myclass" >finish</button>
+<button type="button" id="finishbutton" class="btn btn-info btn-lg myclass" >finish</button><br>
   
-     <iframe id="iframe"   src="content.html" style="position: absolute; height: 1000px; width:1000px; border: none" align="middle"></iframe>
+     <iframe id="iframe"   src="content.html" style="position: absolute; height: 830px; width:1160px; border: none" align="middle"></iframe>
    
        
 
@@ -91,7 +91,7 @@ $( document ).ready(function() {
       NextResource();
     });
     $( "#button" ).click(function() { 
-
+        localStorage['startTime'] = new Date().getTime();
       document.getElementById('iframe').contentWindow.loadPage(JSON.parse(localStorage["currentResource"]).Flash);
     });
 
@@ -125,10 +125,19 @@ function BeginBundle(){
 function NextResource(){
     var scoreRank = ["High","Med","Low"];
     var userRank = scoreRank[getRandomInt(0,2)];
+    var score = Math.random();
+    var threshold = .6;
+
+    var context = JSON.parse(localStorage['context']);
+    //save score theshold and time spent
+    context.endTimeInSec = (new Date().getTime() - localStorage['startTime'])/1000;
+    context.threshold = threshold;
+    localStorage['score'] = score;
+    localStorage['context'] = JSON.stringify(context);
     //Previous resource comepleted
         xAPIStatement('completed');
 
-    var context = JSON.parse(localStorage['context']);
+    
     var previousState = localStorage['currentState'];
     
     
@@ -137,14 +146,14 @@ function NextResource(){
         localStorage['currentResource'] = context.TopicGroupByType[localStorage['currentState']][0];
 
     }else if(previousState =="AutoTutorDRQ"){
-        if(scoreRank == "High"){
+        if(score > threshold){
             localStorage['currentState'] = "Dragoon";
         }else{
             localStorage['currentState'] = "AutoTutorKC";
         }
 
     }else if(previousState =="AutoTutorKC"){
-        if(scoreRank == "High"){
+        if(score > threshold){
             localStorage['currentState'] = "AutoTutorDRQ";
         }else{
             localStorage['currentState'] = "SkillBuilder";
@@ -165,8 +174,20 @@ function NextResource(){
         return;
     }
 
-    localStorage['currentResource'] = JSON.stringify(context.TopicGroupByType[localStorage['currentState']][0]);
+    //for now dragoon leads to the end of the bundle. This means there will be no current resource after dragoon is complete. this may change
+    if(previousState != "Dragoon"){
+        localStorage['currentResource'] = JSON.stringify(context.TopicGroupByType[localStorage['currentState']][0]);
+    }
+    
 
+    //
+
+   
+
+    //time spent is reset to 0 for new resource being lauched. 
+    context.endTimeInSec = 0.0;
+    //
+     localStorage['context'] = JSON.stringify(context);
     //New resource launched/opened
         xAPIStatement('launched');
     //Open the currentResource
@@ -245,13 +266,20 @@ function xAPIStatement(verb){
                 },
                 "objectType": "Activity"
             },"context": {
-        "extensions": {
-            "http://ElectronixTutor.com/Context": JSON.parse(localStorage['context'])
-                
-            
-        }
+                "extensions": {
+                    "http://ElectronixTutor.com/Context": JSON.parse(localStorage['context'])
+                        
+                    
+                }
+            },
+             "result": {
+                "score": {
+                    "scaled": parseFloat((verb == 'completed') ? localStorage['score'] : 0.0)
+                }
     }
         };
+
+        console.log(JSON.stringify(basicStatement));
 
         wrapper.sendStatement(basicStatement, outputResults);
 

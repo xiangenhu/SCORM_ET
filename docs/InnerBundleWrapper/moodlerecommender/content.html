@@ -73,14 +73,14 @@
         
     	
     	//var result = doInitialize();
-    	var html = '<div style="padding: 15px 20px;  font-weight: bold;">';
-    	html += '<span id="ATscore"></span>';
-    	html += '</div>';
+    	//var html = '<div style="padding: 15px 20px;  font-weight: bold;">';
+    	//html += '<span id="ATscore"></span>';
+    	//html += '</div>';
     	if (link == undefined ) {
 	        // argument passed and not undefined
-	        html += '<iframe src="' + GetLinks(ATType) + '" width="900" height="768" frameborder="0"/>';
+	        html = '<iframe src="' + GetLinks(ATType) + '" width="900" height="768" frameborder="0"/>';
 	    }else{
-	    	html += '<iframe src="' + link + '" width="1150" height="810" frameborder="0"/>';
+	    	html = '<iframe src="' + link + '" width="1150" height="810" frameborder="0"/>';
 	    }
     	
     	
