@@ -65,7 +65,7 @@
             
           </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="CompletedBundleButton" type="button" class="btn btn-default" data-dismiss="modal">Continue</button>
         </div>
       </div>
     </div>
@@ -79,6 +79,7 @@ var t;
 $( document ).ready(function() {
     localStorage['currentTopic'] = GetURLVariable('topic');
     localStorage['userName'] = GetURLVariable('username');
+    localStorage['userID'] = GetURLVariable('userid');
 
     getinnerbundlematrix(localStorage['userName'],localStorage['currentTopic']);
 
@@ -95,7 +96,9 @@ $( document ).ready(function() {
       document.getElementById('iframe').contentWindow.loadPage(JSON.parse(localStorage["currentResource"]).Flash);
     });
 
-    
+     $( "#CompletedBundleButton " ).click(function() { 
+       window.location.href = 'http://et.x-in-y.com/course/view.php?id=10';
+    });
 });
 
 function GetURLVariable(v){
@@ -123,6 +126,7 @@ function BeginBundle(){
 }
 
 function NextResource(){
+
     var scoreRank = ["High","Med","Low"];
     var userRank = scoreRank[getRandomInt(0,2)];
     var score = Math.random();
@@ -136,7 +140,6 @@ function NextResource(){
     localStorage['context'] = JSON.stringify(context);
     //Previous resource comepleted
         xAPIStatement('completed');
-
     
     var previousState = localStorage['currentState'];
     
@@ -170,15 +173,117 @@ function NextResource(){
         return;
     }else if(previousState =="Dragoon"){
         //Done function to end things
-        console.log("done");
+        $('#FeedbackModalBody')
+                        .append(
+                            $('<h1  type="button" style=" padding: 10px 20px;font-size: 20px;border-radius: 10px;" "> '+ "You finished the " + localStorage['currentTopic'] + " Bundle." + '</h1>')
+                            .val(""));
+        $('#FeedBackDataButton').click();
         return;
     }
 
     //for now dragoon leads to the end of the bundle. This means there will be no current resource after dragoon is complete. this may change
     if(previousState != "Dragoon"){
-        localStorage['currentResource'] = JSON.stringify(context.TopicGroupByType[localStorage['currentState']][0]);
+        
     }
+    localStorage['currentResource'] = JSON.stringify(context.TopicGroupByType[localStorage['currentState']][0]);
+
+    //
+
+   
+
+    //time spent is reset to 0 for new resource being lauched. 
+    context.endTimeInSec = 0.0;
+    //
+     localStorage['context'] = JSON.stringify(context);
+    //New resource launched/opened
+        xAPIStatement('launched');
+    //Open the currentResource
+    $("#button").click();
+    console.log("previous State:::::::: " + previousState);
+    console.log("Rank:::::::: " + userRank);
+    console.log("current State:::::::: " + localStorage['currentState']);
+    console.log("current Resource:::::::: " + localStorage['currentResource']);
+}
+
+function NextResourceGeneric(){
     
+    var score = Math.random();   
+    var threshold = .6;
+    //used only for atdr and atkc due to branching based upon scores
+    var appendBranch = (score > threshold) ? ' High' : ' Low';
+    
+
+
+    var context = JSON.parse(localStorage['context']);
+    //save score theshold and time spent
+    context.endTimeInSec = (new Date().getTime() - localStorage['startTime'])/1000;
+    context.threshold = threshold;
+    localStorage['score'] = score;
+    localStorage['context'] = JSON.stringify(context);
+    //Previous resource comepleted
+        xAPIStatement('completed');
+
+    var previousState = localStorage['currentState'];
+
+    //var highestMatrixPercentage = ["",0];
+    var indexOfInnerMatrix = -1;
+    $.each(context.innerMatrix, function( index, value ) {
+              $.each(value, function( index2, item ) {
+                     if(item == previousState){
+                            indexOfInnerMatrix  = index;
+
+                     }
+                
+                });
+
+           
+
+            console.log(value.ResourceType + " " + index)
+     });
+    
+    
+    if(previousState =="SelectedReading"){
+        localStorage['currentState'] = "AutoTutorDRQ";
+        localStorage['currentResource'] = context.TopicGroupByType[localStorage['currentState']][0];
+
+    }else if(previousState =="AutoTutorDRQ"){
+        if(score > threshold){
+            localStorage['currentState'] = "Dragoon";
+        }else{
+            localStorage['currentState'] = "AutoTutorKC";
+        }
+
+    }else if(previousState =="AutoTutorKC"){
+        if(score > threshold){
+            localStorage['currentState'] = "AutoTutorDRQ";
+        }else{
+            localStorage['currentState'] = "SkillBuilder";
+        }
+  
+    }else if(previousState =="SkillBuilder"){
+        //Done function to end things
+        console.log("done");
+        $('#FeedbackModalBody')
+                        .append(
+                            $('<h1  type="button" style=" padding: 10px 20px;font-size: 20px;border-radius: 10px;" "> '+ "You finished the " + localStorage['currentTopic'] + " Bundle." + '</h1>')
+                            .val(""));
+        $('#FeedBackDataButton').click();
+        return;
+    }else if(previousState =="Dragoon"){
+        //Done function to end things
+        $('#FeedbackModalBody')
+                        .append(
+                            $('<h1  type="button" style=" padding: 10px 20px;font-size: 20px;border-radius: 10px;" "> '+ "You finished the " + localStorage['currentTopic'] + " Bundle." + '</h1>')
+                            .val(""));
+        $('#FeedBackDataButton').click();
+        return;
+    }
+
+    //for now dragoon leads to the end of the bundle. This means there will be no current resource after dragoon is complete. this may change
+    if(previousState != "Dragoon"){
+        
+    }
+    localStorage['currentResource'] = JSON.stringify(context.TopicGroupByType[localStorage['currentState']][0]);
 
     //
 

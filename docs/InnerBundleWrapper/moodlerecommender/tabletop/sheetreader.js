@@ -62,7 +62,7 @@ var moodleUserName = '';
      var AutoTutorDRQ = [];
      var AutoTutorKC = [];
      var SkillBuilder = [];
-     //var dragoons = [];
+     var Dragoon = [];
      
        $.each(json[topic], function( index, value ) {
 
@@ -81,11 +81,16 @@ var moodleUserName = '';
          if(value["File Name"].includes("SkillBuilder")){
           SkillBuilder.push(value);
         }
+
+         if(value["File Name"].includes("Dragoon")){
+          Dragoon.push(value);
+        }
        });
        typeGrouping["SelectedReading"] = SelectedReading;
        typeGrouping["AutoTutorKC"] = AutoTutorKC;
        typeGrouping["AutoTutorDRQ"] = AutoTutorDRQ;
        typeGrouping["SkillBuilder"] = SkillBuilder;
+       typeGrouping["Dragoon"] = Dragoon;
         //1) end
         return typeGrouping
     }
