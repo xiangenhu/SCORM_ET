@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="datepicker/moment/moment.js"></script>
+
+<link rel="stylesheet" href="datepicker/css/bootstrap-datetimepicker.min.css">
+<script src="datepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+
+<script language=javascript src="util/APIWrapper.js"></script>
+<script language=javascript src="ET.js"></script>
+
+<script language=javascript src="Config.js"></script>
+
+<script language=javascript>
+    // Set some variables global to the SCO
+    var answer = -1;
+    var exitPageStatus = false;
+    var ATType = GetQueryVar("ATType", "AutoTutorDR")
+    var BundleTitle = GetQueryVar("T", "Transistor");
+    var ATScoreMessage;
+    var ATKcName;
+    var ATScore;
+    var Threshold = 0.5;
+
+    window.addEventListener("message",
+    	function submitScore(evt) {
+    		console.log(":::::::::::::::::::::Function Called::::::::::::::::::");
+    		if (evt.origin === "http://prod.x-in-y.com" || evt.origin === "https://prod.x-in-y.com") {
+    			ATScoreMessage = evt.data;
+    			var getScore = ATScoreMessage.ETScore;
+    			if (getScore == true) {
+    				ATKcName = ATScoreMessage.KcName;
+    				ATScore = ATScoreMessage.KcScore.replace(/\r?\n|\r/g,'');
+    				console.log(":::::::::::::::::::::" + ATKcName + ": " + ATScore);
+
+    				var val = "";
+    		if (ATScore < Threshold) {
+    			val = "failed";
+    		} else {
+    			val = "passed";
+    		}
+
+    				var resourceData = {
+    					score : ATScore,
+    					resourceType : ATType,
+    					bundleTitle : BundleTitle,
+    					kcName : ATKcName,
+    					verb: val,
+    					resourceTopic: BundleTitle
+
+    				}
+    				console.log(resourceData);
+    				SendToParent("FromResource",resourceData);
+    			}
+    		}
+
+    		
+
+    		document.getElementById("ATscore").innerHTML = 'Topic Name: ' + BundleTitle + '<br>' + 'Type of Question: ' + ATType + '<br>' + 'Knowledge Component: ' + ATKcName + '<br>' + 'Score: ' + ATScore + '<br>' + 'Overall Performance (Threshold  = 0.5): ' + val;
+
+    	},
+    	false);
+
+   
+   
+    function loadPage(link) {
+    	
+    	var result = doInitialize();
+    	var html = '<div style="padding: 15px 20px;  font-weight: bold;">';
+    	html += '<span id="ATscore"></span>';
+    	html += '</div>';
+    	if (link == undefined ) {
+	        // argument passed and not undefined
+	        html += '<iframe src="' + GetLinks(ATType) + '" width="900" height="768" frameborder="0"/>';
+	    }else{
+	    	html += '<iframe src="' + link + '" width="900" height="768" frameborder="0"/>';
+	    }
+    	
+    	
+    	document.getElementById("disp").innerHTML = html;
+    }
+
+
+</script>
+</head>
+<body onLoad="loadPage()">
+
+
+<div class="row">
+	<div class="col-md-2 col-md-offset-3">
+		<div id="disp"  name="disp"></div>		
+	</div>	
+</div>
+
+<script type="text/javascript"> 
+	$( document ).ready(function() {
+		
+
+	});
+
+</script>
+
+<script type="text/javascript">
+var dt;
+
+
+function SendToParent(mode,dataObject){
+
+	var sendData;
+
+	if(mode == "FromResource"){
+		sendData = {
+			userID : "WantFromMoodle",
+			Resource : URI + dataObject.resourceType,
+			verbVal : dataObject.verb,
+			sScore : dataObject.score,
+			kcs : [dataObject.kcName],
+			kcURI : configKnowledgeComponentURI,
+			topic : dataObject.resourceTopic,
+			uri : URI 
+		}
+	}
+
+	console.log(sendData);
+	parent.send(sendData); 
+
+}
+
+function SendRecieveDataToParent(mode){
+
+	//always queryusing actor, verb, resource, Since/Until Date, and return count... post processing handles all of the calculations
+	var sendData;
+
+	var sinceDate = $("#search-statements-since-date input").val();
+	var untilDate = $("#search-statements-until-date input").val(); 
+
+
+	if(mode == "Simulation"){
+		
+		sendData = {
+			userID : document.getElementById("userRecieve").value,
+			Resource : document.getElementById("ResourcesRecieve").value,
+			verbVal : document.getElementById("verbReceive").value,
+			count: document.getElementById("CountRecieved").value,
+			kcURI : configKnowledgeComponentURI,
+			uri: URI,
+			SinceDate : sinceDate,
+			UntilDate : untilDate
+		}
+
+
+
+			//console.log(sendData);
+			parent.getStatementsWithSearch(sendData); 
+		}
+
+
+}
+
+
+</script>
+
+</body>
+</html>

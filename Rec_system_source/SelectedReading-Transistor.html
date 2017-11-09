@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js"
+            integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I="
+            crossorigin="anonymous"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+   <table width="100%">
+        <caption style="text-align: center; caption-side: bottom;">Ohm &amp; Kirchhoff</caption>
+        <tbody>
+            <tr>
+                <td style="text-align: center;"><img src="http://et.x-in-y.com/draftfile.php/162/user/draft/429077274/Ohm3.gif" alt="Georg Ohm" width="100" height="128" role="presentation"></td>
+                <td style="text-align: center;">&nbsp;<img src="http://et.x-in-y.com/draftfile.php/162/user/draft/429077274/Gustav_Robert_Kirchhoff.jpg" alt="Gustav Kirchhoff" width="100" height="129" role="presentation" style="background-color: transparent;" class="atto_image_button_text-top"></td>
+            </tr>
+        </tbody>
+    </table>
+
+<span style="padding:10px">A transistor is a semiconductor device used to amplify or switch electronic signals and electrical power. It is composed of semiconductor material usually with at least three terminals for connection to an external circuit. Transistors can be regarded as a type of switch, as can many electronic components. They are used in a variety of circuits and you will find that it is rare that a circuit built in a school Technology Department does not contain at least one transistor. They are central to electronics and there are two main types; NPN and PNP. Most circuits tend to use NPN. There are hundreds of transistors which work at different voltages but all of them fall into these two categories.</span>
+    <br />
+    <br />
+
+    <button id="NextPage" style="text-align:center" type="button" class="btn btn-primary">Continue</button>
+
+    <script>
+
+        $("#NextPage").click(function () {
+           // alert("The paragraph was clicked.");
+            //parent.NextResource();
+            window.postMessage("nextpage", "*");
+        });
+    </script>
+
+
+</body>
+</html>
